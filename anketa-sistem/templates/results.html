@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultati ankete - AI alati</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin: 30px 0 15px 0;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #3498db;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        .responses-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+            display: block;
+            white-space: nowrap;
+        }
+        
+        .responses-table thead {
+            background: #3498db;
+            color: white;
+        }
+        
+        .responses-table th,
+        .responses-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            min-width: 120px;
+        }
+        
+        .responses-table tbody tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .responses-table tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        
+        .table-container table {
+            white-space: nowrap;
+            width: 100%;
+            display: table;
+        }
+        
+        .text-cell {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .text-cell:hover {
+            overflow: visible;
+            white-space: normal;
+            position: relative;
+            z-index: 10;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rezultati ankete o korišćenju AI alata</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">{{ stats.total_responses }}</span>
+                <div class="stat-label">Ukupno odgovora</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">{{ stats.chatgpt_users }}</span>
+                <div class="stat-label">Koristi ChatGPT ({{ stats.chatgpt_percentage }}%)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">{{ stats.copilot_users }}</span>
+                <div class="stat-label">Koristi Copilot ({{ stats.copilot_percentage }}%)</div>
+            </div>
+        </div>
+        
+        <h2>Detaljni odgovori</h2>
+        
+        {% if responses %}
+            <div class="table-container">
+                <table class="responses-table">
+                    <thead>
+                        <tr>
+                            <th>Vreme</th>
+                            <th>Godina</th>
+                            <th>Smer</th>
+                            <th>ChatGPT</th>
+                            <th>ChatGPT učestalost</th>
+                            <th>ChatGPT svrha</th>
+                            <th>Copilot</th>
+                            <th>Copilot učestalost</th>
+                            <th>Copilot svrha</th>
+                            <th>Uticaj na učenje</th>
+                            <th>Prednosti</th>
+                            <th>Nedostaci</th>
+                            <th>Preporuka</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for response in responses %}
+                        <tr>
+                            <td>{{ response.timestamp }}</td>
+                            <td>{{ response.godina_studija }}</td>
+                            <td>{{ response.smer }}</td>
+                            <td>{{ response.koristi_chatgpt }}</td>
+                            <td>{{ response.chatgpt_cesto }}</td>
+                            <td class="text-cell">{{ response.chatgpt_svrha }}</td>
+                            <td>{{ response.koristi_copilot }}</td>
+                            <td>{{ response.copilot_cesto }}</td>
+                            <td class="text-cell">{{ response.copilot_svrha }}</td>
+                            <td class="text-cell">{{ response.uticaj_na_ucenje }}</td>
+                            <td class="text-cell">{{ response.prednosti }}</td>
+                            <td class="text-cell">{{ response.nedostaci }}</td>
+                            <td>{{ response.preporuka_drugim }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="no-data">
+                <p>Nema zabeleženih odgovora.</p>
+            </div>
+        {% endif %}
+        
+        <div style="margin-top: 30px;">
+            <a href="/" class="btn">Nazad na anketu</a>
+            <a href="/results" class="btn">Osveži rezultate</a>
+        </div>
+    </div>
+</body>
+</html>

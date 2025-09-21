@@ -1,0 +1,6 @@
+timestamp,ime_prezime,godina_studija,smer,koristi_chatgpt,chatgpt_cesto,chatgpt_svrha,koristi_copilot,copilot_cesto,copilot_svrha,uticaj_na_ucenje,prednosti,nedostaci,preporuka_drugim
+2025-09-21 21:33:04,Lazar Davidovic,master,Softversko inzenjerstvo,da,mesecno,Za prevodjenje tekstova,ne,ne_koristim,ne koristim,brze savladavam gradivo ,ima ih dosta,ima ih dosta ,da
+2025-09-21 23:22:51,ostalo,test,da,dnevno,test,da,dnevno,test,test,test,test,mozda
+2025-09-21 23:26:44,1,Softversko inzenjerstvo,da,,za ucenje,da,dnevno,za ucenje,dobro,/,/,ne
+2025-09-21 23:44:42,master,Elektrotehnika,da,nedeljno,"Jednostavne skripte, priprema za intervju pri promeni firme, ponavljanje C++ i ASP-a, pomoć pri leetcode zadacima",ne,,,"Ne toliko, više je da nešto skontam na brzinu, previše me vrti u krug istim odgovorima",brza pretraga,dosta bagova u kodu koji je duži od 50 linija,da
+2025-09-22 00:00:22,2,Signali i sistemi,da,nedeljno,Pomoc pri resavanju zadataka i pisanje koda.,ne,ne_koristim,,Pomazu dosta.,Stede vreme.,,da

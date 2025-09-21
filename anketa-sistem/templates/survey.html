@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa o korišćenju AI alata</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .author-info {
+            text-align: right;
+            margin-bottom: 30px;
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        .author-info strong {
+            color: #2c3e50;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        input[type="radio"] {
+            margin: 0;
+        }
+        
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+        
+        .flash-success {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .flash-error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Anketa o korišćenju ChatGPT-a i Copilot-a</h1>
+        <div class="author-info">
+            <strong>Autor:</strong> Lazar Davidović
+        </div>
+        
+        <div style="background: #e8f4f8; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 4px solid #3498db;">
+            <p><strong>Napomena:</strong> Ova anketa je potpuno anonimna. Vaši podaci se neće čuvati ni deliti sa trećim licima.</p>
+            
+        </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="/submit">
+            <div class="section">
+                <h3>Osnovne informacije</h3>
+                
+                <div class="form-group">
+                    <label for="godina_studija">Godina studija:</label>
+                    <select id="godina_studija" name="godina_studija" required>
+                        <option value="">Izaberite...</option>
+                        <option value="1">Prva godina</option>
+                        <option value="2">Druga godina</option>
+                        <option value="3">Treća godina</option>
+                        <option value="4">Četvrta godina</option>
+                        <option value="master">Master studije</option>
+                        <option value="doktorske">Doktorske studije</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="smer">Smer/Oblast (opciono):</label>
+                    <input type="text" id="smer" name="smer" placeholder="npr. Informatika, Elektrotehnika, Ekonomija...">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>ChatGPT</h3>
+                
+                <div class="form-group">
+                    <label>Da li koristite ChatGPT?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="chatgpt_da" name="koristi_chatgpt" value="da" required>
+                            <label for="chatgpt_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="chatgpt_ne" name="koristi_chatgpt" value="ne" required>
+                            <label for="chatgpt_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="chatgpt_cesto">Koliko često koristite ChatGPT?</label>
+                    <select id="chatgpt_cesto" name="chatgpt_cesto">
+                        <option value="">Izaberite...</option>
+                        <option value="dnevno">Dnevno</option>
+                        <option value="nedeljno">Nekoliko puta nedeljno</option>
+                        <option value="mesecno">Nekoliko puta mesečno</option>
+                        <option value="retko">Retko</option>
+                        <option value="ne_koristim">Ne koristim</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="chatgpt_svrha">U koje svrhe koristite ChatGPT? (možete navesti više)</label>
+                    <textarea id="chatgpt_svrha" name="chatgpt_svrha" placeholder="npr. objašnjavanje koncepata, pomoć pri rešavanju zadataka, pisanje koda..."></textarea>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>GitHub Copilot</h3>
+                
+                <div class="form-group">
+                    <label>Da li koristite GitHub Copilot?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="copilot_da" name="koristi_copilot" value="da" required>
+                            <label for="copilot_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="copilot_ne" name="koristi_copilot" value="ne" required>
+                            <label for="copilot_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="copilot_cesto">Koliko često koristite Copilot?</label>
+                    <select id="copilot_cesto" name="copilot_cesto">
+                        <option value="">Izaberite...</option>
+                        <option value="dnevno">Dnevno</option>
+                        <option value="nedeljno">Nekoliko puta nedeljno</option>
+                        <option value="mesecno">Nekoliko puta mesečno</option>
+                        <option value="retko">Retko</option>
+                        <option value="ne_koristim">Ne koristim</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="copilot_svrha">U koje svrhe koristite Copilot? (možete navesti više)</label>
+                    <textarea id="copilot_svrha" name="copilot_svrha" placeholder="npr. autocomplete koda, generisanje funkcija, refaktorisanje..."></textarea>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Opšta pitanja</h3>
+                
+                <div class="form-group">
+                    <label for="uticaj_na_ucenje">Kako AI alati utiču na vaš proces učenja?</label>
+                    <textarea id="uticaj_na_ucenje" name="uticaj_na_ucenje" placeholder="Opišite pozitivne ili negativne uticaje..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="prednosti">Koje su najveće prednosti korišćenja AI alata?</label>
+                    <textarea id="prednosti" name="prednosti" placeholder="Navedite glavne prednosti..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nedostaci">Koje su najveće mane ili rizici korišćenja AI alata?</label>
+                    <textarea id="nedostaci" name="nedostaci" placeholder="Navedite glavne nedostatke ili brige..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li biste preporučili korišćenje AI alata drugim studentima?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="preporuka_da" name="preporuka_drugim" value="da" required>
+                            <label for="preporuka_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="preporuka_ne" name="preporuka_drugim" value="ne" required>
+                            <label for="preporuka_ne">Ne</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="preporuka_mozda" name="preporuka_drugim" value="mozda" required>
+                            <label for="preporuka_mozda">Možda</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Pošalji odgovore</button>
+        </form>
+    </div>
+</body>
+</html>
