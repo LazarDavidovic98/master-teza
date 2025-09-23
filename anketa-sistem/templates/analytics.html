@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napredna Analitika - AI Alati Istraživanje</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 2.8em;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .header p {
+            color: #666;
+            margin: 15px 0 0 0;
+            font-size: 1.2em;
+        }
+        .navigation {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+            min-width: 140px;
+            justify-content: center;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-link.active {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-link {
+                width: 200px;
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+        }
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #dee2e6;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 10px 0;
+        }
+        .stat-label {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .stat-description {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #3498db;
+        }
+        .section-header h2 {
+            color: #333;
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .section-header p {
+            color: #666;
+            margin: 10px 0 0 0;
+        }
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .chart-container {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .chart-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .chart-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        .chart-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .chart-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Modal styles for zoom */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            object-fit: contain;
+            animation: zoomIn 0.3s;
+            border-radius: 10px;
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.1); }
+            to { transform: scale(1); }
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+        
+        .zoom-hint {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .chart-container:hover .zoom-hint {
+            opacity: 1;
+        }
+        .plotly-chart {
+            background: white;
+            border: 2px solid #dee2e6;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .insights-section {
+            background: linear-gradient(135deg, #e8f2ff 0%, #f0f8ff 100%);
+            border: 2px solid #b3d9ff;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .insights-section h3 {
+            color: #0066cc;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .insight-item {
+            background: white;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .insight-item h4 {
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+        .insight-item p {
+            margin: 0;
+            color: #666;
+        }
+        .author {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-style: italic;
+        }
+        .trend-indicator {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .trend-up {
+            background: #d4edda;
+            color: #155724;
+        }
+        .trend-down {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .trend-stable {
+            background: #fff3cd;
+            color: #856404;
+        }
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            .summary-stats {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Napredna Analitika</h1>
+            <p>Detaljni uvidi u korišćenje AI alata među studentima</p>
+        </div>
+
+        <div class="navigation">
+            <div class="nav-container">
+                <a href="{{ url_for('index') }}" class="nav-link">
+                    <span>📋</span> Anketa
+                </a>
+                <a href="{{ url_for('results') }}" class="nav-link">
+                    <span>📈</span> Rezultati
+                </a>
+                <a href="{{ url_for('compare_docs') }}" class="nav-link">
+                    <span>📄</span> README Poređenje
+                </a>
+                <a href="{{ url_for('ai_comparison') }}" class="nav-link">
+                    <span>⚡</span> AI Poređenje
+                </a>
+                <a href="{{ url_for('analytics') }}" class="nav-link active">
+                    <span>📊</span> Analitika
+                </a>
+            </div>
+        </div>
+
+        <!-- Summary Statistics -->
+        <div class="summary-stats">
+            <div class="stat-card">
+                <div class="stat-number">{{ analytics.summary_stats.total_survey_responses }}</div>
+                <div class="stat-label">Ukupno Anketa</div>
+                <div class="stat-description">Popunjenih anketa o AI korišćenju</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ analytics.summary_stats.total_ai_comparisons }}</div>
+                <div class="stat-label">AI Poređenja</div>
+                <div class="stat-description">ChatGPT vs Copilot testova</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ analytics.summary_stats.chatgpt_users }}</div>
+                <div class="stat-label">ChatGPT Korisnika</div>
+                <div class="stat-description">Aktivno koristi ChatGPT</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ analytics.summary_stats.copilot_users }}</div>
+                <div class="stat-label">Copilot Korisnika</div>
+                <div class="stat-description">Aktivno koristi Copilot</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}%</div>
+                <div class="stat-label">Stopa Preporuke</div>
+                <div class="stat-description">Preporučuje AI alate drugima</div>
+            </div>
+        </div>
+
+        <!-- Survey Analytics Section -->
+        {% if analytics.survey_charts %}
+        <div class="section">
+            <div class="section-header">
+                <h2>📋 Analiza Ankete o AI Alata</h2>
+                <p>Vizualizacije odgovora o korišćenju ChatGPT-a i Copilot-a među studentima</p>
+            </div>
+            
+            <div class="charts-grid">
+                {% for chart in analytics.survey_charts %}
+                <div class="chart-container">
+                    <div class="chart-title">{{ chart.title }}</div>
+                    <img src="data:image/png;base64,{{ chart.image }}" alt="{{ chart.title }}" class="chart-image">
+                    <div class="zoom-hint">🔍 Kliknite za povećanje</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- AI Comparison Analytics Section -->
+        {% if analytics.ai_comparison_charts %}
+        <div class="section">
+            <div class="section-header">
+                <h2>⚡ Analiza AI Poređenja</h2>
+                <p>Komparativna analiza performansi ChatGPT-a vs Copilot-a</p>
+            </div>
+            
+            <div class="charts-grid">
+                {% for chart in analytics.ai_comparison_charts %}
+                <div class="chart-container">
+                    <div class="chart-title">{{ chart.title }}</div>
+                    <img src="data:image/png;base64,{{ chart.image }}" alt="{{ chart.title }}" class="chart-image">
+                    <div class="zoom-hint">🔍 Kliknite za povećanje</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Interactive Charts Section -->
+        {% if analytics.plotly_charts %}
+        <div class="section">
+            <div class="section-header">
+                <h2>📈 Interaktivni Grafikoni</h2>
+                <p>Dinamički trendovi i vremenske analize</p>
+            </div>
+            
+            {% for chart in analytics.plotly_charts %}
+            <div class="plotly-chart">
+                <div class="chart-title">{{ chart.title }}</div>
+                <div id="plotly-chart-{{ loop.index }}"></div>
+                <script>
+                    // Enhanced Plotly configuration with better zoom and interaction
+                    var config = {
+                        responsive: true,
+                        displayModeBar: true,
+                        displaylogo: false,
+                        modeBarButtonsToAdd: ['pan2d', 'select2d', 'lasso2d'],
+                        modeBarButtonsToRemove: ['sendDataToCloud'],
+                        scrollZoom: true
+                    };
+                    
+                    var layout = Object.assign({}, {{ chart.chart|safe }}.layout || {}, {
+                        dragmode: 'zoom',
+                        showlegend: true,
+                        hovermode: 'closest',
+                        xaxis: Object.assign({}, {{ chart.chart|safe }}.layout?.xaxis || {}, {
+                            showspikes: true,
+                            spikecolor: '#3498db',
+                            spikethickness: 2
+                        }),
+                        yaxis: Object.assign({}, {{ chart.chart|safe }}.layout?.yaxis || {}, {
+                            showspikes: true,
+                            spikecolor: '#3498db',
+                            spikethickness: 2
+                        })
+                    });
+                    
+                    Plotly.newPlot('plotly-chart-{{ loop.index }}', {{ chart.chart|safe }}.data, layout, config);
+                </script>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Key Insights Section -->
+        <div class="insights-section">
+            <h3>🧠 Ključni Uvidi</h3>
+            
+            {% if analytics.summary_stats.total_survey_responses > 0 %}
+            <div class="insight-item">
+                <h4>🎯 Popularnost AI Alata</h4>
+                <p>
+                    {% set chatgpt_rate = (analytics.summary_stats.chatgpt_users / analytics.summary_stats.total_survey_responses * 100) %}
+                    {% set copilot_rate = (analytics.summary_stats.copilot_users / analytics.summary_stats.total_survey_responses * 100) %}
+                    ChatGPT koristi {{ "%.1f"|format(chatgpt_rate) }}% studenata, dok Copilot koristi {{ "%.1f"|format(copilot_rate) }}% studenata.
+                    {% if chatgpt_rate > copilot_rate %}
+                        ChatGPT je popularniji za {{ "%.1f"|format(chatgpt_rate - copilot_rate) }} procenatnih poena.
+                    {% elif copilot_rate > chatgpt_rate %}
+                        Copilot je popularniji za {{ "%.1f"|format(copilot_rate - chatgpt_rate) }} procenatnih poena.
+                    {% else %}
+                        Oba alata imaju jednaku popularnost.
+                    {% endif %}
+                </p>
+            </div>
+            {% endif %}
+
+            {% if analytics.summary_stats.recommendation_rate > 75 %}
+            <div class="insight-item">
+                <h4>✅ Visoka Satisfakcija <span class="trend-indicator trend-up">Pozitivno</span></h4>
+                <p>{{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}% studenata preporučuje AI alate drugima, što ukazuje na visoku stopu satisfakcije.</p>
+            </div>
+            {% elif analytics.summary_stats.recommendation_rate > 50 %}
+            <div class="insight-item">
+                <h4>⚖️ Umerena Satisfakcija <span class="trend-indicator trend-stable">Stabilno</span></h4>
+                <p>{{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}% studenata preporučuje AI alate, što pokazuje umeren nivo satisfakcije.</p>
+            </div>
+            {% else %}
+            <div class="insight-item">
+                <h4>⚠️ Niska Satisfakcija <span class="trend-indicator trend-down">Pažnja</span></h4>
+                <p>Samo {{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}% studenata preporučuje AI alate, potrebno je istražiti razloge.</p>
+            </div>
+            {% endif %}
+
+            <div class="insight-item">
+                <h4>📊 Statističke Mogućnosti</h4>
+                <p>
+                    Sa {{ analytics.summary_stats.total_survey_responses }} anketa i {{ analytics.summary_stats.total_ai_comparisons }} AI poređenja, 
+                    imamo robusne podatke za statističku analizu trendova u korišćenju AI alata među studentima.
+                </p>
+            </div>
+
+            <div class="insight-item">
+                <h4>🔬 Istraživačka Vrednost</h4>
+                <p>
+                    Ovi podaci omogućavaju analizu korelacije između godine studija, smera i preferencija AI alata, 
+                    kao i kvantitativno poređenje performansi različitih AI sistema.
+                </p>
+            </div>
+        </div>
+
+        <!-- Data Export Info -->
+        <div style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px; margin-bottom: 30px;">
+            <h4 style="margin: 0 0 15px 0; color: #333;">💾 Izvoz Podataka za Istraživanje</h4>
+            <p style="margin: 0; color: #666;">
+                Svi podaci se automatski čuvaju u CSV formatima pogodnim za dalju analizu u Python/R/SPSS:
+            </p>
+            <ul style="margin: 10px 0 0 20px; color: #666;">
+                <li><code>survey_responses.csv</code> - Odgovori iz ankete</li>
+                <li><code>ai_comparison_responses.csv</code> - Podaci o AI poređenjima</li>
+            </ul>
+        </div>
+
+        <div class="author">
+            <p>Autor: <strong>Lazar Davidović</strong></p>
+        </div>
+    </div>
+
+    <!-- Modal for zoomed charts -->
+    <div id="chartModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Chart zoom functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('chartModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeBtn = document.getElementsByClassName('close')[0];
+            
+            // Add click event to all chart images
+            const chartImages = document.querySelectorAll('.chart-image');
+            chartImages.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                    
+                    // Disable body scroll when modal is open
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // Close modal when X is clicked
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close modal when clicking outside of image
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Enhanced Plotly charts with better zoom functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configure all Plotly charts for better interaction
+            const plotlyCharts = document.querySelectorAll('[id^="plotly-chart-"]');
+            plotlyCharts.forEach(function(chartDiv) {
+                // Wait a bit for charts to render then enhance them
+                setTimeout(function() {
+                    if (chartDiv.data) {
+                        Plotly.relayout(chartDiv, {
+                            'xaxis.showspikes': true,
+                            'yaxis.showspikes': true,
+                            'hovermode': 'closest',
+                            'dragmode': 'zoom'
+                        });
+                    }
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

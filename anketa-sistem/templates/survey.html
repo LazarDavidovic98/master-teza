@@ -116,6 +116,69 @@
             background: #2980b9;
         }
         
+        .navigation {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+            min-width: 140px;
+            justify-content: center;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-link.active {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-link {
+                width: 200px;
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+        }
+        
         .section {
             background: #f8f9fa;
             padding: 20px;
@@ -155,6 +218,26 @@
         <h1>Anketa o korišćenju ChatGPT-a i Copilot-a</h1>
         <div class="author-info">
             <strong>Autor:</strong> Lazar Davidović
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-container">
+                <a href="{{ url_for('index') }}" class="nav-link active">
+                    <span>📋</span> Anketa
+                </a>
+                <a href="{{ url_for('results') }}" class="nav-link">
+                    <span>📈</span> Rezultati
+                </a>
+                <a href="{{ url_for('compare_docs') }}" class="nav-link">
+                    <span>📄</span> README Poređenje
+                </a>
+                <a href="{{ url_for('ai_comparison') }}" class="nav-link">
+                    <span>⚡</span> AI Poređenje
+                </a>
+                <a href="{{ url_for('analytics') }}" class="nav-link">
+                    <span>📊</span> Analitika
+                </a>
+            </div>
         </div>
         
         <div style="background: #e8f4f8; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 4px solid #3498db;">

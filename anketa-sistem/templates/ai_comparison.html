@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uporedno Testiranje ChatGPT vs Copilot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        .header h1 {
+            color: #333;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            color: #666;
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+        }
+        .navigation {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+            min-width: 140px;
+            justify-content: center;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-link.active {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-link {
+                width: 200px;
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+        }
+        .form-section {
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .form-section h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        textarea {
+            font-family: 'Courier New', monospace;
+            background: #f9f9f9;
+            resize: vertical;
+            min-height: 120px;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #667eea;
+            outline: none;
+            background: white;
+        }
+        .ai-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .ai-box {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .ai-box.chatgpt {
+            border-color: #10a37f;
+        }
+        .ai-box.copilot {
+            border-color: #0969da;
+        }
+        .ai-box h4 {
+            margin: 0 0 15px 0;
+            font-size: 1.3em;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+        }
+        .ai-box.chatgpt h4 {
+            background: #10a37f;
+        }
+        .ai-box.copilot h4 {
+            background: #0969da;
+        }
+        .rating-group {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .rating-option {
+            text-align: center;
+        }
+        .rating-option input {
+            width: auto;
+            margin-bottom: 5px;
+        }
+        .rating-option label {
+            font-size: 12px;
+            margin: 0;
+            color: #666;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: block;
+            margin: 30px auto 0;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .info-box {
+            background: #e8f2ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        .info-box h4 {
+            margin: 0 0 10px 0;
+            color: #0066cc;
+        }
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+        .flash-error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #c62828;
+            margin-bottom: 15px;
+        }
+        .author {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .ai-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ ChatGPT vs Copilot</h1>
+            <p>Uporedno testiranje kvaliteta AI alata na istom zadatku</p>
+        </div>
+
+        <div class="navigation">
+            <div class="nav-container">
+                <a href="{{ url_for('index') }}" class="nav-link">
+                    <span>📋</span> Anketa
+                </a>
+                <a href="{{ url_for('results') }}" class="nav-link">
+                    <span>📈</span> Rezultati
+                </a>
+                <a href="{{ url_for('compare_docs') }}" class="nav-link">
+                    <span>📄</span> README Poređenje
+                </a>
+                <a href="{{ url_for('ai_comparison') }}" class="nav-link active">
+                    <span>⚡</span> AI Poređenje
+                </a>
+                <a href="{{ url_for('analytics') }}" class="nav-link">
+                    <span>📊</span> Analitika
+                </a>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h4>🎯 Kako funkcioniše testiranje:</h4>
+            <ul>
+                <li><strong>1. Zadatak:</strong> Opišite zadatak koji ste dali oba AI alata</li>
+                <li><strong>2. Rešenja:</strong> Unesite odgovore koje ste dobili od ChatGPT-a i Copilot-a</li>
+                <li><strong>3. Ocene:</strong> Ocenite kvalitet, tačnost i korisnost (1-5)</li>
+                <li><strong>4. Analiza:</strong> Sistem će pokazati uporednu analizu i statistike</li>
+            </ul>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('ai_comparison_submit') }}">
+            <div class="form-section">
+                <h3>📝 Informacije o Zadatku</h3>
+                
+                <div class="form-group">
+                    <label for="task_type">Tip zadatka:</label>
+                    <select name="task_type" id="task_type" required>
+                        <option value="">Izaberite tip zadatka...</option>
+                        <option value="programski">Programski zadatak</option>
+                        <option value="esejski">Esejsko pitanje</option>
+                        <option value="dokumentacija">Pisanje dokumentacije</option>
+                        <option value="objasnjenje">Objašnjenje koncepta</option>
+                        <option value="debug">Debug koda</option>
+                        <option value="pretragu">Pretraga informacija</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="task_description">Opis zadatka koji ste dali oba AI alata:</label>
+                    <textarea name="task_description" id="task_description" rows="5" 
+                              placeholder="Opišite detaljno zadatak, pitanje ili problem koji ste postavili i ChatGPT-u i Copilot-u..."
+                              required></textarea>
+                </div>
+            </div>
+
+            <div class="ai-section">
+                <!-- ChatGPT Section -->
+                <div class="ai-box chatgpt">
+                    <h4>🤖 ChatGPT Rešenje</h4>
+                    
+                    <div class="form-group">
+                        <label for="chatgpt_solution">ChatGPT odgovor/rešenje:</label>
+                        <textarea name="chatgpt_solution" id="chatgpt_solution" rows="8"
+                                  placeholder="Unesite ovde kompletan odgovor koji ste dobili od ChatGPT-a..."
+                                  required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kvalitet rešenja (1-5):</label>
+                        <div class="rating-group">
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_quality" value="1" id="chatgpt_q1">
+                                <label for="chatgpt_q1">1<br>Loš</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_quality" value="2" id="chatgpt_q2">
+                                <label for="chatgpt_q2">2<br>Slab</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_quality" value="3" id="chatgpt_q3">
+                                <label for="chatgpt_q3">3<br>Prosek</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_quality" value="4" id="chatgpt_q4">
+                                <label for="chatgpt_q4">4<br>Dobar</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_quality" value="5" id="chatgpt_q5">
+                                <label for="chatgpt_q5">5<br>Odličan</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tačnost informacija (1-5):</label>
+                        <div class="rating-group">
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_accuracy" value="1" id="chatgpt_a1">
+                                <label for="chatgpt_a1">1<br>Netačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_accuracy" value="2" id="chatgpt_a2">
+                                <label for="chatgpt_a2">2<br>Uglavnom netačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_accuracy" value="3" id="chatgpt_a3">
+                                <label for="chatgpt_a3">3<br>Delu tačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_accuracy" value="4" id="chatgpt_a4">
+                                <label for="chatgpt_a4">4<br>Uglavnom tačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_accuracy" value="5" id="chatgpt_a5">
+                                <label for="chatgpt_a5">5<br>Potpuno tačno</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Korisnost (1-5):</label>
+                        <div class="rating-group">
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_usefulness" value="1" id="chatgpt_u1">
+                                <label for="chatgpt_u1">1<br>Beskorisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_usefulness" value="2" id="chatgpt_u2">
+                                <label for="chatgpt_u2">2<br>Malo korisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_usefulness" value="3" id="chatgpt_u3">
+                                <label for="chatgpt_u3">3<br>Umereno korisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_usefulness" value="4" id="chatgpt_u4">
+                                <label for="chatgpt_u4">4<br>Vrlo korisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="chatgpt_rating_usefulness" value="5" id="chatgpt_u5">
+                                <label for="chatgpt_u5">5<br>Izuzetno korisno</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chatgpt_comments">Dodatni komentari o ChatGPT rešenju:</label>
+                        <textarea name="chatgpt_comments" id="chatgpt_comments" rows="3"
+                                  placeholder="Opcionalno: vaši komentari, prednosti, mane..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Copilot Section -->
+                <div class="ai-box copilot">
+                    <h4>🚁 Copilot Rešenje</h4>
+                    
+                    <div class="form-group">
+                        <label for="copilot_solution">Copilot odgovor/rešenje:</label>
+                        <textarea name="copilot_solution" id="copilot_solution" rows="8"
+                                  placeholder="Unesite ovde kompletan odgovor koji ste dobili od Copilot-a..."
+                                  required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kvalitet rešenja (1-5):</label>
+                        <div class="rating-group">
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_quality" value="1" id="copilot_q1">
+                                <label for="copilot_q1">1<br>Loš</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_quality" value="2" id="copilot_q2">
+                                <label for="copilot_q2">2<br>Slab</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_quality" value="3" id="copilot_q3">
+                                <label for="copilot_q3">3<br>Prosek</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_quality" value="4" id="copilot_q4">
+                                <label for="copilot_q4">4<br>Dobar</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_quality" value="5" id="copilot_q5">
+                                <label for="copilot_q5">5<br>Odličan</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tačnost informacija (1-5):</label>
+                        <div class="rating-group">
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_accuracy" value="1" id="copilot_a1">
+                                <label for="copilot_a1">1<br>Netačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_accuracy" value="2" id="copilot_a2">
+                                <label for="copilot_a2">2<br>Uglavnom netačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_accuracy" value="3" id="copilot_a3">
+                                <label for="copilot_a3">3<br>Delu tačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_accuracy" value="4" id="copilot_a4">
+                                <label for="copilot_a4">4<br>Uglavnom tačno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_accuracy" value="5" id="copilot_a5">
+                                <label for="copilot_a5">5<br>Potpuno tačno</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Korisnost (1-5):</label>
+                        <div class="rating-group">
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_usefulness" value="1" id="copilot_u1">
+                                <label for="copilot_u1">1<br>Beskorisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_usefulness" value="2" id="copilot_u2">
+                                <label for="copilot_u2">2<br>Malo korisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_usefulness" value="3" id="copilot_u3">
+                                <label for="copilot_u3">3<br>Umereno korisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_usefulness" value="4" id="copilot_u4">
+                                <label for="copilot_u4">4<br>Vrlo korisno</label>
+                            </div>
+                            <div class="rating-option">
+                                <input type="radio" name="copilot_rating_usefulness" value="5" id="copilot_u5">
+                                <label for="copilot_u5">5<br>Izuzetno korisno</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="copilot_comments">Dodatni komentari o Copilot rešenju:</label>
+                        <textarea name="copilot_comments" id="copilot_comments" rows="3"
+                                  placeholder="Opcionalno: vaši komentari, prednosti, mane..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>🏆 Opšte Poređenje</h3>
+                
+                <div class="form-group">
+                    <label>Koji AI alat je dao bolje rešenje ukupno?</label>
+                    <select name="overall_preference" required>
+                        <option value="">Izaberite...</option>
+                        <option value="chatgpt">ChatGPT</option>
+                        <option value="copilot">Copilot</option>
+                        <option value="equal">Jednako dobro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="preference_reason">Objasnite razlog vaše odluke:</label>
+                    <textarea name="preference_reason" id="preference_reason" rows="4"
+                              placeholder="Zašto ste se odlučili za ovaj AI alat? Koje su ključne razlike ili prednosti?"
+                              required></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">🔍 Analiziraj Poređenje</button>
+        </form>
+
+        <div class="author">
+            <p>Autor: <strong>Lazar Davidović</strong></p>
+        </div>
+    </div>
+</body>
+</html>
