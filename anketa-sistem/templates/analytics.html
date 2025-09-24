@@ -396,19 +396,34 @@
                 <div class="stat-description">ChatGPT vs Copilot testova</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{{ analytics.summary_stats.chatgpt_users }}</div>
-                <div class="stat-label">ChatGPT Korisnika</div>
-                <div class="stat-description">Aktivno koristi ChatGPT</div>
+                <div class="stat-number">{{ analytics.summary_stats.chatgpt_aware }}</div>
+                <div class="stat-label">Zna za ChatGPT</div>
+                <div class="stat-description">Svesni o ChatGPT-u</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{{ analytics.summary_stats.copilot_users }}</div>
-                <div class="stat-label">Copilot Korisnika</div>
-                <div class="stat-description">Aktivno koristi Copilot</div>
+                <div class="stat-number">{{ analytics.summary_stats.copilot_aware }}</div>
+                <div class="stat-label">Zna za Copilot</div>
+                <div class="stat-description">Svesni o GitHub Copilot-u</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}%</div>
-                <div class="stat-label">Stopa Preporuke</div>
-                <div class="stat-description">Preporučuje AI alate drugima</div>
+                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.employed_percentage) }}%</div>
+                <div class="stat-label">Zaposleni</div>
+                <div class="stat-description">U radnom odnosu</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.avg_programming_env) }}</div>
+                <div class="stat-label">Prog. Okruženja</div>
+                <div class="stat-description">Prosečno korišćenje (1-5)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.avg_programming_lang) }}</div>
+                <div class="stat-label">Prog. Jezici</div>
+                <div class="stat-description">Prosečno korišćenje (1-5)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.avg_ai_usage) }}</div>
+                <div class="stat-label">AI Korišćenje</div>
+                <div class="stat-description">Prosečno korišćenje (1-5)</div>
             </div>
         </div>
 
@@ -504,52 +519,96 @@
             
             {% if analytics.summary_stats.total_survey_responses > 0 %}
             <div class="insight-item">
-                <h4>🎯 Popularnost AI Alata</h4>
+                <h4>👥 Demografski Profil <span class="trend-indicator trend-up">Raznovrsno</span></h4>
                 <p>
-                    {% set chatgpt_rate = (analytics.summary_stats.chatgpt_users / analytics.summary_stats.total_survey_responses * 100) %}
-                    {% set copilot_rate = (analytics.summary_stats.copilot_users / analytics.summary_stats.total_survey_responses * 100) %}
-                    ChatGPT koristi {{ "%.1f"|format(chatgpt_rate) }}% studenata, dok Copilot koristi {{ "%.1f"|format(copilot_rate) }}% studenata.
-                    {% if chatgpt_rate > copilot_rate %}
-                        ChatGPT je popularniji za {{ "%.1f"|format(chatgpt_rate - copilot_rate) }} procenatnih poena.
-                    {% elif copilot_rate > chatgpt_rate %}
-                        Copilot je popularniji za {{ "%.1f"|format(copilot_rate - chatgpt_rate) }} procenatnih poena.
-                    {% else %}
-                        Oba alata imaju jednaku popularnost.
+                    {% set employed_pct = analytics.summary_stats.employed_percentage %}
+                    {{ "%.0f"|format(employed_pct) }}% učesnika je zaposleno, što omogućava analizu korišćenja AI alata u 
+                    {% if employed_pct > 60 %}profesionalnom {% else %}uglavnom akademskom {% endif %}kontekstu.
+                </p>
+            </div>
+            {% endif %}
+
+            {% if analytics.summary_stats.avg_programming_env > 3 %}
+            <div class="insight-item">
+                <h4>💻 Visoka Tehnička Ekspertiza <span class="trend-indicator trend-up">Napredno</span></h4>
+                <p>
+                    Prosečna ocena korišćenja programskih okruženja je {{ "%.1f"|format(analytics.summary_stats.avg_programming_env) }}/5, 
+                    što ukazuje na tehnički naprednu populaciju pogodnu za AI alate.
+                </p>
+            </div>
+            {% elif analytics.summary_stats.avg_programming_env > 2 %}
+            <div class="insight-item">
+                <h4>🔧 Umerena Tehnička Ekspertiza <span class="trend-indicator trend-stable">Srednje</span></h4>
+                <p>
+                    Prosečna ocena korišćenja programskih okruženja je {{ "%.1f"|format(analytics.summary_stats.avg_programming_env) }}/5, 
+                    što pokazuje umeren nivo tehničkih veština među učesnicima.
+                </p>
+            </div>
+            {% endif %}
+
+            {% if analytics.summary_stats.avg_ai_usage > 3 %}
+            <div class="insight-item">
+                <h4>🤖 Aktivno AI Korišćenje <span class="trend-indicator trend-up">Visoko</span></h4>
+                <p>
+                    Prosečna ocena korišćenja generativnih AI alata je {{ "%.1f"|format(analytics.summary_stats.avg_ai_usage) }}/5, 
+                    što signalizira široku adopciju AI tehnologija među učesnicima.
+                </p>
+            </div>
+            {% elif analytics.summary_stats.avg_ai_usage > 2 %}
+            <div class="insight-item">
+                <h4>🤖 Umereno AI Korišćenje <span class="trend-indicator trend-stable">Srednje</span></h4>
+                <p>
+                    Prosečna ocena korišćenja generativnih AI alata je {{ "%.1f"|format(analytics.summary_stats.avg_ai_usage) }}/5, 
+                    što ukazuje na postojanje prostora za povećanje adopcije.
+                </p>
+            </div>
+            {% else %}
+            <div class="insight-item">
+                <h4>🤖 Nisko AI Korišćenje <span class="trend-indicator trend-down">Pažnja</span></h4>
+                <p>
+                    Prosečna ocena korišćenja generativnih AI alata je {{ "%.1f"|format(analytics.summary_stats.avg_ai_usage) }}/5, 
+                    što može ukazivati na potrebu za edukacijom ili poboljšanje pristupačnosti.
+                </p>
+            </div>
+            {% endif %}
+
+            {% if analytics.summary_stats.total_survey_responses > 0 %}
+            <div class="insight-item">
+                <h4>🧠 AI Svesnost <span class="trend-indicator trend-up">Dobra</span></h4>
+                <p>
+                    {% set chatgpt_awareness = (analytics.summary_stats.chatgpt_aware / analytics.summary_stats.total_survey_responses * 100) %}
+                    {% set copilot_awareness = (analytics.summary_stats.copilot_aware / analytics.summary_stats.total_survey_responses * 100) %}
+                    {{ "%.0f"|format(chatgpt_awareness) }}% zna za ChatGPT, dok {{ "%.0f"|format(copilot_awareness) }}% zna za GitHub Copilot.
+                    {% if chatgpt_awareness > copilot_awareness %}
+                    ChatGPT je poznatiji za {{ "%.0f"|format(chatgpt_awareness - copilot_awareness) }} procenatnih poena.
+                    {% elif copilot_awareness > chatgpt_awareness %}
+                    GitHub Copilot je poznatiji za {{ "%.0f"|format(copilot_awareness - chatgpt_awareness) }} procenatnih poena.
                     {% endif %}
                 </p>
             </div>
             {% endif %}
 
-            {% if analytics.summary_stats.recommendation_rate > 75 %}
             <div class="insight-item">
-                <h4>✅ Visoka Satisfakcija <span class="trend-indicator trend-up">Pozitivno</span></h4>
-                <p>{{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}% studenata preporučuje AI alate drugima, što ukazuje na visoku stopu satisfakcije.</p>
-            </div>
-            {% elif analytics.summary_stats.recommendation_rate > 50 %}
-            <div class="insight-item">
-                <h4>⚖️ Umerena Satisfakcija <span class="trend-indicator trend-stable">Stabilno</span></h4>
-                <p>{{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}% studenata preporučuje AI alate, što pokazuje umeren nivo satisfakcije.</p>
-            </div>
-            {% else %}
-            <div class="insight-item">
-                <h4>⚠️ Niska Satisfakcija <span class="trend-indicator trend-down">Pažnja</span></h4>
-                <p>Samo {{ "%.1f"|format(analytics.summary_stats.recommendation_rate) }}% studenata preporučuje AI alate, potrebno je istražiti razloge.</p>
-            </div>
-            {% endif %}
-
-            <div class="insight-item">
-                <h4>📊 Statističke Mogućnosti</h4>
+                <h4>📊 Robusnost Podataka <span class="trend-indicator trend-up">Odliča</span></h4>
                 <p>
-                    Sa {{ analytics.summary_stats.total_survey_responses }} anketa i {{ analytics.summary_stats.total_ai_comparisons }} AI poređenja, 
-                    imamo robusne podatke za statističku analizu trendova u korišćenju AI alata među studentima.
+                    Sa {{ analytics.summary_stats.total_survey_responses }} detaljnih anketa i {{ analytics.summary_stats.total_ai_comparisons }} AI poređenja, 
+                    imamo visokokvalitetne podatke za statističku analizu trendova i korelacija u korišćenju AI alata.
                 </p>
             </div>
 
             <div class="insight-item">
-                <h4>🔬 Istraživačka Vrednost</h4>
+                <h4>🔬 Istraživačka Vrednost <span class="trend-indicator trend-up">Visoka</span></h4>
                 <p>
-                    Ovi podaci omogućavaju analizu korelacije između godine studija, smera i preferencija AI alata, 
-                    kao i kvantitativno poređenje performansi različitih AI sistema.
+                    Podaci omogućavaju duboku analizu korelacije između demografskih karakteristika, tehničkih veština, 
+                    profesionalnog statusa i obrazaca korišćenja različitih AI alata, što je vredno za akademska i industrijaska istraživanja.
+                </p>
+            </div>
+
+            <div class="insight-item">
+                <h4>🎯 Praktična Primena <span class="trend-indicator trend-up">Primenljiva</span></h4>
+                <p>
+                    Rezultati mogu informisati obrazovne institucije o potrebama studenata za AI edukacijom, 
+                    kao i organizacije o najefektivnijim AI alatima za različite demografske grupe i slučajeve korišćenja.
                 </p>
             </div>
         </div>

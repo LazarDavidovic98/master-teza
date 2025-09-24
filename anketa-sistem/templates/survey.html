@@ -212,10 +212,60 @@
             border: 1px solid #f5c6cb;
         }
     </style>
+    <script>
+        // Ograniči izbor na maksimalno 2 checkbox-a za svrhu korišćenja AI alata
+        document.addEventListener('DOMContentLoaded', function() {
+            const svrhaCheckboxes = document.querySelectorAll('input[name="svrha_koriscenja"]');
+            const copilotCheckboxes = document.querySelectorAll('input[name="copilot_svrha"]');
+            
+            function limitCheckboxes(checkboxes, maxSelection) {
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.addEventListener('change', function() {
+                        const checkedBoxes = document.querySelectorAll('input[name="' + this.name + '"]:checked');
+                        if (checkedBoxes.length >= maxSelection) {
+                            checkboxes.forEach(function(cb) {
+                                if (!cb.checked) {
+                                    cb.disabled = true;
+                                }
+                            });
+                        } else {
+                            checkboxes.forEach(function(cb) {
+                                cb.disabled = false;
+                            });
+                        }
+                    });
+                });
+            }
+            
+            limitCheckboxes(svrhaCheckboxes, 2);
+            limitCheckboxes(copilotCheckboxes, 2);
+            
+            // Uslovni prikaz polja za unos drugih LLM-ova
+            const llmRadios = document.querySelectorAll('input[name="zna_druge_llm"]');
+            const llmInput = document.getElementById('navedi_llm');
+            const llmInputGroup = llmInput.parentElement;
+            
+            llmRadios.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'da') {
+                        llmInputGroup.style.display = 'block';
+                        llmInput.required = true;
+                    } else {
+                        llmInputGroup.style.display = 'none';
+                        llmInput.required = false;
+                        llmInput.value = '';
+                    }
+                });
+            });
+            
+            // Inicijalno sakri polje za LLM-ove
+            llmInputGroup.style.display = 'none';
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>Anketa o korišćenju ChatGPT-a i Copilot-a</h1>
+        <h1>Kratka anketa o upotrebi generativnih AI alata</h1>
         <div class="author-info">
             <strong>Autor:</strong> Lazar Davidović
         </div>
@@ -260,129 +310,376 @@
                 <h3>Osnovne informacije</h3>
                 
                 <div class="form-group">
-                    <label for="godina_studija">Godina studija:</label>
-                    <select id="godina_studija" name="godina_studija" required>
+                    <label for="godina_rodjenja">Godina rođenja:</label>
+                    <select id="godina_rodjenja" name="godina_rodjenja" required>
                         <option value="">Izaberite...</option>
-                        <option value="1">Prva godina</option>
-                        <option value="2">Druga godina</option>
-                        <option value="3">Treća godina</option>
-                        <option value="4">Četvrta godina</option>
-                        <option value="master">Master studije</option>
-                        <option value="doktorske">Doktorske studije</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="ranije">Ranije od 1990</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="drzava">Država:</label>
+                    <select id="drzava" name="drzava" required>
+                        <option value="">Izaberite...</option>
+                        <option value="srbija">Srbija</option>
+                        <option value="bosna_i_hercegovina">Bosna i Hercegovina</option>
+                        <option value="crna_gora">Crna Gora</option>
+                        <option value="severna_makedonija">Severna Makedonija</option>
+                        <option value="hrvatska">Hrvatska</option>
+                        <option value="slovenija">Slovenija</option>
+                        <option value="albanija">Albanija</option>
+                        <option value="bugarska">Bugarska</option>
+                        <option value="rumunija">Rumunija</option>
+                        <option value="nemacka">Nemačka</option>
+                        <option value="austrija">Austrija</option>
+                        <option value="madjarska">Mađarska</option>
                         <option value="ostalo">Ostalo</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="smer">Smer/Oblast (opciono):</label>
-                    <input type="text" id="smer" name="smer" placeholder="npr. Informatika, Elektrotehnika, Ekonomija...">
+                    <label for="strucna_sprema">Stručna sprema:</label>
+                    <select id="strucna_sprema" name="strucna_sprema" required>
+                        <option value="">Izaberite...</option>
+                        <option value="osnovna">Osnovna škola</option>
+                        <option value="srednja">Srednja škola</option>
+                        <option value="visa">Viša škola</option>
+                        <option value="visoka">Visoka škola/Fakultet</option>
+                        <option value="master">Master</option>
+                        <option value="doktorat">Doktorat</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li ste u radnom odnosu?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="radni_da" name="radni_odnos" value="da" required>
+                            <label for="radni_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="radni_ne" name="radni_odnos" value="ne" required>
+                            <label for="radni_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="grana_oblast">Grana/Oblast kojom se bavite:</label>
+                    <select id="grana_oblast" name="grana_oblast">
+                        <option value="">Izaberite...</option>
+                        <option value="informatika">Informatika/IT</option>
+                        <option value="elektrotehnika">Elektrotehnika</option>
+                        <option value="masinstvo">Mašinstvo</option>
+                        <option value="gradjevina">Građevina</option>
+                        <option value="ekonomija">Ekonomija</option>
+                        <option value="pravo">Pravo</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="obrazovanje">Obrazovanje</option>
+                        <option value="dizajn">Dizajn</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="trgovina">Trgovina</option>
+                        <option value="usluge">Usluge</option>
+                        <option value="student">Student</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="godine_staza">Godine radnog staža:</label>
+                    <select id="godine_staza" name="godine_staza">
+                        <option value="">Izaberite...</option>
+                        <option value="0">0 (bez radnog iskustva)</option>
+                        <option value="1-2">1-2 godine</option>
+                        <option value="3-5">3-5 godina</option>
+                        <option value="6-10">6-10 godina</option>
+                        <option value="11-15">11-15 godina</option>
+                        <option value="16-20">16-20 godina</option>
+                        <option value="20+">Više od 20 godina</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="institucija">Institucija u kojoj radite:</label>
+                    <input type="text" id="institucija" name="institucija" placeholder="Naziv kompanije, fakulteta, organizacije...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="uza_oblast">Uža oblast u kojoj radite:</label>
+                    <input type="text" id="uza_oblast" name="uza_oblast" placeholder="Web development, DevOps, Finansije, Mehanička konstrukcija...">
                 </div>
             </div>
             
             <div class="section">
-                <h3>ChatGPT</h3>
+                <h3>Profesionalne veštine i alati</h3>
                 
                 <div class="form-group">
-                    <label>Da li koristite ChatGPT?</label>
+                    <label>Da li koristite programska okruženja (Visual Studio, IntelliJ, PyCharm, itd.)?</label>
                     <div class="radio-group">
                         <div class="radio-option">
-                            <input type="radio" id="chatgpt_da" name="koristi_chatgpt" value="da" required>
-                            <label for="chatgpt_da">Da</label>
+                            <input type="radio" id="prog_okruzenja_1" name="programska_okruzenja" value="1" required>
+                            <label for="prog_okruzenja_1">1 (nikada)</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="chatgpt_ne" name="koristi_chatgpt" value="ne" required>
-                            <label for="chatgpt_ne">Ne</label>
+                            <input type="radio" id="prog_okruzenja_2" name="programska_okruzenja" value="2" required>
+                            <label for="prog_okruzenja_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_3" name="programska_okruzenja" value="3" required>
+                            <label for="prog_okruzenja_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_4" name="programska_okruzenja" value="4" required>
+                            <label for="prog_okruzenja_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_5" name="programska_okruzenja" value="5" required>
+                            <label for="prog_okruzenja_5">5 (stalno)</label>
                         </div>
                     </div>
                 </div>
+                
+                <div class="form-group">
+                    <label>Da li koristite programske jezike?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_1" name="programski_jezici" value="1" required>
+                            <label for="prog_jezici_1">1 (nikada)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_2" name="programski_jezici" value="2" required>
+                            <label for="prog_jezici_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_3" name="programski_jezici" value="3" required>
+                            <label for="prog_jezici_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_4" name="programski_jezici" value="4" required>
+                            <label for="prog_jezici_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_5" name="programski_jezici" value="5" required>
+                            <label for="prog_jezici_5">5 (stalno)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li se bavite pisanjem i distribucijom softvera?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="softver_1" name="pisanje_softvera" value="1" required>
+                            <label for="softver_1">1 (nikada)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_2" name="pisanje_softvera" value="2" required>
+                            <label for="softver_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_3" name="pisanje_softvera" value="3" required>
+                            <label for="softver_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_4" name="pisanje_softvera" value="4" required>
+                            <label for="softver_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_5" name="pisanje_softvera" value="5" required>
+                            <label for="softver_5">5 (stalno)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li koristite generativne AI alate?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_1" name="generativni_ai" value="1" required>
+                            <label for="ai_alati_1">1 (nikada)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_2" name="generativni_ai" value="2" required>
+                            <label for="ai_alati_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_3" name="generativni_ai" value="3" required>
+                            <label for="ai_alati_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_4" name="generativni_ai" value="4" required>
+                            <label for="ai_alati_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_5" name="generativni_ai" value="5" required>
+                            <label for="ai_alati_5">5 (stalno)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Znanje o AI alatima</h3>
+                
+                <div class="form-group">
+                    <label>Da li ste čuli za ChatGPT?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_chatgpt_da" name="cuo_chatgpt" value="da" required>
+                            <label for="cuo_chatgpt_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_chatgpt_ne" name="cuo_chatgpt" value="ne" required>
+                            <label for="cuo_chatgpt_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li ste čuli za GitHub Copilot?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_copilot_da" name="cuo_copilot" value="da" required>
+                            <label for="cuo_copilot_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_copilot_ne" name="cuo_copilot" value="ne" required>
+                            <label for="cuo_copilot_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li možete da navedete neke druge LLM-ove?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="drugi_llm_da" name="zna_druge_llm" value="da" required>
+                            <label for="drugi_llm_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="drugi_llm_ne" name="zna_druge_llm" value="ne" required>
+                            <label for="drugi_llm_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="navedi_llm">Ako da, navedite koje LLM-ove znate:</label>
+                    <input type="text" id="navedi_llm" name="navedi_llm" placeholder="npr. Claude, Bard, LLaMA, Gemini...">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Korišćenje AI alata</h3>
                 
                 <div class="form-group">
                     <label for="chatgpt_cesto">Koliko često koristite ChatGPT?</label>
-                    <select id="chatgpt_cesto" name="chatgpt_cesto">
+                    <select id="chatgpt_cesto" name="chatgpt_cesto" required>
                         <option value="">Izaberite...</option>
+                        <option value="nikada">Nikada</option>
+                        <option value="mesecno">Mesečno</option>
+                        <option value="nedeljno">Nedeljno</option>
                         <option value="dnevno">Dnevno</option>
-                        <option value="nedeljno">Nekoliko puta nedeljno</option>
-                        <option value="mesecno">Nekoliko puta mesečno</option>
-                        <option value="retko">Retko</option>
-                        <option value="ne_koristim">Ne koristim</option>
+                        <option value="svakih_par_sati">Na svakih par sati</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="chatgpt_svrha">U koje svrhe koristite ChatGPT? (možete navesti više)</label>
-                    <textarea id="chatgpt_svrha" name="chatgpt_svrha" placeholder="npr. objašnjavanje koncepata, pomoć pri rešavanju zadataka, pisanje koda..."></textarea>
+                    <label for="copilot_cesto">Koliko često koristite GitHub Copilot?</label>
+                    <select id="copilot_cesto" name="copilot_cesto" required>
+                        <option value="">Izaberite...</option>
+                        <option value="nikada">Nikada</option>
+                        <option value="mesecno">Mesečno</option>
+                        <option value="nedeljno">Nedeljno</option>
+                        <option value="dnevno">Dnevno</option>
+                        <option value="svakih_par_sati">Na svakih par sati</option>
+                    </select>
                 </div>
-            </div>
-            
-            <div class="section">
-                <h3>GitHub Copilot</h3>
                 
                 <div class="form-group">
-                    <label>Da li koristite GitHub Copilot?</label>
-                    <div class="radio-group">
+                    <label>Da li generativne AI alate koristite za: (odaberite dva odgovora)</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
                         <div class="radio-option">
-                            <input type="radio" id="copilot_da" name="koristi_copilot" value="da" required>
-                            <label for="copilot_da">Da</label>
+                            <input type="checkbox" id="svrha_ucenje" name="svrha_koriscenja" value="ucenje">
+                            <label for="svrha_ucenje">Učenje</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="copilot_ne" name="koristi_copilot" value="ne" required>
-                            <label for="copilot_ne">Ne</label>
+                            <input type="checkbox" id="svrha_istrazivanje" name="svrha_koriscenja" value="istrazivanje">
+                            <label for="svrha_istrazivanje">Istraživanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_kodiranje" name="svrha_koriscenja" value="kodiranje">
+                            <label for="svrha_kodiranje">Kodiranje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_debagovanje" name="svrha_koriscenja" value="debagovanje">
+                            <label for="svrha_debagovanje">Debagovanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_prevodjenje" name="svrha_koriscenja" value="prevodjenje">
+                            <label for="svrha_prevodjenje">Prevođenje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_pisanje" name="svrha_koriscenja" value="pisanje">
+                            <label for="svrha_pisanje">Pisanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_administracija" name="svrha_koriscenja" value="administracija">
+                            <label for="svrha_administracija">Administracija</label>
                         </div>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="copilot_cesto">Koliko često koristite Copilot?</label>
-                    <select id="copilot_cesto" name="copilot_cesto">
-                        <option value="">Izaberite...</option>
-                        <option value="dnevno">Dnevno</option>
-                        <option value="nedeljno">Nekoliko puta nedeljno</option>
-                        <option value="mesecno">Nekoliko puta mesečno</option>
-                        <option value="retko">Retko</option>
-                        <option value="ne_koristim">Ne koristim</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="copilot_svrha">U koje svrhe koristite Copilot? (možete navesti više)</label>
-                    <textarea id="copilot_svrha" name="copilot_svrha" placeholder="npr. autocomplete koda, generisanje funkcija, refaktorisanje..."></textarea>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h3>Opšta pitanja</h3>
-                
-                <div class="form-group">
-                    <label for="uticaj_na_ucenje">Kako AI alati utiču na vaš proces učenja?</label>
-                    <textarea id="uticaj_na_ucenje" name="uticaj_na_ucenje" placeholder="Opišite pozitivne ili negativne uticaje..." required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="prednosti">Koje su najveće prednosti korišćenja AI alata?</label>
-                    <textarea id="prednosti" name="prednosti" placeholder="Navedite glavne prednosti..."></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="nedostaci">Koje su najveće mane ili rizici korišćenja AI alata?</label>
-                    <textarea id="nedostaci" name="nedostaci" placeholder="Navedite glavne nedostatke ili brige..."></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label>Da li biste preporučili korišćenje AI alata drugim studentima?</label>
-                    <div class="radio-group">
+                    <label>Da li GitHub Copilot najčešće koristite za: (odaberite dva odgovora)</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
                         <div class="radio-option">
-                            <input type="radio" id="preporuka_da" name="preporuka_drugim" value="da" required>
-                            <label for="preporuka_da">Da</label>
+                            <input type="checkbox" id="copilot_skelet" name="copilot_svrha" value="skelet">
+                            <label for="copilot_skelet">Skelet koda</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="preporuka_ne" name="preporuka_drugim" value="ne" required>
-                            <label for="preporuka_ne">Ne</label>
+                            <input type="checkbox" id="copilot_boilerplate" name="copilot_svrha" value="boilerplate">
+                            <label for="copilot_boilerplate">Boilerplate kod</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="preporuka_mozda" name="preporuka_drugim" value="mozda" required>
-                            <label for="preporuka_mozda">Možda</label>
+                            <input type="checkbox" id="copilot_testove" name="copilot_svrha" value="testove">
+                            <label for="copilot_testove">Testove</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="copilot_refaktorisanje" name="copilot_svrha" value="refaktorisanje">
+                            <label for="copilot_refaktorisanje">Refaktorisanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="copilot_dokumentaciju" name="copilot_svrha" value="dokumentaciju">
+                            <label for="copilot_dokumentaciju">Dokumentaciju</label>
                         </div>
                     </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="copilot_licence">Da li koristite GitHub Copilot za proveru licenci?</label>
+                    <select id="copilot_licence" name="copilot_licence" required>
+                        <option value="">Izaberite...</option>
+                        <option value="nikad">Nikad</option>
+                        <option value="ponekad">Ponekad</option>
+                        <option value="uvek">Uvek</option>
+                    </select>
                 </div>
             </div>
             

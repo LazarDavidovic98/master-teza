@@ -334,52 +334,173 @@ def generate_analytics_data():
     
     # === ANKETA ANALYTICS ===
     if not survey_df.empty:
-        # 1. AI korišćenje po godinama studija
         plt.style.use('seaborn-v0_8')
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
         
-        # ChatGPT korišćenje
-        chatgpt_by_year = survey_df.groupby('godina_studija')['koristi_chatgpt'].apply(
-            lambda x: (x == 'da').sum() / len(x) * 100
-        )
-        chatgpt_by_year.plot(kind='bar', ax=ax1, color='#10a37f', alpha=0.8)
-        ax1.set_title('ChatGPT Korišćenje po Godinama Studija', fontsize=14, fontweight='bold')
-        ax1.set_ylabel('Procenat korisnika (%)')
-        ax1.set_xlabel('Godina studija')
+        # 1. Demografski podaci - Godine rođenja i države
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
+        
+        # Godine rođenja distribucija
+        birth_years = survey_df['godina_rodjenja'].value_counts().sort_index()
+        birth_years.plot(kind='bar', ax=ax1, color='#3498db', alpha=0.8)
+        ax1.set_title('Distribucija Godine Rođenja', fontsize=14, fontweight='bold')
+        ax1.set_ylabel('Broj učesnika')
+        ax1.set_xlabel('Godina rođenja')
         ax1.tick_params(axis='x', rotation=45)
         
-        # Copilot korišćenje
-        copilot_by_year = survey_df.groupby('godina_studija')['koristi_copilot'].apply(
-            lambda x: (x == 'da').sum() / len(x) * 100
-        )
-        copilot_by_year.plot(kind='bar', ax=ax2, color='#0969da', alpha=0.8)
-        ax2.set_title('Copilot Korišćenje po Godinama Studija', fontsize=14, fontweight='bold')
-        ax2.set_ylabel('Procenat korisnika (%)')
-        ax2.set_xlabel('Godina studija')
-        ax2.tick_params(axis='x', rotation=45)
+        # Top 10 država
+        countries = survey_df['drzava'].value_counts().head(10)
+        countries.plot(kind='barh', ax=ax2, color='#e74c3c', alpha=0.8)
+        ax2.set_title('Top 10 Država Učesnika', fontsize=14, fontweight='bold')
+        ax2.set_xlabel('Broj učesnika')
         
         plt.tight_layout()
         analytics['survey_charts'].append({
-            'title': 'AI Korišćenje po Godinama Studija',
+            'title': 'Demografski Profil Učesnika',
             'image': create_matplotlib_chart(fig)
         })
         
-        # 2. Učestalost korišćenja - pie chart
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
+        # 2. Obrazovanje i zaposlenje
+        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 12))
+        
+        # Stručna sprema
+        education = survey_df['strucna_sprema'].value_counts()
+        colors1 = ['#9b59b6', '#3498db', '#2ecc71', '#f39c12', '#e74c3c', '#34495e']
+        ax1.pie(education.values, labels=education.index, autopct='%1.1f%%', 
+                colors=colors1[:len(education)], startangle=90)
+        ax1.set_title('Stručna Sprema', fontsize=14, fontweight='bold')
+        
+        # Radni status
+        work_status = survey_df['radni_odnos'].value_counts()
+        colors2 = ['#2ecc71', '#e74c3c']
+        ax2.pie(work_status.values, labels=work_status.index, autopct='%1.1f%%',
+                colors=colors2, startangle=90)
+        ax2.set_title('Status Zaposlenja', fontsize=14, fontweight='bold')
+        
+        # Oblast rada
+        work_areas = survey_df['grana_oblast'].value_counts().head(8)
+        work_areas.plot(kind='bar', ax=ax3, color='#16a085', alpha=0.8)
+        ax3.set_title('Oblasti Rada (Top 8)', fontsize=14, fontweight='bold')
+        ax3.set_ylabel('Broj učesnika')
+        ax3.tick_params(axis='x', rotation=45)
+        
+        # Godine radnog staža
+        experience = survey_df['godine_staza'].value_counts()
+        experience.plot(kind='bar', ax=ax4, color='#d35400', alpha=0.8)
+        ax4.set_title('Godine Radnog Staža', fontsize=14, fontweight='bold')
+        ax4.set_ylabel('Broj učesnika')
+        ax4.tick_params(axis='x', rotation=45)
+        
+        plt.tight_layout()
+        analytics['survey_charts'].append({
+            'title': 'Profil Obrazovanja i Zaposlenja',
+            'image': create_matplotlib_chart(fig)
+        })
+        
+        # 3. Tehnička ekspertiza (skala 1-5)
+        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 12))
+        
+        # Programska okruženja
+        prog_env = survey_df['programska_okruzenja'].value_counts().sort_index()
+        prog_env.plot(kind='bar', ax=ax1, color='#8e44ad', alpha=0.8)
+        ax1.set_title('Korišćenje Programskih Okruženja', fontsize=14, fontweight='bold')
+        ax1.set_ylabel('Broj učesnika')
+        ax1.set_xlabel('Ocena (1=nikada, 5=stalno)')
+        
+        # Programski jezici
+        prog_lang = survey_df['programski_jezici'].value_counts().sort_index()
+        prog_lang.plot(kind='bar', ax=ax2, color='#27ae60', alpha=0.8)
+        ax2.set_title('Korišćenje Programskih Jezika', fontsize=14, fontweight='bold')
+        ax2.set_ylabel('Broj učesnika')
+        ax2.set_xlabel('Ocena (1=nikada, 5=stalno)')
+        
+        # Pisanje softvera
+        software_dev = survey_df['pisanje_softvera'].value_counts().sort_index()
+        software_dev.plot(kind='bar', ax=ax3, color='#f39c12', alpha=0.8)
+        ax3.set_title('Pisanje i Distribucija Softvera', fontsize=14, fontweight='bold')
+        ax3.set_ylabel('Broj učesnika')
+        ax3.set_xlabel('Ocena (1=nikada, 5=stalno)')
+        
+        # Generativni AI
+        ai_usage = survey_df['generativni_ai'].value_counts().sort_index()
+        ai_usage.plot(kind='bar', ax=ax4, color='#e67e22', alpha=0.8)
+        ax4.set_title('Korišćenje Generativnih AI Alata', fontsize=14, fontweight='bold')
+        ax4.set_ylabel('Broj učesnika')
+        ax4.set_xlabel('Ocena (1=nikada, 5=stalno)')
+        
+        plt.tight_layout()
+        analytics['survey_charts'].append({
+            'title': 'Tehnička Ekspertiza Učesnika',
+            'image': create_matplotlib_chart(fig)
+        })
+        
+        # 4. AI Znanje i Svesnost
+        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 10))
+        
+        # ChatGPT svesnost
+        chatgpt_aware = survey_df['cuo_chatgpt'].value_counts()
+        colors = ['#2ecc71', '#e74c3c']
+        ax1.pie(chatgpt_aware.values, labels=chatgpt_aware.index, autopct='%1.1f%%',
+                colors=colors, startangle=90)
+        ax1.set_title('Svesnost o ChatGPT', fontsize=14, fontweight='bold')
+        
+        # GitHub Copilot svesnost
+        copilot_aware = survey_df['cuo_copilot'].value_counts()
+        ax2.pie(copilot_aware.values, labels=copilot_aware.index, autopct='%1.1f%%',
+                colors=colors, startangle=90)
+        ax2.set_title('Svesnost o GitHub Copilot', fontsize=14, fontweight='bold')
+        
+        # Znanje drugih LLM-ova
+        other_llm = survey_df['zna_druge_llm'].value_counts()
+        ax3.pie(other_llm.values, labels=other_llm.index, autopct='%1.1f%%',
+                colors=colors, startangle=90)
+        ax3.set_title('Znanje Drugih LLM-ova', fontsize=14, fontweight='bold')
+        
+        # Najčešći drugi LLM-ovi
+        other_llm_mentioned = survey_df[survey_df['navedi_llm'].notna() & 
+                                      (survey_df['navedi_llm'] != '')]['navedi_llm']
+        if not other_llm_mentioned.empty:
+            # Razdeli po zarezima i prebrojaj
+            all_llms = []
+            for llm_list in other_llm_mentioned:
+                llms = [llm.strip().lower() for llm in llm_list.split(',')]
+                all_llms.extend(llms)
+            llm_counts = Counter(all_llms)
+            top_llms = dict(llm_counts.most_common(10))
+            
+            if top_llms:
+                ax4.barh(list(top_llms.keys()), list(top_llms.values()), color='#9b59b6', alpha=0.8)
+                ax4.set_title('Najčešće Spomenuti Drugi LLM-ovi', fontsize=14, fontweight='bold')
+                ax4.set_xlabel('Broj spomenutih')
+        else:
+            ax4.text(0.5, 0.5, 'Nema podataka\no drugim LLM-ovima', 
+                    ha='center', va='center', transform=ax4.transAxes, fontsize=12)
+            ax4.set_title('Najčešće Spomenuti Drugi LLM-ovi', fontsize=14, fontweight='bold')
+        
+        plt.tight_layout()
+        analytics['survey_charts'].append({
+            'title': 'AI Znanje i Svesnost',
+            'image': create_matplotlib_chart(fig)
+        })
+        
+        # 5. Učestalost korišćenja AI alata
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
         
         # ChatGPT učestalost
         chatgpt_freq = survey_df['chatgpt_cesto'].value_counts()
-        colors1 = ['#10a37f', '#20c997', '#6f42c1', '#fd7e14', '#dc3545']
-        ax1.pie(chatgpt_freq.values, labels=chatgpt_freq.index, autopct='%1.1f%%', 
-                colors=colors1, startangle=90)
+        order = ['nikada', 'mesecno', 'nedeljno', 'dnevno', 'svakih_par_sati']
+        chatgpt_freq = chatgpt_freq.reindex([x for x in order if x in chatgpt_freq.index], fill_value=0)
+        colors1 = ['#e74c3c', '#f39c12', '#f1c40f', '#2ecc71', '#27ae60']
+        ax1.pie(chatgpt_freq.values, labels=chatgpt_freq.index, autopct='%1.1f%%',
+                colors=colors1[:len(chatgpt_freq)], startangle=90)
         ax1.set_title('ChatGPT - Učestalost Korišćenja', fontsize=14, fontweight='bold')
         
         # Copilot učestalost
         copilot_freq = survey_df['copilot_cesto'].value_counts()
-        colors2 = ['#0969da', '#20c997', '#6f42c1', '#fd7e14', '#dc3545']
+        copilot_freq = copilot_freq.reindex([x for x in order if x in copilot_freq.index], fill_value=0)
+        colors2 = ['#e74c3c', '#f39c12', '#f1c40f', '#3498db', '#2980b9']
         ax2.pie(copilot_freq.values, labels=copilot_freq.index, autopct='%1.1f%%',
-                colors=colors2, startangle=90)
-        ax2.set_title('Copilot - Učestalost Korišćenja', fontsize=14, fontweight='bold')
+                colors=colors2[:len(copilot_freq)], startangle=90)
+        ax2.set_title('GitHub Copilot - Učestalost Korišćenja', fontsize=14, fontweight='bold')
         
         plt.tight_layout()
         analytics['survey_charts'].append({
@@ -387,28 +508,64 @@ def generate_analytics_data():
             'image': create_matplotlib_chart(fig)
         })
         
-        # 3. Preporuke drugim studentima
+        # 6. Svrhe korišćenja AI alata
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8))
+        
+        # Svrhe korišćenja generativnih AI alata
+        purposes = []
+        for purpose_list in survey_df['svrha_koriscenja'].dropna():
+            if purpose_list:
+                purposes.extend([p.strip() for p in purpose_list.split(',')])
+        purpose_counts = Counter(purposes)
+        if purpose_counts:
+            top_purposes = dict(purpose_counts.most_common(7))
+            ax1.barh(list(top_purposes.keys()), list(top_purposes.values()), 
+                    color='#3498db', alpha=0.8)
+            ax1.set_title('Svrhe Korišćenja AI Alata', fontsize=14, fontweight='bold')
+            ax1.set_xlabel('Broj odabira')
+        
+        # GitHub Copilot specifične svrhe
+        copilot_purposes = []
+        for purpose_list in survey_df['copilot_svrha'].dropna():
+            if purpose_list:
+                copilot_purposes.extend([p.strip() for p in purpose_list.split(',')])
+        copilot_purpose_counts = Counter(copilot_purposes)
+        if copilot_purpose_counts:
+            top_copilot_purposes = dict(copilot_purpose_counts.most_common(5))
+            ax2.barh(list(top_copilot_purposes.keys()), list(top_copilot_purposes.values()),
+                    color='#9b59b6', alpha=0.8)
+            ax2.set_title('GitHub Copilot Specifične Svrhe', fontsize=14, fontweight='bold')
+            ax2.set_xlabel('Broj odabira')
+        
+        plt.tight_layout()
+        analytics['survey_charts'].append({
+            'title': 'Analiza Svrha Korišćenja',
+            'image': create_matplotlib_chart(fig)
+        })
+        
+        # 7. Licencne provjere sa Copilot
         fig, ax = plt.subplots(1, 1, figsize=(10, 6))
-        preporuke = survey_df['preporuka_drugim'].value_counts()
-        colors = ['#28a745', '#dc3545', '#ffc107']
-        bars = ax.bar(preporuke.index, preporuke.values, color=colors, alpha=0.8)
-        ax.set_title('Da li biste preporučili AI alate drugim studentima?', fontsize=14, fontweight='bold')
+        license_check = survey_df['copilot_licence'].value_counts()
+        colors = ['#e74c3c', '#f39c12', '#2ecc71']
+        bars = ax.bar(license_check.index, license_check.values, 
+                     color=colors[:len(license_check)], alpha=0.8)
+        ax.set_title('GitHub Copilot - Provera Licenci', fontsize=14, fontweight='bold')
         ax.set_ylabel('Broj odgovora')
-        ax.set_xlabel('Odgovor')
+        ax.set_xlabel('Učestalost')
         
         # Dodaj tekstove na stubove
         for bar in bars:
             height = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width()/2., height + 0.1,
+            ax.text(bar.get_x() + bar.get_width()/2., height + 0.5,
                    f'{int(height)}', ha='center', va='bottom', fontweight='bold')
         
         plt.tight_layout()
         analytics['survey_charts'].append({
-            'title': 'Preporuke AI Alata Drugim Studentima',
+            'title': 'Provera Licenci sa GitHub Copilot',
             'image': create_matplotlib_chart(fig)
         })
     
-    # === AI COMPARISON ANALYTICS ===
+    # === AI COMPARISON ANALYTICS (zadržano iz prethodne verzije) ===
     if not ai_comparison_df.empty:
         # 4. Poređenje prosečnih ocena
         fig, ax = plt.subplots(1, 1, figsize=(12, 6))
@@ -425,26 +582,27 @@ def generate_analytics_data():
                 chatgpt_scores.append(ai_comparison_df[chatgpt_col].mean())
                 copilot_scores.append(ai_comparison_df[copilot_col].mean())
         
-        x = range(len(categories))
-        width = 0.35
-        
-        ax.bar([i - width/2 for i in x], chatgpt_scores, width, label='ChatGPT', 
-               color='#10a37f', alpha=0.8)
-        ax.bar([i + width/2 for i in x], copilot_scores, width, label='Copilot', 
-               color='#0969da', alpha=0.8)
-        
-        ax.set_title('Prosečne Ocene: ChatGPT vs Copilot', fontsize=14, fontweight='bold')
-        ax.set_ylabel('Prosečna ocena (1-5)')
-        ax.set_xlabel('Kategorija')
-        ax.set_xticks(x)
-        ax.set_xticklabels(['Kvalitet', 'Tačnost', 'Korisnost'])
-        ax.legend()
-        ax.set_ylim(0, 5)
-        
-        # Dodaj vrednosti na stubove
-        for i, (c_score, co_score) in enumerate(zip(chatgpt_scores, copilot_scores)):
-            ax.text(i - width/2, c_score + 0.05, f'{c_score:.2f}', ha='center', fontweight='bold')
-            ax.text(i + width/2, co_score + 0.05, f'{co_score:.2f}', ha='center', fontweight='bold')
+        if chatgpt_scores and copilot_scores:
+            x = range(len(categories))
+            width = 0.35
+            
+            ax.bar([i - width/2 for i in x], chatgpt_scores, width, label='ChatGPT', 
+                   color='#10a37f', alpha=0.8)
+            ax.bar([i + width/2 for i in x], copilot_scores, width, label='Copilot', 
+                   color='#0969da', alpha=0.8)
+            
+            ax.set_title('Prosečne Ocene: ChatGPT vs Copilot', fontsize=14, fontweight='bold')
+            ax.set_ylabel('Prosečna ocena (1-5)')
+            ax.set_xlabel('Kategorija')
+            ax.set_xticks(x)
+            ax.set_xticklabels(['Kvalitet', 'Tačnost', 'Korisnost'])
+            ax.legend()
+            ax.set_ylim(0, 5)
+            
+            # Dodaj vrednosti na stubove
+            for i, (c_score, co_score) in enumerate(zip(chatgpt_scores, copilot_scores)):
+                ax.text(i - width/2, c_score + 0.05, f'{c_score:.2f}', ha='center', fontweight='bold')
+                ax.text(i + width/2, co_score + 0.05, f'{co_score:.2f}', ha='center', fontweight='bold')
         
         plt.tight_layout()
         analytics['ai_comparison_charts'].append({
@@ -453,22 +611,24 @@ def generate_analytics_data():
         })
         
         # 5. Preferencije korisnika
-        fig, ax = plt.subplots(1, 1, figsize=(10, 6))
-        preferences = ai_comparison_df['overall_preference'].value_counts()
-        colors = ['#10a37f', '#0969da', '#ffc107']
-        wedges, texts, autotexts = ax.pie(preferences.values, labels=preferences.index, 
-                                         autopct='%1.1f%%', colors=colors, startangle=90)
-        ax.set_title('Ukupne Preferencije: ChatGPT vs Copilot', fontsize=14, fontweight='bold')
-        
-        plt.tight_layout()
-        analytics['ai_comparison_charts'].append({
-            'title': 'Korisničke Preferencije AI Alata',
-            'image': create_matplotlib_chart(fig)
-        })
+        if 'overall_preference' in ai_comparison_df.columns:
+            fig, ax = plt.subplots(1, 1, figsize=(10, 6))
+            preferences = ai_comparison_df['overall_preference'].value_counts()
+            colors = ['#10a37f', '#0969da', '#ffc107']
+            wedges, texts, autotexts = ax.pie(preferences.values, labels=preferences.index, 
+                                             autopct='%1.1f%%', colors=colors, startangle=90)
+            ax.set_title('Ukupne Preferencije: ChatGPT vs Copilot', fontsize=14, fontweight='bold')
+            
+            plt.tight_layout()
+            analytics['ai_comparison_charts'].append({
+                'title': 'Korisničke Preferencije AI Alata',
+                'image': create_matplotlib_chart(fig)
+            })
     
     # === PLOTLY INTERAKTIVNI GRAFIKONI ===
     if not survey_df.empty:
         # Timeline analiza
+        survey_df['timestamp'] = pd.to_datetime(survey_df['timestamp'])
         daily_responses = survey_df.groupby(survey_df['timestamp'].dt.date).size().reset_index()
         daily_responses.columns = ['date', 'responses']
         
@@ -486,9 +646,12 @@ def generate_analytics_data():
     analytics['summary_stats'] = {
         'total_survey_responses': len(survey_df) if not survey_df.empty else 0,
         'total_ai_comparisons': len(ai_comparison_df) if not ai_comparison_df.empty else 0,
-        'chatgpt_users': (survey_df['koristi_chatgpt'] == 'da').sum() if not survey_df.empty else 0,
-        'copilot_users': (survey_df['koristi_copilot'] == 'da').sum() if not survey_df.empty else 0,
-        'recommendation_rate': (survey_df['preporuka_drugim'] == 'da').sum() / len(survey_df) * 100 if not survey_df.empty else 0
+        'chatgpt_aware': (survey_df['cuo_chatgpt'] == 'da').sum() if not survey_df.empty else 0,
+        'copilot_aware': (survey_df['cuo_copilot'] == 'da').sum() if not survey_df.empty else 0,
+        'avg_programming_env': survey_df['programska_okruzenja'].astype(float).mean() if not survey_df.empty and survey_df['programska_okruzenja'].notna().any() else 0,
+        'avg_programming_lang': survey_df['programski_jezici'].astype(float).mean() if not survey_df.empty and survey_df['programski_jezici'].notna().any() else 0,
+        'avg_ai_usage': survey_df['generativni_ai'].astype(float).mean() if not survey_df.empty and survey_df['generativni_ai'].notna().any() else 0,
+        'employed_percentage': (survey_df['radni_odnos'] == 'da').sum() / len(survey_df) * 100 if not survey_df.empty else 0
     }
     
     return analytics
@@ -500,18 +663,27 @@ def init_csv_file():
             writer = csv.writer(file)
             writer.writerow([
                 'timestamp',
-                'godina_studija',
-                'smer',
-                'koristi_chatgpt',
+                'godina_rodjenja',
+                'drzava',
+                'strucna_sprema',
+                'radni_odnos',
+                'grana_oblast',
+                'godine_staza',
+                'institucija',
+                'uza_oblast',
+                'programska_okruzenja',
+                'programski_jezici',
+                'pisanje_softvera',
+                'generativni_ai',
+                'cuo_chatgpt',
+                'cuo_copilot',
+                'zna_druge_llm',
+                'navedi_llm',
                 'chatgpt_cesto',
-                'chatgpt_svrha',
-                'koristi_copilot',
                 'copilot_cesto',
+                'svrha_koriscenja',
                 'copilot_svrha',
-                'uticaj_na_ucenje',
-                'prednosti',
-                'nedostaci',
-                'preporuka_drugim'
+                'copilot_licence'
             ])
 
 @app.route('/')
@@ -526,18 +698,27 @@ def submit_survey():
         # Get form data
         data = {
             'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'godina_studija': request.form.get('godina_studija', ''),
-            'smer': request.form.get('smer', ''),
-            'koristi_chatgpt': request.form.get('koristi_chatgpt', ''),
+            'godina_rodjenja': request.form.get('godina_rodjenja', ''),
+            'drzava': request.form.get('drzava', ''),
+            'strucna_sprema': request.form.get('strucna_sprema', ''),
+            'radni_odnos': request.form.get('radni_odnos', ''),
+            'grana_oblast': request.form.get('grana_oblast', ''),
+            'godine_staza': request.form.get('godine_staza', ''),
+            'institucija': request.form.get('institucija', ''),
+            'uza_oblast': request.form.get('uza_oblast', ''),
+            'programska_okruzenja': request.form.get('programska_okruzenja', ''),
+            'programski_jezici': request.form.get('programski_jezici', ''),
+            'pisanje_softvera': request.form.get('pisanje_softvera', ''),
+            'generativni_ai': request.form.get('generativni_ai', ''),
+            'cuo_chatgpt': request.form.get('cuo_chatgpt', ''),
+            'cuo_copilot': request.form.get('cuo_copilot', ''),
+            'zna_druge_llm': request.form.get('zna_druge_llm', ''),
+            'navedi_llm': request.form.get('navedi_llm', ''),
             'chatgpt_cesto': request.form.get('chatgpt_cesto', ''),
-            'chatgpt_svrha': request.form.get('chatgpt_svrha', ''),
-            'koristi_copilot': request.form.get('koristi_copilot', ''),
             'copilot_cesto': request.form.get('copilot_cesto', ''),
-            'copilot_svrha': request.form.get('copilot_svrha', ''),
-            'uticaj_na_ucenje': request.form.get('uticaj_na_ucenje', ''),
-            'prednosti': request.form.get('prednosti', ''),
-            'nedostaci': request.form.get('nedostaci', ''),
-            'preporuka_drugim': request.form.get('preporuka_drugim', '')
+            'svrha_koriscenja': ','.join(request.form.getlist('svrha_koriscenja')),
+            'copilot_svrha': ','.join(request.form.getlist('copilot_svrha')),
+            'copilot_licence': request.form.get('copilot_licence', '')
         }
         
         # Save to CSV
@@ -545,18 +726,27 @@ def submit_survey():
             writer = csv.writer(file)
             writer.writerow([
                 data['timestamp'],
-                data['godina_studija'],
-                data['smer'],
-                data['koristi_chatgpt'],
+                data['godina_rodjenja'],
+                data['drzava'],
+                data['strucna_sprema'],
+                data['radni_odnos'],
+                data['grana_oblast'],
+                data['godine_staza'],
+                data['institucija'],
+                data['uza_oblast'],
+                data['programska_okruzenja'],
+                data['programski_jezici'],
+                data['pisanje_softvera'],
+                data['generativni_ai'],
+                data['cuo_chatgpt'],
+                data['cuo_copilot'],
+                data['zna_druge_llm'],
+                data['navedi_llm'],
                 data['chatgpt_cesto'],
-                data['chatgpt_svrha'],
-                data['koristi_copilot'],
                 data['copilot_cesto'],
+                data['svrha_koriscenja'],
                 data['copilot_svrha'],
-                data['uticaj_na_ucenje'],
-                data['prednosti'],
-                data['nedostaci'],
-                data['preporuka_drugim']
+                data['copilot_licence']
             ])
         
         flash('Hvala vam! Vaš odgovor je uspešno zabeležen.', 'success')
