@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa o korišćenju AI alata</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .author-info {
+            text-align: right;
+            margin-bottom: 30px;
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+        .author-info strong {
+            color: #2c3e50;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .radio-group, .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+        
+        .radio-option:hover, .checkbox-option:hover {
+            background-color: #f8f9fa;
+        }
+        
+        input[type="radio"], input[type="checkbox"] {
+            margin: 0;
+        }
+        
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+            margin-top: 30px;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .quiz-question {
+            background: #e8f4f8;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .quiz-correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .quiz-incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .conditional-field {
+            margin-left: 20px;
+            padding: 15px;
+            background: #f1f3f4;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+        
+        .flash-success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .flash-error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .navigation {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+            min-width: 140px;
+            justify-content: center;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-link.active {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            font-weight: 700;
+        }
+        
+        /* Hide admin links for regular users */
+        .admin-only {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .radio-group, .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-link {
+                width: 200px;
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+    <script>
+        // JavaScript for quiz functionality and conditional fields
+        document.addEventListener('DOMContentLoaded', function() {
+            // Quiz answers with correct options
+            const quizAnswers = {
+                'chatgpt_omni': 'GPT-40',
+                'copilot_task': 'Copilot Agents',
+                'copilot_chat': 'Copilot X',
+                'google_model': 'Gemini',
+                'gpt_realtime': 'GPT-40',
+                'codex_successor': 'Codex',
+                'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)',
+                'copilot_workspace': 'Copilot Workspace',
+                'anthropic_model': 'Claude',
+                'creativity_parameter': 'Temperature',
+                'transformer_basis': 'Transformeri',
+                'university_guidelines': 'MIT'
+            };
+            
+            // Handle quiz feedback
+            function handleQuizAnswer(questionName, selectedValue) {
+                const correctAnswer = quizAnswers[questionName];
+                const feedbackElement = document.getElementById(questionName + '_feedback');
+                
+                if (selectedValue === correctAnswer) {
+                    feedbackElement.textContent = '✅ Tačan odgovor!';
+                    feedbackElement.className = 'quiz-feedback quiz-correct';
+                } else if (selectedValue === 'ne_znam') {
+                    feedbackElement.textContent = '❓ Tačan odgovor je: ' + correctAnswer;
+                    feedbackElement.className = 'quiz-feedback quiz-correct';
+                } else {
+                    feedbackElement.textContent = '❌ Netačan odgovor. Tačan odgovor je: ' + correctAnswer;
+                    feedbackElement.className = 'quiz-feedback quiz-incorrect';
+                }
+                
+                feedbackElement.style.display = 'block';
+            }
+            
+            // Add event listeners for quiz questions
+            Object.keys(quizAnswers).forEach(questionName => {
+                const radioButtons = document.querySelectorAll('input[name="' + questionName + '"]');
+                radioButtons.forEach(radio => {
+                    radio.addEventListener('change', function() {
+                        if (this.checked) {
+                            handleQuizAnswer(questionName, this.value);
+                        }
+                    });
+                });
+            });
+            
+            // Handle conditional fields
+            const radniOdnosRadios = document.querySelectorAll('input[name="radni_odnos"]');
+            const institucijaField = document.getElementById('institucija_conditional');
+            
+            radniOdnosRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'da') {
+                        institucijaField.style.display = 'block';
+                        document.getElementById('institucija').required = true;
+                    } else {
+                        institucijaField.style.display = 'none';
+                        document.getElementById('institucija').required = false;
+                        document.getElementById('institucija').value = '';
+                    }
+                });
+            });
+            
+            // Handle "Ostalo" text inputs
+            const ostaloInputs = document.querySelectorAll('input[type="checkbox"][value*="ostalo"]');
+            ostaloInputs.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const textInput = document.getElementById(this.value + '_text');
+                    if (textInput) {
+                        if (this.checked) {
+                            textInput.style.display = 'block';
+                            textInput.required = true;
+                        } else {
+                            textInput.style.display = 'none';
+                            textInput.required = false;
+                            textInput.value = '';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Napredna anketa o korišćenju generativnih AI alata</h1>
+        <div class="author-info">
+            <strong>Autor:</strong> Lazar Davidović
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-container">
+                <a href="{{ url_for('index') }}" class="nav-link active">
+                    <span>📋</span> Anketa
+                </a>
+                <a href="{{ url_for('results') }}" class="nav-link admin-only">
+                    <span>📈</span> Rezultati
+                </a>
+                <a href="{{ url_for('compare_docs') }}" class="nav-link admin-only">
+                    <span>📄</span> README Poređenje
+                </a>
+                <a href="{{ url_for('ai_comparison') }}" class="nav-link admin-only">
+                    <span>⚡</span> AI Poređenje
+                </a>
+                <a href="{{ url_for('analytics') }}" class="nav-link admin-only">
+                    <span>📊</span> Analitika
+                </a>
+            </div>
+        </div>
+        
+        <div style="background: #e8f4f8; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 4px solid #3498db;">
+            <p><strong>Napomena:</strong> Ova anketa je potpuno anonimna. Vaši podaci se neće čuvati ni deliti sa trećim licima.</p>
+        </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="/submit">
+            <!-- 1. OSNOVNE INFORMACIJE -->
+            <div class="section">
+                <h3>1. Osnovne informacije</h3>
+                
+                <div class="form-group">
+                    <label for="godina_rodjenja">Godina rođenja:</label>
+                    <select id="godina_rodjenja" name="godina_rodjenja" required>
+                        <option value="">Izaberite...</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="ranije">Ranije od 1990</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="drzava">Država:</label>
+                    <select id="drzava" name="drzava" required>
+                        <option value="">Izaberite...</option>
+                        <option value="srbija">Srbija</option>
+                        <option value="bosna_i_hercegovina">Bosna i Hercegovina</option>
+                        <option value="crna_gora">Crna Gora</option>
+                        <option value="severna_makedonija">Severna Makedonija</option>
+                        <option value="hrvatska">Hrvatska</option>
+                        <option value="slovenija">Slovenija</option>
+                        <option value="albanija">Albanija</option>
+                        <option value="bugarska">Bugarska</option>
+                        <option value="rumunija">Rumunija</option>
+                        <option value="nemacka">Nemačka</option>
+                        <option value="austrija">Austrija</option>
+                        <option value="madjarska">Mađarska</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="strucna_sprema">Stručna sprema:</label>
+                    <select id="strucna_sprema" name="strucna_sprema" required>
+                        <option value="">Izaberite...</option>
+                        <option value="osnovna">Osnovna škola</option>
+                        <option value="srednja">Srednja škola</option>
+                        <option value="visa">Viša škola</option>
+                        <option value="visoka">Visoka škola/Fakultet</option>
+                        <option value="master">Master</option>
+                        <option value="doktorat">Doktorat</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li ste u radnom odnosu?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="radni_da" name="radni_odnos" value="da" required>
+                            <label for="radni_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="radni_ne" name="radni_odnos" value="ne" required>
+                            <label for="radni_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="grana_oblast">Grana/Oblast kojom se bavite:</label>
+                    <input type="text" id="grana_oblast" name="grana_oblast" list="oblasti_lista" placeholder="Unesite ili izaberite iz liste...">
+                    <datalist id="oblasti_lista">
+                        <option value="Informatika/IT">
+                        <option value="Elektrotehnika">
+                        <option value="Mašinstvo">
+                        <option value="Građevina">
+                        <option value="Ekonomija">
+                        <option value="Pravo">
+                        <option value="Medicina">
+                        <option value="Obrazovanje">
+                        <option value="Dizajn">
+                        <option value="Marketing">
+                        <option value="Trgovina">
+                        <option value="Usluge">
+                        <option value="Student">
+                        <option value="Prirodne nauke">
+                        <option value="Društvene nauke">
+                    </datalist>
+                </div>
+                
+                <div class="form-group">
+                    <label for="godine_staza">Godine radnog staža:</label>
+                    <select id="godine_staza" name="godine_staza">
+                        <option value="">Izaberite...</option>
+                        <option value="0">0 (bez radnog iskustva)</option>
+                        <option value="1-2">1-2 godine</option>
+                        <option value="3-5">3-5 godina</option>
+                        <option value="6-10">6-10 godina</option>
+                        <option value="11-15">11-15 godina</option>
+                        <option value="16-20">16-20 godina</option>
+                        <option value="20+">Više od 20 godina</option>
+                    </select>
+                </div>
+                
+                <div class="conditional-field" id="institucija_conditional">
+                    <div class="form-group">
+                        <label for="institucija">Institucija u kojoj radite:</label>
+                        <input type="text" id="institucija" name="institucija" list="institucije_lista" placeholder="Unesite ili izaberite iz liste...">
+                        <datalist id="institucije_lista">
+                            <option value="Univerzitet u Beogradu">
+                            <option value="Univerzitet u Novom Sadu">
+                            <option value="Univerzitet u Nišu">
+                            <option value="Microsoft">
+                            <option value="Google">
+                            <option value="Amazon">
+                            <option value="Meta">
+                            <option value="Apple">
+                            <option value="IBM">
+                            <option value="Oracle">
+                            <option value="SAP">
+                            <option value="Siemens">
+                            <option value="Comtrade">
+                            <option value="RT-RK">
+                            <option value="Nordeus">
+                        </datalist>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="uza_oblast">Uža oblast u kojoj radite:</label>
+                    <input type="text" id="uza_oblast" name="uza_oblast" list="uze_oblasti_lista" placeholder="Unesite ili izaberite iz liste...">
+                    <datalist id="uze_oblasti_lista">
+                        <option value="Web development">
+                        <option value="Mobile development">
+                        <option value="DevOps">
+                        <option value="Data Science">
+                        <option value="Machine Learning">
+                        <option value="Cybersecurity">
+                        <option value="Cloud Computing">
+                        <option value="Backend development">
+                        <option value="Frontend development">
+                        <option value="Full-stack development">
+                        <option value="Database Administration">
+                        <option value="Network Administration">
+                        <option value="Quality Assurance">
+                        <option value="Product Management">
+                        <option value="Project Management">
+                        <option value="Business Analysis">
+                    </datalist>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li se bavite pisanjem i distribucijom softvera?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="softver_da" name="pisanje_softvera" value="da" required>
+                            <label for="softver_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_ne" name="pisanje_softvera" value="ne" required>
+                            <label for="softver_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li ste upoznati sa pojmom "generativni AI alati"?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="generativni_ai_da" name="generativni_ai_poznavanje" value="da" required>
+                            <label for="generativni_ai_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="generativni_ai_ne" name="generativni_ai_poznavanje" value="ne" required>
+                            <label for="generativni_ai_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li koristite programske jezike?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="programski_jezici_da" name="programski_jezici" value="da" required>
+                            <label for="programski_jezici_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="programski_jezici_ne" name="programski_jezici" value="ne" required>
+                            <label for="programski_jezici_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li koristite programska okruženja (Visual Studio, IntelliJ, PyCharm, ...)?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="programska_okruzenja_da" name="programska_okruzenja" value="da" required>
+                            <label for="programska_okruzenja_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="programska_okruzenja_ne" name="programska_okruzenja" value="ne" required>
+                            <label for="programska_okruzenja_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        input[type="radio"] {
+            margin: 0;
+        }
+        
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+        
+        .navigation {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+            min-width: 140px;
+            justify-content: center;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-link.active {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-link {
+                width: 200px;
+                font-size: 13px;
+                padding: 10px 15px;
+            }
+        }
+        
+        .section {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+        
+        .flash-success {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .flash-error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+    <script>
+        // Ograniči izbor na maksimalno 2 checkbox-a za svrhu korišćenja AI alata
+        document.addEventListener('DOMContentLoaded', function() {
+            const svrhaCheckboxes = document.querySelectorAll('input[name="svrha_koriscenja"]');
+            const copilotCheckboxes = document.querySelectorAll('input[name="copilot_svrha"]');
+            
+            function limitCheckboxes(checkboxes, maxSelection) {
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.addEventListener('change', function() {
+                        const checkedBoxes = document.querySelectorAll('input[name="' + this.name + '"]:checked');
+                        if (checkedBoxes.length >= maxSelection) {
+                            checkboxes.forEach(function(cb) {
+                                if (!cb.checked) {
+                                    cb.disabled = true;
+                                }
+                            });
+                        } else {
+                            checkboxes.forEach(function(cb) {
+                                cb.disabled = false;
+                            });
+                        }
+                    });
+                });
+            }
+            
+            limitCheckboxes(svrhaCheckboxes, 2);
+            limitCheckboxes(copilotCheckboxes, 2);
+            
+            // Uslovni prikaz polja za unos drugih LLM-ova
+            const llmRadios = document.querySelectorAll('input[name="zna_druge_llm"]');
+            const llmInput = document.getElementById('navedi_llm');
+            const llmInputGroup = llmInput.parentElement;
+            
+            llmRadios.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'da') {
+                        llmInputGroup.style.display = 'block';
+                        llmInput.required = true;
+                    } else {
+                        llmInputGroup.style.display = 'none';
+                        llmInput.required = false;
+                        llmInput.value = '';
+                    }
+                });
+            });
+            
+            // Inicijalno sakri polje za LLM-ove
+            llmInputGroup.style.display = 'none';
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Kratka anketa o upotrebi generativnih AI alata</h1>
+        <div class="author-info">
+            <strong>Autor:</strong> Lazar Davidović
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-container">
+                <a href="{{ url_for('index') }}" class="nav-link active">
+                    <span>📋</span> Anketa
+                </a>
+                <a href="{{ url_for('results') }}" class="nav-link">
+                    <span>📈</span> Rezultati
+                </a>
+                <a href="{{ url_for('compare_docs') }}" class="nav-link">
+                    <span>📄</span> README Poređenje
+                </a>
+                <a href="{{ url_for('ai_comparison') }}" class="nav-link">
+                    <span>⚡</span> AI Poređenje
+                </a>
+                <a href="{{ url_for('analytics') }}" class="nav-link">
+                    <span>📊</span> Analitika
+                </a>
+            </div>
+        </div>
+        
+        <div style="background: #e8f4f8; padding: 15px; border-radius: 5px; margin-bottom: 20px; border-left: 4px solid #3498db;">
+            <p><strong>Napomena:</strong> Ova anketa je potpuno anonimna. Vaši podaci se neće čuvati ni deliti sa trećim licima.</p>
+            
+        </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="/submit">
+            <div class="section">
+                <h3>Osnovne informacije</h3>
+                
+                <div class="form-group">
+                    <label for="godina_rodjenja">Godina rođenja:</label>
+                    <select id="godina_rodjenja" name="godina_rodjenja" required>
+                        <option value="">Izaberite godinu rođenja: </option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <option value="1996">1996</option>
+                        <option value="1995">1995</option>
+                        <option value="1994">1994</option>
+                        <option value="1993">1993</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="ranije">Ranije od 1990</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="drzava">Država:</label>
+                    <select id="drzava" name="drzava" required>
+                        <option value="">Izaberite državu:</option>
+                        <option value="srbija">Srbija</option>
+                        <option value="bosna_i_hercegovina">Bosna i Hercegovina</option>
+                        <option value="crna_gora">Crna Gora</option>
+                        <option value="severna_makedonija">Severna Makedonija</option>
+                        <option value="hrvatska">Hrvatska</option>
+                        <option value="slovenija">Slovenija</option>
+                        <option value="albanija">Albanija</option>
+                        <option value="bugarska">Bugarska</option>
+                        <option value="rumunija">Rumunija</option>
+                        <option value="nemacka">Nemačka</option>
+                        <option value="austrija">Austrija</option>
+                        <option value="madjarska">Mađarska</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="strucna_sprema">Stručna sprema:</label>
+                    <select id="strucna_sprema" name="strucna_sprema" required>
+                        <option value="">Izaberite...</option>
+                        <option value="osnovna">Osnovna škola</option>
+                        <option value="srednja">Srednja škola</option>
+                        <option value="visa">Viša škola</option>
+                        <option value="visoka">Visoka škola/Fakultet</option>
+                        <option value="master">Master</option>
+                        <option value="doktorat">Doktorat</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li ste u radnom odnosu ?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="radni_da" name="radni_odnos" value="da" required>
+                            <label for="radni_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="radni_ne" name="radni_odnos" value="ne" required>
+                            <label for="radni_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="grana_oblast">Grana/Oblast kojom se bavite:</label>
+                    <select id="grana_oblast" name="grana_oblast">
+                        <option value="">Izaberite...</option>
+                        <option value="informatika">Informatika/IT</option>
+                        <option value="elektrotehnika">Elektrotehnika</option>
+                        <option value="masinstvo">Mašinstvo</option>
+                        <option value="gradjevina">Građevina</option>
+                        <option value="ekonomija">Ekonomija</option>
+                        <option value="pravo">Pravo</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="obrazovanje">Obrazovanje</option>
+                        <option value="dizajn">Dizajn</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="trgovina">Trgovina</option>
+                        <option value="usluge">Usluge</option>
+                        <option value="student">Student</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="godine_staza">Godine radnog staža:</label>
+                    <select id="godine_staza" name="godine_staza">
+                        <option value="">Izaberite...</option>
+                        <option value="0">0 (bez radnog iskustva)</option>
+                        <option value="1-2">1-2 godine</option>
+                        <option value="3-5">3-5 godina</option>
+                        <option value="6-10">6-10 godina</option>
+                        <option value="11-15">11-15 godina</option>
+                        <option value="16-20">16-20 godina</option>
+                        <option value="20+">Više od 20 godina</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="institucija">Institucija u kojoj radite:</label>
+                    <input type="text" id="institucija" name="institucija" placeholder="Naziv kompanije, fakulteta, organizacije...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="uza_oblast">Uža oblast u kojoj radite:</label>
+                    <input type="text" id="uza_oblast" name="uza_oblast" placeholder="Web development, DevOps, Finansije, Mehanička konstrukcija...">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Profesionalne veštine i alati</h3>
+                
+                <div class="form-group">
+                    <label>Da li koristite programska okruženja (Visual Studio, IntelliJ, PyCharm, itd.)?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_1" name="programska_okruzenja" value="1" required>
+                            <label for="prog_okruzenja_1">1 (nikada)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_2" name="programska_okruzenja" value="2" required>
+                            <label for="prog_okruzenja_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_3" name="programska_okruzenja" value="3" required>
+                            <label for="prog_okruzenja_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_4" name="programska_okruzenja" value="4" required>
+                            <label for="prog_okruzenja_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_okruzenja_5" name="programska_okruzenja" value="5" required>
+                            <label for="prog_okruzenja_5">5 (stalno)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li koristite programske jezike?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_1" name="programski_jezici" value="1" required>
+                            <label for="prog_jezici_1">1 (nikada)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_2" name="programski_jezici" value="2" required>
+                            <label for="prog_jezici_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_3" name="programski_jezici" value="3" required>
+                            <label for="prog_jezici_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_4" name="programski_jezici" value="4" required>
+                            <label for="prog_jezici_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="prog_jezici_5" name="programski_jezici" value="5" required>
+                            <label for="prog_jezici_5">5 (stalno)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li se bavite pisanjem i distribucijom softvera?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="softver_1" name="pisanje_softvera" value="1" required>
+                            <label for="softver_1">1 (nikada)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_2" name="pisanje_softvera" value="2" required>
+                            <label for="softver_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_3" name="pisanje_softvera" value="3" required>
+                            <label for="softver_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_4" name="pisanje_softvera" value="4" required>
+                            <label for="softver_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="softver_5" name="pisanje_softvera" value="5" required>
+                            <label for="softver_5">5 (stalno)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li koristite generativne AI alate?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_1" name="generativni_ai" value="1" required>
+                            <label for="ai_alati_1">1 (nikada)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_2" name="generativni_ai" value="2" required>
+                            <label for="ai_alati_2">2</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_3" name="generativni_ai" value="3" required>
+                            <label for="ai_alati_3">3</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_4" name="generativni_ai" value="4" required>
+                            <label for="ai_alati_4">4</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="ai_alati_5" name="generativni_ai" value="5" required>
+                            <label for="ai_alati_5">5 (stalno)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Znanje o AI alatima</h3>
+                
+                <div class="form-group">
+                    <label>Da li ste čuli za ChatGPT?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_chatgpt_da" name="cuo_chatgpt" value="da" required>
+                            <label for="cuo_chatgpt_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_chatgpt_ne" name="cuo_chatgpt" value="ne" required>
+                            <label for="cuo_chatgpt_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li ste čuli za GitHub Copilot?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_copilot_da" name="cuo_copilot" value="da" required>
+                            <label for="cuo_copilot_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="cuo_copilot_ne" name="cuo_copilot" value="ne" required>
+                            <label for="cuo_copilot_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li možete da navedete neke druge LLM-ove?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="drugi_llm_da" name="zna_druge_llm" value="da" required>
+                            <label for="drugi_llm_da">Da</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="drugi_llm_ne" name="zna_druge_llm" value="ne" required>
+                            <label for="drugi_llm_ne">Ne</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="navedi_llm">Ako da, navedite koje LLM-ove znate:</label>
+                    <input type="text" id="navedi_llm" name="navedi_llm" placeholder="npr. Claude, Bard, LLaMA, Gemini...">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Korišćenje AI alata</h3>
+                
+                <div class="form-group">
+                    <label for="chatgpt_cesto">Koliko često koristite ChatGPT?</label>
+                    <select id="chatgpt_cesto" name="chatgpt_cesto" required>
+                        <option value="">Izaberite...</option>
+                        <option value="nikada">Nikada</option>
+                        <option value="mesecno">Mesečno</option>
+                        <option value="nedeljno">Nedeljno</option>
+                        <option value="dnevno">Dnevno</option>
+                        <option value="svakih_par_sati">Na svakih par sati</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="copilot_cesto">Koliko često koristite GitHub Copilot?</label>
+                    <select id="copilot_cesto" name="copilot_cesto" required>
+                        <option value="">Izaberite...</option>
+                        <option value="nikada">Nikada</option>
+                        <option value="mesecno">Mesečno</option>
+                        <option value="nedeljno">Nedeljno</option>
+                        <option value="dnevno">Dnevno</option>
+                        <option value="svakih_par_sati">Na svakih par sati</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li generativne AI alate koristite za: (odaberite dva odgovora)</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_ucenje" name="svrha_koriscenja" value="ucenje">
+                            <label for="svrha_ucenje">Učenje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_istrazivanje" name="svrha_koriscenja" value="istrazivanje">
+                            <label for="svrha_istrazivanje">Istraživanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_kodiranje" name="svrha_koriscenja" value="kodiranje">
+                            <label for="svrha_kodiranje">Kodiranje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_debagovanje" name="svrha_koriscenja" value="debagovanje">
+                            <label for="svrha_debagovanje">Debagovanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_prevodjenje" name="svrha_koriscenja" value="prevodjenje">
+                            <label for="svrha_prevodjenje">Prevođenje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_pisanje" name="svrha_koriscenja" value="pisanje">
+                            <label for="svrha_pisanje">Pisanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="svrha_administracija" name="svrha_koriscenja" value="administracija">
+                            <label for="svrha_administracija">Administracija</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Da li GitHub Copilot najčešće koristite za: (odaberite dva odgovora)</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                        <div class="radio-option">
+                            <input type="checkbox" id="copilot_skelet" name="copilot_svrha" value="skelet">
+                            <label for="copilot_skelet">Skelet koda</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="copilot_boilerplate" name="copilot_svrha" value="boilerplate">
+                            <label for="copilot_boilerplate">Boilerplate kod</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="copilot_testove" name="copilot_svrha" value="testove">
+                            <label for="copilot_testove">Testove</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="copilot_refaktorisanje" name="copilot_svrha" value="refaktorisanje">
+                            <label for="copilot_refaktorisanje">Refaktorisanje</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="checkbox" id="copilot_dokumentaciju" name="copilot_svrha" value="dokumentaciju">
+                            <label for="copilot_dokumentaciju">Dokumentaciju</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="copilot_licence">Da li koristite GitHub Copilot za proveru licenci?</label>
+                    <select id="copilot_licence" name="copilot_licence" required>
+                        <option value="">Izaberite...</option>
+                        <option value="nikad">Nikad</option>
+                        <option value="ponekad">Ponekad</option>
+                        <option value="uvek">Uvek</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Pošalji odgovore</button>
+        </form>
+    </div>
+</body>
+</html>

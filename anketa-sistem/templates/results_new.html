@@ -237,35 +237,45 @@
             </div>
         </div>
         
-        <h2>Detaljni odgovori (Ukupno: {{ responses|length }})</h2>
+        <h2>Detaljni odgovori</h2>
         
         {% if responses %}
-            <p style="margin-bottom: 15px; color: #666;">Prikazano {{ responses|length }} odgovora od ukupno {{ responses|length }} učesnika</p>
-            
             <div class="table-container">
                 <table class="responses-table">
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Vreme</th>
-                            <th>Država</th>
+                            <th>Pol</th>
+                            <th>Godine</th>
                             <th>Obrazovanje</th>
                             <th>Zaposlen</th>
+                            <th>IT sektor</th>
+                            <th>Pozicija</th>
+                            <th>AI alati</th>
                             <th>AI poznavanje (1-10)</th>
-                            <th>Poznati AI alati</th>
+                            <th>ChatGPT</th>
+                            <th>Claude</th>
+                            <th>Gemini</th>
+                            <th>Copilot</th>
                             <th>Kviz rezultat</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for response in responses %}
                         <tr>
-                            <td>{{ loop.index }}</td>
-                            <td>{{ response.timestamp[:16] }}</td>
-                            <td>{{ response.drzava }}</td>
-                            <td class="text-cell">{{ response.strucna_sprema }}</td>
+                            <td>{{ response.timestamp }}</td>
+                            <td>{{ response.pol }}</td>
+                            <td>{{ response.godina_rodjenja }}</td>
+                            <td class="text-cell">{{ response.obrazovanje }}</td>
                             <td>{{ response.radni_odnos }}</td>
+                            <td>{{ response.it_sektor }}</td>
+                            <td class="text-cell">{{ response.pozicija if response.pozicija else 'N/A' }}</td>
+                            <td class="text-cell">{{ response.poznati_ai_alati }}</td>
                             <td>{{ response.generativni_ai_poznavanje }}</td>
-                            <td class="text-cell">{{ response.poznati_ai_alati[:50] }}{% if response.poznati_ai_alati|length > 50 %}...{% endif %}</td>
+                            <td>{{ response.chatgpt_iskustvo }}</td>
+                            <td>{{ response.claude_iskustvo }}</td>
+                            <td>{{ response.gemini_iskustvo }}</td>
+                            <td>{{ response.copilot_iskustvo }}</td>
                             <td>
                                 {% set quiz_fields = ['chatgpt_omni', 'copilot_task', 'copilot_chat', 'google_model', 'gpt_realtime', 'codex_successor', 'chatgpt_data_analysis', 'copilot_workspace', 'anthropic_model', 'creativity_parameter', 'transformer_basis', 'university_guidelines'] %}
                                 {% set correct_answers = {'chatgpt_omni': 'GPT-40', 'copilot_task': 'Copilot Workspace', 'copilot_chat': 'Copilot X', 'google_model': 'Gemini', 'gpt_realtime': 'GPT-40', 'codex_successor': 'GPT-3.5', 'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)', 'copilot_workspace': 'Copilot Workspace', 'anthropic_model': 'Claude', 'creativity_parameter': 'Temperature', 'transformer_basis': 'Transformeri', 'university_guidelines': 'Stanford'} %}

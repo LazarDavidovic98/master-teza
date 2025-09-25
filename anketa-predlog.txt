@@ -1,0 +1,286 @@
+Ipak, neka anketa izgleda ovako: 
+1. Osnovne informacije: 
+- godinu rodjenja (neka se bira iz liste kao i do sada)
+- drzava (neka se bira iz liste kao i do sada)
+- strucnu spremu (neka se bira iz liste kao i do sada)
+- da li ste u radnom odnosu ili ne (check box DA, NE)
+- granu/oblast kojom se bavite (neka se bira iz liste kao do sada ili neka se unese rucno, moze i /)
+- godine radnog staza (neka se bira iz liste kao do sada)
+- institucija u kojoj radite (neka se bira iz liste ili neka se doda rucno - na ovo pitanje treba odgovarati ako je ispitanik u radnom odnosu rekao DA)
+- uza oblast u kojoj radite (neka se bira iz liste ili neka se doda rucno)
+- da li se bavite pisanjem i distribucijom softvera ?
+- da li ste upoznati sa pojmom generativni AI alati ?
+- da li koristite programske jezike ?
+- da li koristite programska okruzenje poput Visual Studio, InteliJ, PyCharm, ...
+
+2. Osnovno poznavanje AI alata: 
+- Koje od sledećih AI alata poznajete (čuli ste za njih ili ih koristili)? (moze da se bira jedan ili vise odgovora)
+
+ChatGPT
+
+GitHub Copilot
+
+Google Gemini (ex Bard)
+
+Microsoft Copilot (Word/Excel/PowerPoint)
+
+MidJourney / Stable Diffusion
+
+Claude (Anthropic)
+
+Ostalo (navesti koje)
+
+- Da li ste nekada koristili AI alat u sledeće svrhe? (moze da se bira jedan ili vise odgovora)
+
+Pisanje teksta (eseja, mejlova, bloga)
+
+Pisanje koda
+
+Prevođenje jezika
+
+Analiza podataka (Excel, Python, SQL)
+
+Generisanje slika ili vizuala
+
+Pisanje akademskih radova
+
+Ostalo
+
+3. Tehnicko razumevanje: 
+- Koliko poznajete princip rada generativnih AI modela?
+
+Nimalo
+
+Površno (znam da koristi neuronske mreže)
+
+Umereno (znam šta su tokeni, treniranje na velikim korpusima)
+
+Detaljno (znam za arhitekture poput Transformer-a, attention mehanizam itd.)
+- Da li znate šta znači pojam prompt engineering?
+
+Da, koristim ga redovno
+
+Da, čuo sam ali ne praktikujem
+
+Ne
+
+- Koje od sledećih tehničkih aspekata AI alata razumete?
+
+Arhitektura Transformer modela
+
+Fine-tuning modela na sopstvenim podacima
+
+Razlika između LLM (Large Language Models) i VLM (Vision-Language Models)
+
+Upotreba API-ja za integraciju AI alata u aplikacije
+
+Koncepti kao što su bias, hallucination i alignment
+
+4. Bezbednost, etika i zakon: 
+- Koja pitanja smatrate najproblematičnijim kod AI alata?
+
+Privatnost podataka
+
+Autorska prava i plagijati
+
+Generisanje lažnih informacija
+
+Bezbednost koda generisanog od strane Copilota
+
+Zavisnost od AI alata u učenju i radu
+
+- Da li znate za pravne okvire/regulative vezane za AI?
+
+AI Act (EU)
+
+Uputstva univerziteta/institucija (MIT, Harvard, Cambridge)
+
+Epske tužbe (npr. protiv GitHub Copilot-a 2022)
+
+Ne poznajem
+
+5. Prakticna upotreba: 
+- Da li ste ikada proveravali da li AI alat:
+
+Generiše kod sa licencom (MIT, GPL, Apache)?
+
+Može da napravi SQL upit optimizovan za performanse?
+
+Može da reši matematički dokaz?
+
+Može da generiše podatke za analizu u CSV/JSON formatu?
+
+Može da se poveže sa API-jem (npr. Flask, Django, FastAPI)?
+
+- Da li znate koje metode evaluacije kvaliteta LLM izlaza postoje?
+
+BLEU, ROUGE, METEOR
+
+Jaccard i Cosine sličnost
+
+Human-in-the-loop evaluacija
+
+Ne znam ni jednu
+
+- Koliko ste upoznati sa ograničenjima AI alata?
+
+Ne razlikujem tačne i halucinirane odgovore
+
+Znam osnovna ograničenja (halucinacije, netačnost, zastarela baza)
+
+Znam i tehničke limite (npr. kontekstni prozor, token limit, temperature parametar)
+
+6. Razumevanje Arhitekture i osnova: 
+- Koje elemente arhitekture Transformer modela poznajete?
+
+Encoder
+
+Decoder
+
+Self-attention
+
+Positional encoding
+
+Layer normalization
+
+Ne poznajem ni jedan element
+
+- Koje tehnike se koriste prilikom treniranja velikih jezičkih modela?
+
+Masked language modeling
+
+Next-token prediction
+
+Reinforcement Learning with Human Feedback (RLHF)
+
+Fine-tuning na domen-specifičnim podacima
+
+Ne znam
+
+
+- Koje od sledećih koncepata poznajete i razumete? (cekirajte jedan odgovor)
+Agent 
+
+Task 
+
+Edit 
+
+Plan & Execute
+
+Ne poznajem ni jedan koncept
+
+QUIZZ pitanja: 
+
+Ova pitanja koja su oznacena kao tacna ne treba ispitivacu da budu prikazani u startu, vec nakon sto da odgovor moze da vidi da li je odgovorio tacno
+
+- Da li znate koja verzija ChatGPT modela je poznata i kao omni-modalni model ? (obavestiti ispitivaca da je pogresio ako ne klikne GPT-40 kao u kvizovima, samo taj odgovor je zelen ostali se zacrvene osim polja ne znam)
+GPT-3.5
+
+GPT-4
+
+GPT-4.1
+
+GPT-40 ✅
+
+GPT-5
+
+Ne znam 
+
+- Da li znate koja GitHub Copilot verzija se koristi za task-orijentisani rad ? (Copilot Agents je tacan odgvor, ostali su netacni)
+
+Copilot 2021 
+
+Copilot X 
+
+Copilot Workspace 
+
+Copilot Agents ✅
+
+- Da li znate koja GitHub Copilot verzija se koristi za integraciju sa chat funkcionalnostima i terminalom ? (Copilot X je tacan odgovor ostali su netacni)
+
+Copilot 2021 
+
+Copilot X ✅
+
+Copilot Workspace 
+
+Copilot Agents 
+
+- Koje od sledecih modela je razvio Google ? (tacan odgovor je Gemini, ostali su netacni)
+Claude 3 Opus
+
+Claude 3 Sonnet
+
+Claude 3.5 Sonnet
+
+Gemini ✅
+
+LLaMA 
+
+
+
+- Koji model ChatGPT-a je dobio nadogradnju na “real-time” multimodalne sposobnosti (tekst, slika, zvuk) u maju 2024?
+GPT-3.5
+GPT-4
+GPT-4.1
+GPT-40 ✅
+GPT-5
+Ne znam
+
+- Koji model je naslednik OpenAI Codex-a i stoji iza GitHub Copilot-a 2021?
+GPT-2
+GPT-3
+GPT-3.5
+Codex ✅
+GPT-4
+Ne znam
+
+- Kako se zove opcija ChatGPT-a koja omogućava naprednu analizu podataka (npr. upload CSV fajla i obrada u Python okruženju)?
+ChatGPT Editor
+ChatGPT Agent
+Advanced Data Analysis (Code Interpreter) ✅
+ChatGPT Task Runner
+Copilot Workspace
+Ne znam
+
+- Koja GitHub Copilot verzija je namenjena za planiranje i kreiranje celih projekata (workspace orijentacija)?
+Copilot 2021
+Copilot X
+Copilot Workspace ✅
+Copilot Agents
+Ne znam
+
+- Koji model je razvio Anthropic kao konkurenciju GPT-u?
+Claude ✅
+Gemini
+Codex
+LLaMA
+Ne znam
+
+- Koji parametar kod ChatGPT-a kontroliše “kreativnost” modela (slučajnost generisanih odgovora)?
+Learning rate
+Attention heads
+Batch size
+Temperature ✅
+Dropout
+Ne znam
+
+- Koja od sledećih tehnologija čini osnovu ChatGPT i Copilot modela?
+Recurrent Neural Networks (RNN)
+Support Vector Machines (SVM)
+Transformeri ✅
+Decision Trees
+K-means clustering
+Ne znam
+
+- Koji univerzitet je među prvima izdao smernice o korišćenju AI alata poput ChatGPT-a i GitHub Copilot-a?
+MIT ✅
+Oxford
+Sorbonne
+Stanford
+Univerzitet u Beogradu
+Ne znam
+
+
+Beleziti svaki odgovor ispitivaca pa cak i ove sa kviza, na osnovu ovako prikupljenih odgovora o ispitivacu promeniti analitiku, omoguciti da se analitika menja u 
+skladu sa tim odgovorima i jos dodatno, ispitivac moze da ima mogucnost da klikne samo na dugme o anketi, ostala dugmad moze samo vlasnik ankete koji drzi otvoren server

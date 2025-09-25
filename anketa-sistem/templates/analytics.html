@@ -343,6 +343,141 @@
             background: #fff3cd;
             color: #856404;
         }
+        
+        /* Quiz Analytics Styles */
+        .quiz-summary {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .quiz-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .quiz-stat {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            min-width: 150px;
+        }
+        .quiz-stat .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+        }
+        .quiz-stat .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 600;
+        }
+        .quiz-performance h4 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .quiz-questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .quiz-question-result {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .question-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+        .question-stats {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .correct-answers {
+            background: #d4edda;
+            color: #155724;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .accuracy-bar {
+            flex: 1;
+            margin-left: 15px;
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .accuracy-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+        .accuracy-text {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.75em;
+            font-weight: bold;
+            color: #333;
+        }
+        .quiz-insights h4 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .score-distribution {
+            display: grid;
+            gap: 10px;
+        }
+        .score-band {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .score-band.excellent {
+            background: #d4edda;
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+        .score-band.good {
+            background: #d1ecf1;
+            color: #0c5460;
+            border-left: 4px solid #17a2b8;
+        }
+        .score-band.average {
+            background: #fff3cd;
+            color: #856404;
+            border-left: 4px solid #ffc107;
+        }
+        .score-band.poor {
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+        
         @media (max-width: 768px) {
             .charts-grid {
                 grid-template-columns: 1fr;
@@ -443,6 +578,76 @@
                     <div class="zoom-hint">🔍 Kliknite za povećanje</div>
                 </div>
                 {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Quiz Analytics Section -->
+        {% if analytics.quiz_analysis and analytics.quiz_analysis.results %}
+        <div class="section">
+            <div class="section-header">
+                <h2>🧠 Analiza Kviz Rezultata</h2>
+                <p>Detaljnu analizu znanja o AI alata - kviz performanse</p>
+            </div>
+            
+            <div class="quiz-summary">
+                <div class="quiz-stats">
+                    <div class="quiz-stat">
+                        <div class="stat-number">{{ "%.1f"|format(analytics.quiz_analysis.avg_score) }}%</div>
+                        <div class="stat-label">Prosečan Kviz Skor</div>
+                    </div>
+                    <div class="quiz-stat">
+                        <div class="stat-number">{{ analytics.quiz_analysis.scores|length }}</div>
+                        <div class="stat-label">Učesnika Odgovorilo</div>
+                    </div>
+                    <div class="quiz-stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Ukupno Pitanja</div>
+                    </div>
+                </div>
+                
+                <div class="quiz-performance">
+                    <h4>🎯 Performanse po Pitanjima:</h4>
+                    <div class="quiz-questions-grid">
+                        {% for question, result in analytics.quiz_analysis.results.items() %}
+                        <div class="quiz-question-result">
+                            <div class="question-name">{{ question.replace('_', ' ').title() }}</div>
+                            <div class="question-stats">
+                                <div class="correct-answers">✅ {{ result.correct }}/{{ result.total }}</div>
+                                <div class="accuracy-bar">
+                                    <div class="accuracy-fill" style="width: {{ result.accuracy }}%"></div>
+                                    <span class="accuracy-text">{{ "%.1f"|format(result.accuracy) }}%</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                {% if analytics.quiz_analysis.scores %}
+                <div class="quiz-insights">
+                    <h4>📊 Uvidi i Analiza:</h4>
+                    
+                    <div class="score-distribution">
+                        <div class="score-band excellent">
+                            <span class="band-label">Odličan (80-100%)</span>
+                            <span class="band-count">{{ analytics.quiz_analysis.excellent_count }} učesnika</span>
+                        </div>
+                        <div class="score-band good">
+                            <span class="band-label">Dobar (60-79%)</span>
+                            <span class="band-count">{{ analytics.quiz_analysis.good_count }} učesnika</span>
+                        </div>
+                        <div class="score-band average">
+                            <span class="band-label">Prosečan (40-59%)</span>
+                            <span class="band-count">{{ analytics.quiz_analysis.average_count }} učesnika</span>
+                        </div>
+                        <div class="score-band poor">
+                            <span class="band-label">Slab (0-39%)</span>
+                            <span class="band-count">{{ analytics.quiz_analysis.poor_count }} učesnika</span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
         {% endif %}
