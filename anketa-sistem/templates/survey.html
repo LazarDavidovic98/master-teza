@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Napredna anketa o korišćenju AI alata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,51 +13,66 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             padding: 20px;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         h1 {
-            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-align: center;
-            margin-bottom: 10px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+            font-weight: 700;
+            padding-bottom: 15px;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) 1;
         }
         
         .author-info {
             text-align: right;
-            margin-bottom: 30px;
-            color: #7f8c8d;
+            margin-bottom: 35px;
+            color: #718096;
             font-style: italic;
-            font-size: 14px;
+            font-size: 15px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
         }
         
         .author-info strong {
-            color: #2c3e50;
+            color: #2d3748;
+            font-weight: 600;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         
         label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 15px;
         }
         
         input[type="text"],
@@ -64,11 +80,13 @@
         select,
         textarea {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
+            padding: 14px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
             font-size: 16px;
-            transition: border-color 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #fff;
+            font-family: inherit;
         }
         
         input[type="text"]:focus,
@@ -76,101 +94,193 @@
         select:focus,
         textarea:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-1px);
         }
         
         .radio-group, .checkbox-group {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
         }
         
         .radio-option, .checkbox-option {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            transition: background-color 0.2s;
+            gap: 10px;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            background: #fff;
         }
         
         .radio-option:hover, .checkbox-option:hover {
-            background-color: #f8f9fa;
+            background: #f7fafc;
+            border-color: #cbd5e0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .radio-option:has(input:checked), .checkbox-option:has(input:checked) {
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            border-color: #667eea;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
         }
         
         input[type="radio"], input[type="checkbox"] {
             margin: 0;
+            transform: scale(1.2);
+            accent-color: #667eea;
         }
         
         .submit-btn {
-            background: #3498db;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px 40px;
+            padding: 18px 40px;
             border: none;
-            border-radius: 6px;
+            border-radius: 16px;
             font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             width: 100%;
-            transition: background 0.3s;
-            margin-top: 30px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-top: 40px;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
         }
         
         .submit-btn:hover {
-            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
         }
         
+        /* Sekcije sa različitim pastelarnim bojama */
         .section {
-            background: #f8f9fa;
-            padding: 25px;
-            margin: 25px 0;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 16px;
+            border: 2px solid transparent;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Demografski podaci - svetlo plava */
+        .section.demographics {
+            background: linear-gradient(135deg, #e6f3ff 0%, #cce7ff 100%);
+            border-left: 6px solid #3182ce;
+        }
+        
+        /* Profesionalni podaci - svetlo zelena */
+        .section.professional {
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+            border-left: 6px solid #38a169;
+        }
+        
+        /* AI poznavanje - svetlo ljubičasta */
+        .section.ai-knowledge {
+            background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%);
+            border-left: 6px solid #805ad5;
+        }
+        
+        /* Tehnička pitanja - svetlo narandžasta */
+        .section.technical {
+            background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%);
+            border-left: 6px solid #dd6b20;
+        }
+        
+        /* Quiz - svetlo roza */
+        .section.quiz {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border-left: 6px solid #e53e3e;
+            position: relative;
+        }
+        
+        .section.quiz::before {
+            content: "🎯";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            opacity: 0.3;
         }
         
         .section h3 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.3em;
+            color: #2d3748;
+            margin-bottom: 24px;
+            font-size: 1.4em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
         
+        /* Ikonice za sekcije */
+        .section.demographics h3::before { content: "👤"; }
+        .section.professional h3::before { content: "💼"; }
+        .section.ai-knowledge h3::before { content: "🤖"; }
+        .section.technical h3::before { content: "⚙️"; }
+        .section.quiz h3::before { content: "📝"; }
+        
         .conditional-field {
-            margin-left: 20px;
-            padding: 15px;
-            background: #f1f3f4;
-            border-radius: 6px;
-            margin-top: 10px;
+            margin-left: 24px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            margin-top: 16px;
             display: none;
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
         
         .flash-messages {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         
         .flash-success {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid #c3e6cb;
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+            color: #2f855a;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid #9ae6b4;
+            font-weight: 500;
         }
         
         .flash-error {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid #f5c6cb;
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            color: #c53030;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid #fc8181;
+            font-weight: 500;
         }
         
         .navigation {
             text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin: 40px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
         
         .nav-container {
@@ -178,7 +288,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 18px;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -188,16 +298,16 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
-            padding: 12px 20px;
+            padding: 14px 22px;
             background: rgba(255,255,255,0.1);
             border: 2px solid rgba(255,255,255,0.2);
-            border-radius: 30px;
-            transition: all 0.3s ease;
+            border-radius: 25px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             gap: 8px;
-            backdrop-filter: blur(10px);
-            min-width: 140px;
+            backdrop-filter: blur(20px);
+            min-width: 150px;
             justify-content: center;
         }
         
@@ -205,11 +315,11 @@
             background: rgba(255,255,255,0.25);
             border-color: rgba(255,255,255,0.4);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
         
         .nav-link.active {
-            background: rgba(255,255,255,0.3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-color: rgba(255,255,255,0.5);
             font-weight: 700;
         }
@@ -218,63 +328,277 @@
             display: none;
         }
         
-        /* Quiz-specific styles */
+        /* Quiz-specific styles - poboljšan dizajn */
         .quiz-question {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(229, 62, 62, 0.1);
+            border: 1px solid rgba(229, 62, 62, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .quiz-question:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(229, 62, 62, 0.15);
         }
 
         .quiz-question h4 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 16px;
-            line-height: 1.4;
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 17px;
+            line-height: 1.5;
+            font-weight: 600;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .quiz-question h4::before {
+            content: "🤔";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+        }
+
+        .quiz-question .radio-group {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .quiz-question .radio-option {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #fed7d7;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .quiz-question .radio-option:hover {
+            background: rgba(229, 62, 62, 0.05);
+            border-color: #e53e3e;
+        }
+
+        .quiz-question .radio-option:has(input:checked) {
+            background: linear-gradient(135deg, rgba(229, 62, 62, 0.1), rgba(229, 62, 62, 0.05));
+            border-color: #e53e3e;
+            box-shadow: 0 4px 16px rgba(229, 62, 62, 0.2);
+            transform: scale(1.02);
         }
 
         .quiz-feedback {
-            margin-top: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: bold;
+            margin-top: 15px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: 600;
             display: none;
-            animation: fadeIn 0.3s ease-in;
+            animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 4px solid;
         }
 
         .quiz-feedback.correct {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+            color: #2f855a;
+            border-left-color: #38a169;
+            box-shadow: 0 4px 16px rgba(56, 161, 105, 0.2);
         }
 
         .quiz-feedback.incorrect {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            color: #c53030;
+            border-left-color: #e53e3e;
+            box-shadow: 0 4px 16px rgba(229, 62, 62, 0.2);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes slideInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
         }
         
+        /* Progress indicator */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 0%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 1000;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Section animations */
+        .section {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+        .section:nth-child(7) { animation-delay: 0.7s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Floating labels */
+        .form-group.focused label {
+            transform: translateY(-5px);
+            font-size: 14px;
+            color: #667eea;
+        }
+        
+        /* Enhanced form focus states */
+        .form-group {
+            position: relative;
+        }
+        
+        .form-group input:focus + label,
+        .form-group select:focus + label,
+        .form-group textarea:focus + label {
+            color: #667eea;
+        }
+        
+        /* Quiz completion indicator */
+        .quiz-question.completed {
+            border-color: #38a169;
+            background: linear-gradient(135deg, rgba(56, 161, 105, 0.05), rgba(56, 161, 105, 0.02));
+        }
+        
+        .completion-check {
+            animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+        
+        /* Enhanced hover effects */
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Loading animation for submit button */
+        .submit-btn.loading {
+            position: relative;
+            color: transparent;
+        }
+        
+        .submit-btn.loading::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Responsive design */
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 25px;
+                border-radius: 16px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
             .radio-group, .checkbox-group {
                 grid-template-columns: 1fr;
             }
             
+            .quiz-question .radio-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 20px;
+                margin: 20px 0;
+            }
+            
             .nav-container {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
             }
             
             .nav-link {
-                width: 200px;
+                width: 220px;
                 font-size: 13px;
-                padding: 10px 15px;
+                padding: 12px 18px;
             }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
     <div class="container">
         <h1>Napredna anketa o korišćenju generativnih AI alata</h1>
         <div class="author-info">
@@ -317,7 +641,7 @@
         
         <form method="POST" action="/submit">
             <!-- 1. OSNOVNE INFORMACIJE -->
-            <div class="section">
+            <div class="section demographics">
                 <h3>1. Osnovne informacije</h3>
                 
                 <div class="form-group">
@@ -532,7 +856,7 @@
             </div>
             
             <!-- 2. OSNOVNO POZNAVANJE AI ALATA -->
-            <div class="section">
+            <div class="section ai-knowledge">
                 <h3>2. Osnovno poznavanje AI alata</h3>
                 
                 <div class="form-group">
@@ -607,7 +931,7 @@
             </div>
             
             <!-- 3. TEHNIČKO RAZUMEVANJE -->
-            <div class="section">
+            <div class="section technical">
                 <h3>3. Tehničko razumevanje</h3>
                 
                 <div class="form-group">
@@ -663,7 +987,7 @@
             </div>
             
             <!-- 4. BEZBEDNOST, ETIKA I ZAKON -->
-            <div class="section">
+            <div class="section professional">
                 <h3>4. Bezbednost, etika i zakon</h3>
                 
                 <div class="form-group">
@@ -716,7 +1040,7 @@
             </div>
             
             <!-- 5. PRAKTIČNA UPOTREBA -->
-            <div class="section">
+            <div class="section professional">
                 <h3>5. Praktična upotreba</h3>
                 
                 <div class="form-group">
@@ -779,7 +1103,7 @@
             </div>
             
             <!-- 6. RAZUMEVANJE ARHITEKTURE I OSNOVA -->
-            <div class="section">
+            <div class="section technical">
                 <h3>6. Razumevanje arhitekture i osnova</h3>
                 
                 <div class="form-group">
@@ -852,7 +1176,7 @@
             </div>
             
             <!-- KVIZ PITANJA -->
-            <div class="section">
+            <div class="section quiz">
                 <h3>🧠 Kviz - Test znanja o AI alatima</h3>
                 <p style="margin-bottom: 20px; color: #666; font-style: italic;">
                     Sledećih pitanja su kviz pitanja. Odgovorite po najboljem znanju - rezultati neće uticati na validnost vaše ankete.
@@ -1252,11 +1576,11 @@
             
             // Quiz validation functionality
             const quizAnswers = {
-                'chatgpt_omni': 'GPT-40',
+                'chatgpt_omni': 'GPT-4',
                 'copilot_task': 'Copilot Workspace',
                 'copilot_chat': 'Copilot X',
                 'google_model': 'Gemini',
-                'gpt_realtime': 'GPT-40',
+                'gpt_realtime': 'GPT-4',
                 'codex_successor': 'GPT-3.5',
                 'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)',
                 'copilot_workspace': 'Copilot Workspace',
@@ -1293,6 +1617,124 @@
                         }
                     });
                 });
+            });
+            
+            // Progress bar functionality
+            function updateProgress() {
+                const sections = document.querySelectorAll('.section');
+                const totalSections = sections.length;
+                let completedSections = 0;
+                
+                sections.forEach(section => {
+                    const inputs = section.querySelectorAll('input[required], select[required], textarea[required]');
+                    let sectionComplete = true;
+                    
+                    inputs.forEach(input => {
+                        if (input.type === 'radio') {
+                            const radioGroup = section.querySelectorAll(`input[name="${input.name}"]`);
+                            const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+                            if (!isChecked) sectionComplete = false;
+                        } else if (input.type === 'checkbox') {
+                            // For checkbox groups, check if at least one is checked
+                            const checkboxGroup = section.querySelectorAll(`input[name="${input.name}"]`);
+                            const isChecked = Array.from(checkboxGroup).some(checkbox => checkbox.checked);
+                            if (!isChecked && input.required) sectionComplete = false;
+                        } else if (!input.value.trim()) {
+                            sectionComplete = false;
+                        }
+                    });
+                    
+                    if (sectionComplete) completedSections++;
+                });
+                
+                const progress = (completedSections / totalSections) * 100;
+                document.getElementById('progressBar').style.width = progress + '%';
+            }
+            
+            // Add event listeners to all form inputs for progress tracking
+            document.querySelectorAll('input, select, textarea').forEach(element => {
+                element.addEventListener('change', updateProgress);
+                element.addEventListener('input', updateProgress);
+            });
+            
+            // Smooth scrolling to sections
+            function scrollToSection(sectionClass) {
+                const section = document.querySelector(`.section.${sectionClass}`);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            
+            // Add click effects to radio/checkbox options
+            document.querySelectorAll('.radio-option, .checkbox-option').forEach(option => {
+                option.addEventListener('click', function(e) {
+                    if (e.target.tagName !== 'INPUT') {
+                        const input = this.querySelector('input');
+                        if (input) {
+                            if (input.type === 'radio') {
+                                input.checked = true;
+                            } else if (input.type === 'checkbox') {
+                                input.checked = !input.checked;
+                            }
+                            input.dispatchEvent(new Event('change'));
+                        }
+                    }
+                });
+            });
+            
+            // Add floating labels effect
+            document.querySelectorAll('input[type="text"], input[type="email"], textarea').forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', function() {
+                    if (!this.value.trim()) {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+            });
+            
+            // Quiz enhancements
+            document.querySelectorAll('.quiz-question').forEach((question, index) => {
+                // Add question numbers with animation delay
+                question.style.animationDelay = `${index * 0.1}s`;
+                
+                // Add completion indicator
+                const inputs = question.querySelectorAll('input[type="radio"]');
+                inputs.forEach(input => {
+                    input.addEventListener('change', function() {
+                        question.classList.add('completed');
+                        // Add a subtle completion indicator
+                        if (!question.querySelector('.completion-check')) {
+                            const check = document.createElement('span');
+                            check.className = 'completion-check';
+                            check.textContent = '✓';
+                            check.style.cssText = `
+                                position: absolute;
+                                top: 10px;
+                                right: 50px;
+                                color: #38a169;
+                                font-weight: bold;
+                                font-size: 18px;
+                                opacity: 0.7;
+                            `;
+                            question.appendChild(check);
+                        }
+                    });
+                });
+            });
+            
+            // Initial progress update
+            setTimeout(updateProgress, 100);
+            
+            // Enhanced form submission with loading state
+            const form = document.querySelector('form');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            form.addEventListener('submit', function(e) {
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
             });
             
             // Admin access control (hide admin buttons for regular users)

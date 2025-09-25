@@ -462,11 +462,11 @@ def generate_analytics_data():
     ]
     
     correct_answers = {
-        'chatgpt_omni': 'GPT-40',
+        'chatgpt_omni': 'GPT-4',
         'copilot_task': 'Copilot Workspace',
         'copilot_chat': 'Copilot X',
         'google_model': 'Gemini',
-        'gpt_realtime': 'GPT-40',
+        'gpt_realtime': 'GPT-4',
         'codex_successor': 'GPT-3.5',
         'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)',
         'copilot_workspace': 'Copilot Workspace',
@@ -797,11 +797,11 @@ def results():
         ]
         
         correct_answers = {
-            'chatgpt_omni': 'GPT-40',
+            'chatgpt_omni': 'GPT-4',
             'copilot_task': 'Copilot Workspace',
             'copilot_chat': 'Copilot X',
             'google_model': 'Gemini',
-            'gpt_realtime': 'GPT-40',
+            'gpt_realtime': 'GPT-4',
             'codex_successor': 'GPT-3.5',
             'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)',
             'copilot_workspace': 'Copilot Workspace',

@@ -268,7 +268,7 @@
                             <td class="text-cell">{{ response.poznati_ai_alati[:50] }}{% if response.poznati_ai_alati|length > 50 %}...{% endif %}</td>
                             <td>
                                 {% set quiz_fields = ['chatgpt_omni', 'copilot_task', 'copilot_chat', 'google_model', 'gpt_realtime', 'codex_successor', 'chatgpt_data_analysis', 'copilot_workspace', 'anthropic_model', 'creativity_parameter', 'transformer_basis', 'university_guidelines'] %}
-                                {% set correct_answers = {'chatgpt_omni': 'GPT-40', 'copilot_task': 'Copilot Workspace', 'copilot_chat': 'Copilot X', 'google_model': 'Gemini', 'gpt_realtime': 'GPT-40', 'codex_successor': 'GPT-3.5', 'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)', 'copilot_workspace': 'Copilot Workspace', 'anthropic_model': 'Claude', 'creativity_parameter': 'Temperature', 'transformer_basis': 'Transformeri', 'university_guidelines': 'Stanford'} %}
+                                {% set correct_answers = {'chatgpt_omni': 'GPT-4', 'copilot_task': 'Copilot Workspace', 'copilot_chat': 'Copilot X', 'google_model': 'Gemini', 'gpt_realtime': 'GPT-4', 'codex_successor': 'GPT-3.5', 'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)', 'copilot_workspace': 'Copilot Workspace', 'anthropic_model': 'Claude', 'creativity_parameter': 'Temperature', 'transformer_basis': 'Transformeri', 'university_guidelines': 'Stanford'} %}
                                 {% set correct_count = 0 %}
                                 {% set total_answered = 0 %}
                                 {% for field in quiz_fields %}
