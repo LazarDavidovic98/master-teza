@@ -506,12 +506,6 @@
                 <a href="{{ url_for('results') }}" class="nav-link">
                     <span>📈</span> Rezultati
                 </a>
-                <a href="{{ url_for('compare_docs') }}" class="nav-link">
-                    <span>📄</span> README Poređenje
-                </a>
-                <a href="{{ url_for('ai_comparison') }}" class="nav-link">
-                    <span>⚡</span> AI Poređenje
-                </a>
                 <a href="{{ url_for('analytics') }}" class="nav-link active">
                     <span>📊</span> Analitika
                 </a>
@@ -524,11 +518,6 @@
                 <div class="stat-number">{{ analytics.summary_stats.total_survey_responses }}</div>
                 <div class="stat-label">Ukupno Anketa</div>
                 <div class="stat-description">Popunjenih anketa o AI korišćenju</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">{{ analytics.summary_stats.total_ai_comparisons }}</div>
-                <div class="stat-label">AI Poređenja</div>
-                <div class="stat-description">ChatGPT vs Copilot testova</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">{{ analytics.summary_stats.chatgpt_aware }}</div>
@@ -603,7 +592,7 @@
                     <div class="quiz-stat">
                         <div class="stat-number">12</div>
                         <div class="stat-label">Ukupno Pitanja</div>
-                    </div>
+                    </div>    
                 </div>
                 
                 <div class="quiz-performance">
@@ -653,25 +642,6 @@
         {% endif %}
 
         <!-- AI Comparison Analytics Section -->
-        {% if analytics.ai_comparison_charts %}
-        <div class="section">
-            <div class="section-header">
-                <h2>⚡ Analiza AI Poređenja</h2>
-                <p>Komparativna analiza performansi ChatGPT-a vs Copilot-a</p>
-            </div>
-            
-            <div class="charts-grid">
-                {% for chart in analytics.ai_comparison_charts %}
-                <div class="chart-container">
-                    <div class="chart-title">{{ chart.title }}</div>
-                    <img src="data:image/png;base64,{{ chart.image }}" alt="{{ chart.title }}" class="chart-image">
-                    <div class="zoom-hint">🔍 Kliknite za povećanje</div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-
         <!-- Interactive Charts Section -->
         {% if analytics.plotly_charts %}
         <div class="section">
@@ -794,9 +764,9 @@
             {% endif %}
 
             <div class="insight-item">
-                <h4>📊 Robusnost Podataka <span class="trend-indicator trend-up">Odliča</span></h4>
+                <h4>📊 Robusnost Podataka <span class="trend-indicator trend-up">Odličn</span></h4>
                 <p>
-                    Sa {{ analytics.summary_stats.total_survey_responses }} detaljnih anketa i {{ analytics.summary_stats.total_ai_comparisons }} AI poređenja, 
+                    Sa {{ analytics.summary_stats.total_survey_responses }} detaljnih anketa, 
                     imamo visokokvalitetne podatke za statističku analizu trendova i korelacija u korišćenju AI alata.
                 </p>
             </div>
@@ -822,11 +792,10 @@
         <div style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px; margin-bottom: 30px;">
             <h4 style="margin: 0 0 15px 0; color: #333;">💾 Izvoz Podataka za Istraživanje</h4>
             <p style="margin: 0; color: #666;">
-                Svi podaci se automatski čuvaju u CSV formatima pogodnim za dalju analizu u Python/R/SPSS:
+                Svi podaci se automatski čuvaju u CSV formatu pogodnom za dalju analizu u Python/R/SPSS:
             </p>
             <ul style="margin: 10px 0 0 20px; color: #666;">
                 <li><code>survey_responses.csv</code> - Odgovori iz ankete</li>
-                <li><code>ai_comparison_responses.csv</code> - Podaci o AI poređenjima</li>
             </ul>
         </div>
 
