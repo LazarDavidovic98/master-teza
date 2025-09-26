@@ -342,19 +342,28 @@ def generate_analytics_data():
         employed_count = (survey_df['radni_odnos'] == 'da').sum()
     employed_percentage = (employed_count / total_responses * 100) if total_responses > 0 else 0
     
+    # Bezbedna konverzija AI znanja u numeričke vrednosti
+    avg_ai_usage = 0
+    if 'generativni_ai_poznavanje' in survey_df.columns:
+        # Konvertuj u numeričke vrednosti, ignoriši nevalidne
+        numeric_ai_knowledge = pd.to_numeric(survey_df['generativni_ai_poznavanje'], errors='coerce')
+        valid_scores = numeric_ai_knowledge.dropna()
+        if not valid_scores.empty:
+            avg_ai_usage = round(valid_scores.mean(), 2)
+    
     analytics['summary_stats'] = {
         'total_responses': total_responses,
         'total_survey_responses': total_responses,  # Template očekuje ovaj ključ
         'total_ai_comparisons': 0,  # Za kompatibilnost sa template-om
-        'avg_age': 2025 - survey_df['godina_rodjenja'].astype(int).mean() if 'godina_rodjenja' in survey_df.columns else 0,
+        'avg_age': round(2025 - pd.to_numeric(survey_df['godina_rodjenja'], errors='coerce').mean(), 1) if 'godina_rodjenja' in survey_df.columns else 0,
         'countries': survey_df['drzava'].nunique() if 'drzava' in survey_df.columns else 0,
         'completion_rate': 100.0,  # Svi odgovori su kompletni
-        'employed_percentage': employed_percentage,
+        'employed_percentage': round(employed_percentage, 1),
         'chatgpt_aware': 0,  # Ove metrike ću dodati later ako postoje u podacima
         'copilot_aware': 0,
         'avg_programming_env': 0,  # Uklanjam pokušaj konverzije string polja
         'avg_programming_lang': 0,  # Uklanjam pokušaj konverzije string polja
-        'avg_ai_usage': survey_df['generativni_ai_poznavanje'].astype(float).mean() if 'generativni_ai_poznavanje' in survey_df.columns and survey_df['generativni_ai_poznavanje'].notna().any() else 0
+        'avg_ai_usage': avg_ai_usage
     }
     
     try:
@@ -405,21 +414,29 @@ def generate_analytics_data():
     # 2. AI POZNAVANJE I KORIŠĆENJE
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 12))
     
-    # Generativni AI poznavanje
+    # Generativni AI poznavanje - samo numeričke vrednosti
     if 'generativni_ai_poznavanje' in survey_df.columns:
-        ai_knowledge = survey_df['generativni_ai_poznavanje'].value_counts().sort_index()
-        ai_knowledge.plot(kind='bar', ax=ax1, color='#8e44ad', alpha=0.8)
-        ax1.set_title('Poznavanje Generativnih AI Alata', fontsize=12, fontweight='bold')
-        ax1.set_ylabel('Broj učesnika')
-        ax1.set_xlabel('Ocena (1=loše, 5=odlično)')
+        # Konvertuj u numeričke vrednosti i filtiraj nevalidne
+        numeric_ai_knowledge = pd.to_numeric(survey_df['generativni_ai_poznavanje'], errors='coerce')
+        valid_ai_knowledge = numeric_ai_knowledge.dropna()
+        if not valid_ai_knowledge.empty:
+            ai_knowledge = valid_ai_knowledge.value_counts().sort_index()
+            ai_knowledge.plot(kind='bar', ax=ax1, color='#8e44ad', alpha=0.8)
+            ax1.set_title('Poznavanje Generativnih AI Alata', fontsize=12, fontweight='bold')
+            ax1.set_ylabel('Broj učesnika')
+            ax1.set_xlabel('Ocena (1=loše, 5=odlično)')
     
-    # Prompt engineering
+    # Prompt engineering - samo numeričke vrednosti
     if 'prompt_engineering' in survey_df.columns:
-        prompt_skills = survey_df['prompt_engineering'].value_counts().sort_index()
-        prompt_skills.plot(kind='bar', ax=ax2, color='#27ae60', alpha=0.8)
-        ax2.set_title('Veštine Prompt Engineering-a', fontsize=12, fontweight='bold')
-        ax2.set_ylabel('Broj učesnika')
-        ax2.set_xlabel('Ocena (1=loše, 5=odlično)')
+        # Konvertuj u numeričke vrednosti i filtiraj nevalidne
+        numeric_prompt_skills = pd.to_numeric(survey_df['prompt_engineering'], errors='coerce')
+        valid_prompt_skills = numeric_prompt_skills.dropna()
+        if not valid_prompt_skills.empty:
+            prompt_skills = valid_prompt_skills.value_counts().sort_index()
+            prompt_skills.plot(kind='bar', ax=ax2, color='#27ae60', alpha=0.8)
+            ax2.set_title('Veštine Prompt Engineering-a', fontsize=12, fontweight='bold')
+            ax2.set_ylabel('Broj učesnika')
+            ax2.set_xlabel('Ocena (1=loše, 5=odlično)')
     
     # Poznati AI alati - analiza najčešćih
     if 'poznati_ai_alati' in survey_df.columns:
