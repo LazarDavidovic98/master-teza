@@ -14,6 +14,16 @@ import json
 import base64
 from io import BytesIO
 
+# Import our data science extension
+try:
+    from data_science_extension import DataScienceManager
+    from advanced_analytics import AdvancedAnalytics
+    import networkx as nx
+    DATA_SCIENCE_AVAILABLE = True
+except ImportError:
+    DATA_SCIENCE_AVAILABLE = False
+    print("Data Science extension not available - running in basic mode")
+
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-change-this'
 
@@ -485,7 +495,20 @@ def submit_survey():
                 data['university_guidelines']
             ])
         
-        flash('Hvala vam! Vaš odgovor je uspešno zabeležen.', 'success')
+        # Data Science Extension Integration
+        if DATA_SCIENCE_AVAILABLE:
+            try:
+                data_manager = DataScienceManager()
+                participant_id = data_manager.process_survey_response(data)
+                session['participant_id'] = participant_id
+                session['data_science_enabled'] = True
+                flash(f'Podaci uspešno sačuvani! Participant ID: {participant_id}', 'success')
+            except Exception as ds_error:
+                print(f"Data Science processing failed: {ds_error}")
+                flash('Osnovni podaci sačuvani, napredna analiza nedostupna.', 'warning')
+        else:
+            flash('Hvala vam! Vaš odgovor je uspešno zabeležen.', 'success')
+        
         return redirect(url_for('success'))
         
     except Exception as e:
@@ -590,6 +613,89 @@ def analytics():
     except Exception as e:
         flash(f'Greška pri generisanju analitike: {str(e)}', 'error')
         return redirect(url_for('index'))
+
+@app.route('/data_science')
+def data_science_dashboard():
+    """Napredna Data Science analiza dashboard"""
+    if not DATA_SCIENCE_AVAILABLE:
+        flash('Data Science funkcionalnost nije dostupna. Instalirajte potrebne biblioteke.', 'error')
+        return redirect(url_for('analytics'))
+    
+    try:
+        # Kreiraj data manager instance
+        data_manager = DataScienceManager()
+        advanced_analytics = AdvancedAnalytics()
+        
+        # PROVERI I UČITAJ POSTOJEĆE PODATKE
+        # Ako nema data science fajlova, ali ima survey_responses.csv, obradi ih
+        if not os.path.exists('data/participants.csv') and os.path.exists(RESPONSES_FILE):
+            print("🔄 Učitavam postojeće survey podatke...")
+            data_manager.process_existing_survey_data(RESPONSES_FILE)
+        
+        # Dobij osnovni summary
+        summary = data_manager.get_analytics_summary()
+        
+        # Proverava da li postoje podaci
+        if summary.get('total_participants', 0) == 0:
+            # Pokušaj ponovo sa učitavanjem podataka
+            if os.path.exists(RESPONSES_FILE):
+                print("🔄 Ponovni pokušaj učitavanja postojećih podataka...")
+                data_manager.process_existing_survey_data(RESPONSES_FILE)
+                summary = data_manager.get_analytics_summary()
+                
+                if summary.get('total_participants', 0) == 0:
+                    flash('Nema dovoljno podataka za naprednu analizu. Potrebno je prvo da se pošalju odgovori.', 'warning')
+                    return redirect(url_for('analytics'))
+            else:
+                flash('Nema dovoljno podataka za naprednu analizu. Potrebno je prvo da se pošalju odgovori.', 'warning')
+                return redirect(url_for('analytics'))
+        
+        # Generiši NetworkX graf
+        try:
+            G = data_manager.create_network_graph()
+            network_stats = {
+                'nodes': G.number_of_nodes(),
+                'edges': G.number_of_edges(),
+                'density': round(nx.density(G), 3),
+                'connected_components': nx.number_connected_components(G)
+            }
+        except Exception as e:
+            network_stats = {'error': str(e)}
+        
+        # Generiši Gephi fajlove
+        try:
+            nodes_file, edges_file = data_manager.generate_gephi_files()
+            gephi_files = {'nodes': nodes_file, 'edges': edges_file}
+        except Exception as e:
+            gephi_files = {'error': str(e)}
+        
+        return render_template('data_science.html', 
+                             summary=summary,
+                             network_stats=network_stats,
+                             gephi_files=gephi_files,
+                             data_science_enabled=True)
+        
+    except Exception as e:
+        flash(f'Greška pri generisanju Data Science analize: {str(e)}', 'error')
+        return redirect(url_for('analytics'))
+
+@app.route('/export_gephi')
+def export_gephi():
+    """Export podataka za Gephi analizu"""
+    if not DATA_SCIENCE_AVAILABLE:
+        flash('Data Science funkcionalnost nije dostupna.', 'error')
+        return redirect(url_for('analytics'))
+    
+    try:
+        data_manager = DataScienceManager()
+        nodes_file, edges_file = data_manager.generate_gephi_files()
+        
+        flash(f'Gephi fajlovi kreirani: {nodes_file}, {edges_file}', 'success')
+        return redirect(url_for('data_science_dashboard'))
+        
+    except Exception as e:
+        flash(f'Greška pri kreiranju Gephi fajlova: {str(e)}', 'error')
+        return redirect(url_for('data_science_dashboard'))
 
 if __name__ == '__main__':
     init_csv_file()

@@ -1,0 +1,121 @@
+participant_id,question_id,question_category,given_answer,correct_answer,is_correct,difficulty_level
+P02DDE1C8,chatgpt_omni,technical,GPT-4,GPT-4,True,medium
+P02DDE1C8,copilot_task,technical,Copilot Workspace,Copilot Workspace,True,hard
+P02DDE1C8,copilot_chat,technical,Copilot X,Copilot X,True,medium
+P02DDE1C8,google_model,knowledge,Claude 3 Opus,Gemini,False,easy
+P02DDE1C8,gpt_realtime,technical,GPT-4.1,GPT-4,False,hard
+P02DDE1C8,anthropic_model,knowledge,Claude,Claude,True,easy
+P02DDE1C8,creativity_parameter,conceptual,Attention heads,Temperature,False,hard
+P02DDE1C8,transformer_basis,conceptual,Recurrent Neural Networks (RNN),Transformeri,False,medium
+P0024993B,chatgpt_omni,technical,ne_znam,GPT-4,False,medium
+P0024993B,copilot_task,technical,Copilot Agents,Copilot Workspace,False,hard
+P0024993B,copilot_chat,technical,Copilot Workspace,Copilot X,False,medium
+P0024993B,google_model,knowledge,Gemini,Gemini,True,easy
+P0024993B,gpt_realtime,technical,GPT-5,GPT-4,False,hard
+P0024993B,anthropic_model,knowledge,Claude,Claude,True,easy
+P0024993B,creativity_parameter,conceptual,ne_znam,Temperature,False,hard
+P0024993B,transformer_basis,conceptual,ne_znam,Transformeri,False,medium
+P05EBC889,chatgpt_omni,technical,GPT-40,GPT-4,False,medium
+P05EBC889,copilot_task,technical,Copilot Agents,Copilot Workspace,False,hard
+P05EBC889,copilot_chat,technical,Copilot Workspace,Copilot X,False,medium
+P05EBC889,google_model,knowledge,Gemini,Gemini,True,easy
+P05EBC889,gpt_realtime,technical,GPT-40,GPT-4,False,hard
+P05EBC889,anthropic_model,knowledge,ne_znam,Claude,False,easy
+P05EBC889,creativity_parameter,conceptual,Temperature,Temperature,True,hard
+P05EBC889,transformer_basis,conceptual,Transformeri,Transformeri,True,medium
+P05EBC889,chatgpt_omni,technical,ne_znam,GPT-4,False,medium
+P05EBC889,copilot_task,technical,Copilot 2021,Copilot Workspace,False,hard
+P05EBC889,copilot_chat,technical,Copilot 2021,Copilot X,False,medium
+P05EBC889,google_model,knowledge,Claude 3 Opus,Gemini,False,easy
+P05EBC889,gpt_realtime,technical,GPT-3.5,GPT-4,False,hard
+P05EBC889,anthropic_model,knowledge,ne_znam,Claude,False,easy
+P05EBC889,creativity_parameter,conceptual,ne_znam,Temperature,False,hard
+P05EBC889,transformer_basis,conceptual,ne_znam,Transformeri,False,medium
+P01FECC82,chatgpt_omni,technical,ne_znam,GPT-4,False,medium
+P01FECC82,copilot_task,technical,Copilot Workspace,Copilot Workspace,True,hard
+P01FECC82,copilot_chat,technical,Copilot Agents,Copilot X,False,medium
+P01FECC82,google_model,knowledge,Gemini,Gemini,True,easy
+P01FECC82,gpt_realtime,technical,GPT-5,GPT-4,False,hard
+P01FECC82,anthropic_model,knowledge,Claude,Claude,True,easy
+P01FECC82,creativity_parameter,conceptual,Attention heads,Temperature,False,hard
+P01FECC82,transformer_basis,conceptual,ne_znam,Transformeri,False,medium
+P01D29B7D,chatgpt_omni,technical,GPT-3.5,GPT-4,False,medium
+P01D29B7D,copilot_task,technical,Copilot Agents,Copilot Workspace,False,hard
+P01D29B7D,copilot_chat,technical,Copilot Agents,Copilot X,False,medium
+P01D29B7D,google_model,knowledge,Gemini,Gemini,True,easy
+P01D29B7D,gpt_realtime,technical,GPT-4,GPT-4,True,hard
+P01D29B7D,anthropic_model,knowledge,Claude,Claude,True,easy
+P01D29B7D,creativity_parameter,conceptual,Attention heads,Temperature,False,hard
+P01D29B7D,transformer_basis,conceptual,Support Vector Machines (SVM),Transformeri,False,medium
+P059AF9CE,chatgpt_omni,technical,GPT-4,GPT-4,True,medium
+P059AF9CE,copilot_task,technical,Copilot Workspace,Copilot Workspace,True,hard
+P059AF9CE,copilot_chat,technical,Copilot X,Copilot X,True,medium
+P059AF9CE,google_model,knowledge,Gemini,Gemini,True,easy
+P059AF9CE,gpt_realtime,technical,GPT-4,GPT-4,True,hard
+P059AF9CE,anthropic_model,knowledge,Claude,Claude,True,easy
+P059AF9CE,creativity_parameter,conceptual,Temperature,Temperature,True,hard
+P059AF9CE,transformer_basis,conceptual,Transformeri,Transformeri,True,medium
+P003F642E,chatgpt_omni,technical,GPT-4,GPT-4,True,medium
+P003F642E,copilot_task,technical,Copilot X,Copilot Workspace,False,hard
+P003F642E,copilot_chat,technical,Copilot X,Copilot X,True,medium
+P003F642E,google_model,knowledge,Gemini,Gemini,True,easy
+P003F642E,gpt_realtime,technical,GPT-3.5,GPT-4,False,hard
+P003F642E,anthropic_model,knowledge,LLaMA,Claude,False,easy
+P003F642E,creativity_parameter,conceptual,Batch size,Temperature,False,hard
+P003F642E,transformer_basis,conceptual,Support Vector Machines (SVM),Transformeri,False,medium
+P059ED015,chatgpt_omni,technical,GPT-4,GPT-4,True,medium
+P059ED015,copilot_task,technical,Copilot X,Copilot Workspace,False,hard
+P059ED015,copilot_chat,technical,Copilot X,Copilot X,True,medium
+P059ED015,google_model,knowledge,Claude 3 Sonnet,Gemini,False,easy
+P059ED015,gpt_realtime,technical,GPT-4,GPT-4,True,hard
+P059ED015,anthropic_model,knowledge,Gemini,Claude,False,easy
+P059ED015,creativity_parameter,conceptual,Attention heads,Temperature,False,hard
+P059ED015,transformer_basis,conceptual,Support Vector Machines (SVM),Transformeri,False,medium
+P04C9E387,chatgpt_omni,technical,GPT-5,GPT-4,False,medium
+P04C9E387,copilot_task,technical,Copilot Agents,Copilot Workspace,False,hard
+P04C9E387,copilot_chat,technical,Copilot Agents,Copilot X,False,medium
+P04C9E387,google_model,knowledge,Gemini,Gemini,True,easy
+P04C9E387,gpt_realtime,technical,GPT-4.1,GPT-4,False,hard
+P04C9E387,anthropic_model,knowledge,Claude,Claude,True,easy
+P04C9E387,creativity_parameter,conceptual,Learning rate,Temperature,False,hard
+P04C9E387,transformer_basis,conceptual,Transformeri,Transformeri,True,medium
+P00456C7F,chatgpt_omni,technical,GPT-3.5,GPT-4,False,medium
+P00456C7F,copilot_task,technical,Copilot 2021,Copilot Workspace,False,hard
+P00456C7F,copilot_chat,technical,Copilot 2021,Copilot X,False,medium
+P00456C7F,google_model,knowledge,Claude 3 Opus,Gemini,False,easy
+P00456C7F,gpt_realtime,technical,GPT-3.5,GPT-4,False,hard
+P00456C7F,anthropic_model,knowledge,Claude,Claude,True,easy
+P00456C7F,creativity_parameter,conceptual,Learning rate,Temperature,False,hard
+P00456C7F,transformer_basis,conceptual,Recurrent Neural Networks (RNN),Transformeri,False,medium
+P00D4A0E3,chatgpt_omni,technical,ne_znam,GPT-4,False,medium
+P00D4A0E3,copilot_task,technical,Copilot Agents,Copilot Workspace,False,hard
+P00D4A0E3,copilot_chat,technical,Copilot Agents,Copilot X,False,medium
+P00D4A0E3,google_model,knowledge,Gemini,Gemini,True,easy
+P00D4A0E3,gpt_realtime,technical,GPT-4.1,GPT-4,False,hard
+P00D4A0E3,anthropic_model,knowledge,Claude,Claude,True,easy
+P00D4A0E3,creativity_parameter,conceptual,Temperature,Temperature,True,hard
+P00D4A0E3,transformer_basis,conceptual,Transformeri,Transformeri,True,medium
+P051834AD,chatgpt_omni,technical,ne_znam,GPT-4,False,medium
+P051834AD,copilot_task,technical,Copilot Workspace,Copilot Workspace,True,hard
+P051834AD,copilot_chat,technical,Copilot Workspace,Copilot X,False,medium
+P051834AD,google_model,knowledge,Gemini,Gemini,True,easy
+P051834AD,gpt_realtime,technical,GPT-4,GPT-4,True,hard
+P051834AD,anthropic_model,knowledge,Gemini,Claude,False,easy
+P051834AD,creativity_parameter,conceptual,Batch size,Temperature,False,hard
+P051834AD,transformer_basis,conceptual,Recurrent Neural Networks (RNN),Transformeri,False,medium
+P02FB82B0,chatgpt_omni,technical,GPT-4,GPT-4,True,medium
+P02FB82B0,copilot_task,technical,Copilot X,Copilot Workspace,False,hard
+P02FB82B0,copilot_chat,technical,Copilot X,Copilot X,True,medium
+P02FB82B0,google_model,knowledge,Gemini,Gemini,True,easy
+P02FB82B0,gpt_realtime,technical,GPT-3.5,GPT-4,False,hard
+P02FB82B0,anthropic_model,knowledge,Codex,Claude,False,easy
+P02FB82B0,creativity_parameter,conceptual,Dropout,Temperature,False,hard
+P02FB82B0,transformer_basis,conceptual,ne_znam,Transformeri,False,medium
+P016C3381,chatgpt_omni,technical,ne_znam,GPT-4,False,medium
+P016C3381,copilot_task,technical,Copilot X,Copilot Workspace,False,hard
+P016C3381,copilot_chat,technical,Copilot X,Copilot X,True,medium
+P016C3381,google_model,knowledge,Claude 3 Sonnet,Gemini,False,easy
+P016C3381,gpt_realtime,technical,GPT-3.5,GPT-4,False,hard
+P016C3381,anthropic_model,knowledge,ne_znam,Claude,False,easy
+P016C3381,creativity_parameter,conceptual,ne_znam,Temperature,False,hard
+P016C3381,transformer_basis,conceptual,ne_znam,Transformeri,False,medium

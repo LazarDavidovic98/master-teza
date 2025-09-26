@@ -1,0 +1,16 @@
+participant_id,usage_pattern,tools_combination,frequency_score,effectiveness_score,pattern_type
+P02DDE1C8,1_tools_for_3_purposes,GitHub Copilot,0.3,0.2,purpose_diverse
+P0024993B,5_tools_for_9_purposes,ChatGPT|Claude (Anthropic)|GitHub Copilot|Google Gemini (ex Bard)|Microsoft Copilot (Word/Excel/PowerPoint),1.0,0.2,power_user
+P05EBC889,3_tools_for_6_purposes,ChatGPT|GitHub Copilot|Google Gemini (ex Bard),1.0,0.2,purpose_diverse
+P05EBC889,2_tools_for_8_purposes,ChatGPT|Microsoft Copilot (Word/Excel/PowerPoint),1.0,0.2,purpose_diverse
+P01FECC82,3_tools_for_8_purposes,ChatGPT|Google Gemini (ex Bard)|Microsoft Copilot (Word/Excel/PowerPoint),1.0,0.2,purpose_diverse
+P01D29B7D,2_tools_for_6_purposes,ChatGPT|Google Gemini (ex Bard),1.0,0.2,purpose_diverse
+P059AF9CE,1_tools_for_1_purposes,ChatGPT,0.1,0.2,focused_user
+P003F642E,5_tools_for_11_purposes,ChatGPT|GitHub Copilot|Microsoft Copilot (Word/Excel/PowerPoint)|MidJourney / Stable Diffusion|ostalo,1.0,0.2,power_user
+P059ED015,1_tools_for_1_purposes,GitHub Copilot,0.1,0.2,focused_user
+P04C9E387,5_tools_for_6_purposes,ChatGPT|Claude (Anthropic)|GitHub Copilot|Google Gemini (ex Bard)|Microsoft Copilot (Word/Excel/PowerPoint),1.0,0.2,power_user
+P00456C7F,1_tools_for_1_purposes,ChatGPT,0.1,0.2,focused_user
+P00D4A0E3,7_tools_for_10_purposes,ChatGPT|Claude (Anthropic)|GitHub Copilot|Google Gemini (ex Bard)|Microsoft Copilot (Word/Excel/PowerPoint)|MidJourney / Stable Diffusion|ostalo,1.0,0.2,power_user
+P051834AD,4_tools_for_1_purposes,ChatGPT|GitHub Copilot|Google Gemini (ex Bard)|Microsoft Copilot (Word/Excel/PowerPoint),0.4,0.2,tool_explorer
+P02FB82B0,1_tools_for_6_purposes,ChatGPT,0.6,0.2,purpose_diverse
+P016C3381,1_tools_for_2_purposes,ChatGPT,0.2,0.2,purpose_diverse

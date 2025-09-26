@@ -1,0 +1,16 @@
+participant_id,timestamp,birth_year,country,education,employment_status,work_experience,institution,field,programming_experience,age_group,experience_level
+P02DDE1C8,2025-09-26 17:58:21,1998,srbija,master,da,3-5,",",Elektrotehnika,da,mid_career,intermediate
+P0024993B,2025-09-26 18:23:07,1998,srbija,visoka,da,3-5,GL Trade Software DOO Beograd,Računarako programiranje,da,mid_career,intermediate
+P05EBC889,2025-09-26 18:26:14,2003,bosna_i_hercegovina,srednja,ne,0,,Informatika/IT,da,young,junior
+P05EBC889,2025-09-26 18:26:52,1998,srbija,master,da,3-5,CBS International DOO Beograd,Građevina,ne,mid_career,intermediate
+P01FECC82,2025-09-26 18:28:05,2003,srbija,srednja,ne,1-2,,Informatika/IT,ne,young,junior
+P01D29B7D,2025-09-26 18:44:15,2003,srbija,srednja,ne,0,,Student,ne,young,junior
+P059AF9CE,2025-09-26 18:46:26,2001,srbija,srednja,da,3-5,Milistarstvo odbrane,Vojska,ne,young,intermediate
+P003F642E,2025-09-26 18:48:09,2004,srbija,visoka,ne,0,,Informatika/IT,ne,young,junior
+P059ED015,2025-09-26 18:53:27,2005,srbija,osnovna,ne,0,,Pravo,ne,young,junior
+P04C9E387,2025-09-26 18:54:21,2004,srbija,visoka,ne,1-2,,Informatika/IT,da,young,junior
+P00456C7F,2025-09-26 19:07:25,2000,rumunija,master,ne,0,,Pravo,ne,mid_career,junior
+P00D4A0E3,2025-09-26 19:25:51,2000,srbija,visoka,da,1-2,Tenstorrent,Informatika/IT,da,mid_career,junior
+P051834AD,2025-09-26 19:26:40,1992,srbija,visoka,da,6-10,Univerzitet u Beogradu,Informatika/IT,ne,mid_career,senior
+P02FB82B0,2025-09-26 19:44:02,1998,srbija,master,da,3-5,Univerzitet u Beogradu,Elektrotehnika,ne,mid_career,intermediate
+P016C3381,2025-09-26 21:46:50,1998,srbija,master,da,3-5,TESO l.l.c,Informatika/IT,da,mid_career,intermediate
