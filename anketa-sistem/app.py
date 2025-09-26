@@ -18,6 +18,7 @@ from io import BytesIO
 try:
     from data_science_extension import DataScienceManager
     from advanced_analytics import AdvancedAnalytics
+    from file_watcher import FileWatcher
     import networkx as nx
     DATA_SCIENCE_AVAILABLE = True
 except ImportError:
@@ -26,6 +27,28 @@ except ImportError:
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-change-this'
+
+# Initialize file watcher for automatic updates
+file_watcher = None
+if DATA_SCIENCE_AVAILABLE:
+    try:
+        data_manager = DataScienceManager()
+        file_watcher = FileWatcher(data_manager)
+        file_watcher.start()
+    except Exception as e:
+        print(f"File Watcher initialization failed: {e}")
+        file_watcher = None
+
+# Cleanup function for graceful shutdown
+import atexit
+
+def cleanup():
+    """Cleanup function called on app shutdown"""
+    if file_watcher and file_watcher.is_running():
+        print("🛑 Zaustavljam File Watcher...")
+        file_watcher.stop()
+
+atexit.register(cleanup)
 
 # File path for storing survey responses
 RESPONSES_FILE = 'survey_responses.csv'
@@ -697,15 +720,33 @@ def export_gephi():
         flash(f'Greška pri kreiranju Gephi fajlova: {str(e)}', 'error')
         return redirect(url_for('data_science_dashboard'))
 
+@app.route('/file_watcher_status')
+def file_watcher_status():
+    """Prikaži status file watcher-a"""
+    if not DATA_SCIENCE_AVAILABLE or not file_watcher:
+        return {"status": "unavailable", "message": "File Watcher nije dostupan"}
+    
+    return {
+        "status": "running" if file_watcher.is_running() else "stopped",
+        "message": "File Watcher prati promene u survey_responses.csv" if file_watcher.is_running() 
+                  else "File Watcher nije pokrenut"
+    }
+
 if __name__ == '__main__':
     init_csv_file()
-    # Za lokalno testiranje
-    # app.run(debug=True, host='127.0.0.1', port=5000)
     
-    # Za ngrok ili hosting (uklonite # ispred sledeće linije)
-    # import os
-    # port = int(os.environ.get('PORT', 5000))
-    # app.run(debug=False, host='0.0.0.0', port=port)
+    try:
+        # Za lokalno testiranje
+        app.run(debug=True, host='127.0.0.1', port=5000)
+        
+        # Za ngrok ili hosting (uklonite # ispred sledeće linije)
+        # import os
+        # port = int(os.environ.get('PORT', 5000))
+        # app.run(debug=False, host='0.0.0.0', port=port)
+    finally:
+        # Zaustavi file watcher kada se aplikacija završi
+        if file_watcher and file_watcher.is_running():
+            file_watcher.stop()
     
     # Za lokalni WiFi (uklonite # ispred sledeće linije)
     # app.run(debug=True, host='0.0.0.0', port=5000)

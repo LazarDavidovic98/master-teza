@@ -253,6 +253,12 @@
             {% endif %}
         {% endwith %}
         
+        <!-- File Watcher Status -->
+        <div class="alert success" id="file-watcher-status">
+            <strong>🔄 Automatsko Ažuriranje:</strong> 
+            <span id="watcher-message">Proveravam status...</span>
+        </div>
+        
         <!-- Summary Statistics -->
         <div class="section">
             <h2>📊 Data Science Summary</h2>
@@ -497,5 +503,40 @@ data/exports/gephi_edges.csv
             NetworkX za mrežne algoritme i Gephi za vizualizacije!</p>
         </div>
     </div>
+    
+    <script>
+        // Check file watcher status
+        function checkFileWatcherStatus() {
+            fetch('/file_watcher_status')
+                .then(response => response.json())
+                .then(data => {
+                    const statusElement = document.getElementById('file-watcher-status');
+                    const messageElement = document.getElementById('watcher-message');
+                    
+                    if (data.status === 'running') {
+                        statusElement.className = 'alert success';
+                        messageElement.textContent = 'AKTIVNO - Automatski prati promene u survey_responses.csv';
+                    } else if (data.status === 'stopped') {
+                        statusElement.className = 'alert warning';
+                        messageElement.textContent = 'NEAKTIVNO - File Watcher nije pokrenut';
+                    } else {
+                        statusElement.className = 'alert error';
+                        messageElement.textContent = 'NEDOSTUPNO - File Watcher funkcionalnost nije dostupna';
+                    }
+                })
+                .catch(error => {
+                    const statusElement = document.getElementById('file-watcher-status');
+                    const messageElement = document.getElementById('watcher-message');
+                    statusElement.className = 'alert error';
+                    messageElement.textContent = 'GREŠKA - Nije moguće proveriti status';
+                });
+        }
+        
+        // Check status on page load
+        checkFileWatcherStatus();
+        
+        // Check status every 30 seconds
+        setInterval(checkFileWatcherStatus, 30000);
+    </script>
 </body>
 </html>

@@ -1,289 +1,706 @@
-participant_id,ai_tool,knowledge_level,usage_frequency,purpose,effectiveness_rating,tool_category
-P02DDE1C8,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
-P02DDE1C8,GitHub Copilot,da,unknown,mejlova,da,code_assistant
-P02DDE1C8,GitHub Copilot,da,unknown,bloga),da,code_assistant
-P0024993B,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P0024993B,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P0024993B,ChatGPT,da,unknown,bloga),da,conversational_ai
-P0024993B,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P0024993B,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
-P0024993B,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
-P0024993B,ChatGPT,da,unknown,Python,da,conversational_ai
-P0024993B,ChatGPT,da,unknown,SQL),da,conversational_ai
-P0024993B,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P0024993B,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,mejlova,da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,bloga),da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,Python,da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,SQL),da,code_assistant
-P0024993B,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P0024993B,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
-P0024993B,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
-P0024993B,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P0024993B,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,Prevođenje jezika,da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,Analiza podataka (Excel,da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,Python,da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,SQL),da,conversational_ai
-P0024993B,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,bloga),da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P05EBC889,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
-P05EBC889,GitHub Copilot,da,unknown,mejlova,da,code_assistant
-P05EBC889,GitHub Copilot,da,unknown,bloga),da,code_assistant
-P05EBC889,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
-P05EBC889,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
-P05EBC889,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P05EBC889,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P05EBC889,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
-P05EBC889,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
-P05EBC889,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
-P05EBC889,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
-P05EBC889,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,bloga),da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Python,da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,SQL),da,conversational_ai
-P05EBC889,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
-P05EBC889,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P01FECC82,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P01FECC82,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P01FECC82,ChatGPT,da,unknown,bloga),da,conversational_ai
-P01FECC82,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P01FECC82,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
-P01FECC82,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
-P01FECC82,ChatGPT,da,unknown,Python,da,conversational_ai
-P01FECC82,ChatGPT,da,unknown,SQL),da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
-P01FECC82,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
-P01FECC82,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
-P01D29B7D,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P01D29B7D,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P01D29B7D,ChatGPT,da,unknown,bloga),da,conversational_ai
-P01D29B7D,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P01D29B7D,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P01D29B7D,ChatGPT,da,unknown,ostalo,da,conversational_ai
-P01D29B7D,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P01D29B7D,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
-P01D29B7D,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
-P01D29B7D,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
-P01D29B7D,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P01D29B7D,Google Gemini (ex Bard),da,unknown,ostalo,da,conversational_ai
-P059AF9CE,ChatGPT,ne,unknown,Pisanje koda,ne,conversational_ai
-P003F642E,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,bloga),da,conversational_ai
-P003F642E,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,Python,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,SQL),da,conversational_ai
-P003F642E,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
-P003F642E,ChatGPT,da,unknown,ostalo,da,conversational_ai
-P003F642E,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,mejlova,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,bloga),da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,Python,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,SQL),da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
-P003F642E,GitHub Copilot,da,unknown,ostalo,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
-P003F642E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,ostalo,da,code_assistant
-P003F642E,MidJourney / Stable Diffusion,da,unknown,Pisanje teksta (eseja,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,mejlova,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,bloga),da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,Pisanje koda,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,Prevođenje jezika,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,Analiza podataka (Excel,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,Python,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,SQL),da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,Generisanje slika ili vizuala,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,Pisanje akademskih radova,da,other
-P003F642E,MidJourney / Stable Diffusion,da,unknown,ostalo,da,other
-P003F642E,ostalo,da,unknown,Pisanje teksta (eseja,da,other
-P003F642E,ostalo,da,unknown,mejlova,da,other
-P003F642E,ostalo,da,unknown,bloga),da,other
-P003F642E,ostalo,da,unknown,Pisanje koda,da,other
-P003F642E,ostalo,da,unknown,Prevođenje jezika,da,other
-P003F642E,ostalo,da,unknown,Analiza podataka (Excel,da,other
-P003F642E,ostalo,da,unknown,Python,da,other
-P003F642E,ostalo,da,unknown,SQL),da,other
-P003F642E,ostalo,da,unknown,Generisanje slika ili vizuala,da,other
-P003F642E,ostalo,da,unknown,Pisanje akademskih radova,da,other
-P003F642E,ostalo,da,unknown,ostalo,da,other
-P059ED015,GitHub Copilot,ne,unknown,Pisanje koda,ne,code_assistant
-P04C9E387,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P04C9E387,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P04C9E387,ChatGPT,da,unknown,bloga),da,conversational_ai
-P04C9E387,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P04C9E387,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P04C9E387,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
-P04C9E387,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
-P04C9E387,GitHub Copilot,da,unknown,mejlova,da,code_assistant
-P04C9E387,GitHub Copilot,da,unknown,bloga),da,code_assistant
-P04C9E387,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
-P04C9E387,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P04C9E387,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
-P04C9E387,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P04C9E387,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
-P04C9E387,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
-P04C9E387,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
-P04C9E387,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P04C9E387,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
-P04C9E387,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
-P04C9E387,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
-P04C9E387,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
-P04C9E387,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
-P04C9E387,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P04C9E387,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
-P04C9E387,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P04C9E387,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
-P04C9E387,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
-P04C9E387,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
-P04C9E387,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P04C9E387,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
-P00456C7F,ChatGPT,ne,unknown,Pisanje koda,ne,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,bloga),da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,Python,da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,SQL),da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P00D4A0E3,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
-P00D4A0E3,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,mejlova,da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,bloga),da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,Python,da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,SQL),da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P00D4A0E3,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P00D4A0E3,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
-P00D4A0E3,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,Pisanje teksta (eseja,da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,mejlova,da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,bloga),da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,Pisanje koda,da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,Prevođenje jezika,da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,Analiza podataka (Excel,da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,Python,da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,SQL),da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,Generisanje slika ili vizuala,da,other
-P00D4A0E3,MidJourney / Stable Diffusion,da,unknown,Pisanje akademskih radova,da,other
-P00D4A0E3,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,Prevođenje jezika,da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,Analiza podataka (Excel,da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,Python,da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,SQL),da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P00D4A0E3,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
-P00D4A0E3,ostalo,da,unknown,Pisanje teksta (eseja,da,other
-P00D4A0E3,ostalo,da,unknown,mejlova,da,other
-P00D4A0E3,ostalo,da,unknown,bloga),da,other
-P00D4A0E3,ostalo,da,unknown,Pisanje koda,da,other
-P00D4A0E3,ostalo,da,unknown,Prevođenje jezika,da,other
-P00D4A0E3,ostalo,da,unknown,Analiza podataka (Excel,da,other
-P00D4A0E3,ostalo,da,unknown,Python,da,other
-P00D4A0E3,ostalo,da,unknown,SQL),da,other
-P00D4A0E3,ostalo,da,unknown,Generisanje slika ili vizuala,da,other
-P00D4A0E3,ostalo,da,unknown,Pisanje akademskih radova,da,other
-P051834AD,ChatGPT,ne,unknown,Generisanje slika ili vizuala,ne,conversational_ai
-P051834AD,GitHub Copilot,ne,unknown,Generisanje slika ili vizuala,ne,code_assistant
-P051834AD,Google Gemini (ex Bard),ne,unknown,Generisanje slika ili vizuala,ne,conversational_ai
-P051834AD,Microsoft Copilot (Word/Excel/PowerPoint),ne,unknown,Generisanje slika ili vizuala,ne,code_assistant
-P02FB82B0,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
-P02FB82B0,ChatGPT,da,unknown,mejlova,da,conversational_ai
-P02FB82B0,ChatGPT,da,unknown,bloga),da,conversational_ai
-P02FB82B0,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P02FB82B0,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
-P02FB82B0,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
-P016C3381,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
-P016C3381,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P04A9A275,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P04A9A275,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P04A9A275,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P00F54CA0,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P00F54CA0,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P00F54CA0,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P05898115,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05898115,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05898115,ChatGPT,da,unknown,bloga),da,conversational_ai
+P05898115,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P05898115,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P05898115,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P05898115,ChatGPT,da,unknown,Python,da,conversational_ai
+P05898115,ChatGPT,da,unknown,SQL),da,conversational_ai
+P05898115,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05898115,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05898115,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P05898115,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P05898115,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P05898115,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P05898115,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
+P05898115,GitHub Copilot,da,unknown,Python,da,code_assistant
+P05898115,GitHub Copilot,da,unknown,SQL),da,code_assistant
+P05898115,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05898115,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
+P05898115,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P042F6C69,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+,code_assistant
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P042F6C69,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P05898115,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05898115,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,Prevođenje jezika,da,conversational_ai
+P042F6C69,ChatGPT,da,unknown,bloga),da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,Python,da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,SQL),da,conversational_ai
+P05898115,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P042F6C69,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P042F6C69,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P042F6C69,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P042F6C69,ChatGPT,da,unknown,Python,da,conversational_ai
+P042F6C69,ChatGPT,da,unknown,SQL),da,conversational_ai
+P042F6C69,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P042F6C69,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P042F6C69,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P006B1D32,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,bloga),da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P042F6C69,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P006B1D32,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P042F6C69,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P006B1D32,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P006B1D32,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P042F6C69,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P006B1D32,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P006B1D32,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P042F6C69,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
+P006B1D32,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P006B1D32,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P006B1D32,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P006B1D32,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P042F6C69,GitHub Copilot,da,unknown,SQL),da,code_assistant
+P006B1D32,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P006B1D32,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P006B1D32,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P042F6C69,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P006B1D32,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
+P042F6C69,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P042F6C69,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P006B1D32,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,bloga),da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,Python,da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,SQL),da,conversational_ai
+P006B1D32,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P042F6C69,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P042F6C69,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+tant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+de_assistant
+P006B1D32,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P042F6C69,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P042F6C69,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P042F6C69,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P042F6C69,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P042F6C69,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,Prevođenje jezika,da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,Python,da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,SQL),da,conversational_ai
+P042F6C69,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P02010819,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P02010819,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P02010819,ChatGPT,da,unknown,bloga),da,conversational_ai
+P02010819,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P02010819,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P02010819,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P02010819,ChatGPT,da,unknown,Python,da,conversational_ai
+P02010819,ChatGPT,da,unknown,SQL),da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
+P02010819,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P02010819,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P0536A323,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P059FAA9F,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P0536A323,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P0536A323,ChatGPT,da,unknown,bloga),da,conversational_ai
+P0536A323,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P0536A323,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P059FAA9F,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P0536A323,ChatGPT,da,unknown,ostalo,da,conversational_ai
+P0536A323,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P0536A323,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P0536A323,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P059FAA9F,ChatGPT,da,unknown,bloga),da,conversational_ai
+da,conversational_ai
+P0536A323,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P0536A323,Google Gemini (ex Bard),da,unknown,ostalo,da,conversational_ai
+P059FAA9F,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P059FAA9F,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P059FAA9F,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P059FAA9F,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P059FAA9F,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P059FAA9F,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P059FAA9F,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P026ABF42,ChatGPT,ne,unknown,Pisanje koda,ne,conversational_ai
+P059FAA9F,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P059FAA9F,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P059FAA9F,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P059FAA9F,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P059FAA9F,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P059FAA9F,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P059FAA9F,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,bloga),da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,Python,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,SQL),da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P0538B41D,ChatGPT,da,unknown,ostalo,da,conversational_ai
+P0538B41D,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,Python,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,SQL),da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P0538B41D,GitHub Copilot,da,unknown,ostalo,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P0538B41D,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,ostalo,da,code_assistant
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,Pisanje teksta (eseja,da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,mejlova,da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,bloga),da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,Pisanje koda,da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,Prevođenje jezika,da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,Analiza podataka (Excel,da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,Python,da,other
+P059FAA9F,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,Generisanje slika ili vizuala,da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,Pisanje akademskih radova,da,other
+P0538B41D,MidJourney / Stable Diffusion,da,unknown,ostalo,da,other
+P059FAA9F,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P0538B41D,ostalo,da,unknown,Pisanje teksta (eseja,da,other
+P0538B41D,ostalo,da,unknown,mejlova,da,other
+P059FAA9F,ChatGPT,da,unknown,bloga),da,conversational_ai
+P0538B41D,ostalo,da,unknown,bloga),da,other
+P059FAA9F,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P059FAA9F,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P0538B41D,ostalo,da,unknown,Prevođenje jezika,da,other
+P059FAA9F,ChatGPT,da,unknown,Python,da,conversational_ai
+P0538B41D,ostalo,da,unknown,Analiza podataka (Excel,da,other
+P059FAA9F,ChatGPT,da,unknown,SQL),da,conversational_ai
+P0538B41D,ostalo,da,unknown,Python,da,other
+P0538B41D,ostalo,da,unknown,SQL),da,other
+P0538B41D,ostalo,da,unknown,Generisanje slika ili vizuala,da,other
+sational_ai
+P0538B41D,ostalo,da,unknown,Pisanje akademskih radova,da,other
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P0538B41D,ostalo,da,unknown,ostalo,da,other
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P059FAA9F,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P01F5323B,GitHub Copilot,ne,unknown,Pisanje koda,ne,code_assistant
+P05D09940,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,bloga),da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05D09940,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P033673D8,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P033673D8,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P033673D8,ChatGPT,da,unknown,bloga),da,conversational_ai
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P033673D8,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P05D09940,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P033673D8,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P033673D8,ChatGPT,da,unknown,SQL),da,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P046EF607,ChatGPT,ne,unknown,Pisanje koda,ne,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
+P033673D8,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
+P033673D8,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P033673D8,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P033673D8,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P033673D8,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P033673D8,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P033673D8,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P05CD760E,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05CD760E,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05CD760E,ChatGPT,da,unknown,bloga),da,conversational_ai
+P05CD760E,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P05CD760E,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P05CD760E,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P033673D8,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P05CD760E,ChatGPT,da,unknown,Python,da,conversational_ai
+P05CD760E,ChatGPT,da,unknown,SQL),da,conversational_ai
+nknown,SQL),da,code_assistant
+P05CD760E,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05CD760E,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05CD760E,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,Python,da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,SQL),da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05CD760E,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P05CD760E,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05CD760E,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05CD760E,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P025A8F80,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,Pisanje teksta (eseja,da,other
+P025A8F80,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,mejlova,da,other
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,bloga),da,other
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,Pisanje koda,da,other
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,Prevođenje jezika,da,other
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,Analiza podataka (Excel,da,other
+P025A8F80,ChatGPT,da,unknown,bloga),da,conversational_ai
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,Python,da,other
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,SQL),da,other
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,Generisanje slika ili vizuala,da,other
+P025A8F80,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P05CD760E,MidJourney / Stable Diffusion,da,unknown,Pisanje akademskih radova,da,other
+P025A8F80,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P025A8F80,ChatGPT,da,unknown,ostalo,da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P025A8F80,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,Prevođenje jezika,da,conversational_ai
+P025A8F80,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P025A8F80,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,Python,da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,SQL),da,conversational_ai
+P05CD760E,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P025A8F80,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+nal_ai
+P05CD760E,ostalo,da,unknown,Pisanje teksta (eseja,da,other
+P05CD760E,ostalo,da,unknown,mejlova,da,other
+P025A8F80,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05CD760E,ostalo,da,unknown,bloga),da,other
+P05CD760E,ostalo,da,unknown,Pisanje koda,da,other
+P025A8F80,Google Gemini (ex Bard),da,unknown,ostalo,da,conversational_ai
+P05CD760E,ostalo,da,unknown,Prevođenje jezika,da,other
+P05CD760E,ostalo,da,unknown,Analiza podataka (Excel,da,other
+P05CD760E,ostalo,da,unknown,Python,da,other
+P05CD760E,ostalo,da,unknown,SQL),da,other
+P05CD760E,ostalo,da,unknown,Generisanje slika ili vizuala,da,other
+P05CD760E,ostalo,da,unknown,Pisanje akademskih radova,da,other
+P0210E196,ChatGPT,ne,unknown,Generisanje slika ili vizuala,ne,conversational_ai
+P0210E196,GitHub Copilot,ne,unknown,Generisanje slika ili vizuala,ne,code_assistant
+P0210E196,Google Gemini (ex Bard),ne,unknown,Generisanje slika ili vizuala,ne,conversational_ai
+P0210E196,Microsoft Copilot (Word/Excel/PowerPoint),ne,unknown,Generisanje slika ili vizuala,ne,code_assistant
+P01DA5EAD,ChatGPT,ne,unknown,Pisanje koda,ne,conversational_ai
+P0131D08F,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P0131D08F,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P0131D08F,ChatGPT,da,unknown,bloga),da,conversational_ai
+P0131D08F,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P0131D08F,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P0131D08F,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P0158BC43,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P0158BC43,ChatGPT,da,unknown,Testiranje softvera,da,conversational_ai
+P0158BC43,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P01D580BB,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P0158BC43,GitHub Copilot,da,unknown,Testiranje softvera,da,code_assistant
+P01D580BB,ChatGPT,da,unknown,bloga),da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,Python,da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,SQL),da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P01D580BB,ChatGPT,da,unknown,ostalo,da,conversational_ai
+P01D580BB,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,Python,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,SQL),da,code_assistant
+P038E5CD6,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P038E5CD6,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P01D580BB,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P01D580BB,GitHub Copilot,da,unknown,ostalo,da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P038E5CD6,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P038E5CD6,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P01D580BB,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,ostalo,da,code_assistant
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,Pisanje teksta (eseja,da,other
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,mejlova,da,other
+P038E5CD6,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P038E5CD6,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,bloga),da,other
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,Pisanje koda,da,other
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,Prevođenje jezika,da,other
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,Analiza podataka (Excel,da,other
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,Python,da,other
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,SQL),da,other
+P05D09940,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,bloga),da,conversational_ai
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,Generisanje slika ili vizuala,da,other
+P05D09940,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,Pisanje akademskih radova,da,other
+P05D09940,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P01D580BB,MidJourney / Stable Diffusion,da,unknown,ostalo,da,other
+,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P01D580BB,ostalo,da,unknown,Pisanje teksta (eseja,da,other
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P01D580BB,ostalo,da,unknown,mejlova,da,other
+P05D09940,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P01D580BB,ostalo,da,unknown,bloga),da,other
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P01D580BB,ostalo,da,unknown,Pisanje koda,da,other
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P01D580BB,ostalo,da,unknown,Prevođenje jezika,da,other
+known,Pisanje koda,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P05D09940,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P01D580BB,ostalo,da,unknown,Analiza podataka (Excel,da,other
+P05D09940,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P01D580BB,ostalo,da,unknown,Python,da,other
+),da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P01D580BB,ostalo,da,unknown,SQL),da,other
+P05D09940,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P01D580BB,ostalo,da,unknown,Generisanje slika ili vizuala,da,other
+P01D580BB,ostalo,da,unknown,Pisanje akademskih radova,da,other
+P01D580BB,ostalo,da,unknown,ostalo,da,other
+P05D09940,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,bloga),da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05D09940,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05D09940,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05D09940,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05D09940,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P05D09940,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P05D09940,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P05D09940,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P05AC66BD,GitHub Copilot,ne,unknown,Pisanje koda,ne,code_assistant
+P03D296F1,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,bloga),da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P03D296F1,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P053667DD,ChatGPT,ne,unknown,Pisanje koda,ne,conversational_ai
+P028F5A96,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,bloga),da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,Analiza podataka (Excel,da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,Python,da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,SQL),da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P028F5A96,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P028F5A96,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,Prevođenje jezika,da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,Analiza podataka (Excel,da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,Python,da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,SQL),da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P028F5A96,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P028F5A96,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,Prevođenje jezika,da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,Python,da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,SQL),da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P028F5A96,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Prevođenje jezika,da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Analiza podataka (Excel,da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Python,da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,SQL),da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P028F5A96,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,Pisanje teksta (eseja,da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,mejlova,da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,bloga),da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,Pisanje koda,da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,Prevođenje jezika,da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,Analiza podataka (Excel,da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,Python,da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,SQL),da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,Generisanje slika ili vizuala,da,other
+P028F5A96,MidJourney / Stable Diffusion,da,unknown,Pisanje akademskih radova,da,other
+P028F5A96,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,Prevođenje jezika,da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,Analiza podataka (Excel,da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,Python,da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,SQL),da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P028F5A96,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P028F5A96,ostalo,da,unknown,Pisanje teksta (eseja,da,other
+P028F5A96,ostalo,da,unknown,mejlova,da,other
+P028F5A96,ostalo,da,unknown,bloga),da,other
+P028F5A96,ostalo,da,unknown,Pisanje koda,da,other
+P028F5A96,ostalo,da,unknown,Prevođenje jezika,da,other
+P028F5A96,ostalo,da,unknown,Analiza podataka (Excel,da,other
+P028F5A96,ostalo,da,unknown,Python,da,other
+P028F5A96,ostalo,da,unknown,SQL),da,other
+P028F5A96,ostalo,da,unknown,Generisanje slika ili vizuala,da,other
+P028F5A96,ostalo,da,unknown,Pisanje akademskih radova,da,other
+P04BCBBD8,ChatGPT,ne,unknown,Generisanje slika ili vizuala,ne,conversational_ai
+P04BCBBD8,GitHub Copilot,ne,unknown,Generisanje slika ili vizuala,ne,code_assistant
+P04BCBBD8,Google Gemini (ex Bard),ne,unknown,Generisanje slika ili vizuala,ne,conversational_ai
+P04BCBBD8,Microsoft Copilot (Word/Excel/PowerPoint),ne,unknown,Generisanje slika ili vizuala,ne,code_assistant
+P02E687EB,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P02E687EB,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P02E687EB,ChatGPT,da,unknown,bloga),da,conversational_ai
+P02E687EB,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P02E687EB,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P02E687EB,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P00DD5AE9,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P00DD5AE9,ChatGPT,da,unknown,Testiranje softvera,da,conversational_ai
+P00DD5AE9,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P00DD5AE9,GitHub Copilot,da,unknown,Testiranje softvera,da,code_assistant
+P04C95A6C,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P04C95A6C,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P04C95A6C,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P04C95A6C,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P04C95A6C,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P04C95A6C,ChatGPT,da,unknown,Prevođenje jezika,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,bloga),da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P03D296F1,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,mejlova,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,bloga),da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,ChatGPT,da,unknown,Pisanje akademskih radova,da,conversational_ai
+P03D296F1,GitHub Copilot,da,unknown,Pisanje teksta (eseja,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,mejlova,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,bloga),da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Pisanje koda,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P03D296F1,GitHub Copilot,da,unknown,Pisanje akademskih radova,da,code_assistant
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,mejlova,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,bloga),da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,Google Gemini (ex Bard),da,unknown,Pisanje akademskih radova,da,conversational_ai
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje teksta (eseja,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,mejlova,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,bloga),da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje koda,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Generisanje slika ili vizuala,da,code_assistant
+P03D296F1,Microsoft Copilot (Word/Excel/PowerPoint),da,unknown,Pisanje akademskih radova,da,code_assistant
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje teksta (eseja,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,mejlova,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,bloga),da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje koda,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Generisanje slika ili vizuala,da,conversational_ai
+P03D296F1,Claude (Anthropic),da,unknown,Pisanje akademskih radova,da,conversational_ai
