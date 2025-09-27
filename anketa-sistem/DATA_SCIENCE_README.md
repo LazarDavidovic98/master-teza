@@ -35,7 +35,11 @@ pip install -r requirements_data_science.txt
 
 ### Korak 2: Generiši test podatke (opciono)
 ```bash
+# Za kompleksnu analizu sa 50-100 učesnika:
 python demo_data_science.py
+
+# Za mass testiranje sa 300+ novih redova:
+python generate_mass_data.py
 ```
 
 ### Korak 3: Pokreni Flask aplikaciju
@@ -45,6 +49,21 @@ python app.py
 
 ### Korak 4: Idi na Data Science Dashboard
 Otvori: `http://127.0.0.1:5000/data_science`
+
+## 🎯 Test Data Generatori
+
+### `demo_data_science.py` - Kompletan sistem
+- Generiše **50-100 učesnika** sa kompletnom analizom
+- Automatski pokreće napredne analize
+- Idealno za development i testing
+- Kreira sve povezane CSV fajlove
+
+### `generate_mass_data.py` - Mass Data Generator
+- Generiše **300+ novih redova** direktno u survey_responses.csv
+- Dodaje podatke u postojeći fajl (ne briše stare)
+- Realistički podaci sa 70% tačnih quiz odgovora
+- File watcher automatski regeneriše sve analize
+- Idealno za stress testing i performance analizu
 
 ## 🔍 Analize koje možete uraditi
 

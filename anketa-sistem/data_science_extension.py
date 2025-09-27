@@ -395,13 +395,18 @@ class DataScienceManager:
         """Kreiraj NetworkX graf za analizu"""
         G = nx.Graph()
         
-        # Učitaj relationships
-        relationships_df = pd.read_csv(self.files['relationships'])
+        # Učitaj relationships sa eksplicitnim dtype za ID kolone
+        relationships_df = pd.read_csv(self.files['relationships'], 
+                                     dtype={'source_id': str, 'target_id': str})
         
         for _, row in relationships_df.iterrows():
+            # Eksplicitno konvertuj u string da izbegneš probleme sa tipovima
+            source_id = str(row['source_id'])
+            target_id = str(row['target_id'])
+            
             G.add_edge(
-                row['source_id'], 
-                row['target_id'],
+                source_id, 
+                target_id,
                 relationship_type=row['relationship_type'],
                 weight=row['weight'],
                 context=row['context']
@@ -416,10 +421,12 @@ class DataScienceManager:
         # Nodes file
         nodes_data = []
         for node in G.nodes():
-            node_type = 'participant' if node.startswith('P') else 'entity'
+            # Eksplicitno konvertuj čvor u string
+            node_str = str(node)
+            node_type = 'participant' if node_str.startswith('P') else 'entity'
             nodes_data.append({
-                'Id': node,
-                'Label': node,
+                'Id': node_str,
+                'Label': node_str,
                 'Type': node_type
             })
         
@@ -430,8 +437,8 @@ class DataScienceManager:
         edges_data = []
         for edge in G.edges(data=True):
             edges_data.append({
-                'Source': edge[0],
-                'Target': edge[1],
+                'Source': str(edge[0]),  # Eksplicitno konvertuj u string
+                'Target': str(edge[1]),  # Eksplicitno konvertuj u string
                 'Type': edge[2].get('relationship_type', 'unknown'),
                 'Weight': edge[2].get('weight', 1.0),
                 'Context': edge[2].get('context', 'unknown')
