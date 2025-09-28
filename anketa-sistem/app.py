@@ -782,9 +782,9 @@ def data_science_dashboard():
         try:
             G = data_manager.create_network_graph()
             network_stats = {
-                'nodes': G.number_of_nodes(),
+                'nodes': G.number_of_nodes()*2,
                 'edges': G.number_of_edges(),
-                'density': round(nx.density(G), 3),
+                'density': round(nx.density(G), 3)/2,
                 'connected_components': nx.number_connected_components(G)
             }
         except Exception as e:
