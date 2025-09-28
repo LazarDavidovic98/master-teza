@@ -713,25 +713,16 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="grana_oblast">Grana/Oblast kojom se bavite:</label>
-                    <input type="text" id="grana_oblast" name="grana_oblast" list="oblasti_lista" placeholder="Unesite ili izaberite iz liste..." required>
-                    <datalist id="oblasti_lista">
-                        <option value="Informatika/IT">
-                        <option value="Elektrotehnika">
-                        <option value="Mašinstvo">
-                        <option value="Građevina">
-                        <option value="Ekonomija">
-                        <option value="Pravo">
-                        <option value="Medicina">
-                        <option value="Obrazovanje">
-                        <option value="Dizajn">
-                        <option value="Marketing">
-                        <option value="Trgovina">
-                        <option value="Usluge">
-                        <option value="Student">
-                        <option value="Prirodne nauke">
-                        <option value="Društvene nauke">
-                    </datalist>
+                    <label for="ciljana_grupa">Ciljana grupa:</label>
+                    <select id="ciljana_grupa" name="ciljana_grupa" required>
+                        <option value="">Izaberite...</option>
+                        <option value="it_industrija">IT Industrija</option>
+                        <option value="prosveta">Prosveta</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="kreativna_filmska">Kreativna i filmska industrija</option>
+                        <option value="drustvene_nauke">Društvene nauke</option>
+                        <option value="ostalo">Ostalo</option>
+                    </select>
                 </div>
                 
                 <div class="form-group">
@@ -771,82 +762,339 @@
                         </datalist>
                     </div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="uza_oblast">Uža oblast u kojoj radite:</label>
-                    <input type="text" id="uza_oblast" name="uza_oblast" list="uze_oblasti_lista" placeholder="Unesite ili izaberite iz liste..." required>
-                    <datalist id="uze_oblasti_lista">
-                        <option value="Web development">
-                        <option value="Mobile development">
-                        <option value="DevOps">
-                        <option value="Data Science">
-                        <option value="Machine Learning">
-                        <option value="Cybersecurity">
-                        <option value="Cloud Computing">
-                        <option value="Backend development">
-                        <option value="Frontend development">
-                        <option value="Full-stack development">
-                        <option value="Database Administration">
-                        <option value="Network Administration">
-                        <option value="Quality Assurance">
-                        <option value="Product Management">
-                        <option value="Project Management">
-                        <option value="Business Analysis">
-                    </datalist>
-                </div>
-                
-                <div class="form-group">
-                    <label>Da li se bavite pisanjem i distribucijom softvera?</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="softver_da" name="pisanje_softvera" value="da" required>
-                            <label for="softver_da">Da</label>
+
+                <!-- PITANJA SPECIFIČNA ZA IT INDUSTRIJU -->
+                <div id="it_pitanja" class="conditional-group" style="display: none;">
+                    <div class="form-group">
+                        <label>Koju poziciju zauzimate u IT sektoru? (možete birati više odgovora)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_pozicija_dev" name="it_pozicije" value="Developer/Programer">
+                                <label for="it_pozicija_dev">Developer/Programer</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_pozicija_qa" name="it_pozicije" value="Quality Assurance/Tester">
+                                <label for="it_pozicija_qa">Quality Assurance/Tester</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_pozicija_devops" name="it_pozicije" value="DevOps Engineer">
+                                <label for="it_pozicija_devops">DevOps Engineer</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_pozicija_pm" name="it_pozicije" value="Project Manager">
+                                <label for="it_pozicija_pm">Project Manager</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_pozicija_ba" name="it_pozicije" value="Business Analyst">
+                                <label for="it_pozicija_ba">Business Analyst</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_pozicija_ui" name="it_pozicije" value="UI/UX Designer">
+                                <label for="it_pozicija_ui">UI/UX Designer</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_pozicija_data" name="it_pozicije" value="Data Scientist/Analyst">
+                                <label for="it_pozicija_data">Data Scientist/Analyst</label>
+                            </div>
                         </div>
-                        <div class="radio-option">
-                            <input type="radio" id="softver_ne" name="pisanje_softvera" value="ne" required>
-                            <label for="softver_ne">Ne</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Koje programske tehnologije najčešće koristite? (možete birati više odgovora)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_tehnologije_javascript" name="it_tehnologije" value="JavaScript/TypeScript">
+                                <label for="it_tehnologije_javascript">JavaScript/TypeScript</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_tehnologije_python" name="it_tehnologije" value="Python">
+                                <label for="it_tehnologije_python">Python</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_tehnologije_java" name="it_tehnologije" value="Java">
+                                <label for="it_tehnologije_java">Java</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_tehnologije_csharp" name="it_tehnologije" value="C#/.NET">
+                                <label for="it_tehnologije_csharp">C#/.NET</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_tehnologije_react" name="it_tehnologije" value="React/Angular/Vue">
+                                <label for="it_tehnologije_react">React/Angular/Vue</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_tehnologije_mobile" name="it_tehnologije" value="Mobile (iOS/Android)">
+                                <label for="it_tehnologije_mobile">Mobile (iOS/Android)</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="it_tehnologije_cloud" name="it_tehnologije" value="Cloud (AWS/Azure/GCP)">
+                                <label for="it_tehnologije_cloud">Cloud (AWS/Azure/GCP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Da li koristite AI alate u razvoju softvera?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="it_ai_da" name="it_ai_koriscenje" value="da_aktivno">
+                                <label for="it_ai_da">Da, aktivno koristim</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="it_ai_povremeno" name="it_ai_koriscenje" value="povremeno">
+                                <label for="it_ai_povremeno">Povremeno</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="it_ai_ne" name="it_ai_koriscenje" value="ne">
+                                <label for="it_ai_ne">Ne koristim</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="form-group">
-                    <label>Da li ste upoznati sa pojmom "generativni AI alati"?</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="generativni_ai_da" name="generativni_ai_poznavanje" value="da" required>
-                            <label for="generativni_ai_da">Da</label>
+
+                <!-- PITANJA SPECIFIČNA ZA PROSVETU -->
+                <div id="prosveta_pitanja" class="conditional-group" style="display: none;">
+                    <div class="form-group">
+                        <label>Na kom nivou obrazovanja radite?</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="prosveta_osnovno" name="prosveta_nivo" value="Osnovno obrazovanje">
+                                <label for="prosveta_osnovno">Osnovno obrazovanje</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="prosveta_srednje" name="prosveta_nivo" value="Srednje obrazovanje">
+                                <label for="prosveta_srednje">Srednje obrazovanje</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="prosveta_vise" name="prosveta_nivo" value="Više/Visoko obrazovanje">
+                                <label for="prosveta_vise">Više/Visoko obrazovanje</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="prosveta_predskola" name="prosveta_nivo" value="Predškolsko obrazovanje">
+                                <label for="prosveta_predskola">Predškolsko obrazovanje</label>
+                            </div>
                         </div>
-                        <div class="radio-option">
-                            <input type="radio" id="generativni_ai_ne" name="generativni_ai_poznavanje" value="ne" required>
-                            <label for="generativni_ai_ne">Ne</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Koje predmete predajete? (ukoliko ste nastavnik/profesor)</label>
+                        <input type="text" id="prosveta_predmeti" name="prosveta_predmeti" placeholder="Navedite predmete koje predajete...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Da li koristite AI alate u pripremi nastave ili administrativnim poslovima?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="prosveta_ai_da" name="prosveta_ai_koriscenje" value="da_redovno">
+                                <label for="prosveta_ai_da">Da, redovno</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="prosveta_ai_povremeno" name="prosveta_ai_koriscenje" value="povremeno">
+                                <label for="prosveta_ai_povremeno">Povremeno</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="prosveta_ai_ne" name="prosveta_ai_koriscenje" value="ne">
+                                <label for="prosveta_ai_ne">Ne koristim</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="form-group">
-                    <label>Da li koristite programske jezike?</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="programski_jezici_da" name="programski_jezici" value="da" required>
-                            <label for="programski_jezici_da">Da</label>
+
+                <!-- PITANJA SPECIFIČNA ZA MEDICINU -->
+                <div id="medicina_pitanja" class="conditional-group" style="display: none;">
+                    <div class="form-group">
+                        <label>U kojoj oblasti medicine radite?</label>
+                        <input type="text" id="medicina_oblast" name="medicina_oblast" placeholder="Npr. opšta medicina, hirurgija, pedijatrija...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Kakva je vaša pozicija u zdravstvu?</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="medicina_lekar" name="medicina_pozicije" value="Lekar/Doktor">
+                                <label for="medicina_lekar">Lekar/Doktor</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="medicina_sestra" name="medicina_pozicije" value="Medicinska sestra/tehničar">
+                                <label for="medicina_sestra">Medicinska sestra/tehničar</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="medicina_farmaceut" name="medicina_pozicije" value="Farmaceut">
+                                <label for="medicina_farmaceut">Farmaceut</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="medicina_administrator" name="medicina_pozicije" value="Administrator/Menadžer">
+                                <label for="medicina_administrator">Administrator/Menadžer</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="medicina_istrazivac" name="medicina_pozicije" value="Istraživač">
+                                <label for="medicina_istrazivac">Istraživač</label>
+                            </div>
                         </div>
-                        <div class="radio-option">
-                            <input type="radio" id="programski_jezici_ne" name="programski_jezici" value="ne" required>
-                            <label for="programski_jezici_ne">Ne</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Da li koristite AI alate u svojom radu (dijagnostika, istraživanja, administracija)?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="medicina_ai_da" name="medicina_ai_koriscenje" value="da_u_praksi">
+                                <label for="medicina_ai_da">Da, u kliničkoj praksi</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="medicina_ai_istrazivanja" name="medicina_ai_koriscenje" value="da_u_istrazivanjima">
+                                <label for="medicina_ai_istrazivanja">Da, u istraživanjima</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="medicina_ai_admin" name="medicina_ai_koriscenje" value="da_u_administraciji">
+                                <label for="medicina_ai_admin">Da, u administrativnim poslovima</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="medicina_ai_ne" name="medicina_ai_koriscenje" value="ne">
+                                <label for="medicina_ai_ne">Ne koristim</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="form-group">
-                    <label>Da li koristite programska okruženja (Visual Studio, IntelliJ, PyCharm, ...)?</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="programska_okruzenja_da" name="programska_okruzenja" value="da" required>
-                            <label for="programska_okruzenja_da">Da</label>
+
+                <!-- PITANJA SPECIFIČNA ZA KREATIVNU I FILMSKU INDUSTRIJU -->
+                <div id="kreativna_pitanja" class="conditional-group" style="display: none;">
+                    <div class="form-group">
+                        <label>U kojoj oblasti kreativne industrije radite? (možete birati više odgovora)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="kreativna_film" name="kreativna_oblasti" value="Film i televizija">
+                                <label for="kreativna_film">Film i televizija</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="kreativna_graficki" name="kreativna_oblasti" value="Grafički dizajn">
+                                <label for="kreativna_graficki">Grafički dizajn</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="kreativna_muzika" name="kreativna_oblasti" value="Muzika i audio produkcija">
+                                <label for="kreativna_muzika">Muzika i audio produkcija</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="kreativna_animacija" name="kreativna_oblasti" value="Animacija i VFX">
+                                <label for="kreativna_animacija">Animacija i VFX</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="kreativna_gaming" name="kreativna_oblasti" value="Gaming industrija">
+                                <label for="kreativna_gaming">Gaming industrija</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="kreativna_foto" name="kreativna_oblasti" value="Fotografija">
+                                <label for="kreativna_foto">Fotografija</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="kreativna_pisanje" name="kreativna_oblasti" value="Pisanje/Kreativno pisanje">
+                                <label for="kreativna_pisanje">Pisanje/Kreativno pisanje</label>
+                            </div>
                         </div>
-                        <div class="radio-option">
-                            <input type="radio" id="programska_okruzenja_ne" name="programska_okruzenja" value="ne" required>
-                            <label for="programska_okruzenja_ne">Ne</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Da li koristite AI alate za kreativnu produkciju?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="kreativna_ai_da" name="kreativna_ai_koriscenje" value="da_aktivno">
+                                <label for="kreativna_ai_da">Da, aktivno koristim</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="kreativna_ai_eksperiment" name="kreativna_ai_koriscenje" value="eksperimentisem">
+                                <label for="kreativna_ai_eksperiment">Eksperimentišem</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="kreativna_ai_ne" name="kreativna_ai_koriscenje" value="ne">
+                                <label for="kreativna_ai_ne">Ne koristim</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PITANJA SPECIFIČNA ZA DRUŠTVENE NAUKE -->
+                <div id="drustvene_pitanja" class="conditional-group" style="display: none;">
+                    <div class="form-group">
+                        <label>Kojom oblašću društvenih nauka se bavite?</label>
+                        <input type="text" id="drustvene_oblast" name="drustvene_oblast" placeholder="Npr. sociologija, psihologija, antropologija, politikologija...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Koja je vaša primarna aktivnost?</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="drustvene_istrazivanje" name="drustvene_aktivnosti" value="Naučno istraživanje">
+                                <label for="drustvene_istrazivanje">Naučno istraživanje</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="drustvene_nastava" name="drustvene_aktivnosti" value="Nastava/Predavanje">
+                                <label for="drustvene_nastava">Nastava/Predavanje</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="drustvene_konsalting" name="drustvene_aktivnosti" value="Konsalting">
+                                <label for="drustvene_konsalting">Konsalting</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="drustvene_analiza" name="drustvene_aktivnosti" value="Analiza podataka/Statistike">
+                                <label for="drustvene_analiza">Analiza podataka/Statistike</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Da li koristite AI alate u istraživanjima ili analizi podataka?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="drustvene_ai_da" name="drustvene_ai_koriscenje" value="da_u_istrazivanjima">
+                                <label for="drustvene_ai_da">Da, u istraživanjima</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="drustvene_ai_analiza" name="drustvene_ai_koriscenje" value="da_u_analizi">
+                                <label for="drustvene_ai_analiza">Da, u analizi podataka</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="drustvene_ai_ne" name="drustvene_ai_koriscenje" value="ne">
+                                <label for="drustvene_ai_ne">Ne koristim</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PITANJA ZA OSTALO -->
+                <div id="ostalo_pitanja" class="conditional-group" style="display: none;">
+                    <div class="form-group">
+                        <label>Opišite oblast vašeg rada:</label>
+                        <input type="text" id="ostalo_oblast" name="ostalo_oblast" placeholder="Navedite oblast vašeg rada..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Da li u svom radu koristite bilo kakve AI alate?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="ostalo_ai_da" name="ostalo_ai_koriscenje" value="da">
+                                <label for="ostalo_ai_da">Da</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="ostalo_ai_ne" name="ostalo_ai_koriscenje" value="ne">
+                                <label for="ostalo_ai_ne">Ne</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Kako biste opisali svoj nivo tehničke ekspertize?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="ostalo_ekspertiza_pocetnik" name="ostalo_ekspertiza" value="pocetnik">
+                                <label for="ostalo_ekspertiza_pocetnik">Početnik</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="ostalo_ekspertiza_srednji" name="ostalo_ekspertiza" value="srednji">
+                                <label for="ostalo_ekspertiza_srednji">Srednji</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="ostalo_ekspertiza_napredni" name="ostalo_ekspertiza" value="napredni">
+                                <label for="ostalo_ekspertiza_napredni">Napredni</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1530,6 +1778,58 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Handle conditional fields for target groups
+            const ciljanGrupaSelect = document.getElementById('ciljana_grupa');
+            const allConditionalGroups = document.querySelectorAll('.conditional-group');
+            
+            ciljanGrupaSelect.addEventListener('change', function() {
+                // Hide all conditional groups
+                allConditionalGroups.forEach(group => {
+                    group.style.display = 'none';
+                    // Remove required attribute from all inputs in hidden groups
+                    const inputs = group.querySelectorAll('input, select, textarea');
+                    inputs.forEach(input => {
+                        input.required = false;
+                    });
+                });
+                
+                // Show specific group based on selection
+                let targetGroupId = '';
+                switch(this.value) {
+                    case 'it_industrija':
+                        targetGroupId = 'it_pitanja';
+                        break;
+                    case 'prosveta':
+                        targetGroupId = 'prosveta_pitanja';
+                        break;
+                    case 'medicina':
+                        targetGroupId = 'medicina_pitanja';
+                        break;
+                    case 'kreativna_filmska':
+                        targetGroupId = 'kreativna_pitanja';
+                        break;
+                    case 'drustvene_nauke':
+                        targetGroupId = 'drustvene_pitanja';
+                        break;
+                    case 'ostalo':
+                        targetGroupId = 'ostalo_pitanja';
+                        break;
+                }
+                
+                if (targetGroupId) {
+                    const targetGroup = document.getElementById(targetGroupId);
+                    if (targetGroup) {
+                        targetGroup.style.display = 'block';
+                        // Add required attribute to inputs in visible group that need it
+                        const requiredInputs = targetGroup.querySelectorAll('input[type="text"][placeholder*="..."], select option[value=""]:first-child');
+                        // For "Ostalo" group, make the area description required
+                        if (targetGroupId === 'ostalo_pitanja') {
+                            document.getElementById('ostalo_oblast').required = true;
+                        }
+                    }
+                }
+            });
+        
             // Handle conditional field for "institucija"
             const radniOdnosRadios = document.querySelectorAll('input[name="radni_odnos"]');
             const institucijaField = document.getElementById('institucija_conditional');

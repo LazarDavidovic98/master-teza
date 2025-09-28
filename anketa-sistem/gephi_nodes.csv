@@ -1,0 +1,52 @@
+Id,Label,Type,Ciljana_grupa,Age_group,Country,Education,Work_experience,Institution,Size
+P058575E4,Učesnik P058575E,participant,prosveta,experienced,crna_gora,visa,16-20,RT-RK,20
+P03EAE7A5,Učesnik P03EAE7A,participant,it_industrija,young,nemacka,doktorat,6-10,,20
+P023158B4,Učesnik P023158B,participant,drustvene_nauke,young,crna_gora,master,1-2,,20
+P01ACD678,Učesnik P01ACD67,participant,kreativna_filmska,mid_career,rumunija,master,20+,,20
+P01BF41E4,Učesnik P01BF41E,participant,it_industrija,mid_career,srbija,doktorat,16-20,,20
+P03EDA7E8,Učesnik P03EDA7E,participant,prosveta,mid_career,crna_gora,srednja,11-15,,20
+P04C4C4CE,Učesnik P04C4C4C,participant,it_industrija,mid_career,nemacka,doktorat,20+,Oracle,20
+P05C43C44,Učesnik P05C43C4,participant,kreativna_filmska,experienced,severna_makedonija,visa,11-15,Comtrade,20
+P02F450D5,Učesnik P02F450D,participant,prosveta,young,nemacka,srednja,3-5,Univerzitet u Novom Sadu,20
+P05E1D55F,Učesnik P05E1D55,participant,medicina,mid_career,rumunija,visa,16-20,,20
+P0324390C,Učesnik P0324390,participant,kreativna_filmska,mid_career,srbija,visoka,1-2,,20
+P01770C34,Učesnik P01770C3,participant,drustvene_nauke,experienced,nemacka,doktorat,11-15,IBM,20
+P00DC8F69,Učesnik P00DC8F6,participant,prosveta,experienced,rumunija,doktorat,11-15,,20
+P05F5A45E,Učesnik P05F5A45,participant,drustvene_nauke,young,slovenija,doktorat,0,IBM,20
+P028BF499,Učesnik P028BF49,participant,medicina,young,austrija,master,11-15,Nordeus,20
+P04851D34,Učesnik P04851D3,participant,kreativna_filmska,mid_career,crna_gora,srednja,1-2,RT-RK,20
+P03980179,Učesnik P0398017,participant,medicina,experienced,bugarska,visoka,20+,Google,20
+P03D921EE,Učesnik P03D921E,participant,medicina,young,nemacka,doktorat,6-10,,20
+P048D6369,Učesnik P048D636,participant,ostalo,mid_career,bugarska,visoka,20+,Univerzitet u Nišu,20
+P03CD55D7,Učesnik P03CD55D,participant,ostalo,mid_career,slovenija,master,0,Google,20
+P008C804C,Učesnik P008C804,participant,drustvene_nauke,mid_career,nemacka,visa,16-20,,20
+P0230B1FE,Učesnik P0230B1F,participant,prosveta,experienced,bosna_i_hercegovina,visoka,1-2,,20
+P002CCBFB,Učesnik P002CCBF,participant,kreativna_filmska,experienced,slovenija,visoka,6-10,Univerzitet u Novom Sadu,20
+P00744C14,Učesnik P00744C1,participant,medicina,experienced,bosna_i_hercegovina,visa,6-10,Amazon,20
+GROUP_PROSVETA,Grupa: prosveta,target_group,prosveta,,,,,,120
+GROUP_IT_INDUSTRIJA,Grupa: it_industrija,target_group,it_industrija,,,,,,90
+GROUP_MEDICINA,Grupa: medicina,target_group,medicina,,,,,,120
+GROUP_KREATIVNA_FILMSKA,Grupa: kreativna_filmska,target_group,kreativna_filmska,,,,,,80
+GROUP_DRUSTVENE_NAUKE,Grupa: drustvene_nauke,target_group,drustvene_nauke,,,,,,50
+GROUP_OSTALO,Grupa: ostalo,target_group,ostalo,,,,,,40
+TOOL_Grammarly,Grammarly,ai_tool,,,,,,,32
+TOOL_Bing_Chat,Bing_Chat,ai_tool,,,,,,,36
+TOOL_DeepL,DeepL,ai_tool,,,,,,,26
+TOOL_ChatGPT,ChatGPT,ai_tool,,,,,,,36
+TOOL_Gemini,Gemini,ai_tool,,,,,,,32
+TOOL_Claude,Claude,ai_tool,,,,,,,30
+TOOL_GitHub_Copilot,GitHub_Copilot,ai_tool,,,,,,,28
+TOOL_Midjourney,Midjourney,ai_tool,,,,,,,28
+TOOL_DALL-E,DALL-E,ai_tool,,,,,,,24
+TOOL_Stable_Diffusion,Stable_Diffusion,ai_tool,,,,,,,40
+ORG_Google,Org: Google,organization,,,,,,,15
+ORG_Apple,Org: Apple,organization,,,,,,,15
+ORG_IBM,Org: IBM,organization,,,,,,,15
+ORG_RT-RK,Org: RT-RK,organization,,,,,,,15
+ORG_Nordeus,Org: Nordeus,organization,,,,,,,15
+ORG_Microsoft,Org: Microsoft,organization,,,,,,,15
+ORG_Univerzitet_u_Novom_Sadu,Org: Univerzitet_u_Novom_Sadu,organization,,,,,,,15
+ORG_Comtrade,Org: Comtrade,organization,,,,,,,15
+ORG_Oracle,Org: Oracle,organization,,,,,,,15
+ORG_Univerzitet_u_Nišu,Org: Univerzitet_u_Nišu,organization,,,,,,,15
+ORG_Amazon,Org: Amazon,organization,,,,,,,15

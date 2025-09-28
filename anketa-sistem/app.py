@@ -381,14 +381,33 @@ def init_csv_file():
                 'drzava',
                 'strucna_sprema',
                 'radni_odnos',
-                'grana_oblast',
+                'ciljana_grupa',
                 'godine_staza',
                 'institucija',
-                'uza_oblast',
-                'pisanje_softvera',
-                'generativni_ai_poznavanje',
-                'programski_jezici',
-                'programska_okruzenja',
+                # IT Industrija fields
+                'it_pozicije',
+                'it_tehnologije',
+                'it_ai_koriscenje',
+                # Prosveta fields
+                'prosveta_nivo',
+                'prosveta_predmeti',
+                'prosveta_ai_koriscenje',
+                # Medicina fields
+                'medicina_oblast',
+                'medicina_pozicije',
+                'medicina_ai_koriscenje',
+                # Kreativna industrija fields
+                'kreativna_oblasti',
+                'kreativna_ai_koriscenje',
+                # Društvene nauke fields
+                'drustvene_oblast',
+                'drustvene_aktivnosti',
+                'drustvene_ai_koriscenje',
+                # Ostalo fields
+                'ostalo_oblast',
+                'ostalo_ai_koriscenje',
+                'ostalo_ekspertiza',
+                # Rest of existing fields
                 'poznati_ai_alati',
                 'ostalo_poznati_ai_alati',
                 'svrhe_koriscenja',
@@ -434,14 +453,33 @@ def submit_survey():
             'drzava': request.form.get('drzava', ''),
             'strucna_sprema': request.form.get('strucna_sprema', ''),
             'radni_odnos': request.form.get('radni_odnos', ''),
-            'grana_oblast': request.form.get('grana_oblast', ''),
+            'ciljana_grupa': request.form.get('ciljana_grupa', ''),
             'godine_staza': request.form.get('godine_staza', ''),
             'institucija': request.form.get('institucija', ''),
-            'uza_oblast': request.form.get('uza_oblast', ''),
-            'pisanje_softvera': request.form.get('pisanje_softvera', ''),
-            'generativni_ai_poznavanje': request.form.get('generativni_ai_poznavanje', ''),
-            'programski_jezici': request.form.get('programski_jezici', ''),
-            'programska_okruzenja': request.form.get('programska_okruzenja', ''),
+            # IT Industrija fields
+            'it_pozicije': ','.join(request.form.getlist('it_pozicije')),
+            'it_tehnologije': ','.join(request.form.getlist('it_tehnologije')),
+            'it_ai_koriscenje': request.form.get('it_ai_koriscenje', ''),
+            # Prosveta fields
+            'prosveta_nivo': ','.join(request.form.getlist('prosveta_nivo')),
+            'prosveta_predmeti': request.form.get('prosveta_predmeti', ''),
+            'prosveta_ai_koriscenje': request.form.get('prosveta_ai_koriscenje', ''),
+            # Medicina fields
+            'medicina_oblast': request.form.get('medicina_oblast', ''),
+            'medicina_pozicije': ','.join(request.form.getlist('medicina_pozicije')),
+            'medicina_ai_koriscenje': request.form.get('medicina_ai_koriscenje', ''),
+            # Kreativna industrija fields
+            'kreativna_oblasti': ','.join(request.form.getlist('kreativna_oblasti')),
+            'kreativna_ai_koriscenje': request.form.get('kreativna_ai_koriscenje', ''),
+            # Društvene nauke fields
+            'drustvene_oblast': request.form.get('drustvene_oblast', ''),
+            'drustvene_aktivnosti': ','.join(request.form.getlist('drustvene_aktivnosti')),
+            'drustvene_ai_koriscenje': request.form.get('drustvene_ai_koriscenje', ''),
+            # Ostalo fields
+            'ostalo_oblast': request.form.get('ostalo_oblast', ''),
+            'ostalo_ai_koriscenje': request.form.get('ostalo_ai_koriscenje', ''),
+            'ostalo_ekspertiza': request.form.get('ostalo_ekspertiza', ''),
+            # Rest of the existing fields
             'poznati_ai_alati': ','.join(request.form.getlist('poznati_ai_alati')),
             'ostalo_poznati_ai_alati': request.form.get('ostalo_poznati_ai_alati', ''),
             'svrhe_koriscenja': ','.join(request.form.getlist('svrhe_koriscenja')),
@@ -481,14 +519,33 @@ def submit_survey():
                 data['drzava'],
                 data['strucna_sprema'],
                 data['radni_odnos'],
-                data['grana_oblast'],
+                data['ciljana_grupa'],
                 data['godine_staza'],
                 data['institucija'],
-                data['uza_oblast'],
-                data['pisanje_softvera'],
-                data['generativni_ai_poznavanje'],
-                data['programski_jezici'],
-                data['programska_okruzenja'],
+                # IT Industrija fields
+                data['it_pozicije'],
+                data['it_tehnologije'],
+                data['it_ai_koriscenje'],
+                # Prosveta fields
+                data['prosveta_nivo'],
+                data['prosveta_predmeti'],
+                data['prosveta_ai_koriscenje'],
+                # Medicina fields
+                data['medicina_oblast'],
+                data['medicina_pozicije'],
+                data['medicina_ai_koriscenje'],
+                # Kreativna industrija fields
+                data['kreativna_oblasti'],
+                data['kreativna_ai_koriscenje'],
+                # Društvene nauke fields
+                data['drustvene_oblast'],
+                data['drustvene_aktivnosti'],
+                data['drustvene_ai_koriscenje'],
+                # Ostalo fields
+                data['ostalo_oblast'],
+                data['ostalo_ai_koriscenje'],
+                data['ostalo_ekspertiza'],
+                # Rest of existing fields
                 data['poznati_ai_alati'],
                 data['ostalo_poznati_ai_alati'],
                 data['svrhe_koriscenja'],

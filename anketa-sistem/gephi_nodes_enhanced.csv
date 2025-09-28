@@ -1,0 +1,52 @@
+Id,Label,Type,Ciljana_grupa,Age_group,Country,Education,Work_experience,Institution,Size,Color,Shape
+P058575E4,Učesnik P058575E,participant,prosveta,experienced,crna_gora,visa,16-20,RT-RK,25,#3498db,circle
+P03EAE7A5,Učesnik P03EAE7A,participant,it_industrija,young,nemacka,doktorat,6-10,,25,#3498db,circle
+P023158B4,Učesnik P023158B,participant,drustvene_nauke,young,crna_gora,master,1-2,,25,#3498db,circle
+P01ACD678,Učesnik P01ACD67,participant,kreativna_filmska,mid_career,rumunija,master,20+,,25,#3498db,circle
+P01BF41E4,Učesnik P01BF41E,participant,it_industrija,mid_career,srbija,doktorat,16-20,,25,#3498db,circle
+P03EDA7E8,Učesnik P03EDA7E,participant,prosveta,mid_career,crna_gora,srednja,11-15,,25,#3498db,circle
+P04C4C4CE,Učesnik P04C4C4C,participant,it_industrija,mid_career,nemacka,doktorat,20+,Oracle,25,#3498db,circle
+P05C43C44,Učesnik P05C43C4,participant,kreativna_filmska,experienced,severna_makedonija,visa,11-15,Comtrade,25,#3498db,circle
+P02F450D5,Učesnik P02F450D,participant,prosveta,young,nemacka,srednja,3-5,Univerzitet u Novom Sadu,25,#3498db,circle
+P05E1D55F,Učesnik P05E1D55,participant,medicina,mid_career,rumunija,visa,16-20,,25,#3498db,circle
+P0324390C,Učesnik P0324390,participant,kreativna_filmska,mid_career,srbija,visoka,1-2,,25,#3498db,circle
+P01770C34,Učesnik P01770C3,participant,drustvene_nauke,experienced,nemacka,doktorat,11-15,IBM,25,#3498db,circle
+P00DC8F69,Učesnik P00DC8F6,participant,prosveta,experienced,rumunija,doktorat,11-15,,25,#3498db,circle
+P05F5A45E,Učesnik P05F5A45,participant,drustvene_nauke,young,slovenija,doktorat,0,IBM,25,#3498db,circle
+P028BF499,Učesnik P028BF49,participant,medicina,young,austrija,master,11-15,Nordeus,25,#3498db,circle
+P04851D34,Učesnik P04851D3,participant,kreativna_filmska,mid_career,crna_gora,srednja,1-2,RT-RK,25,#3498db,circle
+P03980179,Učesnik P0398017,participant,medicina,experienced,bugarska,visoka,20+,Google,25,#3498db,circle
+P03D921EE,Učesnik P03D921E,participant,medicina,young,nemacka,doktorat,6-10,,25,#3498db,circle
+P048D6369,Učesnik P048D636,participant,ostalo,mid_career,bugarska,visoka,20+,Univerzitet u Nišu,25,#3498db,circle
+P03CD55D7,Učesnik P03CD55D,participant,ostalo,mid_career,slovenija,master,0,Google,25,#3498db,circle
+P008C804C,Učesnik P008C804,participant,drustvene_nauke,mid_career,nemacka,visa,16-20,,25,#3498db,circle
+P0230B1FE,Učesnik P0230B1F,participant,prosveta,experienced,bosna_i_hercegovina,visoka,1-2,,25,#3498db,circle
+P002CCBFB,Učesnik P002CCBF,participant,kreativna_filmska,experienced,slovenija,visoka,6-10,Univerzitet u Novom Sadu,25,#3498db,circle
+P00744C14,Učesnik P00744C1,participant,medicina,experienced,bosna_i_hercegovina,visa,6-10,Amazon,25,#3498db,circle
+GROUP_PROSVETA,Grupa: prosveta,target_group,prosveta,,crna_gora,visa,20+,12 članova,96,#e74c3c,diamond
+GROUP_IT_INDUSTRIJA,Grupa: it_industrija,target_group,it_industrija,,nemacka,doktorat,16-20,9 članova,72,#e74c3c,diamond
+GROUP_MEDICINA,Grupa: medicina,target_group,medicina,,srbija,srednja,6-10,12 članova,96,#e74c3c,diamond
+GROUP_KREATIVNA_FILMSKA,Grupa: kreativna_filmska,target_group,kreativna_filmska,,bugarska,visoka,6-10,8 članova,64,#e74c3c,diamond
+GROUP_DRUSTVENE_NAUKE,Grupa: drustvene_nauke,target_group,drustvene_nauke,,nemacka,doktorat,0,5 članova,40,#e74c3c,diamond
+GROUP_OSTALO,Grupa: ostalo,target_group,ostalo,,slovenija,master,0,4 članova,32,#e74c3c,diamond
+TOOL_Grammarly,Grammarly,ai_tool,prosveta,,,writing_assistant,,Koristi 16 učesnika,48,#2ecc71,square
+TOOL_Bing_Chat,Bing_Chat,ai_tool,prosveta,,,search_assistant,,Koristi 18 učesnika,50,#2ecc71,square
+TOOL_ChatGPT,ChatGPT,ai_tool,it_industrija,,,conversational_ai,,Koristi 18 učesnika,50,#2ecc71,square
+TOOL_Gemini,Gemini,ai_tool,it_industrija,,,conversational_ai,,Koristi 16 učesnika,48,#2ecc71,square
+TOOL_Claude,Claude,ai_tool,prosveta,,,conversational_ai,,Koristi 15 učesnika,45,#2ecc71,square
+TOOL_Midjourney,Midjourney,ai_tool,it_industrija,,,image_generation,,Koristi 14 učesnika,42,#2ecc71,square
+TOOL_DeepL,DeepL,ai_tool,prosveta,,,translation,,Koristi 13 učesnika,39,#2ecc71,square
+TOOL_GitHub_Copilot,GitHub_Copilot,ai_tool,prosveta,,,code_assistant,,Koristi 14 učesnika,42,#2ecc71,square
+TOOL_Stable_Diffusion,Stable_Diffusion,ai_tool,it_industrija,,,image_generation,,Koristi 20 učesnika,50,#2ecc71,square
+TOOL_DALL-E,DALL-E,ai_tool,it_industrija,,,image_generation,,Koristi 12 učesnika,36,#2ecc71,square
+ORG_Univerzitet_u_Nišu,Org: Univerzitet_u_Nišu,organization,ostalo,,,,,1 zaposlenih,30,#f39c12,triangle
+ORG_Oracle,Org: Oracle,organization,prosveta,,,,,2 zaposlenih,30,#f39c12,triangle
+ORG_Amazon,Org: Amazon,organization,it_industrija,,,,,2 zaposlenih,30,#f39c12,triangle
+ORG_Nordeus,Org: Nordeus,organization,medicina,,,,,2 zaposlenih,30,#f39c12,triangle
+ORG_Apple,Org: Apple,organization,prosveta,,,,,2 zaposlenih,30,#f39c12,triangle
+ORG_Google,Org: Google,organization,ostalo,,,,,2 zaposlenih,30,#f39c12,triangle
+ORG_Comtrade,Org: Comtrade,organization,kreativna_filmska,,,,,2 zaposlenih,30,#f39c12,triangle
+ORG_Microsoft,Org: Microsoft,organization,medicina,,,,,1 zaposlenih,30,#f39c12,triangle
+ORG_IBM,Org: IBM,organization,drustvene_nauke,,,,,3 zaposlenih,30,#f39c12,triangle
+ORG_RT-RK,Org: RT-RK,organization,prosveta,,,,,2 zaposlenih,30,#f39c12,triangle
+ORG_Univerzitet_u_Novom_Sadu,Org: Univerzitet_u_Novom_Sadu,organization,prosveta,,,,,2 zaposlenih,30,#f39c12,triangle

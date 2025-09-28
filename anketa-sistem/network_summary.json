@@ -1,0 +1,49 @@
+{
+  "total_nodes": 51,
+  "total_edges": 292,
+  "node_types": {
+    "participant": 24,
+    "organization": 11,
+    "ai_tool": 10,
+    "target_group": 6
+  },
+  "edge_types": {
+    "uses_tool": 156,
+    "belongs_to_group": 50,
+    "member_of_group": 50,
+    "affiliated_with": 21,
+    "tool_similarity": 15
+  },
+  "group_statistics": {
+    "prosveta": {
+      "count": 12,
+      "education": "visa",
+      "country": "crna_gora"
+    },
+    "it_industrija": {
+      "count": 9,
+      "education": "doktorat",
+      "country": "nemacka"
+    },
+    "medicina": {
+      "count": 12,
+      "education": "srednja",
+      "country": "srbija"
+    },
+    "kreativna_filmska": {
+      "count": 8,
+      "education": "visoka",
+      "country": "bugarska"
+    },
+    "drustvene_nauke": {
+      "count": 5,
+      "education": "doktorat",
+      "country": "nemacka"
+    },
+    "ostalo": {
+      "count": 4,
+      "education": "master",
+      "country": "slovenija"
+    }
+  }
+}

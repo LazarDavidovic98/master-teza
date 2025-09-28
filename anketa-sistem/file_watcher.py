@@ -26,11 +26,12 @@ class SurveyFileHandler(FileSystemEventHandler):
         if os.path.basename(event.src_path) == self.survey_file:
             current_time = time.time()
             
-            # Izbegava multiple pozive (debouncing)
-            if current_time - self.last_modified < 2:
+            # Izbegava multiple pozive (debouncing) - povećao vreme sa 2 na 5 sekundi
+            if current_time - self.last_modified < 5:
                 return
                 
             if self.processing:
+                print(f"⚠️ [{datetime.now().strftime('%H:%M:%S')}] Već se obrađuje - preskačem")
                 return
                 
             self.last_modified = current_time

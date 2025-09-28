@@ -42,7 +42,7 @@ class DataScienceManager:
                 writer = csv.writer(f)
                 writer.writerow([
                     'participant_id', 'timestamp', 'birth_year', 'country', 'education',
-                    'employment_status', 'work_experience', 'institution', 'field',
+                    'employment_status', 'ciljana_grupa', 'work_experience', 'institution', 'field',
                     'programming_experience', 'age_group', 'experience_level'
                 ])
         
@@ -51,7 +51,7 @@ class DataScienceManager:
             with open(self.files['ai_knowledge'], 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow([
-                    'participant_id', 'ai_tool', 'knowledge_level', 'usage_frequency',
+                    'participant_id', 'ciljana_grupa', 'ai_tool', 'knowledge_level', 'usage_frequency',
                     'purpose', 'effectiveness_rating', 'tool_category'
                 ])
         
@@ -60,7 +60,7 @@ class DataScienceManager:
             with open(self.files['quiz_responses'], 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow([
-                    'participant_id', 'question_id', 'question_category', 'given_answer', 
+                    'participant_id', 'ciljana_grupa', 'question_id', 'question_category', 'given_answer', 
                     'correct_answer', 'is_correct', 'difficulty_level'
                 ])
         
@@ -69,7 +69,7 @@ class DataScienceManager:
             with open(self.files['relationships'], 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow([
-                    'source_id', 'target_id', 'relationship_type', 'weight', 'context'
+                    'source_id', 'target_id', 'relationship_type', 'weight', 'context', 'ciljana_grupa'
                 ])
         
         # tool_usage_patterns.csv
@@ -77,7 +77,7 @@ class DataScienceManager:
             with open(self.files['tool_usage_patterns'], 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow([
-                    'participant_id', 'usage_pattern', 'tools_combination', 'frequency_score',
+                    'participant_id', 'ciljana_grupa', 'usage_pattern', 'tools_combination', 'frequency_score',
                     'effectiveness_score', 'pattern_type'
                 ])
     
@@ -109,7 +109,16 @@ class DataScienceManager:
         """Očisti postojeće data science fajlove"""
         for file_path in self.files.values():
             if os.path.exists(file_path):
-                os.remove(file_path)
+                try:
+                    os.remove(file_path)
+                except PermissionError:
+                    print(f"⚠️ Ne mogu da obrišem {file_path} - fajl je u upotrebi")
+                    # Pokušaj da prebriše sadržaj
+                    try:
+                        with open(file_path, 'w', newline='', encoding='utf-8') as f:
+                            f.write('')
+                    except:
+                        pass
 
     def process_survey_response(self, survey_data, from_existing=False):
         """Obradi jedan odgovor iz ankete i razdeli ga po CSV fajlovima"""
@@ -151,6 +160,7 @@ class DataScienceManager:
             data.get('drzava', ''),
             data.get('strucna_sprema', ''),
             data.get('radni_odnos', ''),
+            data.get('ciljana_grupa', ''),  # Dodano ciljana_grupa
             data.get('godine_staza', ''),
             data.get('institucija', ''),
             data.get('grana_oblast', ''),
@@ -168,6 +178,7 @@ class DataScienceManager:
         # AI alati koje poznaje
         known_tools = data.get('poznati_ai_alati', '').split(',')
         ai_knowledge_level = data.get('generativni_ai_poznavanje', '')
+        ciljana_grupa = data.get('ciljana_grupa', '')
         
         for tool in known_tools:
             if tool.strip():
@@ -179,6 +190,7 @@ class DataScienceManager:
                     if purpose.strip():
                         knowledge_row = [
                             participant_id,
+                            ciljana_grupa,  # Dodano ciljana_grupa
                             tool.strip(),
                             ai_knowledge_level,
                             'unknown',  # frequency - možete dodati polje u anketu
@@ -193,6 +205,8 @@ class DataScienceManager:
     
     def process_quiz_responses(self, participant_id, data):
         """Obradi odgovore na kviz pitanja"""
+        ciljana_grupa = data.get('ciljana_grupa', '')
+        
         quiz_questions = {
             'chatgpt_omni': {'correct': 'GPT-4', 'category': 'technical', 'difficulty': 'medium'},
             'copilot_task': {'correct': 'Copilot Workspace', 'category': 'technical', 'difficulty': 'hard'},
@@ -211,6 +225,7 @@ class DataScienceManager:
                 
                 quiz_row = [
                     participant_id,
+                    ciljana_grupa,  # Dodano ciljana_grupa
                     question_id,
                     question_info['category'],
                     given_answer,
@@ -226,6 +241,8 @@ class DataScienceManager:
     def create_relationships(self, participant_id, data):
         """Kreiraj veze za network analizu"""
         
+        ciljana_grupa = data.get('ciljana_grupa', '')
+        
         # Mapiranje tekstualnih vrednosti u numeričke
         knowledge_mapping = {
             'nimalo': 1,
@@ -235,6 +252,21 @@ class DataScienceManager:
             'veoma_dobro': 5,
             '': 1  # default vrednost
         }
+        
+        # Veza između učesnika i ciljane grupe (najvažnija veza za community detection)
+        if ciljana_grupa and ciljana_grupa.strip():
+            relationship_row = [
+                participant_id,
+                f"GROUP_{ciljana_grupa.upper()}",
+                'belongs_to_group',
+                1.0,  # Maksimalna težina za grupu
+                'target_group',
+                ciljana_grupa
+            ]
+            
+            with open(self.files['relationships'], 'a', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                writer.writerow(relationship_row)
         
         # Veza između učesnika i AI alata
         known_tools = data.get('poznati_ai_alati', '').split(',')
@@ -250,7 +282,8 @@ class DataScienceManager:
                     f"TOOL_{tool.strip().replace(' ', '_')}",
                     'uses_tool',
                     weight,
-                    'ai_tool_usage'
+                    'ai_tool_usage',
+                    ciljana_grupa
                 ]
                 
                 with open(self.files['relationships'], 'a', newline='', encoding='utf-8') as f:
@@ -265,7 +298,8 @@ class DataScienceManager:
                 f"ORG_{institution.replace(' ', '_').replace(',', '')}",
                 'affiliated_with',
                 1.0,
-                'organizational'
+                'organizational',
+                ciljana_grupa
             ]
             
             with open(self.files['relationships'], 'a', newline='', encoding='utf-8') as f:
@@ -274,6 +308,7 @@ class DataScienceManager:
     
     def analyze_usage_patterns(self, participant_id, data):
         """Analiziraj patterns korišćenja alata"""
+        ciljana_grupa = data.get('ciljana_grupa', '')
         known_tools = data.get('poznati_ai_alati', '').split(',')
         purposes = data.get('svrhe_koriscenja', '').split(',')
         
@@ -305,6 +340,7 @@ class DataScienceManager:
             
             pattern_row = [
                 participant_id,
+                ciljana_grupa,  # Dodano ciljana_grupa
                 pattern,
                 tools_combination,
                 frequency_score,
@@ -396,58 +432,205 @@ class DataScienceManager:
         G = nx.Graph()
         
         # Učitaj relationships sa eksplicitnim dtype za ID kolone
-        relationships_df = pd.read_csv(self.files['relationships'], 
-                                     dtype={'source_id': str, 'target_id': str})
+        try:
+            if not os.path.exists(self.files['relationships']):
+                print("⚠️ relationships.csv fajl ne postoji")
+                return G
+                
+            # Pročitaj fajl i provjeri da li ima header
+            with open(self.files['relationships'], 'r', encoding='utf-8') as f:
+                first_line = f.readline().strip()
+                
+            # Ako prvi red ne sadrži 'source_id', fajl nema header
+            if 'source_id' not in first_line:
+                print("⚠️ relationships.csv nema header - dodajem header")
+                # Čitaj podatke bez header-a
+                relationships_df = pd.read_csv(self.files['relationships'], 
+                                             header=None,
+                                             names=['source_id', 'target_id', 'relationship_type', 
+                                                   'weight', 'context', 'ciljana_grupa'],
+                                             dtype={'source_id': str, 'target_id': str})
+            else:
+                relationships_df = pd.read_csv(self.files['relationships'], 
+                                             dtype={'source_id': str, 'target_id': str})
+                                             
+        except Exception as e:
+            print(f"Greška pri čitanju relationships fajla: {e}")
+            return G
         
         for _, row in relationships_df.iterrows():
-            # Eksplicitno konvertuj u string da izbegneš probleme sa tipovima
-            source_id = str(row['source_id'])
-            target_id = str(row['target_id'])
-            
-            G.add_edge(
-                source_id, 
-                target_id,
-                relationship_type=row['relationship_type'],
-                weight=row['weight'],
-                context=row['context']
-            )
+            try:
+                # Eksplicitno konvertuj u string da izbegneš probleme sa tipovima
+                source_id = str(row['source_id'])
+                target_id = str(row['target_id'])
+                
+                G.add_edge(
+                    source_id, 
+                    target_id,
+                    relationship_type=row.get('relationship_type', 'unknown'),
+                    weight=float(row.get('weight', 1.0)),
+                    context=row.get('context', 'unknown'),
+                    ciljana_grupa=row.get('ciljana_grupa', 'unknown')
+                )
+            except Exception as e:
+                print(f"Greška pri dodavanju veze {row}: {e}")
+                continue
         
         return G
     
     def generate_gephi_files(self):
-        """Generiši fajlove za Gephi"""
-        G = self.create_network_graph()
-        
-        # Nodes file
-        nodes_data = []
-        for node in G.nodes():
-            # Eksplicitno konvertuj čvor u string
-            node_str = str(node)
-            node_type = 'participant' if node_str.startswith('P') else 'entity'
-            nodes_data.append({
-                'Id': node_str,
-                'Label': node_str,
-                'Type': node_type
-            })
-        
-        nodes_df = pd.DataFrame(nodes_data)
-        nodes_df.to_csv(f'{self.base_dir}/gephi_nodes.csv', index=False)
-        
-        # Edges file
-        edges_data = []
-        for edge in G.edges(data=True):
-            edges_data.append({
-                'Source': str(edge[0]),  # Eksplicitno konvertuj u string
-                'Target': str(edge[1]),  # Eksplicitno konvertuj u string
-                'Type': edge[2].get('relationship_type', 'unknown'),
-                'Weight': edge[2].get('weight', 1.0),
-                'Context': edge[2].get('context', 'unknown')
-            })
-        
-        edges_df = pd.DataFrame(edges_data)
-        edges_df.to_csv(f'{self.base_dir}/gephi_edges.csv', index=False)
-        
-        return f'{self.base_dir}/gephi_nodes.csv', f'{self.base_dir}/gephi_edges.csv'
+        """Generiši fajlove za Gephi sa ciljanim grupama kao komunama"""
+        try:
+            G = self.create_network_graph()
+            print(f"Network graf kreiran sa {G.number_of_nodes()} čvorova i {G.number_of_edges()} veza")
+            
+            if G.number_of_nodes() == 0:
+                print("⚠️ Graf nema čvorove - proverite relationships.csv fajl")
+                return None, None
+            
+            # Učitaj dodatne informacije o učesnicima
+            try:
+                participants_df = pd.read_csv(self.files['participants'])
+                # Ukloni duplikate na osnovu participant_id i uzmi poslednji unos
+                participants_df = participants_df.drop_duplicates(subset=['participant_id'], keep='last')
+                participant_info = participants_df.set_index('participant_id').to_dict('index')
+                print(f"Učitano {len(participant_info)} učesnika iz participants.csv (nakon uklanjanja duplikata)")
+            except Exception as e:
+                print(f"Greška pri čitanju participants.csv: {e}")
+                participant_info = {}
+            
+            # Nodes file sa dodatnim atributima za ciljane grupe
+            nodes_data = []
+            for node in G.nodes():
+                node_str = str(node)
+                
+                # Određuj tip čvora
+                if node_str.startswith('P'):
+                    node_type = 'participant'
+                    # Dobij informacije o ciljanoj grupi
+                    participant_data = participant_info.get(node_str, {})
+                    ciljana_grupa = participant_data.get('ciljana_grupa', 'unknown')
+                    age_group = participant_data.get('age_group', 'unknown')
+                    exp_level = participant_data.get('experience_level', 'unknown')
+                    
+                    nodes_data.append({
+                        'Id': node_str,
+                        'Label': node_str,
+                        'Type': node_type,
+                        'CiljanaGrupa': ciljana_grupa,
+                        'AgeGroup': age_group,
+                        'ExperienceLevel': exp_level,
+                        'Size': 20,
+                        'Color': self.get_group_color(ciljana_grupa)
+                    })
+                    
+                elif node_str.startswith('GROUP_'):
+                    node_type = 'target_group'
+                    group_name = node_str.replace('GROUP_', '')
+                    
+                    nodes_data.append({
+                        'Id': node_str,
+                        'Label': group_name,
+                        'Type': node_type,
+                        'CiljanaGrupa': group_name.lower(),
+                        'AgeGroup': 'group',
+                        'ExperienceLevel': 'group',
+                        'Size': 50,  # Veći čvorovi za grupe
+                        'Color': self.get_group_color(group_name.lower())
+                    })
+                    
+                elif node_str.startswith('TOOL_'):
+                    node_type = 'ai_tool'
+                    tool_name = node_str.replace('TOOL_', '').replace('_', ' ')
+                    
+                    nodes_data.append({
+                        'Id': node_str,
+                        'Label': tool_name,
+                        'Type': node_type,
+                        'CiljanaGrupa': 'tool',
+                        'AgeGroup': 'tool',
+                        'ExperienceLevel': 'tool',
+                        'Size': 30,
+                        'Color': '#FFD700'  # Zlatna za alate
+                    })
+                    
+                else:
+                    node_type = 'entity'
+                    nodes_data.append({
+                        'Id': node_str,
+                        'Label': node_str,
+                        'Type': node_type,
+                        'CiljanaGrupa': 'other',
+                        'AgeGroup': 'other',
+                        'ExperienceLevel': 'other',
+                        'Size': 15,
+                        'Color': '#808080'  # Siva za ostale
+                    })
+            
+            print(f"Kreano {len(nodes_data)} čvorova za Gephi")
+            
+            if nodes_data:
+                nodes_df = pd.DataFrame(nodes_data)
+                nodes_file_path = f'{self.base_dir}/gephi_nodes.csv'
+                nodes_df.to_csv(nodes_file_path, index=False)
+                print(f"Nodes fajl snimljen: {nodes_file_path}")
+            
+            # Edges file sa dodatnim atributima
+            edges_data = []
+            for edge in G.edges(data=True):
+                relationship_type = edge[2].get('relationship_type', 'unknown')
+                weight = edge[2].get('weight', 1.0)
+                context = edge[2].get('context', 'unknown')
+                
+                # Definiši boju veze na osnovu tipa
+                edge_color = self.get_edge_color(relationship_type)
+                
+                edges_data.append({
+                    'Source': str(edge[0]),
+                    'Target': str(edge[1]),
+                    'Type': relationship_type,
+                    'Weight': weight,
+                    'Context': context,
+                    'Color': edge_color,
+                    'Thickness': max(1, int(weight * 5))  # Debljina na osnovu težine
+                })
+            
+            print(f"Kreano {len(edges_data)} veza za Gephi")
+            
+            if edges_data:
+                edges_df = pd.DataFrame(edges_data)
+                edges_file_path = f'{self.base_dir}/gephi_edges.csv'
+                edges_df.to_csv(edges_file_path, index=False)
+                print(f"Edges fajl snimljen: {edges_file_path}")
+            
+            return f'{self.base_dir}/gephi_nodes.csv', f'{self.base_dir}/gephi_edges.csv'
+            
+        except Exception as e:
+            print(f"Greška pri generisanju Gephi fajlova: {e}")
+            import traceback
+            traceback.print_exc()
+            return None, None
+    
+    def get_group_color(self, group_name):
+        """Vrati boju za ciljanu grupu"""
+        colors = {
+            'it': '#FF6B6B',          # Crvena za IT
+            'prosveta': '#4ECDC4',    # Tirkizna za prosvetu
+            'medicina': '#45B7D1',    # Plava za medicinu
+            'kreativna': '#96CEB4',   # Zelena za kreativne industrije
+            'drustvene': '#FFEAA7',   # Žuta za društvene nauke
+            'ostalo': '#DDA0DD'       # Ljubičasta za ostalo
+        }
+        return colors.get(group_name.lower(), '#C0C0C0')  # Default siva
+    
+    def get_edge_color(self, relationship_type):
+        """Vrati boju za tip veze"""
+        colors = {
+            'belongs_to_group': '#FF0000',    # Crvena za pripadnost grupi
+            'uses_tool': '#00FF00',          # Zelena za korišćenje alata
+            'affiliated_with': '#0000FF'     # Plava za afilijaciju
+        }
+        return colors.get(relationship_type, '#808080')  # Default siva
     
     def get_analytics_summary(self):
         """Generiši sažetak za analitiku"""

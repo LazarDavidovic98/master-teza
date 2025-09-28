@@ -1,0 +1,41 @@
+Id,Label,Type,Group_Name,Member_Count,Top_Country,Top_Education,Top_Experience,Diversity_Score,Size,Color,Shape,X,Y
+GROUP_PROSVETA,PROSVETA\n(12 članova),target_group,prosveta,12,crna_gora,visa,20+,0.5,60,#e74c3c,diamond,0.0,0.0
+GROUP_IT_INDUSTRIJA,IT_INDUSTRIJA\n(9 članova),target_group,it_industrija,9,nemacka,doktorat,16-20,0.6666666666666666,45,#e74c3c,diamond,0.0,0.0
+GROUP_MEDICINA,MEDICINA\n(12 članova),target_group,medicina,12,srbija,srednja,6-10,0.6666666666666666,60,#e74c3c,diamond,0.0,0.0
+GROUP_KREATIVNA_FILMSKA,KREATIVNA_FILMSKA\n(8 članova),target_group,kreativna_filmska,8,bugarska,visoka,6-10,0.875,40,#e74c3c,diamond,0.0,0.0
+GROUP_DRUSTVENE_NAUKE,DRUSTVENE_NAUKE\n(5 članova),target_group,drustvene_nauke,5,nemacka,doktorat,0,0.8,30,#e74c3c,diamond,0.0,0.0
+GROUP_OSTALO,OSTALO\n(4 članova),target_group,ostalo,4,slovenija,master,0,1.0,30,#e74c3c,diamond,0.0,0.0
+P04851D34,U_P04851,participant,kreativna_filmska,1,crna_gora,srednja,1-2,0.0,15,#3498db,circle,76.9436145279943,39.97316858899484
+P03980179,U_P03980,participant,medicina,1,bugarska,visoka,20+,0.0,15,#3498db,circle,41.08794238535799,-49.036892166290635
+P03D921EE,U_P03D92,participant,medicina,1,nemacka,doktorat,6-10,0.0,15,#3498db,circle,67.53927143555879,-71.96180221347757
+P048D6369,U_P048D6,participant,ostalo,1,bugarska,visoka,20+,0.0,15,#3498db,circle,11.339408956290413,68.8219253396328
+P0230B1FE,U_P0230B,participant,prosveta,1,bosna_i_hercegovina,visoka,1-2,0.0,15,#3498db,circle,-68.2373402914112,-56.61101687417236
+P008C804C,U_P008C8,participant,drustvene_nauke,1,nemacka,visa,16-20,0.0,15,#3498db,circle,-93.51030534101253,96.97410014082959
+P028BF499,U_P028BF,participant,medicina,1,austrija,master,11-15,0.0,15,#3498db,circle,43.3208617779261,34.642255070561134
+P002CCBFB,U_P002CC,participant,kreativna_filmska,1,slovenija,visoka,6-10,0.0,15,#3498db,circle,-54.470280992027334,38.911175520011426
+P00744C14,U_P00744,participant,medicina,1,bosna_i_hercegovina,visa,6-10,0.0,15,#3498db,circle,-74.95657743086738,12.935928837714485
+P03CD55D7,U_P03CD5,participant,ostalo,1,slovenija,master,0,0.0,15,#3498db,circle,29.632364207517753,56.48371839496667
+P00DC8F69,U_P00DC8,participant,prosveta,1,rumunija,doktorat,11-15,0.0,15,#3498db,circle,68.37932994673909,-71.76915618761446
+P05F5A45E,U_P05F5A,participant,drustvene_nauke,1,slovenija,doktorat,0,0.0,15,#3498db,circle,27.928713843609557,38.34808574607581
+P0324390C,U_P03243,participant,kreativna_filmska,1,srbija,visoka,1-2,0.0,15,#3498db,circle,-59.9468724086976,-14.808901816543269
+P058575E4,U_P05857,participant,prosveta,1,crna_gora,visa,16-20,0.0,15,#3498db,circle,54.17988014242695,20.87211529292594
+P01770C34,U_P01770,participant,drustvene_nauke,1,nemacka,doktorat,11-15,0.0,15,#3498db,circle,-84.1546686054346,47.67090739668777
+P023158B4,U_P02315,participant,drustvene_nauke,1,crna_gora,master,1-2,0.0,15,#3498db,circle,7.088027366382988,74.27616683556587
+P01ACD678,U_P01ACD,participant,kreativna_filmska,1,rumunija,master,20+,0.0,15,#3498db,circle,-85.33808106087548,59.42054484353051
+P01BF41E4,U_P01BF4,participant,it_industrija,1,srbija,doktorat,16-20,0.0,15,#3498db,circle,-89.38360773642118,-91.56566667093497
+P03EAE7A5,U_P03EAE,participant,it_industrija,1,nemacka,doktorat,6-10,0.0,15,#3498db,circle,-35.668639864241115,96.00119469516736
+P04C4C4CE,U_P04C4C,participant,it_industrija,1,nemacka,doktorat,20+,0.0,15,#3498db,circle,-36.584335526086285,-5.809097787292544
+P05C43C44,U_P05C43,participant,kreativna_filmska,1,severna_makedonija,visa,11-15,0.0,15,#3498db,circle,-55.13150110379228,-59.845310237344385
+P02F450D5,U_P02F45,participant,prosveta,1,nemacka,srednja,3-5,0.0,15,#3498db,circle,50.405872042902985,-32.433107543631934
+P05E1D55F,U_P05E1D,participant,medicina,1,rumunija,visa,16-20,0.0,15,#3498db,circle,-16.223159426981624,-13.99809668915401
+P03EDA7E8,U_P03EDA,participant,prosveta,1,crna_gora,srednja,11-15,0.0,15,#3498db,circle,-15.97555921986104,75.40788189872688
+TOOL_Bing_Chat,Bing_Chat,ai_tool,prosveta,18,,,,1.0,25,#2ecc71,square,-127.36264864097251,103.43035391999263
+TOOL_DALL-E,DALL-E,ai_tool,it_industrija,12,,,,0.8333333333333334,24,#2ecc71,square,-31.46965784233423,-22.142588375241033
+TOOL_Midjourney,Midjourney,ai_tool,it_industrija,14,,,,1.0,25,#2ecc71,square,59.339292664789156,67.61568405663246
+TOOL_DeepL,DeepL,ai_tool,prosveta,13,,,,1.0,25,#2ecc71,square,77.3695622576866,-147.36047913929985
+TOOL_Stable_Diffusion,Stable_Diffusion,ai_tool,it_industrija,20,,,,1.0,25,#2ecc71,square,-4.285945726867908,17.067838921205492
+TOOL_GitHub_Copilot,GitHub_Copilot,ai_tool,prosveta,14,,,,0.8333333333333334,25,#2ecc71,square,121.30278035489926,-24.614594529977524
+TOOL_ChatGPT,ChatGPT,ai_tool,it_industrija,18,,,,1.0,25,#2ecc71,square,70.66470543173372,63.22763435036134
+TOOL_Grammarly,Grammarly,ai_tool,prosveta,16,,,,0.8333333333333334,25,#2ecc71,square,15.283007510854503,7.707035046601959
+TOOL_Gemini,Gemini,ai_tool,it_industrija,16,,,,1.0,25,#2ecc71,square,76.05228107796808,65.74339032151522
+TOOL_Claude,Claude,ai_tool,prosveta,15,,,,1.0,25,#2ecc71,square,-70.16073041403776,-15.274536267620675

@@ -1,0 +1,123 @@
+Source,Target,Type,Weight,Relationship,Label,Color,Thickness
+P058575E4,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P03EAE7A5,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P023158B4,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01ACD678,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01BF41E4,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P03EDA7E8,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P04C4C4CE,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P05C43C44,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P02F450D5,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P05C43C44,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+P05E1D55F,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P0324390C,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01770C34,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P04C4C4CE,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P023158B4,GROUP_DRUSTVENE_NAUKE,Directed,1.0,belongs_to,pripada,#34495e,3
+P00DC8F69,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P05F5A45E,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01ACD678,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+P04C4C4CE,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+P028BF499,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01770C34,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P00DC8F69,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01BF41E4,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P04851D34,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01770C34,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P03980179,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+P04851D34,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+P03D921EE,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P048D6369,GROUP_DRUSTVENE_NAUKE,Directed,1.0,belongs_to,pripada,#34495e,3
+P03CD55D7,GROUP_OSTALO,Directed,1.0,belongs_to,pripada,#34495e,3
+P008C804C,GROUP_OSTALO,Directed,1.0,belongs_to,pripada,#34495e,3
+P02F450D5,GROUP_OSTALO,Directed,1.0,belongs_to,pripada,#34495e,3
+P0230B1FE,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01770C34,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P01770C34,GROUP_DRUSTVENE_NAUKE,Directed,1.0,belongs_to,pripada,#34495e,3
+P04C4C4CE,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P05F5A45E,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P02F450D5,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P002CCBFB,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+P00744C14,GROUP_PROSVETA,Directed,1.0,belongs_to,pripada,#34495e,3
+P008C804C,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P048D6369,GROUP_OSTALO,Directed,1.0,belongs_to,pripada,#34495e,3
+P00744C14,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P04C4C4CE,GROUP_IT_INDUSTRIJA,Directed,1.0,belongs_to,pripada,#34495e,3
+P008C804C,GROUP_DRUSTVENE_NAUKE,Directed,1.0,belongs_to,pripada,#34495e,3
+P01ACD678,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+P05F5A45E,GROUP_DRUSTVENE_NAUKE,Directed,1.0,belongs_to,pripada,#34495e,3
+P028BF499,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P03980179,GROUP_MEDICINA,Directed,1.0,belongs_to,pripada,#34495e,3
+P0324390C,GROUP_KREATIVNA_FILMSKA,Directed,1.0,belongs_to,pripada,#34495e,3
+TOOL_DALL-E,GROUP_PROSVETA,Directed,0.05,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_DALL-E,GROUP_IT_INDUSTRIJA,Directed,0.11764705882352941,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_DALL-E,GROUP_MEDICINA,Directed,0.11538461538461539,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_DALL-E,GROUP_KREATIVNA_FILMSKA,Directed,0.034482758620689655,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_DALL-E,GROUP_OSTALO,Directed,0.16666666666666666,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Midjourney,GROUP_PROSVETA,Directed,0.075,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_Midjourney,GROUP_IT_INDUSTRIJA,Directed,0.11764705882352941,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_Midjourney,GROUP_MEDICINA,Directed,0.07692307692307693,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Midjourney,GROUP_KREATIVNA_FILMSKA,Directed,0.10344827586206896,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_Midjourney,GROUP_DRUSTVENE_NAUKE,Directed,0.06666666666666667,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Midjourney,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_DeepL,GROUP_PROSVETA,Directed,0.125,used_by_group,koristi_se (5x),#27ae60,1
+TOOL_DeepL,GROUP_IT_INDUSTRIJA,Directed,0.029411764705882353,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_DeepL,GROUP_MEDICINA,Directed,0.07692307692307693,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_DeepL,GROUP_KREATIVNA_FILMSKA,Directed,0.10344827586206896,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_DeepL,GROUP_DRUSTVENE_NAUKE,Directed,0.06666666666666667,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_DeepL,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Stable_Diffusion,GROUP_PROSVETA,Directed,0.075,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_Stable_Diffusion,GROUP_IT_INDUSTRIJA,Directed,0.14705882352941177,used_by_group,koristi_se (5x),#27ae60,1
+TOOL_Stable_Diffusion,GROUP_MEDICINA,Directed,0.19230769230769232,used_by_group,koristi_se (5x),#27ae60,1
+TOOL_Stable_Diffusion,GROUP_KREATIVNA_FILMSKA,Directed,0.13793103448275862,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_Stable_Diffusion,GROUP_DRUSTVENE_NAUKE,Directed,0.13333333333333333,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Stable_Diffusion,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_GitHub_Copilot,GROUP_PROSVETA,Directed,0.1,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_GitHub_Copilot,GROUP_IT_INDUSTRIJA,Directed,0.11764705882352941,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_GitHub_Copilot,GROUP_MEDICINA,Directed,0.07692307692307693,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_GitHub_Copilot,GROUP_KREATIVNA_FILMSKA,Directed,0.10344827586206896,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_GitHub_Copilot,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_ChatGPT,GROUP_PROSVETA,Directed,0.075,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_ChatGPT,GROUP_IT_INDUSTRIJA,Directed,0.14705882352941177,used_by_group,koristi_se (5x),#27ae60,1
+TOOL_ChatGPT,GROUP_MEDICINA,Directed,0.038461538461538464,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_ChatGPT,GROUP_KREATIVNA_FILMSKA,Directed,0.1724137931034483,used_by_group,koristi_se (5x),#27ae60,1
+TOOL_ChatGPT,GROUP_DRUSTVENE_NAUKE,Directed,0.2,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_ChatGPT,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Grammarly,GROUP_PROSVETA,Directed,0.175,used_by_group,koristi_se (7x),#27ae60,1
+TOOL_Grammarly,GROUP_IT_INDUSTRIJA,Directed,0.029411764705882353,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Grammarly,GROUP_MEDICINA,Directed,0.19230769230769232,used_by_group,koristi_se (5x),#27ae60,1
+TOOL_Grammarly,GROUP_DRUSTVENE_NAUKE,Directed,0.13333333333333333,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Grammarly,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Gemini,GROUP_PROSVETA,Directed,0.05,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Gemini,GROUP_IT_INDUSTRIJA,Directed,0.14705882352941177,used_by_group,koristi_se (5x),#27ae60,1
+TOOL_Gemini,GROUP_MEDICINA,Directed,0.07692307692307693,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Gemini,GROUP_KREATIVNA_FILMSKA,Directed,0.10344827586206896,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_Gemini,GROUP_DRUSTVENE_NAUKE,Directed,0.13333333333333333,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Gemini,GROUP_OSTALO,Directed,0.16666666666666666,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Bing_Chat,GROUP_PROSVETA,Directed,0.175,used_by_group,koristi_se (7x),#27ae60,1
+TOOL_Bing_Chat,GROUP_IT_INDUSTRIJA,Directed,0.029411764705882353,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Bing_Chat,GROUP_MEDICINA,Directed,0.11538461538461539,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_Bing_Chat,GROUP_KREATIVNA_FILMSKA,Directed,0.13793103448275862,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_Bing_Chat,GROUP_DRUSTVENE_NAUKE,Directed,0.13333333333333333,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Bing_Chat,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Claude,GROUP_PROSVETA,Directed,0.1,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_Claude,GROUP_IT_INDUSTRIJA,Directed,0.11764705882352941,used_by_group,koristi_se (4x),#27ae60,1
+TOOL_Claude,GROUP_MEDICINA,Directed,0.038461538461538464,used_by_group,koristi_se (1x),#27ae60,1
+TOOL_Claude,GROUP_KREATIVNA_FILMSKA,Directed,0.10344827586206896,used_by_group,koristi_se (3x),#27ae60,1
+TOOL_Claude,GROUP_DRUSTVENE_NAUKE,Directed,0.13333333333333333,used_by_group,koristi_se (2x),#27ae60,1
+TOOL_Claude,GROUP_OSTALO,Directed,0.08333333333333333,used_by_group,koristi_se (1x),#27ae60,1
+GROUP_PROSVETA,GROUP_IT_INDUSTRIJA,Undirected,0.85,similar_groups,sličnost (0.85),#9b59b6,8
+GROUP_PROSVETA,GROUP_MEDICINA,Undirected,1.0,similar_groups,sličnost (1.00),#9b59b6,10
+GROUP_PROSVETA,GROUP_KREATIVNA_FILMSKA,Undirected,0.85,similar_groups,sličnost (0.85),#9b59b6,8
+GROUP_PROSVETA,GROUP_DRUSTVENE_NAUKE,Undirected,0.75,similar_groups,sličnost (0.75),#9b59b6,7
+GROUP_PROSVETA,GROUP_OSTALO,Undirected,0.65,similar_groups,sličnost (0.65),#9b59b6,6
+GROUP_IT_INDUSTRIJA,GROUP_MEDICINA,Undirected,0.9,similar_groups,sličnost (0.90),#9b59b6,9
+GROUP_IT_INDUSTRIJA,GROUP_KREATIVNA_FILMSKA,Undirected,0.75,similar_groups,sličnost (0.75),#9b59b6,7
+GROUP_IT_INDUSTRIJA,GROUP_DRUSTVENE_NAUKE,Undirected,0.7,similar_groups,sličnost (0.70),#9b59b6,7
+GROUP_IT_INDUSTRIJA,GROUP_OSTALO,Undirected,0.55,similar_groups,sličnost (0.55),#9b59b6,5
+GROUP_MEDICINA,GROUP_KREATIVNA_FILMSKA,Undirected,1.0,similar_groups,sličnost (1.00),#9b59b6,10
+GROUP_MEDICINA,GROUP_DRUSTVENE_NAUKE,Undirected,0.85,similar_groups,sličnost (0.85),#9b59b6,8
+GROUP_MEDICINA,GROUP_OSTALO,Undirected,0.75,similar_groups,sličnost (0.75),#9b59b6,7
+GROUP_KREATIVNA_FILMSKA,GROUP_DRUSTVENE_NAUKE,Undirected,0.8,similar_groups,sličnost (0.80),#9b59b6,8
+GROUP_KREATIVNA_FILMSKA,GROUP_OSTALO,Undirected,0.75,similar_groups,sličnost (0.75),#9b59b6,7
+GROUP_DRUSTVENE_NAUKE,GROUP_OSTALO,Undirected,0.7,similar_groups,sličnost (0.70),#9b59b6,7
