@@ -1,58 +1,48 @@
 participant_id,timestamp,birth_year,country,education,employment_status,ciljana_grupa,work_experience,institution,field,programming_experience,age_group,experience_level
-P04723F93,2025-09-08 18:12:11,1985,crna_gora,visa,da,prosveta,16-20,RT-RK,,,experienced,unknown
-P02144639,2025-09-06 18:12:11,2001,nemacka,doktorat,ne,it_industrija,6-10,,,,young,senior
-P05F004A5,2025-09-24 18:12:11,1988,severna_makedonija,srednja,ne,it_industrija,16-20,,,,experienced,unknown
-P005409EB,2025-09-05 18:12:11,1998,crna_gora,doktorat,da,prosveta,20+,Apple,,,mid_career,unknown
-P01CDBF78,2025-09-12 18:12:11,1994,srbija,srednja,da,medicina,1-2,IBM,,,mid_career,junior
-P0018FEE4,2025-09-14 18:12:11,1994,crna_gora,srednja,ne,prosveta,11-15,,,,mid_career,unknown
-P04F2950D,2025-09-20 18:12:11,1996,bosna_i_hercegovina,visa,ne,prosveta,20+,,,,mid_career,unknown
-P04E83471,2025-08-31 18:12:11,1990,austrija,visa,ne,prosveta,0,,,,experienced,junior
-P0324B2D0,2025-09-22 18:12:11,1986,austrija,srednja,ne,it_industrija,16-20,,,,experienced,unknown
-P04E83471,2025-08-31 18:12:11,1988,severna_makedonija,visa,da,kreativna_filmska,11-15,Comtrade,,,experienced,unknown
-P054F429F,2025-09-10 18:12:11,1998,rumunija,visa,ne,medicina,16-20,,,,mid_career,unknown
-P00B843F5,2025-09-25 18:12:11,1999,crna_gora,srednja,ne,medicina,3-5,,,,mid_career,intermediate
-P046337A9,2025-09-19 18:12:11,1992,bosna_i_hercegovina,srednja,da,it_industrija,16-20,Amazon,,,mid_career,unknown
-P04F2950D,2025-09-20 18:12:11,1987,crna_gora,doktorat,ne,it_industrija,1-2,,,,experienced,junior
-P05F004A5,2025-09-24 18:12:11,2003,crna_gora,master,ne,drustvene_nauke,1-2,,,,young,junior
-P037B2B5F,2025-09-27 18:12:11,1991,srbija,doktorat,ne,medicina,6-10,,,,mid_career,senior
-P02334083,2025-09-23 18:12:11,1993,nemacka,doktorat,ne,prosveta,20+,,,,mid_career,unknown
-P005409EB,2025-09-05 18:12:11,1995,austrija,visoka,ne,kreativna_filmska,6-10,,,,mid_career,senior
-P04F2950D,2025-09-20 18:12:11,1994,bugarska,srednja,ne,kreativna_filmska,0,,,,mid_career,junior
-P027B0E99,2025-09-09 18:12:11,2002,bugarska,visa,da,medicina,6-10,Microsoft,,,young,senior
-P046337A9,2025-09-19 18:12:11,2000,nemacka,master,ne,medicina,3-5,,,,mid_career,intermediate
-P037B2B5F,2025-09-27 18:12:11,1986,rumunija,doktorat,ne,prosveta,11-15,,,,experienced,unknown
-P01CDBF78,2025-09-12 18:12:11,1998,srbija,doktorat,ne,it_industrija,16-20,,,,mid_career,unknown
-P04CDE74A,2025-09-21 18:12:11,1992,srbija,doktorat,ne,it_industrija,20+,,,,mid_career,unknown
-P046337A9,2025-09-19 18:12:11,1998,severna_makedonija,master,da,medicina,0,Nordeus,,,mid_career,junior
-P02E29AC5,2025-09-16 18:12:11,1996,bugarska,master,da,kreativna_filmska,20+,Apple,,,mid_career,unknown
-P04CDE74A,2025-09-21 18:12:11,1994,crna_gora,srednja,da,kreativna_filmska,1-2,RT-RK,,,mid_career,junior
-P02ECAF31,2025-09-01 18:12:11,2005,nemacka,doktorat,ne,medicina,6-10,,,,young,senior
-P0547EDC8,2025-09-13 18:12:11,2004,bugarska,srednja,ne,drustvene_nauke,0,,,,young,junior
-P03C60670,2025-09-07 18:12:11,1995,slovenija,master,da,ostalo,0,Google,,,mid_career,junior
-P016FD437,2025-09-15 18:12:11,1994,bosna_i_hercegovina,visa,ne,ostalo,0,,,,mid_career,junior
-P0324B2D0,2025-09-22 18:12:11,1990,hrvatska,master,ne,ostalo,0,,,,experienced,junior
-P02480706,2025-09-18 18:12:11,1986,bosna_i_hercegovina,visoka,ne,prosveta,1-2,,,,experienced,junior
-P046337A9,2025-09-19 18:12:11,2004,crna_gora,srednja,da,prosveta,16-20,Oracle,,,young,unknown
-P046337A9,2025-09-19 18:12:11,1988,nemacka,doktorat,da,drustvene_nauke,11-15,IBM,,,experienced,unknown
-P04F2950D,2025-09-20 18:12:11,2003,srbija,visa,ne,prosveta,0,,,,young,junior
-P02334083,2025-09-23 18:12:11,2003,severna_makedonija,doktorat,ne,it_industrija,1-2,,,,young,junior
-P0324B2D0,2025-09-22 18:12:11,2003,nemacka,srednja,da,prosveta,3-5,Univerzitet u Novom Sadu,,,young,intermediate
-P00513987,2025-08-30 18:12:11,1988,slovenija,visoka,da,kreativna_filmska,6-10,Univerzitet u Novom Sadu,,,experienced,senior
-P01057C42,2025-09-26 18:12:11,1991,rumunija,srednja,ne,prosveta,11-15,,,,mid_career,unknown
-P016FD437,2025-09-15 18:12:11,1999,severna_makedonija,srednja,da,medicina,0,Comtrade,,,mid_career,junior
-P0547EDC8,2025-09-13 18:12:11,1992,bugarska,visoka,da,ostalo,20+,Univerzitet u Nišu,,,mid_career,unknown
-P01057C42,2025-09-26 18:12:11,1985,bosna_i_hercegovina,visa,da,medicina,6-10,Amazon,,,experienced,senior
-P04F2950D,2025-09-20 18:12:11,1998,nemacka,doktorat,da,it_industrija,20+,Oracle,,,mid_career,unknown
-P016FD437,2025-09-15 18:12:11,1998,nemacka,visa,ne,drustvene_nauke,16-20,,,,mid_career,unknown
-P005409EB,2025-09-05 18:12:11,1999,rumunija,master,ne,kreativna_filmska,20+,,,,mid_career,unknown
-P02334083,2025-09-23 18:12:11,2003,slovenija,doktorat,da,drustvene_nauke,0,IBM,,,young,junior
-P027B0E99,2025-09-09 18:12:11,2003,austrija,master,da,medicina,11-15,Nordeus,,,young,unknown
-P02E29AC5,2025-09-16 18:12:11,1989,bugarska,visoka,da,medicina,20+,Google,,,experienced,unknown
-P00B843F5,2025-09-25 18:12:11,1991,srbija,visoka,ne,kreativna_filmska,1-2,,,,mid_career,junior
-P007DF53D,2025-09-28 18:44:19,2005,bugarska,osnovna,da,prosveta,3-5,Univerzitet u Beogradu,,,young,intermediate
-P024DC686,2025-09-28 18:53:31,2001,madjarska,srednja,da,prosveta,3-5,Univerzitet u Nišu,,,young,intermediate
-P024DC686,2025-09-28 18:53:31,2001,madjarska,srednja,da,prosveta,3-5,Univerzitet u Nišu,,,young,intermediate
-P024DC686,2025-09-28 18:53:31,2001,madjarska,srednja,da,prosveta,3-5,Univerzitet u Nišu,,,young,intermediate
-P024DC686,2025-09-28 18:53:31,2001,madjarska,srednja,da,prosveta,3-5,Univerzitet u Nišu,,,young,intermediate
-P05585050,2025-09-28 19:07:21,1990,crna_gora,srednja,da,drustvene_nauke,1-2,Univerzitet u Beogradu,,,experienced,junior
-P02756AA6,2025-09-28 19:15:40,1990,severna_makedonija,visa,ne,prosveta,11-15,,,,experienced,unknown
+P0061F1DD,2025-09-08 18:12:11,1985,crna_gora,visa,da,prosveta,16-20,RT-RK,,,experienced,unknown
+P00288CC9,2025-09-06 18:12:11,2001,nemacka,doktorat,ne,it_industrija,6-10,,,,young,senior
+P0373A13F,2025-09-24 18:12:11,1988,severna_makedonija,srednja,ne,it_industrija,16-20,,,,experienced,unknown
+P00110723,2025-09-05 18:12:11,1998,crna_gora,doktorat,da,prosveta,20+,Apple,,,mid_career,unknown
+P04C9CECC,2025-09-12 18:12:11,1994,srbija,srednja,da,medicina,1-2,IBM,,,mid_career,junior
+P05E401F5,2025-09-14 18:12:11,1994,crna_gora,srednja,ne,prosveta,11-15,,,,mid_career,unknown
+P02134388,2025-09-20 18:12:11,1996,bosna_i_hercegovina,visa,ne,prosveta,20+,,,,mid_career,unknown
+P04106658,2025-08-31 18:12:11,1990,austrija,visa,ne,prosveta,0,,,,experienced,junior
+P014BD585,2025-09-22 18:12:11,1986,austrija,srednja,ne,it_industrija,16-20,,,,experienced,unknown
+P04106658,2025-08-31 18:12:11,1988,severna_makedonija,visa,da,kreativna_filmska,11-15,Comtrade,,,experienced,unknown
+P00A19FE9,2025-09-10 18:12:11,1998,rumunija,visa,ne,medicina,16-20,,,,mid_career,unknown
+P008D086B,2025-09-25 18:12:11,1999,crna_gora,srednja,ne,medicina,3-5,,,,mid_career,intermediate
+P052914E0,2025-09-19 18:12:11,1992,bosna_i_hercegovina,srednja,da,it_industrija,16-20,Amazon,,,mid_career,unknown
+P02134388,2025-09-20 18:12:11,1987,crna_gora,doktorat,ne,it_industrija,1-2,,,,experienced,junior
+P0373A13F,2025-09-24 18:12:11,2003,crna_gora,master,ne,drustvene_nauke,1-2,,,,young,junior
+P003EC48E,2025-09-27 18:12:11,1991,srbija,doktorat,ne,medicina,6-10,,,,mid_career,senior
+P043292FD,2025-09-23 18:12:11,1993,nemacka,doktorat,ne,prosveta,20+,,,,mid_career,unknown
+P00110723,2025-09-05 18:12:11,1995,austrija,visoka,ne,kreativna_filmska,6-10,,,,mid_career,senior
+P02134388,2025-09-20 18:12:11,1994,bugarska,srednja,ne,kreativna_filmska,0,,,,mid_career,junior
+P04B40ABD,2025-09-09 18:12:11,2002,bugarska,visa,da,medicina,6-10,Microsoft,,,young,senior
+P052914E0,2025-09-19 18:12:11,2000,nemacka,master,ne,medicina,3-5,,,,mid_career,intermediate
+P003EC48E,2025-09-27 18:12:11,1986,rumunija,doktorat,ne,prosveta,11-15,,,,experienced,unknown
+P04C9CECC,2025-09-12 18:12:11,1998,srbija,doktorat,ne,it_industrija,16-20,,,,mid_career,unknown
+P04A42972,2025-09-21 18:12:11,1992,srbija,doktorat,ne,it_industrija,20+,,,,mid_career,unknown
+P052914E0,2025-09-19 18:12:11,1998,severna_makedonija,master,da,medicina,0,Nordeus,,,mid_career,junior
+P03C3CF49,2025-09-16 18:12:11,1996,bugarska,master,da,kreativna_filmska,20+,Apple,,,mid_career,unknown
+P04A42972,2025-09-21 18:12:11,1994,crna_gora,srednja,da,kreativna_filmska,1-2,RT-RK,,,mid_career,junior
+P01303364,2025-09-01 18:12:11,2005,nemacka,doktorat,ne,medicina,6-10,,,,young,senior
+P057B7EFB,2025-09-13 18:12:11,2004,bugarska,srednja,ne,drustvene_nauke,0,,,,young,junior
+P0597E182,2025-09-07 18:12:11,1995,slovenija,master,da,ostalo,0,Google,,,mid_career,junior
+P0410D77D,2025-09-15 18:12:11,1994,bosna_i_hercegovina,visa,ne,ostalo,0,,,,mid_career,junior
+P014BD585,2025-09-22 18:12:11,1990,hrvatska,master,ne,ostalo,0,,,,experienced,junior
+P023F4B98,2025-09-18 18:12:11,1986,bosna_i_hercegovina,visoka,ne,prosveta,1-2,,,,experienced,junior
+P052914E0,2025-09-19 18:12:11,2004,crna_gora,srednja,da,prosveta,16-20,Oracle,,,young,unknown
+P052914E0,2025-09-19 18:12:11,1988,nemacka,doktorat,da,drustvene_nauke,11-15,IBM,,,experienced,unknown
+P02134388,2025-09-20 18:12:11,2003,srbija,visa,ne,prosveta,0,,,,young,junior
+P043292FD,2025-09-23 18:12:11,2003,severna_makedonija,doktorat,ne,it_industrija,1-2,,,,young,junior
+P014BD585,2025-09-22 18:12:11,2003,nemacka,srednja,da,prosveta,3-5,Univerzitet u Novom Sadu,,,young,intermediate
+P01FF2827,2025-08-30 18:12:11,1988,slovenija,visoka,da,kreativna_filmska,6-10,Univerzitet u Novom Sadu,,,experienced,senior
+P02813CF1,2025-09-26 18:12:11,1991,rumunija,srednja,ne,prosveta,11-15,,,,mid_career,unknown
+P0410D77D,2025-09-15 18:12:11,1999,severna_makedonija,srednja,da,medicina,0,Comtrade,,,mid_career,junior
+P057B7EFB,2025-09-13 18:12:11,1992,bugarska,visoka,da,ostalo,20+,Univerzitet u Nišu,,,mid_career,unknown
+P02813CF1,2025-09-26 18:12:11,1985,bosna_i_hercegovina,visa,da,medicina,6-10,Amazon,,,experienced,senior
+P02134388,2025-09-20 18:12:11,1998,nemacka,doktorat,da,it_industrija,20+,Oracle,,,mid_career,unknown
+P0410D77D,2025-09-15 18:12:11,1998,nemacka,visa,ne,drustvene_nauke,16-20,,,,mid_career,unknown
+P00110723,2025-09-05 18:12:11,1999,rumunija,master,ne,kreativna_filmska,20+,,,,mid_career,unknown
+P043292FD,2025-09-23 18:12:11,2003,slovenija,doktorat,da,drustvene_nauke,0,IBM,,,young,junior

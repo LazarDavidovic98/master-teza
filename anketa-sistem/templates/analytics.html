@@ -693,11 +693,11 @@
 
         <!-- Key Insights Section -->
         <div class="insights-section">
-            <h3>🧠 Ključni Uvidi</h3>
+            <h3>Ključni Uvidi</h3>
             
             {% if analytics.summary_stats.total_survey_responses > 0 %}
             <div class="insight-item">
-                <h4>👥 Demografski Profil <span class="trend-indicator trend-up">Raznovrsno</span></h4>
+                <h4> Demografski Profil <span class="trend-indicator trend-up">Raznovrsno</span></h4>
                 <p>
                     {% set employed_pct = analytics.summary_stats.employed_percentage %}
                     {{ "%.0f"|format(employed_pct) }}% učesnika je zaposleno, što omogućava analizu korišćenja AI alata u 
@@ -742,7 +742,7 @@
             </div>
             {% else %}
             <div class="insight-item">
-                <h4>🤖 Nisko AI Korišćenje <span class="trend-indicator trend-down">Pažnja</span></h4>
+                <h4> Nisko AI Korišćenje <span class="trend-indicator trend-down">Pažnja</span></h4>
                 <p>
                     Prosečna ocena korišćenja generativnih AI alata je {{ "%.1f"|format(analytics.summary_stats.avg_ai_usage) }}/5, 
                     što može ukazivati na potrebu za edukacijom ili poboljšanje pristupačnosti.

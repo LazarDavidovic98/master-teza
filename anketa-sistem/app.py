@@ -12,7 +12,7 @@ import plotly.express as px
 from plotly.utils import PlotlyJSONEncoder
 import json
 import base64
-from io import BytesIO
+from io import BytesIO, StringIO
 
 # Import our data science extension
 try:
@@ -58,12 +58,60 @@ def load_survey_data():
         return pd.DataFrame()
     
     try:
+        # Pokušaj prvo sa normalnim čitanjem
         df = pd.read_csv(RESPONSES_FILE, encoding='utf-8')
         if not df.empty:
             df['timestamp'] = pd.to_datetime(df['timestamp'])
         return df
+    except pd.errors.ParserError as e:
+        print(f"Greška pri parsiranju CSV-a: {e}")
+        print("Pokušavam sa naprednim čitanjem...")
+        
+        try:
+            # Pokušaj sa error_bad_lines=False da preskočiš problematične linije
+            df = pd.read_csv(RESPONSES_FILE, encoding='utf-8', on_bad_lines='skip')
+            print(f"Uspešno učitano {len(df)} redova sa preskakanjem loših linija.")
+            if not df.empty:
+                df['timestamp'] = pd.to_datetime(df['timestamp'])
+            return df
+        except Exception as e2:
+            print(f"I dalje greška: {e2}")
+            
+            # Poslednji pokušaj - ručno čitanje i čišćenje
+            try:
+                with open(RESPONSES_FILE, 'r', encoding='utf-8') as f:
+                    lines = f.readlines()
+                
+                # Uzmi header
+                header = lines[0].strip()
+                expected_cols = len(header.split(','))
+                print(f"Header ima {expected_cols} kolona")
+                
+                # Filtrriraj samo validne linije
+                clean_lines = [header]
+                for i, line in enumerate(lines[1:], 1):
+                    cols = line.count(',') + 1
+                    if cols == expected_cols:
+                        clean_lines.append(line.strip())
+                    else:
+                        print(f"Preskačem liniju {i+1}: ima {cols} kolona umesto {expected_cols}")
+                
+                # Napravi temp fajl
+                temp_content = '\n'.join(clean_lines)
+                from io import StringIO
+                df = pd.read_csv(StringIO(temp_content), encoding='utf-8')
+                
+                print(f"Uspešno učitano {len(df)} čistih redova")
+                if not df.empty:
+                    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                return df
+                
+            except Exception as e3:
+                print(f"Finalna greška pri učitavanju podataka: {e3}")
+                return pd.DataFrame()
+    
     except Exception as e:
-        print(f"Greška pri učitavanju podataka: {e}")
+        print(f"Neočekivana greška pri učitavanju podataka: {e}")
         return pd.DataFrame()
 
 def create_matplotlib_chart(figure):
