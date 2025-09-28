@@ -1,0 +1,24 @@
+{
+  "total_nodes": 51,
+  "total_edges": 180,
+  "node_types": {
+    "participant": 24,
+    "entity": 11,
+    "ai_tool": 10,
+    "target_group": 6
+  },
+  "edge_types": {
+    "uses_tool": 118,
+    "belongs_to_group": 43,
+    "affiliated_with": 19
+  },
+  "enhanced_from": "data/gephi_nodes.csv and data/gephi_edges.csv",
+  "enhancements": [
+    "Added Shape attribute for different node shapes",
+    "Added X,Y coordinates for initial layout",
+    "Enhanced demographic information for participants",
+    "Added group similarity edges",
+    "Improved edge labeling and typing",
+    "Added explicit Directed/Undirected edge types"
+  ]
+}
