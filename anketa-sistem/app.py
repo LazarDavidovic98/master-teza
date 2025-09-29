@@ -7,6 +7,7 @@ import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend for server
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 import plotly.graph_objs as go
 import plotly.express as px
 from plotly.utils import PlotlyJSONEncoder
@@ -289,65 +290,662 @@ def generate_analytics_data():
         'image': create_matplotlib_chart(fig)
     })
     
-    # 2. AI POZNAVANJE I KORIŠĆENJE
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 12))
+    # 📋 ANALIZA ANKETE O AI ALATA - POTPUNO NOVA SEKCIJA
+    # Vizualizacije odgovora o korišćenju ChatGPT-a i Copilot-a među studentima
     
-    # Generativni AI poznavanje - samo numeričke vrednosti
-    if 'generativni_ai_poznavanje' in survey_df.columns:
-        # Konvertuj u numeričke vrednosti i filtiraj nevalidne
-        numeric_ai_knowledge = pd.to_numeric(survey_df['generativni_ai_poznavanje'], errors='coerce')
-        valid_ai_knowledge = numeric_ai_knowledge.dropna()
-        if not valid_ai_knowledge.empty:
-            ai_knowledge = valid_ai_knowledge.value_counts().sort_index()
-            ai_knowledge.plot(kind='bar', ax=ax1, color='#8e44ad', alpha=0.8)
-            ax1.set_title('Poznavanje Generativnih AI Alata', fontsize=12, fontweight='bold')
-            ax1.set_ylabel('Broj učesnika')
-            ax1.set_xlabel('Ocena (1=loše, 5=odlično)')
+    # 1. OSNOVNA ANALIZA AI ALATA - Panoramski pregled
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(18, 14))
+    fig.suptitle('📋 Analiza Ankete o AI Alata - Osnovna Analiza', fontsize=16, fontweight='bold', y=0.98)
     
-    # Prompt engineering - samo numeričke vrednosti
-    if 'prompt_engineering' in survey_df.columns:
-        # Konvertuj u numeričke vrednosti i filtiraj nevalidne
-        numeric_prompt_skills = pd.to_numeric(survey_df['prompt_engineering'], errors='coerce')
-        valid_prompt_skills = numeric_prompt_skills.dropna()
-        if not valid_prompt_skills.empty:
-            prompt_skills = valid_prompt_skills.value_counts().sort_index()
-            prompt_skills.plot(kind='bar', ax=ax2, color='#27ae60', alpha=0.8)
-            ax2.set_title('Veštine Prompt Engineering-a', fontsize=12, fontweight='bold')
-            ax2.set_ylabel('Broj učesnika')
-            ax2.set_xlabel('Ocena (1=loše, 5=odlično)')
-    
-    # Poznati AI alati - analiza najčešćih
-    if 'poznati_ai_alati' in survey_df.columns:
-        all_tools = []
-        for tools in survey_df['poznati_ai_alati'].dropna():
-            if tools:
-                all_tools.extend([tool.strip() for tool in tools.split(',')])
+    try:
+        # 1.1 ChatGPT vs Copilot Popularnost - Treemap Style Bar Chart
+        if 'poznati_ai_alati' in survey_df.columns:
+            chatgpt_users = survey_df['poznati_ai_alati'].astype(str).str.contains('ChatGPT', na=False).sum()
+            copilot_users = survey_df['poznati_ai_alati'].astype(str).str.contains('GitHub Copilot', na=False).sum()
+            claude_users = survey_df['poznati_ai_alati'].astype(str).str.contains('Claude', na=False).sum()
+            dalle_users = survey_df['poznati_ai_alati'].astype(str).str.contains('DALL-E', na=False).sum()
+            gemini_users = survey_df['poznati_ai_alati'].astype(str).str.contains('Gemini', na=False).sum()
+            
+            tools = ['ChatGPT', 'GitHub Copilot', 'Claude', 'DALL-E', 'Gemini']
+            counts = [chatgpt_users, copilot_users, claude_users, dalle_users, gemini_users]
+            colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7']
+            
+            bars = ax1.barh(tools, counts, color=colors, edgecolor='black', linewidth=1)
+            ax1.set_xlabel('Broj Korisnika', fontweight='bold')
+            ax1.set_title('🔥 TOP 5 AI Alata - Zastupljenost u Anketi', fontweight='bold', fontsize=12)
+            ax1.grid(axis='x', alpha=0.3)
+            
+            # Dodaj vrednosti na barove
+            for i, (bar, count) in enumerate(zip(bars, counts)):
+                ax1.text(count + max(counts)*0.01, bar.get_y() + bar.get_height()/2, 
+                        f'{count} ({count/len(survey_df)*100:.1f}%)', 
+                        va='center', fontweight='bold')
         
-        if all_tools:
-            tool_counts = pd.Series(all_tools).value_counts().head(8)
-            tool_counts.plot(kind='barh', ax=ax3, color='#f39c12', alpha=0.8)
-            ax3.set_title('Najpoznatiji AI Alati', fontsize=12, fontweight='bold')
-            ax3.set_xlabel('Broj spomenuta')
-    
-    # Svrhe korišćenja
-    if 'svrhe_koriscenja' in survey_df.columns:
-        all_purposes = []
-        for purposes in survey_df['svrhe_koriscenja'].dropna():
-            if purposes:
-                all_purposes.extend([purpose.strip() for purpose in purposes.split(',')])
+        # 1.2 Svrhe Korišćenja AI Alata - Word Cloud Style
+        if 'svrhe_koriscenja' in survey_df.columns:
+            purposes = []
+            for purpose_text in survey_df['svrhe_koriscenja'].dropna():
+                if isinstance(purpose_text, str) and purpose_text:
+                    purposes.extend(purpose_text.split(','))
+            
+            # Brojanje najčešćih svrha
+            purpose_counts = {}
+            common_purposes = [
+                'Pisanje teksta', 'Kreiranje slika', 'Učenje novih koncepata', 
+                'Analiza podataka', 'Prevođenje jezika', 'Kreiranje prezentacija'
+            ]
+            
+            for purpose in common_purposes:
+                count = sum(1 for p in purposes if purpose.lower() in p.lower())
+                if count > 0:
+                    purpose_counts[purpose] = count
+            
+            if purpose_counts:
+                purpose_labels = list(purpose_counts.keys())
+                purpose_values = list(purpose_counts.values())
+                colors_pie = plt.cm.Set3(np.linspace(0, 1, len(purpose_labels)))
+                
+                wedges, texts, autotexts = ax2.pie(purpose_values, labels=purpose_labels, autopct='%1.1f%%',
+                                                  colors=colors_pie, startangle=90, textprops={'fontsize': 9})
+                ax2.set_title('🎯 Svrhe Korišćenja AI Alata', fontweight='bold', fontsize=12)
+                
+                # Poboljšaj čitljivost
+                for autotext in autotexts:
+                    autotext.set_color('white')
+                    autotext.set_fontweight('bold')
         
-        if all_purposes:
-            purpose_counts = pd.Series(all_purposes).value_counts().head(6)
-            purpose_counts.plot(kind='bar', ax=ax4, color='#e67e22', alpha=0.8)
-            ax4.set_title('Svrhe Korišćenja AI Alata', fontsize=12, fontweight='bold')
-            ax4.set_ylabel('Broj spomenuta')
-            ax4.tick_params(axis='x', rotation=45)
+        # 1.3 AI Znanje vs Industrija - Heatmap sa statistikama
+        if 'ciljana_grupa' in survey_df.columns and 'poznavanje_principa' in survey_df.columns:
+            knowledge_levels = ['nimalo', 'malo', 'dosta', 'veoma_dosta']
+            industries = ['it_industrija', 'prosveta', 'medicina', 'kreativna_filmska', 'drustvene_nauke']
+            
+            # Kreiraj matricu znanja po industrijama
+            knowledge_matrix = np.zeros((len(industries), len(knowledge_levels)))
+            
+            for i, industry in enumerate(industries):
+                industry_data = survey_df[survey_df['ciljana_grupa'] == industry]
+                for j, level in enumerate(knowledge_levels):
+                    count = (industry_data['poznavanje_principa'] == level).sum()
+                    knowledge_matrix[i, j] = count
+            
+            # Normalizuj po redovima za bolje poređenje
+            row_sums = knowledge_matrix.sum(axis=1)
+            knowledge_matrix_norm = np.divide(knowledge_matrix, row_sums[:, np.newaxis], 
+                                            out=np.zeros_like(knowledge_matrix), where=row_sums[:, np.newaxis]!=0) * 100
+            
+            im = ax3.imshow(knowledge_matrix_norm, cmap='RdYlBu_r', aspect='auto', vmin=0, vmax=100)
+            ax3.set_xticks(range(len(knowledge_levels)))
+            ax3.set_yticks(range(len(industries)))
+            ax3.set_xticklabels(['Nimalo', 'Malo', 'Dosta', 'Veoma Dosta'], rotation=45)
+            ax3.set_yticklabels([ind.replace('_', ' ').title() for ind in industries])
+            ax3.set_title('🧠 Nivo AI Znanja po Industrijama (%)', fontweight='bold', fontsize=12)
+            
+            # Dodaj brojeve u ćelije
+            for i in range(len(industries)):
+                for j in range(len(knowledge_levels)):
+                    if row_sums[i] > 0:
+                        text = ax3.text(j, i, f'{knowledge_matrix_norm[i, j]:.0f}%',
+                                       ha="center", va="center", 
+                                       color="white" if knowledge_matrix_norm[i, j] > 50 else "black",
+                                       fontweight='bold')
+            
+            # Dodaj colorbar
+            plt.colorbar(im, ax=ax3, fraction=0.046, pad=0.04, label='Procenat korisnika')
+        
+        # 1.4 Generacijska Analiza - Advanced Stacked Bar
+        if 'godina_rodjenja' in survey_df.columns and 'poznati_ai_alati' in survey_df.columns:
+            # Definiši generacije
+            current_year = 2025
+            survey_df['age'] = current_year - pd.to_numeric(survey_df['godina_rodjenja'], errors='coerce')
+            
+            def get_generation(age):
+                if pd.isna(age):
+                    return 'Nepoznato'
+                elif age <= 25:
+                    return 'Gen Z (≤25)'
+                elif age <= 35:
+                    return 'Mladi Milenijali (26-35)'
+                elif age <= 45:
+                    return 'Stariji Milenijali (36-45)'
+                else:
+                    return 'Gen X+ (46+)'
+            
+            survey_df['generation'] = survey_df['age'].apply(get_generation)
+            generations = ['Gen Z (≤25)', 'Mladi Milenijali (26-35)', 'Stariji Milenijali (36-45)', 'Gen X+ (46+)']
+            
+            # Analiziraj korišćenje top AI alata po generacijama
+            generation_data = {}
+            for gen in generations:
+                gen_data = survey_df[survey_df['generation'] == gen]
+                if len(gen_data) > 0:
+                    chatgpt = gen_data['poznati_ai_alati'].astype(str).str.contains('ChatGPT', na=False).sum()
+                    copilot = gen_data['poznati_ai_alati'].astype(str).str.contains('GitHub Copilot', na=False).sum()
+                    claude = gen_data['poznati_ai_alati'].astype(str).str.contains('Claude', na=False).sum()
+                    dalle = gen_data['poznati_ai_alati'].astype(str).str.contains('DALL-E', na=False).sum()
+                    
+                    total = len(gen_data)
+                    generation_data[gen] = {
+                        'ChatGPT': (chatgpt/total)*100,
+                        'Copilot': (copilot/total)*100,
+                        'Claude': (claude/total)*100,
+                        'DALL-E': (dalle/total)*100
+                    }
+            
+            if generation_data:
+                df_gen = pd.DataFrame(generation_data).T
+                df_gen.plot(kind='bar', stacked=False, ax=ax4, 
+                           color=['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4'],
+                           width=0.8)
+                ax4.set_title('🎭 AI Alati po Generacijama (%)', fontweight='bold', fontsize=12)
+                ax4.set_xlabel('Generacija', fontweight='bold')
+                ax4.set_ylabel('Procenat Korisnika', fontweight='bold')
+                ax4.legend(title='AI Alati', bbox_to_anchor=(1.05, 1), loc='upper left')
+                ax4.tick_params(axis='x', rotation=45)
+                ax4.grid(axis='y', alpha=0.3)
+    
+    except Exception as e:
+        print(f"Greška u osnovnoj AI analizi: {str(e)}")
+        for ax in [ax1, ax2, ax3, ax4]:
+            ax.text(0.5, 0.5, f'Grafikon nedostupan\n{str(e)[:50]}...', 
+                   ha='center', va='center', transform=ax.transAxes)
     
     plt.tight_layout()
     analytics['survey_charts'].append({
-        'title': 'AI Znanje i Korišćenje',
+        'title': '📋 Analiza Ankete o AI Alata - Osnovna Analiza',
         'image': create_matplotlib_chart(fig)
     })
+    
+    # 2. NAPREDNA STATISTIČKA ANALIZA
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(18, 14))
+    fig.suptitle('📊 Napredna Statistička Analiza AI Korišćenja', fontsize=16, fontweight='bold', y=0.98)
+    
+    try:
+        # 2.1 Korelacijska Matrica - AI Veštine
+        correlation_fields = ['poznavanje_principa', 'prompt_engineering', 'tehnicko_razumevanje']
+        if all(field in survey_df.columns for field in correlation_fields):
+            # Mapiranje tekstualnih vrednosti na numeričke
+            knowledge_mapping = {'nimalo': 1, 'malo': 2, 'dosta': 3, 'veoma_dosta': 4}
+            prompt_mapping = {'ne': 1, 'da_teoretski': 2, 'da_praktikujem': 3}
+            tech_mapping = {'Large Language Models (LLM)': 3, 'Fine-tuning modela na sopstvenim podacima': 4, 
+                           'Rad sa embedding vektorima': 4, 'Ne razumem dovoljno': 1}
+            
+            corr_data = pd.DataFrame()
+            corr_data['AI Znanje'] = survey_df['poznavanje_principa'].map(knowledge_mapping)
+            corr_data['Prompt Eng.'] = survey_df['prompt_engineering'].map(prompt_mapping)
+            
+            # Za tehničko razumevanje, mapiranje prema složenosti
+            tech_scores = []
+            for tech in survey_df['tehnicko_razumevanje']:
+                if isinstance(tech, str):
+                    if 'Ne razumem' in tech:
+                        tech_scores.append(1)
+                    elif 'Large Language Models' in tech:
+                        tech_scores.append(3)
+                    elif any(advanced in tech for advanced in ['Fine-tuning', 'embedding', 'transformer']):
+                        tech_scores.append(4)
+                    else:
+                        tech_scores.append(2)
+                else:
+                    tech_scores.append(np.nan)
+            
+            corr_data['Tehničko Razum.'] = tech_scores
+            
+            # Izračunaj korelacije
+            correlation_matrix = corr_data.corr()
+            
+            # Kreiraj heatmap korelacije
+            im = ax1.imshow(correlation_matrix.values, cmap='RdBu_r', aspect='auto', vmin=-1, vmax=1)
+            ax1.set_xticks(range(len(correlation_matrix.columns)))
+            ax1.set_yticks(range(len(correlation_matrix.columns)))
+            ax1.set_xticklabels(correlation_matrix.columns, rotation=45, ha='right')
+            ax1.set_yticklabels(correlation_matrix.columns)
+            ax1.set_title('🔗 Korelacijska Matrica AI Veština', fontweight='bold', fontsize=12)
+            
+            # Dodaj vrednosti korelacije
+            for i in range(len(correlation_matrix.columns)):
+                for j in range(len(correlation_matrix.columns)):
+                    if not pd.isna(correlation_matrix.iloc[i, j]):
+                        text = ax1.text(j, i, f'{correlation_matrix.iloc[i, j]:.2f}',
+                                       ha="center", va="center", 
+                                       color="white" if abs(correlation_matrix.iloc[i, j]) > 0.5 else "black",
+                                       fontweight='bold')
+            
+            plt.colorbar(im, ax=ax1, fraction=0.046, pad=0.04, label='Korelacija')
+        
+        # 2.2 Distribucija AI Znanja - Violin Plot sa statističkim podacima
+        if 'poznavanje_principa' in survey_df.columns and 'ciljana_grupa' in survey_df.columns:
+            knowledge_numeric = survey_df['poznavanje_principa'].map(knowledge_mapping)
+            industries_clean = ['it_industrija', 'prosveta', 'medicina', 'kreativna_filmska', 'drustvene_nauke']
+            
+            plot_data = []
+            labels = []
+            stats_text = []
+            
+            for industry in industries_clean:
+                industry_data = survey_df[survey_df['ciljana_grupa'] == industry]
+                industry_knowledge = industry_data['poznavanje_principa'].map(knowledge_mapping).dropna()
+                
+                if len(industry_knowledge) > 0:
+                    plot_data.append(industry_knowledge.values)
+                    labels.append(industry.replace('_', ' ').title())
+                    
+                    # Izračunaj statistike
+                    mean_val = industry_knowledge.mean()
+                    median_val = industry_knowledge.median()
+                    std_val = industry_knowledge.std()
+                    stats_text.append(f'μ={mean_val:.2f}\nσ={std_val:.2f}')
+            
+            if plot_data:
+                violin_parts = ax2.violinplot(plot_data, positions=range(len(plot_data)), 
+                                            showmeans=True, showmedians=True)
+                ax2.set_xticks(range(len(labels)))
+                ax2.set_xticklabels(labels, rotation=45, ha='right')
+                ax2.set_ylabel('AI Znanje Nivo (1-4)', fontweight='bold')
+                ax2.set_title('📈 Distribucija AI Znanja po Sektorima', fontweight='bold', fontsize=12)
+                ax2.grid(True, alpha=0.3)
+                
+                # Oboji violin plotove
+                colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7']
+                for i, pc in enumerate(violin_parts['bodies']):
+                    pc.set_facecolor(colors[i % len(colors)])
+                    pc.set_alpha(0.7)
+                
+                # Dodaj statistike kao tekst
+                for i, stats in enumerate(stats_text):
+                    ax2.text(i, max([max(data) for data in plot_data]) + 0.1, stats,
+                            ha='center', va='bottom', fontsize=8, 
+                            bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.8))
+        
+        # 2.3 Trend Analiza - ChatGPT vs Copilot po Obrazovanju
+        if 'strucna_sprema' in survey_df.columns and 'poznati_ai_alati' in survey_df.columns:
+            education_levels = survey_df['strucna_sprema'].value_counts().index.tolist()
+            
+            chatgpt_by_edu = []
+            copilot_by_edu = []
+            education_labels = []
+            
+            for edu in education_levels:
+                edu_data = survey_df[survey_df['strucna_sprema'] == edu]
+                if len(edu_data) > 0:
+                    chatgpt_pct = (edu_data['poznati_ai_alati'].astype(str).str.contains('ChatGPT', na=False).sum() / len(edu_data)) * 100
+                    copilot_pct = (edu_data['poznati_ai_alati'].astype(str).str.contains('GitHub Copilot', na=False).sum() / len(edu_data)) * 100
+                    
+                    chatgpt_by_edu.append(chatgpt_pct)
+                    copilot_by_edu.append(copilot_pct)
+                    education_labels.append(edu)
+            
+            x = np.arange(len(education_labels))
+            width = 0.35
+            
+            bars1 = ax3.bar(x - width/2, chatgpt_by_edu, width, label='ChatGPT', 
+                           color='#FF6B6B', alpha=0.8, edgecolor='black')
+            bars2 = ax3.bar(x + width/2, copilot_by_edu, width, label='GitHub Copilot', 
+                           color='#4ECDC4', alpha=0.8, edgecolor='black')
+            
+            ax3.set_xlabel('Nivo Obrazovanja', fontweight='bold')
+            ax3.set_ylabel('Procenat Korisnika', fontweight='bold')
+            ax3.set_title('🎓 ChatGPT vs Copilot po Obrazovanju', fontweight='bold', fontsize=12)
+            ax3.set_xticks(x)
+            ax3.set_xticklabels(education_labels, rotation=45, ha='right')
+            ax3.legend()
+            ax3.grid(axis='y', alpha=0.3)
+            
+            # Dodaj vrednosti na barove
+            for bars in [bars1, bars2]:
+                for bar in bars:
+                    height = bar.get_height()
+                    if height > 0:
+                        ax3.text(bar.get_x() + bar.get_width()/2., height + 1,
+                                f'{height:.1f}%', ha='center', va='bottom', fontweight='bold', fontsize=9)
+        
+        # 2.4 Radar Chart - Problemi i Izazovi AI
+        if 'problemi_ai' in survey_df.columns:
+            problem_categories = [
+                'Pristrasnost u odgovorima', 'Generisanje lažnih informacija', 
+                'Autorska prava i plagijati', 'Privatnost podataka', 
+                'Tehnička ograničenja', 'Etičke dileme'
+            ]
+            
+            problem_counts = []
+            for problem in problem_categories:
+                count = survey_df['problemi_ai'].astype(str).str.contains(problem, na=False).sum()
+                problem_counts.append(count)
+            
+            # Normalizuj na procenat
+            total_responses = len(survey_df['problemi_ai'].dropna())
+            problem_percentages = [(count/total_responses)*100 for count in problem_counts]
+            
+            # Radar chart setup
+            angles = np.linspace(0, 2 * np.pi, len(problem_categories), endpoint=False).tolist()
+            problem_percentages += problem_percentages[:1]  # Complete the circle
+            angles += angles[:1]
+            
+            ax4 = plt.subplot(224, projection='polar')
+            ax4.plot(angles, problem_percentages, 'o-', linewidth=2, color='#FF6B6B')
+            ax4.fill(angles, problem_percentages, alpha=0.25, color='#FF6B6B')
+            ax4.set_xticks(angles[:-1])
+            ax4.set_xticklabels([cat.replace(' ', '\n') for cat in problem_categories], fontsize=9)
+            ax4.set_ylim(0, max(problem_percentages) * 1.2)
+            ax4.set_title('⚠️ Identifikovani Problemi AI (%)', fontweight='bold', fontsize=12, pad=20)
+            ax4.grid(True)
+            
+            # Dodaj vrednosti
+            for angle, pct in zip(angles[:-1], problem_percentages[:-1]):
+                ax4.text(angle, pct + max(problem_percentages)*0.05, f'{pct:.1f}%', 
+                        ha='center', va='center', fontweight='bold', fontsize=8,
+                        bbox=dict(boxstyle="round,pad=0.2", facecolor='white', alpha=0.8))
+    
+    except Exception as e:
+        print(f"Greška u naprednoj AI analizi: {str(e)}")
+        for ax in [ax1, ax2, ax3]:
+            if ax != ax4:  # ax4 je polar, drugačije se rukuje
+                ax.text(0.5, 0.5, f'Grafikon nedostupan\n{str(e)[:50]}...', 
+                       ha='center', va='center', transform=ax.transAxes)
+    
+    plt.tight_layout()
+    analytics['survey_charts'].append({
+        'title': '📊 Napredna Statistička Analiza AI Korišćenja',
+        'image': create_matplotlib_chart(fig)
+    })
+    
+    # 3. ZNAČAJNI STATISTIČKI PODACI ZA BUDUĆA ISTRAŽIVANJA
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(18, 14))
+    fig.suptitle('🔬 Ključni Nalazi za Buduća Istraživanja', fontsize=16, fontweight='bold', y=0.98)
+    
+    try:
+        # 3.1 AI Adoptacija Indeks - Kompozitni pokazatelj
+        if all(field in survey_df.columns for field in ['poznati_ai_alati', 'svrhe_koriscenja', 'poznavanje_principa']):
+            
+            # Izračunaj AI Adoptacijski Indeks (0-100)
+            ai_adoption_scores = []
+            industries_for_adoption = []
+            
+            for idx, row in survey_df.iterrows():
+                score = 0
+                
+                # Broj poznatih AI alata (max 30 poena)
+                tools = str(row.get('poznati_ai_alati', ''))
+                tool_count = sum(1 for tool in ['ChatGPT', 'GitHub Copilot', 'Claude', 'DALL-E', 'Gemini'] if tool in tools)
+                score += min(tool_count * 6, 30)
+                
+                # Raznovrsnost svrha (max 25 poena)
+                purposes = str(row.get('svrhe_koriscenja', ''))
+                purpose_count = len([p for p in purposes.split(',') if p.strip()]) if purposes != 'nan' else 0
+                score += min(purpose_count * 5, 25)
+                
+                # Nivo znanja (max 30 poena)
+                knowledge = row.get('poznavanje_principa', '')
+                knowledge_score = {'nimalo': 0, 'malo': 10, 'dosta': 20, 'veoma_dosta': 30}.get(knowledge, 0)
+                score += knowledge_score
+                
+                # Prompt engineering (max 15 poena)
+                prompt_skill = row.get('prompt_engineering', '')
+                prompt_score = {'ne': 0, 'da_teoretski': 7, 'da_praktikujem': 15}.get(prompt_skill, 0)
+                score += prompt_score
+                
+                ai_adoption_scores.append(score)
+                industries_for_adoption.append(row.get('ciljana_grupa', 'nepoznato'))
+            
+            # Grupiši po industrijama
+            adoption_by_industry = {}
+            industries_clean = ['it_industrija', 'prosveta', 'medicina', 'kreativna_filmska', 'drustvene_nauke']
+            
+            for industry in industries_clean:
+                industry_scores = [score for score, ind in zip(ai_adoption_scores, industries_for_adoption) if ind == industry]
+                if industry_scores:
+                    avg_score = np.mean(industry_scores)
+                    adoption_by_industry[industry.replace('_', ' ').title()] = avg_score
+            
+            if adoption_by_industry:
+                industries = list(adoption_by_industry.keys())
+                scores = list(adoption_by_industry.values())
+                colors = plt.cm.RdYlGn(np.array(scores) / 100)
+                
+                bars = ax1.barh(industries, scores, color=colors, edgecolor='black', linewidth=1)
+                ax1.set_xlabel('AI Adoptacijski Indeks (0-100)', fontweight='bold')
+                ax1.set_title('🚀 AI Adoptacijski Indeks po Sektorima', fontweight='bold', fontsize=12)
+                ax1.grid(axis='x', alpha=0.3)
+                
+                # Dodaj vrednosti i kategorije
+                for bar, score in zip(bars, scores):
+                    category = "Visok" if score >= 70 else "Srednji" if score >= 40 else "Nizak"
+                    ax1.text(score + 2, bar.get_y() + bar.get_height()/2, 
+                            f'{score:.1f} ({category})', va='center', fontweight='bold')
+        
+        # 3.2 Prediktivni Model - AI Znanje vs Godina
+        if 'godina_rodjenja' in survey_df.columns and 'poznavanje_principa' in survey_df.columns:
+            birth_years = pd.to_numeric(survey_df['godina_rodjenja'], errors='coerce')
+            knowledge_numeric = survey_df['poznavanje_principa'].map({'nimalo': 1, 'malo': 2, 'dosta': 3, 'veoma_dosta': 4})
+            
+            # Filtriraj validne podatke
+            valid_data = pd.DataFrame({
+                'birth_year': birth_years,
+                'knowledge': knowledge_numeric
+            }).dropna()
+            
+            if len(valid_data) > 10:
+                # Scatter plot sa trendom
+                scatter = ax2.scatter(valid_data['birth_year'], valid_data['knowledge'], 
+                                    alpha=0.6, c=valid_data['knowledge'], cmap='viridis', 
+                                    s=60, edgecolors='black', linewidth=0.5)
+                
+                # Dodaj trend liniju
+                z = np.polyfit(valid_data['birth_year'], valid_data['knowledge'], 1)
+                p = np.poly1d(z)
+                trend_x = np.linspace(valid_data['birth_year'].min(), valid_data['birth_year'].max(), 100)
+                ax2.plot(trend_x, p(trend_x), "r--", alpha=0.8, linewidth=3, label=f'Trend: y={z[0]:.3f}x+{z[1]:.1f}')
+                
+                ax2.set_xlabel('Godina Rođenja', fontweight='bold')
+                ax2.set_ylabel('AI Znanje Nivo (1-4)', fontweight='bold')
+                ax2.set_title('📈 Prediktivni Trend: AI Znanje kroz Generacije', fontweight='bold', fontsize=12)
+                ax2.grid(True, alpha=0.3)
+                ax2.legend()
+                
+                # Dodaj projekciju
+                future_years = [2030, 2035, 2040]
+                future_knowledge = [p(year) for year in future_years]
+                ax2.plot(future_years, future_knowledge, 'ro', markersize=8, label='Projekcija')
+                
+                # Statistike
+                correlation = valid_data['birth_year'].corr(valid_data['knowledge'])
+                r_squared = correlation ** 2
+                ax2.text(0.05, 0.95, f'R² = {r_squared:.3f}\nKorelacija = {correlation:.3f}', 
+                        transform=ax2.transAxes, fontsize=10, fontweight='bold',
+                        bbox=dict(boxstyle="round", facecolor='wheat', alpha=0.8))
+        
+        # 3.3 Kompetencijski Gap - Trenutno vs Potrebno Znanje
+        if 'poznavanje_principa' in survey_df.columns and 'tehnicko_razumevanje' in survey_df.columns:
+            
+            # Mapiranje trenutnog znanja
+            current_knowledge = survey_df['poznavanje_principa'].map({'nimalo': 1, 'malo': 2, 'dosta': 3, 'veoma_dosta': 4})
+            
+            # Mapiranje potrebnog znanja na osnovu tehničkog razumevanja
+            needed_knowledge = []
+            for tech in survey_df['tehnicko_razumevanje']:
+                if isinstance(tech, str):
+                    if 'Ne razumem' in tech:
+                        needed_knowledge.append(2)  # Potrebno osnovno znanje
+                    elif 'Large Language Models' in tech:
+                        needed_knowledge.append(3)  # Potrebno solidno znanje
+                    elif any(advanced in tech for advanced in ['Fine-tuning', 'embedding']):
+                        needed_knowledge.append(4)  # Potrebno napredno znanje
+                    else:
+                        needed_knowledge.append(2.5)
+                else:
+                    needed_knowledge.append(np.nan)
+            
+            # Izračunaj gap
+            gap_data = pd.DataFrame({
+                'current': current_knowledge,
+                'needed': needed_knowledge,
+                'industry': survey_df['ciljana_grupa']
+            }).dropna()
+            
+            gap_data['gap'] = gap_data['needed'] - gap_data['current']
+            
+            # Grupiši po industrijama
+            gap_by_industry = {}
+            for industry in industries_clean:
+                industry_gaps = gap_data[gap_data['industry'] == industry]['gap']
+                if len(industry_gaps) > 0:
+                    avg_gap = industry_gaps.mean()
+                    gap_by_industry[industry.replace('_', ' ').title()] = avg_gap
+            
+            if gap_by_industry:
+                industries = list(gap_by_industry.keys())
+                gaps = list(gap_by_industry.values())
+                
+                # Pozitivan gap = nedostatak znanja, negativan = višak znanja
+                colors = ['#FF6B6B' if gap > 0 else '#4ECDC4' for gap in gaps]
+                
+                bars = ax3.barh(industries, gaps, color=colors, edgecolor='black', linewidth=1)
+                ax3.set_xlabel('Kompetencijski Gap (Potrebno - Trenutno)', fontweight='bold')
+                ax3.set_title('⚖️ Kompetencijski Gap po Sektorima', fontweight='bold', fontsize=12)
+                ax3.axvline(x=0, color='black', linestyle='-', alpha=0.5)
+                ax3.grid(axis='x', alpha=0.3)
+                
+                # Dodaj vrednosti i interpretacije
+                for bar, gap in zip(bars, gaps):
+                    interpretation = "Nedostatak" if gap > 0.5 else "Balans" if abs(gap) <= 0.5 else "Višak"
+                    color = 'white' if abs(gap) > 0.5 else 'black'
+                    ax3.text(gap + (0.1 if gap >= 0 else -0.1), bar.get_y() + bar.get_height()/2, 
+                            f'{gap:.2f}\n({interpretation})', ha='left' if gap >= 0 else 'right', 
+                            va='center', fontweight='bold', color=color)
+        
+        # 3.4 Budući Trendovi - Inovacije i Preferencije
+        innovation_fields = ['chatgpt_omni', 'copilot_workspace', 'gpt_realtime', 'anthropic_model']
+        if all(field in survey_df.columns for field in innovation_fields):
+            
+            # Mapa savremenih AI funkcionalnosti
+            innovation_map = {
+                'chatgpt_omni': 'Multimodalni AI (GPT-4)',
+                'copilot_workspace': 'AI Development Environment',
+                'gpt_realtime': 'Realtime AI Komunikacija',
+                'anthropic_model': 'Etička AI (Claude)'
+            }
+            
+            # Analiza svesti o inovacijama
+            innovation_awareness = {}
+            for field, label in innovation_map.items():
+                if field in survey_df.columns:
+                    # Broj ljudi koji je dao bilo kakav odgovor (ne prazan)
+                    aware_count = len(survey_df[survey_df[field].notna() & (survey_df[field] != '')])
+                    total_count = len(survey_df)
+                    awareness_pct = (aware_count / total_count) * 100
+                    innovation_awareness[label] = awareness_pct
+            
+            if innovation_awareness:
+                # Kreiraj polumesec grafikon (donut)
+                labels = list(innovation_awareness.keys())
+                sizes = list(innovation_awareness.values())
+                colors = ['#FF9999', '#66B2FF', '#99FF99', '#FFD700']
+                
+                # Napravi eksploziju za najvažnije inovacije
+                explode = [0.1 if size > np.mean(sizes) else 0 for size in sizes]
+                
+                wedges, texts, autotexts = ax4.pie(sizes, labels=labels, autopct='%1.1f%%',
+                                                  colors=colors, startangle=90, explode=explode,
+                                                  wedgeprops=dict(width=0.6, edgecolor='black'))
+                ax4.set_title('🔮 Svest o AI Inovacijama (% ispitanika)', fontweight='bold', fontsize=12)
+                
+                # Dodaj centralnu statistiku
+                avg_awareness = np.mean(sizes)
+                ax4.text(0, 0, f'Prosečna\nSvest\n{avg_awareness:.1f}%', 
+                        ha='center', va='center', fontsize=11, fontweight='bold',
+                        bbox=dict(boxstyle="round", facecolor='white', alpha=0.9))
+                
+                # Poboljšaj čitljivost
+                for autotext in autotexts:
+                    autotext.set_color('white')
+                    autotext.set_fontweight('bold')
+                
+                # Dodaj interpretaciju ispod
+                interpretation = "Visoka" if avg_awareness > 70 else "Srednja" if avg_awareness > 40 else "Niska"
+                ax4.text(0, -1.3, f'Opšta svest o AI inovacijama: {interpretation}', 
+                        ha='center', va='center', fontsize=10, fontweight='bold',
+                        bbox=dict(boxstyle="round", facecolor='lightblue', alpha=0.7))
+    
+    except Exception as e:
+        print(f"Greška u analizi za buduća istraživanja: {str(e)}")
+        for ax in [ax1, ax2, ax3, ax4]:
+            ax.text(0.5, 0.5, f'Grafikon nedostupan\n{str(e)[:50]}...', 
+                   ha='center', va='center', transform=ax.transAxes)
+    
+    plt.tight_layout()
+    analytics['survey_charts'].append({
+        'title': '🔬 Ključni Nalazi za Buduća Istraživanja',
+        'image': create_matplotlib_chart(fig)
+    })
+    
+    # 4. Izračunaj ključne statistike za prikazivanje
+    analytics['key_insights'] = {}
+    
+    try:
+        # Osnovna demografija
+        total_responses = len(survey_df)
+        analytics['key_insights']['total_responses'] = total_responses
+        
+        # ChatGPT vs Copilot statistike
+        if 'poznati_ai_alati' in survey_df.columns:
+            chatgpt_users = survey_df['poznati_ai_alati'].astype(str).str.contains('ChatGPT', na=False).sum()
+            copilot_users = survey_df['poznati_ai_alati'].astype(str).str.contains('GitHub Copilot', na=False).sum()
+            
+            analytics['key_insights']['chatgpt_percentage'] = (chatgpt_users / total_responses) * 100
+            analytics['key_insights']['copilot_percentage'] = (copilot_users / total_responses) * 100
+            analytics['key_insights']['both_tools_users'] = survey_df['poznati_ai_alati'].astype(str).str.contains('ChatGPT.*GitHub Copilot|GitHub Copilot.*ChatGPT', na=False).sum()
+        
+        # Distribucija po industrijama
+        if 'ciljana_grupa' in survey_df.columns:
+            industry_counts = survey_df['ciljana_grupa'].value_counts()
+            analytics['key_insights']['dominant_industry'] = industry_counts.index[0] if len(industry_counts) > 0 else 'N/A'
+            analytics['key_insights']['dominant_industry_pct'] = (industry_counts.iloc[0] / total_responses) * 100 if len(industry_counts) > 0 else 0
+        
+        # AI znanje statistike
+        if 'poznavanje_principa' in survey_df.columns:
+            knowledge_counts = survey_df['poznavanje_principa'].value_counts()
+            advanced_users = knowledge_counts.get('veoma_dosta', 0) + knowledge_counts.get('dosta', 0)
+            analytics['key_insights']['advanced_users_pct'] = (advanced_users / total_responses) * 100
+        
+        # Generacijske statistike
+        if 'godina_rodjenja' in survey_df.columns:
+            birth_years = pd.to_numeric(survey_df['godina_rodjenja'], errors='coerce').dropna()
+            current_year = 2025
+            ages = current_year - birth_years
+            gen_z_count = (ages <= 25).sum()
+            millennials_count = ((ages > 25) & (ages <= 40)).sum()
+            
+            analytics['key_insights']['gen_z_pct'] = (gen_z_count / len(ages)) * 100
+            analytics['key_insights']['millennials_pct'] = (millennials_count / len(ages)) * 100
+            analytics['key_insights']['avg_age'] = ages.mean()
+        
+        # Problemi i izazovi
+        if 'problemi_ai' in survey_df.columns:
+            problem_text = ' '.join(survey_df['problemi_ai'].dropna().astype(str))
+            bias_mentions = problem_text.lower().count('pristrasnost')
+            fake_info_mentions = problem_text.lower().count('lažnih')
+            copyright_mentions = problem_text.lower().count('autorska')
+            
+            total_problem_responses = len(survey_df['problemi_ai'].dropna())
+            if total_problem_responses > 0:
+                analytics['key_insights']['main_concern'] = 'Pristrasnost' if bias_mentions >= fake_info_mentions and bias_mentions >= copyright_mentions else 'Lažne informacije' if fake_info_mentions >= copyright_mentions else 'Autorska prava'
+                analytics['key_insights']['concern_pct'] = max(bias_mentions, fake_info_mentions, copyright_mentions) / total_problem_responses * 100
+        
+        # Edukacija i rad
+        if 'strucna_sprema' in survey_df.columns:
+            education_counts = survey_df['strucna_sprema'].value_counts()
+            higher_ed = education_counts.get('master', 0) + education_counts.get('doktorat', 0)
+            analytics['key_insights']['higher_education_pct'] = (higher_ed / total_responses) * 100
+        
+        if 'radni_odnos' in survey_df.columns:
+            employed = survey_df['radni_odnos'].value_counts().get('da', 0)
+            analytics['key_insights']['employment_rate'] = (employed / total_responses) * 100
+    
+    except Exception as e:
+        print(f"Greška u izračunu ključnih statistika: {str(e)}")
+        analytics['key_insights'] = {
+            'total_responses': len(survey_df),
+            'error': str(e)
+        }
     
     # 3. KVIZ ANALIZA
     quiz_fields = [
