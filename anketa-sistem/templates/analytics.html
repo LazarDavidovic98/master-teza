@@ -538,14 +538,14 @@
                 <div class="stat-description">U radnom odnosu</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.avg_programming_env) }}</div>
-                <div class="stat-label">Prog. Okruženja</div>
-                <div class="stat-description">Prosečno korišćenje (1-5)</div>
+                <div class="stat-number">{{ analytics.summary_stats.employed_count }}</div>
+                <div class="stat-label">Br. Zaposlenih</div>
+                <div class="stat-description">Ukupno zaposlenih učesnika</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.avg_programming_lang) }}</div>
-                <div class="stat-label">Prog. Jezici</div>
-                <div class="stat-description">Prosečno korišćenje (1-5)</div>
+                <div class="stat-number">{{ analytics.summary_stats.unemployed_count }}</div>
+                <div class="stat-label">Br. Nezaposlenih</div>
+                <div class="stat-description">Ukupno nezaposlenih učesnika</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">{{ "%.1f"|format(analytics.summary_stats.avg_ai_usage) }}</div>
@@ -553,6 +553,55 @@
                 <div class="stat-description">Prosečno korišćenje (1-5)</div>
             </div>
         </div>
+        
+        <!-- Additional IT vs Other Industries Insight -->
+        {% if analytics.summary_stats.total_survey_responses > 0 %}
+        <div class="section">
+            <div class="section-header">
+                <h2>🏭 IT Industrija vs Ostale Grane</h2>
+                <p>Analiza razlika u poznavanju AI alata između IT i drugih industrija</p>
+            </div>
+            
+            <div class="insight-item">
+                <h4>💼 Profesionalna Analiza <span class="trend-indicator trend-info">Uvid</span></h4>
+                <p>
+                    {% set chatgpt_percentage = (analytics.summary_stats.chatgpt_aware / analytics.summary_stats.total_survey_responses * 100) %}
+                    {% set copilot_percentage = (analytics.summary_stats.copilot_aware / analytics.summary_stats.total_survey_responses * 100) %}
+                    
+                    Od ukupno {{ analytics.summary_stats.total_survey_responses }} anketa, 
+                    {{ analytics.summary_stats.chatgpt_aware }} ljudi ({{ "%.1f"|format(chatgpt_percentage) }}%) zna za ChatGPT, 
+                    dok {{ analytics.summary_stats.copilot_aware }} ljudi ({{ "%.1f"|format(copilot_percentage) }}%) zna za GitHub Copilot.
+                    
+                    {% if chatgpt_percentage > copilot_percentage %}
+                    ChatGPT je poznatiji za {{ "%.1f"|format(chatgpt_percentage - copilot_percentage) }} procenatnih poena.
+                    {% elif copilot_percentage > chatgpt_percentage %}
+                    GitHub Copilot je poznatiji za {{ "%.1f"|format(copilot_percentage - chatgpt_percentage) }} procenatnih poena.
+                    {% else %}
+                    ChatGPT i GitHub Copilot imaju podjednaku zastupljenost među učesnicima.
+                    {% endif %}
+                </p>
+            </div>
+            
+            <div class="insight-item">
+                <h4>🏭 IT vs Ostale Industrije <span class="trend-indicator {% if analytics.summary_stats.it_better_ai_knowledge > 0 %}trend-up{% elif analytics.summary_stats.it_better_ai_knowledge < 0 %}trend-down{% else %}trend-neutral{% endif %}">
+                    {% if analytics.summary_stats.it_better_ai_knowledge > 0 %}IT Prednost{% elif analytics.summary_stats.it_better_ai_knowledge < 0 %}Ostale Bolje{% else %}Jednako{% endif %}
+                </span></h4>
+                <p>
+                    IT industrija ({{ analytics.summary_stats.it_users_count }} učesnika) vs ostale grane ({{ analytics.summary_stats.non_it_users_count }} učesnika):
+                    IT sektor poznaje AI alate na {{ "%.1f"|format(analytics.summary_stats.it_ai_knowledge_avg) }}% nivou, 
+                    dok ostale industrije na {{ "%.1f"|format(analytics.summary_stats.non_it_ai_knowledge_avg) }}% nivou.
+                    
+                    {% if analytics.summary_stats.it_better_ai_knowledge > 0 %}
+                    IT industrija prednjači za {{ "%.1f"|format(analytics.summary_stats.it_better_ai_knowledge) }} procenatnih poena u poznavanju AI alata.
+                    {% elif analytics.summary_stats.it_better_ai_knowledge < 0 %}
+                    Ostale industrije prednjače za {{ "%.1f"|format(-analytics.summary_stats.it_better_ai_knowledge) }} procenatnih poena u poznavanju AI alata.
+                    {% else %}
+                    Nema značajne razlike u poznavanju AI alata između IT i drugih industrija.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        {% endif %}
 
         <!-- Survey Analytics Section -->
         {% if analytics.survey_charts %}

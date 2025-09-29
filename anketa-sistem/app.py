@@ -141,31 +141,107 @@ def generate_analytics_data():
     
     # Izračunaj employed_percentage
     employed_count = 0
+    unemployed_count = 0
     if 'radni_odnos' in survey_df.columns:
         employed_count = (survey_df['radni_odnos'] == 'da').sum()
+        unemployed_count = (survey_df['radni_odnos'] == 'ne').sum()
     employed_percentage = (employed_count / total_responses * 100) if total_responses > 0 else 0
     
-    # Bezbedna konverzija AI znanja u numeričke vrednosti
+    # Izračunaj koliko ljudi zna za ChatGPT i Copilot
+    chatgpt_aware = 0
+    copilot_aware = 0
+    if 'poznati_ai_alati' in survey_df.columns:
+        for tools in survey_df['poznati_ai_alati'].dropna():
+            if 'ChatGPT' in str(tools):
+                chatgpt_aware += 1
+            if 'Copilot' in str(tools) or 'GitHub Copilot' in str(tools):
+                copilot_aware += 1
+    
+    # Izračunaj prosečno AI korišćenje - koristi različite kolone za različite grupe
     avg_ai_usage = 0
-    if 'generativni_ai_poznavanje' in survey_df.columns:
-        # Konvertuj u numeričke vrednosti, ignoriši nevalidne
-        numeric_ai_knowledge = pd.to_numeric(survey_df['generativni_ai_poznavanje'], errors='coerce')
-        valid_scores = numeric_ai_knowledge.dropna()
-        if not valid_scores.empty:
-            avg_ai_usage = round(valid_scores.mean(), 2)
+    ai_usage_scores = []
+    
+    # Pokupi AI korišćenje iz različitih profesionalnih grupa
+    for col in ['it_ai_koriscenje', 'prosveta_ai_koriscenje', 'medicina_ai_koriscenje', 
+                'kreativna_ai_koriscenje', 'drustvene_ai_koriscenje', 'ostalo_ai_koriscenje']:
+        if col in survey_df.columns:
+            for value in survey_df[col].dropna():
+                if value == 'da':
+                    ai_usage_scores.append(5)  # Maksimalno korišćenje
+                elif value == 'ne':
+                    ai_usage_scores.append(1)  # Minimalno korišćenje
+                elif value == 'ponekad':
+                    ai_usage_scores.append(3)  # Umereno korišćenje
+    
+    if ai_usage_scores:
+        avg_ai_usage = round(sum(ai_usage_scores) / len(ai_usage_scores), 2)
+    
+    # Izračunaj prosečno poznavanje programskih okruženja i jezika
+    avg_programming_env = 0
+    avg_programming_lang = 0
+    
+    # Ova polja nisu numerička u CSV-u, pa ćemo ih ostaviti na 0
+    # ili dodati logiku za interpretaciju teksta ako je potrebno
+    
+    # Dodaj analizu IT industrije vs ostale grane
+    it_better_ai_knowledge = 0
+    it_users_count = 0
+    non_it_users_count = 0
+    it_ai_knowledge_avg = 0
+    non_it_ai_knowledge_avg = 0
+    
+    if 'ciljana_grupa' in survey_df.columns:
+        it_users = survey_df[survey_df['ciljana_grupa'] == 'it_industrija']
+        non_it_users = survey_df[survey_df['ciljana_grupa'] != 'it_industrija']
+        
+        it_users_count = len(it_users)
+        non_it_users_count = len(non_it_users)
+        
+        # Analiziraj koliko IT korisnici bolje poznaju AI alate
+        it_chatgpt_aware = 0
+        it_copilot_aware = 0
+        non_it_chatgpt_aware = 0
+        non_it_copilot_aware = 0
+        
+        # Broj IT korisnika koji poznaju ChatGPT i Copilot
+        if 'poznati_ai_alati' in survey_df.columns:
+            for tools in it_users['poznati_ai_alati'].dropna():
+                if 'ChatGPT' in str(tools):
+                    it_chatgpt_aware += 1
+                if 'Copilot' in str(tools) or 'GitHub Copilot' in str(tools):
+                    it_copilot_aware += 1
+                    
+            for tools in non_it_users['poznati_ai_alati'].dropna():
+                if 'ChatGPT' in str(tools):
+                    non_it_chatgpt_aware += 1
+                if 'Copilot' in str(tools) or 'GitHub Copilot' in str(tools):
+                    non_it_copilot_aware += 1
+        
+        # Izračunaj procenat poznavanja
+        it_ai_knowledge_avg = ((it_chatgpt_aware + it_copilot_aware) / (it_users_count * 2) * 100) if it_users_count > 0 else 0
+        non_it_ai_knowledge_avg = ((non_it_chatgpt_aware + non_it_copilot_aware) / (non_it_users_count * 2) * 100) if non_it_users_count > 0 else 0
+        
+        it_better_ai_knowledge = round(it_ai_knowledge_avg - non_it_ai_knowledge_avg, 1)
     
     analytics['summary_stats'] = {
         'total_responses': total_responses,
         'total_survey_responses': total_responses,  # Template očekuje ovaj ključ
+        'employed_count': employed_count,
+        'unemployed_count': unemployed_count,
         'avg_age': round(2025 - pd.to_numeric(survey_df['godina_rodjenja'], errors='coerce').mean(), 1) if 'godina_rodjenja' in survey_df.columns else 0,
         'countries': survey_df['drzava'].nunique() if 'drzava' in survey_df.columns else 0,
         'completion_rate': 100.0,  # Svi odgovori su kompletni
         'employed_percentage': round(employed_percentage, 1),
-        'chatgpt_aware': 0,  # Ove metrike ću dodati later ako postoje u podacima
-        'copilot_aware': 0,
-        'avg_programming_env': 0,  # Uklanjam pokušaj konverzije string polja
-        'avg_programming_lang': 0,  # Uklanjam pokušaj konverzije string polja
-        'avg_ai_usage': avg_ai_usage
+        'chatgpt_aware': chatgpt_aware,
+        'copilot_aware': copilot_aware,
+        'avg_programming_env': avg_programming_env,
+        'avg_programming_lang': avg_programming_lang,
+        'avg_ai_usage': avg_ai_usage,
+        'it_better_ai_knowledge': it_better_ai_knowledge,
+        'it_users_count': it_users_count,
+        'non_it_users_count': non_it_users_count,
+        'it_ai_knowledge_avg': round(it_ai_knowledge_avg, 1),
+        'non_it_ai_knowledge_avg': round(non_it_ai_knowledge_avg, 1)
     }
     
     try:
