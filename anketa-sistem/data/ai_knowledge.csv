@@ -7268,3 +7268,511 @@ P05462310,it_industrija,GitHub Copilot,,unknown,Pisanje teksta (eseja,,code_assi
 P05462310,it_industrija,GitHub Copilot,,unknown,mejlova,,code_assistant
 P05462310,it_industrija,GitHub Copilot,,unknown,bloga),,code_assistant
 P05462310,it_industrija,GitHub Copilot,,unknown,Kreiranje prezentacija,,code_assistant
+P042043FD,it_industrija,Claude,,unknown,Pisanje teksta (eseja,,conversational_ai
+P042043FD,it_industrija,Claude,,unknown,mejlova,,conversational_ai
+P042043FD,it_industrija,Claude,,unknown,bloga),,conversational_ai
+P042043FD,it_industrija,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P042043FD,it_industrija,Bing Chat,,unknown,mejlova,,other
+P042043FD,it_industrija,Bing Chat,,unknown,bloga),,other
+P042043FD,it_industrija,Grammarly,,unknown,Pisanje teksta (eseja,,other
+P042043FD,it_industrija,Grammarly,,unknown,mejlova,,other
+P042043FD,it_industrija,Grammarly,,unknown,bloga),,other
+P042043FD,it_industrija,Midjourney,,unknown,Pisanje teksta (eseja,,other
+P042043FD,it_industrija,Midjourney,,unknown,mejlova,,other
+P042043FD,it_industrija,Midjourney,,unknown,bloga),,other
+P042043FD,it_industrija,ChatGPT,,unknown,Pisanje teksta (eseja,,conversational_ai
+P042043FD,it_industrija,ChatGPT,,unknown,mejlova,,conversational_ai
+P042043FD,it_industrija,ChatGPT,,unknown,bloga),,conversational_ai
+P043123B0,ostalo,GitHub Copilot,,unknown,Kreiranje slika,,code_assistant
+P043123B0,ostalo,GitHub Copilot,,unknown,Kreiranje prezentacija,,code_assistant
+P043123B0,ostalo,GitHub Copilot,,unknown,Brainstorming ideja,,code_assistant
+P043123B0,ostalo,Midjourney,,unknown,Kreiranje slika,,other
+P043123B0,ostalo,Midjourney,,unknown,Kreiranje prezentacija,,other
+P043123B0,ostalo,Midjourney,,unknown,Brainstorming ideja,,other
+P00A196BF,medicina,Gemini,,unknown,Pisanje koda,,conversational_ai
+P00A196BF,medicina,Gemini,,unknown,Analiza podataka,,conversational_ai
+P00A196BF,medicina,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P00A196BF,medicina,Midjourney,,unknown,Pisanje koda,,other
+P00A196BF,medicina,Midjourney,,unknown,Analiza podataka,,other
+P00A196BF,medicina,Midjourney,,unknown,Učenje novih koncepata,,other
+P05C5CCDD,prosveta,ChatGPT,,unknown,Učenje novih koncepata,,conversational_ai
+P05C5CCDD,prosveta,Stable Diffusion,,unknown,Učenje novih koncepata,,other
+P05C5CCDD,prosveta,DALL-E,,unknown,Učenje novih koncepata,,other
+P05C5CCDD,prosveta,Midjourney,,unknown,Učenje novih koncepata,,other
+P030DEA04,medicina,Midjourney,,unknown,Pisanje koda,,other
+P030DEA04,medicina,DALL-E,,unknown,Pisanje koda,,other
+P030DEA04,medicina,Grammarly,,unknown,Pisanje koda,,other
+P030DEA04,medicina,Gemini,,unknown,Pisanje koda,,conversational_ai
+P030DEA04,medicina,DeepL,,unknown,Pisanje koda,,other
+P00476C10,medicina,DALL-E,,unknown,Pisanje koda,,other
+P00476C10,medicina,DALL-E,,unknown,Kreiranje prezentacija,,other
+P00476C10,medicina,DALL-E,,unknown,Kreiranje slika,,other
+P00476C10,medicina,Gemini,,unknown,Pisanje koda,,conversational_ai
+P00476C10,medicina,Gemini,,unknown,Kreiranje prezentacija,,conversational_ai
+P00476C10,medicina,Gemini,,unknown,Kreiranje slika,,conversational_ai
+P00476C10,medicina,Claude,,unknown,Pisanje koda,,conversational_ai
+P00476C10,medicina,Claude,,unknown,Kreiranje prezentacija,,conversational_ai
+P00476C10,medicina,Claude,,unknown,Kreiranje slika,,conversational_ai
+P04FAAB50,prosveta,GitHub Copilot,,unknown,Analiza podataka,,code_assistant
+P04FAAB50,prosveta,Midjourney,,unknown,Analiza podataka,,other
+P04FAAB50,prosveta,Grammarly,,unknown,Analiza podataka,,other
+P04FAAB50,prosveta,Claude,,unknown,Analiza podataka,,conversational_ai
+P04FAAB50,prosveta,Stable Diffusion,,unknown,Analiza podataka,,other
+P029354D4,medicina,Bing Chat,,unknown,Kreiranje prezentacija,,other
+P029354D4,medicina,Bing Chat,,unknown,Analiza podataka,,other
+P029354D4,medicina,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P029354D4,medicina,Bing Chat,,unknown,mejlova,,other
+P029354D4,medicina,Bing Chat,,unknown,bloga),,other
+P029354D4,medicina,Stable Diffusion,,unknown,Kreiranje prezentacija,,other
+P029354D4,medicina,Stable Diffusion,,unknown,Analiza podataka,,other
+P029354D4,medicina,Stable Diffusion,,unknown,Pisanje teksta (eseja,,other
+P029354D4,medicina,Stable Diffusion,,unknown,mejlova,,other
+P029354D4,medicina,Stable Diffusion,,unknown,bloga),,other
+P029354D4,medicina,DeepL,,unknown,Kreiranje prezentacija,,other
+P029354D4,medicina,DeepL,,unknown,Analiza podataka,,other
+P029354D4,medicina,DeepL,,unknown,Pisanje teksta (eseja,,other
+P029354D4,medicina,DeepL,,unknown,mejlova,,other
+P029354D4,medicina,DeepL,,unknown,bloga),,other
+P029354D4,medicina,DALL-E,,unknown,Kreiranje prezentacija,,other
+P029354D4,medicina,DALL-E,,unknown,Analiza podataka,,other
+P029354D4,medicina,DALL-E,,unknown,Pisanje teksta (eseja,,other
+P029354D4,medicina,DALL-E,,unknown,mejlova,,other
+P029354D4,medicina,DALL-E,,unknown,bloga),,other
+P029354D4,medicina,Grammarly,,unknown,Kreiranje prezentacija,,other
+P029354D4,medicina,Grammarly,,unknown,Analiza podataka,,other
+P029354D4,medicina,Grammarly,,unknown,Pisanje teksta (eseja,,other
+P029354D4,medicina,Grammarly,,unknown,mejlova,,other
+P029354D4,medicina,Grammarly,,unknown,bloga),,other
+P04CBBF61,it_industrija,Bing Chat,,unknown,Kreiranje prezentacija,,other
+P04CBBF61,it_industrija,Bing Chat,,unknown,Prevođenje jezika,,other
+P04CBBF61,it_industrija,Bing Chat,,unknown,Brainstorming ideja,,other
+P04CBBF61,it_industrija,ChatGPT,,unknown,Kreiranje prezentacija,,conversational_ai
+P04CBBF61,it_industrija,ChatGPT,,unknown,Prevođenje jezika,,conversational_ai
+P04CBBF61,it_industrija,ChatGPT,,unknown,Brainstorming ideja,,conversational_ai
+P04CBBF61,it_industrija,GitHub Copilot,,unknown,Kreiranje prezentacija,,code_assistant
+P04CBBF61,it_industrija,GitHub Copilot,,unknown,Prevođenje jezika,,code_assistant
+P04CBBF61,it_industrija,GitHub Copilot,,unknown,Brainstorming ideja,,code_assistant
+P042043FD,it_industrija,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P042043FD,it_industrija,Gemini,,unknown,Kreiranje slika,,conversational_ai
+P042043FD,it_industrija,ChatGPT,,unknown,Učenje novih koncepata,,conversational_ai
+P042043FD,it_industrija,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P042043FD,it_industrija,DALL-E,,unknown,Učenje novih koncepata,,other
+P042043FD,it_industrija,DALL-E,,unknown,Kreiranje slika,,other
+P042043FD,it_industrija,GitHub Copilot,,unknown,Učenje novih koncepata,,code_assistant
+P042043FD,it_industrija,GitHub Copilot,,unknown,Kreiranje slika,,code_assistant
+P043123B0,prosveta,Gemini,,unknown,Pisanje koda,,conversational_ai
+P043123B0,prosveta,Gemini,,unknown,Brainstorming ideja,,conversational_ai
+P043123B0,prosveta,Bing Chat,,unknown,Pisanje koda,,other
+P043123B0,prosveta,Bing Chat,,unknown,Brainstorming ideja,,other
+P043123B0,prosveta,DeepL,,unknown,Pisanje koda,,other
+P043123B0,prosveta,DeepL,,unknown,Brainstorming ideja,,other
+P043123B0,prosveta,Claude,,unknown,Pisanje teksta (eseja,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,mejlova,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,bloga),,conversational_ai
+P043123B0,prosveta,Claude,,unknown,Kreiranje prezentacija,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,Analiza podataka,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,Učenje novih koncepata,,conversational_ai
+P043123B0,prosveta,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P043123B0,prosveta,Bing Chat,,unknown,mejlova,,other
+P043123B0,prosveta,Bing Chat,,unknown,bloga),,other
+P043123B0,prosveta,Bing Chat,,unknown,Kreiranje prezentacija,,other
+P043123B0,prosveta,Bing Chat,,unknown,Analiza podataka,,other
+P043123B0,prosveta,Bing Chat,,unknown,Učenje novih koncepata,,other
+P043123B0,prosveta,ChatGPT,,unknown,Pisanje teksta (eseja,,conversational_ai
+P043123B0,prosveta,ChatGPT,,unknown,mejlova,,conversational_ai
+P043123B0,prosveta,ChatGPT,,unknown,bloga),,conversational_ai
+P043123B0,prosveta,ChatGPT,,unknown,Kreiranje prezentacija,,conversational_ai
+P043123B0,prosveta,ChatGPT,,unknown,Analiza podataka,,conversational_ai
+P043123B0,prosveta,ChatGPT,,unknown,Učenje novih koncepata,,conversational_ai
+P043123B0,prosveta,Gemini,,unknown,Pisanje teksta (eseja,,conversational_ai
+P043123B0,prosveta,Gemini,,unknown,mejlova,,conversational_ai
+P043123B0,prosveta,Gemini,,unknown,bloga),,conversational_ai
+P043123B0,prosveta,Gemini,,unknown,Kreiranje prezentacija,,conversational_ai
+P043123B0,prosveta,Gemini,,unknown,Analiza podataka,,conversational_ai
+P043123B0,prosveta,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P043123B0,prosveta,Midjourney,,unknown,Pisanje teksta (eseja,,other
+P043123B0,prosveta,Midjourney,,unknown,mejlova,,other
+P043123B0,prosveta,Midjourney,,unknown,bloga),,other
+P043123B0,prosveta,Midjourney,,unknown,Kreiranje prezentacija,,other
+P043123B0,prosveta,Midjourney,,unknown,Analiza podataka,,other
+P043123B0,prosveta,Midjourney,,unknown,Učenje novih koncepata,,other
+P00A196BF,prosveta,DeepL,,unknown,Prevođenje jezika,,other
+P00A196BF,prosveta,DeepL,,unknown,Kreiranje prezentacija,,other
+P00A196BF,prosveta,DeepL,,unknown,Pisanje koda,,other
+P00A196BF,prosveta,DeepL,,unknown,Učenje novih koncepata,,other
+P00A196BF,prosveta,Claude,,unknown,Prevođenje jezika,,conversational_ai
+P00A196BF,prosveta,Claude,,unknown,Kreiranje prezentacija,,conversational_ai
+P00A196BF,prosveta,Claude,,unknown,Pisanje koda,,conversational_ai
+P00A196BF,prosveta,Claude,,unknown,Učenje novih koncepata,,conversational_ai
+P00A196BF,prosveta,Gemini,,unknown,Prevođenje jezika,,conversational_ai
+P00A196BF,prosveta,Gemini,,unknown,Kreiranje prezentacija,,conversational_ai
+P00A196BF,prosveta,Gemini,,unknown,Pisanje koda,,conversational_ai
+P00A196BF,prosveta,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P00A196BF,prosveta,GitHub Copilot,,unknown,Prevođenje jezika,,code_assistant
+P00A196BF,prosveta,GitHub Copilot,,unknown,Kreiranje prezentacija,,code_assistant
+P00A196BF,prosveta,GitHub Copilot,,unknown,Pisanje koda,,code_assistant
+P00A196BF,prosveta,GitHub Copilot,,unknown,Učenje novih koncepata,,code_assistant
+P00CB3095,medicina,Grammarly,,unknown,Pisanje teksta (eseja,,other
+P00CB3095,medicina,Grammarly,,unknown,mejlova,,other
+P00CB3095,medicina,Grammarly,,unknown,bloga),,other
+P00CB3095,medicina,Grammarly,,unknown,Kreiranje prezentacija,,other
+P00CB3095,medicina,Grammarly,,unknown,Pisanje koda,,other
+P042043FD,ostalo,GitHub Copilot,,unknown,Kreiranje prezentacija,,code_assistant
+P042043FD,ostalo,GitHub Copilot,,unknown,Kreiranje slika,,code_assistant
+P042043FD,ostalo,GitHub Copilot,,unknown,Pisanje koda,,code_assistant
+P042043FD,ostalo,GitHub Copilot,,unknown,Prevođenje jezika,,code_assistant
+P042043FD,ostalo,ChatGPT,,unknown,Kreiranje prezentacija,,conversational_ai
+P042043FD,ostalo,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P042043FD,ostalo,ChatGPT,,unknown,Pisanje koda,,conversational_ai
+P042043FD,ostalo,ChatGPT,,unknown,Prevođenje jezika,,conversational_ai
+P042043FD,ostalo,Midjourney,,unknown,Kreiranje prezentacija,,other
+P042043FD,ostalo,Midjourney,,unknown,Kreiranje slika,,other
+P042043FD,ostalo,Midjourney,,unknown,Pisanje koda,,other
+P042043FD,ostalo,Midjourney,,unknown,Prevođenje jezika,,other
+P042043FD,ostalo,Bing Chat,,unknown,Kreiranje prezentacija,,other
+P042043FD,ostalo,Bing Chat,,unknown,Kreiranje slika,,other
+P042043FD,ostalo,Bing Chat,,unknown,Pisanje koda,,other
+P042043FD,ostalo,Bing Chat,,unknown,Prevođenje jezika,,other
+P009DFA21,it_industrija,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P009DFA21,it_industrija,Bing Chat,,unknown,mejlova,,other
+P009DFA21,it_industrija,Bing Chat,,unknown,bloga),,other
+P009DFA21,it_industrija,Bing Chat,,unknown,Pisanje koda,,other
+P009DFA21,it_industrija,Bing Chat,,unknown,Analiza podataka,,other
+P009DFA21,it_industrija,DALL-E,,unknown,Pisanje teksta (eseja,,other
+P009DFA21,it_industrija,DALL-E,,unknown,mejlova,,other
+P009DFA21,it_industrija,DALL-E,,unknown,bloga),,other
+P009DFA21,it_industrija,DALL-E,,unknown,Pisanje koda,,other
+P009DFA21,it_industrija,DALL-E,,unknown,Analiza podataka,,other
+P009DFA21,it_industrija,Midjourney,,unknown,Pisanje teksta (eseja,,other
+P009DFA21,it_industrija,Midjourney,,unknown,mejlova,,other
+P009DFA21,it_industrija,Midjourney,,unknown,bloga),,other
+P009DFA21,it_industrija,Midjourney,,unknown,Pisanje koda,,other
+P009DFA21,it_industrija,Midjourney,,unknown,Analiza podataka,,other
+P043123B0,prosveta,DALL-E,,unknown,Prevođenje jezika,,other
+P043123B0,prosveta,DALL-E,,unknown,Pisanje koda,,other
+P043123B0,prosveta,DALL-E,,unknown,Kreiranje slika,,other
+P043123B0,prosveta,DALL-E,,unknown,Pisanje teksta (eseja,,other
+P043123B0,prosveta,DALL-E,,unknown,mejlova,,other
+P043123B0,prosveta,DALL-E,,unknown,bloga),,other
+P043123B0,prosveta,DeepL,,unknown,Prevođenje jezika,,other
+P043123B0,prosveta,DeepL,,unknown,Pisanje koda,,other
+P043123B0,prosveta,DeepL,,unknown,Kreiranje slika,,other
+P043123B0,prosveta,DeepL,,unknown,Pisanje teksta (eseja,,other
+P043123B0,prosveta,DeepL,,unknown,mejlova,,other
+P043123B0,prosveta,DeepL,,unknown,bloga),,other
+P043123B0,prosveta,Bing Chat,,unknown,Prevođenje jezika,,other
+P043123B0,prosveta,Bing Chat,,unknown,Pisanje koda,,other
+P043123B0,prosveta,Bing Chat,,unknown,Kreiranje slika,,other
+P043123B0,prosveta,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P043123B0,prosveta,Bing Chat,,unknown,mejlova,,other
+P043123B0,prosveta,Bing Chat,,unknown,bloga),,other
+P043123B0,prosveta,Claude,,unknown,Prevođenje jezika,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,Pisanje koda,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,Kreiranje slika,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,Pisanje teksta (eseja,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,mejlova,,conversational_ai
+P043123B0,prosveta,Claude,,unknown,bloga),,conversational_ai
+P0274CE52,ostalo,Grammarly,,unknown,Prevođenje jezika,,other
+P0274CE52,ostalo,Grammarly,,unknown,Učenje novih koncepata,,other
+P0274CE52,ostalo,Claude,,unknown,Prevođenje jezika,,conversational_ai
+P0274CE52,ostalo,Claude,,unknown,Učenje novih koncepata,,conversational_ai
+P0274CE52,ostalo,Midjourney,,unknown,Prevođenje jezika,,other
+P0274CE52,ostalo,Midjourney,,unknown,Učenje novih koncepata,,other
+P00476C10,prosveta,GitHub Copilot,,unknown,Brainstorming ideja,,code_assistant
+P00476C10,prosveta,GitHub Copilot,,unknown,Učenje novih koncepata,,code_assistant
+P00476C10,prosveta,GitHub Copilot,,unknown,Pisanje koda,,code_assistant
+P05E8E901,ostalo,ChatGPT,,unknown,Prevođenje jezika,,conversational_ai
+P05E8E901,ostalo,ChatGPT,,unknown,Analiza podataka,,conversational_ai
+P05E8E901,ostalo,ChatGPT,,unknown,Brainstorming ideja,,conversational_ai
+P05E8E901,ostalo,ChatGPT,,unknown,Učenje novih koncepata,,conversational_ai
+P009DFA21,medicina,GitHub Copilot,,unknown,Kreiranje prezentacija,,code_assistant
+P009DFA21,medicina,GitHub Copilot,,unknown,Pisanje koda,,code_assistant
+P009DFA21,medicina,Midjourney,,unknown,Kreiranje prezentacija,,other
+P009DFA21,medicina,Midjourney,,unknown,Pisanje koda,,other
+P036E36BC,kreativna_filmska,Claude,,unknown,Pisanje koda,,conversational_ai
+P036E36BC,kreativna_filmska,Claude,,unknown,Brainstorming ideja,,conversational_ai
+P036E36BC,kreativna_filmska,Claude,,unknown,Učenje novih koncepata,,conversational_ai
+P036E36BC,kreativna_filmska,Grammarly,,unknown,Pisanje koda,,other
+P036E36BC,kreativna_filmska,Grammarly,,unknown,Brainstorming ideja,,other
+P036E36BC,kreativna_filmska,Grammarly,,unknown,Učenje novih koncepata,,other
+P036E36BC,kreativna_filmska,Bing Chat,,unknown,Pisanje koda,,other
+P036E36BC,kreativna_filmska,Bing Chat,,unknown,Brainstorming ideja,,other
+P036E36BC,kreativna_filmska,Bing Chat,,unknown,Učenje novih koncepata,,other
+P036E36BC,kreativna_filmska,DeepL,,unknown,Pisanje koda,,other
+P036E36BC,kreativna_filmska,DeepL,,unknown,Brainstorming ideja,,other
+P036E36BC,kreativna_filmska,DeepL,,unknown,Učenje novih koncepata,,other
+P036E36BC,kreativna_filmska,Stable Diffusion,,unknown,Pisanje koda,,other
+P036E36BC,kreativna_filmska,Stable Diffusion,,unknown,Brainstorming ideja,,other
+P036E36BC,kreativna_filmska,Stable Diffusion,,unknown,Učenje novih koncepata,,other
+P051CC5EF,prosveta,ChatGPT,,unknown,Učenje novih koncepata,,conversational_ai
+P051CC5EF,prosveta,ChatGPT,,unknown,Pisanje koda,,conversational_ai
+P051CC5EF,prosveta,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P051CC5EF,prosveta,ChatGPT,,unknown,Analiza podataka,,conversational_ai
+P051CC5EF,prosveta,Grammarly,,unknown,Učenje novih koncepata,,other
+P051CC5EF,prosveta,Grammarly,,unknown,Pisanje koda,,other
+P051CC5EF,prosveta,Grammarly,,unknown,Kreiranje slika,,other
+P051CC5EF,prosveta,Grammarly,,unknown,Analiza podataka,,other
+P051CC5EF,prosveta,GitHub Copilot,,unknown,Učenje novih koncepata,,code_assistant
+P051CC5EF,prosveta,GitHub Copilot,,unknown,Pisanje koda,,code_assistant
+P051CC5EF,prosveta,GitHub Copilot,,unknown,Kreiranje slika,,code_assistant
+P051CC5EF,prosveta,GitHub Copilot,,unknown,Analiza podataka,,code_assistant
+P05EABFEE,prosveta,Grammarly,,unknown,Pisanje koda,,other
+P05EABFEE,prosveta,Grammarly,,unknown,Prevođenje jezika,,other
+P05EABFEE,prosveta,Grammarly,,unknown,Analiza podataka,,other
+P036E36BC,kreativna_filmska,Midjourney,,unknown,Brainstorming ideja,,other
+P036E36BC,kreativna_filmska,Claude,,unknown,Brainstorming ideja,,conversational_ai
+P036E36BC,kreativna_filmska,Grammarly,,unknown,Brainstorming ideja,,other
+P009DFA21,it_industrija,ChatGPT,,unknown,Pisanje teksta (eseja,,conversational_ai
+P009DFA21,it_industrija,ChatGPT,,unknown,mejlova,,conversational_ai
+P009DFA21,it_industrija,ChatGPT,,unknown,bloga),,conversational_ai
+P009DFA21,it_industrija,ChatGPT,,unknown,Pisanje koda,,conversational_ai
+P009DFA21,it_industrija,DeepL,,unknown,Pisanje teksta (eseja,,other
+P009DFA21,it_industrija,DeepL,,unknown,mejlova,,other
+P009DFA21,it_industrija,DeepL,,unknown,bloga),,other
+P009DFA21,it_industrija,DeepL,,unknown,Pisanje koda,,other
+P009DFA21,it_industrija,Gemini,,unknown,Pisanje teksta (eseja,,conversational_ai
+P009DFA21,it_industrija,Gemini,,unknown,mejlova,,conversational_ai
+P009DFA21,it_industrija,Gemini,,unknown,bloga),,conversational_ai
+P009DFA21,it_industrija,Gemini,,unknown,Pisanje koda,,conversational_ai
+P05F06BDD,medicina,ChatGPT,,unknown,Učenje novih koncepata,,conversational_ai
+P05F06BDD,medicina,ChatGPT,,unknown,Pisanje koda,,conversational_ai
+P05F06BDD,medicina,ChatGPT,,unknown,Brainstorming ideja,,conversational_ai
+P05F06BDD,medicina,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P0261E373,it_industrija,GitHub Copilot,,unknown,Kreiranje slika,,code_assistant
+P0261E373,it_industrija,GitHub Copilot,,unknown,Kreiranje prezentacija,,code_assistant
+P0261E373,it_industrija,GitHub Copilot,,unknown,Prevođenje jezika,,code_assistant
+P0261E373,it_industrija,GitHub Copilot,,unknown,Analiza podataka,,code_assistant
+P0261E373,it_industrija,Gemini,,unknown,Kreiranje slika,,conversational_ai
+P0261E373,it_industrija,Gemini,,unknown,Kreiranje prezentacija,,conversational_ai
+P0261E373,it_industrija,Gemini,,unknown,Prevođenje jezika,,conversational_ai
+P0261E373,it_industrija,Gemini,,unknown,Analiza podataka,,conversational_ai
+P0261E373,it_industrija,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P0261E373,it_industrija,ChatGPT,,unknown,Kreiranje prezentacija,,conversational_ai
+P0261E373,it_industrija,ChatGPT,,unknown,Prevođenje jezika,,conversational_ai
+P0261E373,it_industrija,ChatGPT,,unknown,Analiza podataka,,conversational_ai
+P043123B0,drustvene_nauke,GitHub Copilot,,unknown,Pisanje koda,,code_assistant
+P043123B0,drustvene_nauke,GitHub Copilot,,unknown,Analiza podataka,,code_assistant
+P043123B0,drustvene_nauke,GitHub Copilot,,unknown,Pisanje teksta (eseja,,code_assistant
+P043123B0,drustvene_nauke,GitHub Copilot,,unknown,mejlova,,code_assistant
+P043123B0,drustvene_nauke,GitHub Copilot,,unknown,bloga),,code_assistant
+P043123B0,drustvene_nauke,Stable Diffusion,,unknown,Pisanje koda,,other
+P043123B0,drustvene_nauke,Stable Diffusion,,unknown,Analiza podataka,,other
+P043123B0,drustvene_nauke,Stable Diffusion,,unknown,Pisanje teksta (eseja,,other
+P043123B0,drustvene_nauke,Stable Diffusion,,unknown,mejlova,,other
+P043123B0,drustvene_nauke,Stable Diffusion,,unknown,bloga),,other
+P029354D4,kreativna_filmska,Gemini,,unknown,Pisanje teksta (eseja,,conversational_ai
+P029354D4,kreativna_filmska,Gemini,,unknown,mejlova,,conversational_ai
+P029354D4,kreativna_filmska,Gemini,,unknown,bloga),,conversational_ai
+P0274CE52,ostalo,Midjourney,,unknown,Brainstorming ideja,,other
+P0274CE52,ostalo,Midjourney,,unknown,Učenje novih koncepata,,other
+P0274CE52,ostalo,Midjourney,,unknown,Pisanje koda,,other
+P05EABFEE,medicina,Grammarly,,unknown,Pisanje koda,,other
+P05EABFEE,medicina,Grammarly,,unknown,Analiza podataka,,other
+P04B0B1E4,ostalo,DALL-E,,unknown,Kreiranje slika,,other
+P04B0B1E4,ostalo,Bing Chat,,unknown,Kreiranje slika,,other
+P04B0B1E4,ostalo,Stable Diffusion,,unknown,Kreiranje slika,,other
+P04B0B1E4,ostalo,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P04B0B1E4,ostalo,Claude,,unknown,Kreiranje slika,,conversational_ai
+P04B0B1E4,prosveta,DALL-E,,unknown,Analiza podataka,,other
+P04B0B1E4,prosveta,DALL-E,,unknown,Učenje novih koncepata,,other
+P04B0B1E4,prosveta,Bing Chat,,unknown,Analiza podataka,,other
+P04B0B1E4,prosveta,Bing Chat,,unknown,Učenje novih koncepata,,other
+P04B0B1E4,prosveta,Midjourney,,unknown,Analiza podataka,,other
+P04B0B1E4,prosveta,Midjourney,,unknown,Učenje novih koncepata,,other
+P00476C10,medicina,Grammarly,,unknown,Pisanje teksta (eseja,,other
+P00476C10,medicina,Grammarly,,unknown,mejlova,,other
+P00476C10,medicina,Grammarly,,unknown,bloga),,other
+P00476C10,medicina,Grammarly,,unknown,Brainstorming ideja,,other
+P00476C10,medicina,Grammarly,,unknown,Prevođenje jezika,,other
+P00476C10,medicina,Grammarly,,unknown,Učenje novih koncepata,,other
+P00476C10,medicina,DeepL,,unknown,Pisanje teksta (eseja,,other
+P00476C10,medicina,DeepL,,unknown,mejlova,,other
+P00476C10,medicina,DeepL,,unknown,bloga),,other
+P00476C10,medicina,DeepL,,unknown,Brainstorming ideja,,other
+P00476C10,medicina,DeepL,,unknown,Prevođenje jezika,,other
+P00476C10,medicina,DeepL,,unknown,Učenje novih koncepata,,other
+P00476C10,medicina,GitHub Copilot,,unknown,Pisanje teksta (eseja,,code_assistant
+P00476C10,medicina,GitHub Copilot,,unknown,mejlova,,code_assistant
+P00476C10,medicina,GitHub Copilot,,unknown,bloga),,code_assistant
+P00476C10,medicina,GitHub Copilot,,unknown,Brainstorming ideja,,code_assistant
+P00476C10,medicina,GitHub Copilot,,unknown,Prevođenje jezika,,code_assistant
+P00476C10,medicina,GitHub Copilot,,unknown,Učenje novih koncepata,,code_assistant
+P00476C10,medicina,Stable Diffusion,,unknown,Pisanje teksta (eseja,,other
+P00476C10,medicina,Stable Diffusion,,unknown,mejlova,,other
+P00476C10,medicina,Stable Diffusion,,unknown,bloga),,other
+P00476C10,medicina,Stable Diffusion,,unknown,Brainstorming ideja,,other
+P00476C10,medicina,Stable Diffusion,,unknown,Prevođenje jezika,,other
+P00476C10,medicina,Stable Diffusion,,unknown,Učenje novih koncepata,,other
+P00476C10,medicina,Gemini,,unknown,Pisanje teksta (eseja,,conversational_ai
+P00476C10,medicina,Gemini,,unknown,mejlova,,conversational_ai
+P00476C10,medicina,Gemini,,unknown,bloga),,conversational_ai
+P00476C10,medicina,Gemini,,unknown,Brainstorming ideja,,conversational_ai
+P00476C10,medicina,Gemini,,unknown,Prevođenje jezika,,conversational_ai
+P00476C10,medicina,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P05EABFEE,prosveta,Stable Diffusion,,unknown,Kreiranje slika,,other
+P05EABFEE,prosveta,Stable Diffusion,,unknown,Prevođenje jezika,,other
+P05EABFEE,prosveta,Stable Diffusion,,unknown,Pisanje teksta (eseja,,other
+P05EABFEE,prosveta,Stable Diffusion,,unknown,mejlova,,other
+P05EABFEE,prosveta,Stable Diffusion,,unknown,bloga),,other
+P05EABFEE,prosveta,DeepL,,unknown,Kreiranje slika,,other
+P05EABFEE,prosveta,DeepL,,unknown,Prevođenje jezika,,other
+P05EABFEE,prosveta,DeepL,,unknown,Pisanje teksta (eseja,,other
+P05EABFEE,prosveta,DeepL,,unknown,mejlova,,other
+P05EABFEE,prosveta,DeepL,,unknown,bloga),,other
+P05EABFEE,prosveta,Midjourney,,unknown,Kreiranje slika,,other
+P05EABFEE,prosveta,Midjourney,,unknown,Prevođenje jezika,,other
+P05EABFEE,prosveta,Midjourney,,unknown,Pisanje teksta (eseja,,other
+P05EABFEE,prosveta,Midjourney,,unknown,mejlova,,other
+P05EABFEE,prosveta,Midjourney,,unknown,bloga),,other
+P05EABFEE,prosveta,Bing Chat,,unknown,Kreiranje slika,,other
+P05EABFEE,prosveta,Bing Chat,,unknown,Prevođenje jezika,,other
+P05EABFEE,prosveta,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P05EABFEE,prosveta,Bing Chat,,unknown,mejlova,,other
+P05EABFEE,prosveta,Bing Chat,,unknown,bloga),,other
+P05EABFEE,prosveta,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P05EABFEE,prosveta,ChatGPT,,unknown,Prevođenje jezika,,conversational_ai
+P05EABFEE,prosveta,ChatGPT,,unknown,Pisanje teksta (eseja,,conversational_ai
+P05EABFEE,prosveta,ChatGPT,,unknown,mejlova,,conversational_ai
+P05EABFEE,prosveta,ChatGPT,,unknown,bloga),,conversational_ai
+P04CBBF61,prosveta,Claude,,unknown,Pisanje teksta (eseja,,conversational_ai
+P04CBBF61,prosveta,Claude,,unknown,mejlova,,conversational_ai
+P04CBBF61,prosveta,Claude,,unknown,bloga),,conversational_ai
+P04CBBF61,prosveta,Claude,,unknown,Pisanje koda,,conversational_ai
+P04CBBF61,prosveta,Claude,,unknown,Brainstorming ideja,,conversational_ai
+P04CBBF61,prosveta,Claude,,unknown,Prevođenje jezika,,conversational_ai
+P04CBBF61,prosveta,Gemini,,unknown,Pisanje teksta (eseja,,conversational_ai
+P04CBBF61,prosveta,Gemini,,unknown,mejlova,,conversational_ai
+P04CBBF61,prosveta,Gemini,,unknown,bloga),,conversational_ai
+P04CBBF61,prosveta,Gemini,,unknown,Pisanje koda,,conversational_ai
+P04CBBF61,prosveta,Gemini,,unknown,Brainstorming ideja,,conversational_ai
+P04CBBF61,prosveta,Gemini,,unknown,Prevođenje jezika,,conversational_ai
+P04CBBF61,prosveta,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P04CBBF61,prosveta,Bing Chat,,unknown,mejlova,,other
+P04CBBF61,prosveta,Bing Chat,,unknown,bloga),,other
+P04CBBF61,prosveta,Bing Chat,,unknown,Pisanje koda,,other
+P04CBBF61,prosveta,Bing Chat,,unknown,Brainstorming ideja,,other
+P04CBBF61,prosveta,Bing Chat,,unknown,Prevođenje jezika,,other
+P04CBBF61,prosveta,DeepL,,unknown,Pisanje teksta (eseja,,other
+P04CBBF61,prosveta,DeepL,,unknown,mejlova,,other
+P04CBBF61,prosveta,DeepL,,unknown,bloga),,other
+P04CBBF61,prosveta,DeepL,,unknown,Pisanje koda,,other
+P04CBBF61,prosveta,DeepL,,unknown,Brainstorming ideja,,other
+P04CBBF61,prosveta,DeepL,,unknown,Prevođenje jezika,,other
+P051CC5EF,prosveta,Midjourney,,unknown,Kreiranje slika,,other
+P051CC5EF,prosveta,Midjourney,,unknown,Kreiranje prezentacija,,other
+P051CC5EF,prosveta,Midjourney,,unknown,Brainstorming ideja,,other
+P051CC5EF,prosveta,Midjourney,,unknown,Prevođenje jezika,,other
+P051CC5EF,prosveta,DeepL,,unknown,Kreiranje slika,,other
+P051CC5EF,prosveta,DeepL,,unknown,Kreiranje prezentacija,,other
+P051CC5EF,prosveta,DeepL,,unknown,Brainstorming ideja,,other
+P051CC5EF,prosveta,DeepL,,unknown,Prevođenje jezika,,other
+P051CC5EF,prosveta,Stable Diffusion,,unknown,Kreiranje slika,,other
+P051CC5EF,prosveta,Stable Diffusion,,unknown,Kreiranje prezentacija,,other
+P051CC5EF,prosveta,Stable Diffusion,,unknown,Brainstorming ideja,,other
+P051CC5EF,prosveta,Stable Diffusion,,unknown,Prevođenje jezika,,other
+P051CC5EF,prosveta,Grammarly,,unknown,Kreiranje slika,,other
+P051CC5EF,prosveta,Grammarly,,unknown,Kreiranje prezentacija,,other
+P051CC5EF,prosveta,Grammarly,,unknown,Brainstorming ideja,,other
+P051CC5EF,prosveta,Grammarly,,unknown,Prevođenje jezika,,other
+P01AFDD37,prosveta,Claude,,unknown,Učenje novih koncepata,,conversational_ai
+P01AFDD37,prosveta,ChatGPT,,unknown,Učenje novih koncepata,,conversational_ai
+P01AFDD37,prosveta,Midjourney,,unknown,Učenje novih koncepata,,other
+P01AFDD37,prosveta,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P01AFDD37,prosveta,DeepL,,unknown,Učenje novih koncepata,,other
+P051CC5EF,kreativna_filmska,Bing Chat,,unknown,Analiza podataka,,other
+P051CC5EF,kreativna_filmska,DeepL,,unknown,Analiza podataka,,other
+P051CC5EF,kreativna_filmska,DALL-E,,unknown,Analiza podataka,,other
+P051CC5EF,kreativna_filmska,Claude,,unknown,Analiza podataka,,conversational_ai
+P051CC5EF,kreativna_filmska,Midjourney,,unknown,Analiza podataka,,other
+P04CBBF61,it_industrija,Gemini,,unknown,Kreiranje prezentacija,,conversational_ai
+P04CBBF61,it_industrija,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P04CBBF61,it_industrija,Gemini,,unknown,Prevođenje jezika,,conversational_ai
+P04CBBF61,it_industrija,Gemini,,unknown,Kreiranje slika,,conversational_ai
+P04CBBF61,it_industrija,Midjourney,,unknown,Kreiranje prezentacija,,other
+P04CBBF61,it_industrija,Midjourney,,unknown,Učenje novih koncepata,,other
+P04CBBF61,it_industrija,Midjourney,,unknown,Prevođenje jezika,,other
+P04CBBF61,it_industrija,Midjourney,,unknown,Kreiranje slika,,other
+P04CBBF61,it_industrija,DALL-E,,unknown,Kreiranje prezentacija,,other
+P04CBBF61,it_industrija,DALL-E,,unknown,Učenje novih koncepata,,other
+P04CBBF61,it_industrija,DALL-E,,unknown,Prevođenje jezika,,other
+P04CBBF61,it_industrija,DALL-E,,unknown,Kreiranje slika,,other
+P04CBBF61,it_industrija,Grammarly,,unknown,Kreiranje prezentacija,,other
+P04CBBF61,it_industrija,Grammarly,,unknown,Učenje novih koncepata,,other
+P04CBBF61,it_industrija,Grammarly,,unknown,Prevođenje jezika,,other
+P04CBBF61,it_industrija,Grammarly,,unknown,Kreiranje slika,,other
+P04CBBF61,it_industrija,DeepL,,unknown,Kreiranje prezentacija,,other
+P04CBBF61,it_industrija,DeepL,,unknown,Učenje novih koncepata,,other
+P04CBBF61,it_industrija,DeepL,,unknown,Prevođenje jezika,,other
+P04CBBF61,it_industrija,DeepL,,unknown,Kreiranje slika,,other
+P05E8E901,prosveta,Midjourney,,unknown,Kreiranje prezentacija,,other
+P05E8E901,prosveta,Midjourney,,unknown,Pisanje teksta (eseja,,other
+P05E8E901,prosveta,Midjourney,,unknown,mejlova,,other
+P05E8E901,prosveta,Midjourney,,unknown,bloga),,other
+P05E8E901,prosveta,Bing Chat,,unknown,Kreiranje prezentacija,,other
+P05E8E901,prosveta,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P05E8E901,prosveta,Bing Chat,,unknown,mejlova,,other
+P05E8E901,prosveta,Bing Chat,,unknown,bloga),,other
+P030DEA04,medicina,ChatGPT,,unknown,Brainstorming ideja,,conversational_ai
+P030DEA04,medicina,ChatGPT,,unknown,Kreiranje prezentacija,,conversational_ai
+P030DEA04,medicina,ChatGPT,,unknown,Kreiranje slika,,conversational_ai
+P030DEA04,medicina,Stable Diffusion,,unknown,Brainstorming ideja,,other
+P030DEA04,medicina,Stable Diffusion,,unknown,Kreiranje prezentacija,,other
+P030DEA04,medicina,Stable Diffusion,,unknown,Kreiranje slika,,other
+P042043FD,prosveta,Bing Chat,,unknown,Učenje novih koncepata,,other
+P042043FD,prosveta,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P030DEA04,prosveta,Midjourney,,unknown,Pisanje koda,,other
+P030DEA04,prosveta,Midjourney,,unknown,Učenje novih koncepata,,other
+P030DEA04,prosveta,Midjourney,,unknown,Kreiranje slika,,other
+P030DEA04,prosveta,Bing Chat,,unknown,Pisanje koda,,other
+P030DEA04,prosveta,Bing Chat,,unknown,Učenje novih koncepata,,other
+P030DEA04,prosveta,Bing Chat,,unknown,Kreiranje slika,,other
+P043123B0,kreativna_filmska,DALL-E,,unknown,Prevođenje jezika,,other
+P043123B0,kreativna_filmska,DALL-E,,unknown,Pisanje koda,,other
+P043123B0,kreativna_filmska,DALL-E,,unknown,Analiza podataka,,other
+P043123B0,kreativna_filmska,DALL-E,,unknown,Kreiranje slika,,other
+P034FBA74,kreativna_filmska,Grammarly,,unknown,Kreiranje slika,,other
+P034FBA74,kreativna_filmska,Grammarly,,unknown,Analiza podataka,,other
+P034FBA74,kreativna_filmska,Grammarly,,unknown,Brainstorming ideja,,other
+P034FBA74,kreativna_filmska,DeepL,,unknown,Kreiranje slika,,other
+P034FBA74,kreativna_filmska,DeepL,,unknown,Analiza podataka,,other
+P034FBA74,kreativna_filmska,DeepL,,unknown,Brainstorming ideja,,other
+P034FBA74,kreativna_filmska,Stable Diffusion,,unknown,Kreiranje slika,,other
+P034FBA74,kreativna_filmska,Stable Diffusion,,unknown,Analiza podataka,,other
+P034FBA74,kreativna_filmska,Stable Diffusion,,unknown,Brainstorming ideja,,other
+P0261E373,prosveta,Bing Chat,,unknown,Kreiranje slika,,other
+P0261E373,prosveta,Bing Chat,,unknown,Pisanje koda,,other
+P0261E373,prosveta,Bing Chat,,unknown,Pisanje teksta (eseja,,other
+P0261E373,prosveta,Bing Chat,,unknown,mejlova,,other
+P0261E373,prosveta,Bing Chat,,unknown,bloga),,other
+P0261E373,prosveta,Bing Chat,,unknown,Učenje novih koncepata,,other
+P0261E373,prosveta,Gemini,,unknown,Kreiranje slika,,conversational_ai
+P0261E373,prosveta,Gemini,,unknown,Pisanje koda,,conversational_ai
+P0261E373,prosveta,Gemini,,unknown,Pisanje teksta (eseja,,conversational_ai
+P0261E373,prosveta,Gemini,,unknown,mejlova,,conversational_ai
+P0261E373,prosveta,Gemini,,unknown,bloga),,conversational_ai
+P0261E373,prosveta,Gemini,,unknown,Učenje novih koncepata,,conversational_ai
+P0261E373,prosveta,DeepL,,unknown,Kreiranje slika,,other
+P0261E373,prosveta,DeepL,,unknown,Pisanje koda,,other
+P0261E373,prosveta,DeepL,,unknown,Pisanje teksta (eseja,,other
+P0261E373,prosveta,DeepL,,unknown,mejlova,,other
+P0261E373,prosveta,DeepL,,unknown,bloga),,other
+P0261E373,prosveta,DeepL,,unknown,Učenje novih koncepata,,other
+P0261E373,prosveta,Grammarly,,unknown,Kreiranje slika,,other
+P0261E373,prosveta,Grammarly,,unknown,Pisanje koda,,other
+P0261E373,prosveta,Grammarly,,unknown,Pisanje teksta (eseja,,other
+P0261E373,prosveta,Grammarly,,unknown,mejlova,,other
+P0261E373,prosveta,Grammarly,,unknown,bloga),,other
+P0261E373,prosveta,Grammarly,,unknown,Učenje novih koncepata,,other
+P0261E373,prosveta,DALL-E,,unknown,Kreiranje slika,,other
+P0261E373,prosveta,DALL-E,,unknown,Pisanje koda,,other
+P0261E373,prosveta,DALL-E,,unknown,Pisanje teksta (eseja,,other
+P0261E373,prosveta,DALL-E,,unknown,mejlova,,other
+P0261E373,prosveta,DALL-E,,unknown,bloga),,other
+P0261E373,prosveta,DALL-E,,unknown,Učenje novih koncepata,,other
+P02BFEEBA,medicina,Claude,,unknown,Učenje novih koncepata,,conversational_ai
+P02BFEEBA,medicina,Claude,,unknown,Pisanje koda,,conversational_ai
+P02BFEEBA,medicina,Claude,,unknown,Kreiranje prezentacija,,conversational_ai
+P04CBBF61,ostalo,Claude,,unknown,Brainstorming ideja,,conversational_ai
+P04CBBF61,ostalo,Claude,,unknown,Kreiranje slika,,conversational_ai
+P04CBBF61,ostalo,Grammarly,,unknown,Brainstorming ideja,,other
+P04CBBF61,ostalo,Grammarly,,unknown,Kreiranje slika,,other

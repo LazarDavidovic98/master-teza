@@ -213,9 +213,13 @@ class DataScienceManager:
             'copilot_chat': {'correct': 'Copilot X', 'category': 'technical', 'difficulty': 'medium'},
             'google_model': {'correct': 'Gemini', 'category': 'knowledge', 'difficulty': 'easy'},
             'gpt_realtime': {'correct': 'GPT-4', 'category': 'technical', 'difficulty': 'hard'},
+            'codex_successor': {'correct': 'GPT-3.5', 'category': 'technical', 'difficulty': 'medium'},
+            'chatgpt_data_analysis': {'correct': 'Advanced Data Analysis (Code Interpreter)', 'category': 'technical', 'difficulty': 'hard'},
+            'copilot_workspace': {'correct': 'Copilot Workspace', 'category': 'technical', 'difficulty': 'hard'},
             'anthropic_model': {'correct': 'Claude', 'category': 'knowledge', 'difficulty': 'easy'},
             'creativity_parameter': {'correct': 'Temperature', 'category': 'conceptual', 'difficulty': 'hard'},
-            'transformer_basis': {'correct': 'Transformeri', 'category': 'conceptual', 'difficulty': 'medium'}
+            'transformer_basis': {'correct': 'Transformeri', 'category': 'conceptual', 'difficulty': 'medium'},
+            'university_guidelines': {'correct': 'Stanford', 'category': 'knowledge', 'difficulty': 'easy'}
         }
         
         for question_id, question_info in quiz_questions.items():

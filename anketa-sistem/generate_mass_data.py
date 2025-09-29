@@ -73,9 +73,9 @@ def generate_mass_data(num_records=300):
         'copilot_task': ['Copilot Workspace', 'GitHub Copilot', 'Copilot X', 'Copilot Chat'],  # Tačan: Copilot Workspace  
         'copilot_chat': ['Copilot Chat', 'ChatGPT', 'Copilot X', 'GitHub Copilot'],
         'google_model': ['Gemini', 'PaLM', 'BERT', 'T5'],  # Tačan: Gemini
-        'gpt_realtime': ['GPT-4.1', 'GPT-4 Turbo', 'GPT-5', 'GPT-4 Real-time'],
-        'codex_successor': ['GitHub Copilot', 'Codex', 'GPT-4', 'Claude'],  # Tačan: GitHub Copilot
-        'chatgpt_data_analysis': ['ChatGPT Editor', 'Advanced Data Analysis', 'Code Interpreter', 'Data Analyst'],
+        'gpt_realtime': ['GPT-4', 'GPT-4.1', 'GPT-4 Turbo', 'GPT-5', 'GPT-4 Real-time'],
+        'codex_successor': ['GPT-3.5', 'GitHub Copilot', 'Codex', 'GPT-4', 'Claude'],  # Tačan: GPT-3.5
+        'chatgpt_data_analysis': ['Advanced Data Analysis (Code Interpreter)', 'ChatGPT Editor', 'Data Analyst', 'Code Interpreter'],
         'copilot_workspace': ['Copilot Workspace', 'Copilot X', 'GitHub Workspace', 'Copilot IDE'],  # Tačan: Copilot Workspace
         'anthropic_model': ['Claude', 'GPT-4', 'Gemini', 'PaLM'],  # Tačan: Claude
         'creativity_parameter': ['Temperature', 'Top-p', 'Attention heads', 'Learning rate'],  # Tačan: Temperature
@@ -254,26 +254,53 @@ def generate_mass_data(num_records=300):
         quiz_answers = {}
         for question, options in quiz_options.items():
             if random.random() < 0.7:  # 70% verovatnoća za tačan odgovor
-                # Za tačne odgovore koristim prvi u listi (koji su označeni kao tačni)
+                # Za tačne odgovore koristim eksplicitno definisane tačne vrednosti
                 if question == 'chatgpt_omni':
                     quiz_answers[question] = 'GPT-4'
                 elif question == 'copilot_task':
                     quiz_answers[question] = 'Copilot Workspace'
+                elif question == 'copilot_chat':
+                    quiz_answers[question] = 'Copilot X'
                 elif question == 'google_model':
                     quiz_answers[question] = 'Gemini'
+                elif question == 'gpt_realtime':
+                    quiz_answers[question] = 'GPT-4'
+                elif question == 'gpt_realtime':
+                    quiz_answers[question] = 'GPT-4'
                 elif question == 'codex_successor':
-                    quiz_answers[question] = 'GitHub Copilot'
+                    quiz_answers[question] = 'GPT-3.5'
+                elif question == 'chatgpt_data_analysis':
+                    quiz_answers[question] = 'Advanced Data Analysis (Code Interpreter)'
+                elif question == 'copilot_workspace':
+                    quiz_answers[question] = 'Copilot Workspace'
                 elif question == 'anthropic_model':
                     quiz_answers[question] = 'Claude'
                 elif question == 'creativity_parameter':
                     quiz_answers[question] = 'Temperature'
                 elif question == 'transformer_basis':
                     quiz_answers[question] = 'Transformeri'
+                elif question == 'university_guidelines':
+                    quiz_answers[question] = 'Stanford'
                 else:
-                    quiz_answers[question] = random.choice(options)
+                    quiz_answers[question] = options[0]  # Prvi je uvek tačan
             else:
-                # 30% netačnih odgovora
-                quiz_answers[question] = random.choice(options)
+                # 30% netačnih odgovora - bira nasumičnu opciju različitu od tačne
+                correct_answers = {
+                    'chatgpt_omni': 'GPT-4',
+                    'copilot_task': 'Copilot Workspace', 
+                    'copilot_chat': 'Copilot X',
+                    'google_model': 'Gemini',
+                    'gpt_realtime': 'GPT-4',
+                    'codex_successor': 'GPT-3.5',
+                    'chatgpt_data_analysis': 'Advanced Data Analysis (Code Interpreter)',
+                    'copilot_workspace': 'Copilot Workspace',
+                    'anthropic_model': 'Claude',
+                    'creativity_parameter': 'Temperature',
+                    'transformer_basis': 'Transformeri',
+                    'university_guidelines': 'Stanford'
+                }
+                wrong_options = [opt for opt in options if opt != correct_answers.get(question)]
+                quiz_answers[question] = random.choice(wrong_options) if wrong_options else random.choice(options)
         
         # Kreiraj red prema novoj strukturi header-a
         row = [
