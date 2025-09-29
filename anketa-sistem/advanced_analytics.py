@@ -24,8 +24,21 @@ class AdvancedAnalytics:
             self.participants = pd.read_csv(f'{self.data_dir}/participants.csv')
             self.ai_knowledge = pd.read_csv(f'{self.data_dir}/ai_knowledge.csv') 
             self.quiz_responses = pd.read_csv(f'{self.data_dir}/quiz_responses.csv')
-            self.relationships = pd.read_csv(f'{self.data_dir}/relationships.csv')
+            
+            # Za relationships.csv, pokušaj prvo sa headerom, zatim bez
+            try:
+                self.relationships = pd.read_csv(f'{self.data_dir}/relationships.csv')
+                # Proveriti da li ima potrebne kolone
+                if 'source_id' not in self.relationships.columns:
+                    raise ValueError("Nema source_id kolonu")
+            except:
+                # Pokušaj učitati bez header-a
+                self.relationships = pd.read_csv(f'{self.data_dir}/relationships.csv', 
+                                               header=None,
+                                               names=['source_id', 'target_id', 'relationship_type', 'weight', 'category', 'group'])
+            
             self.usage_patterns = pd.read_csv(f'{self.data_dir}/tool_usage_patterns.csv')
+            
         except FileNotFoundError as e:
             print(f"Fajl nije pronađen: {e}")
             print("Prvo pokrenite data_science_extension.py da kreirate podatke")
@@ -52,30 +65,108 @@ class AdvancedAnalytics:
         """Klasterovanje korisnika na osnovu AI alata"""
         print("\\n=== AI TOOL CLUSTERING ===")
         
-        # Kreiraj pivot tabelu: participant vs ai_tool
-        tool_matrix = self.ai_knowledge.pivot_table(
-            index='participant_id', 
-            columns='ai_tool', 
-            values='knowledge_level', 
-            fill_value=0
-        )
+        # Proveriti da li postoji knowledge_level kolona i da li ima validne podatke
+        if 'knowledge_level' not in self.ai_knowledge.columns:
+            print("UPOZORENJE: knowledge_level kolona ne postoji u ai_knowledge.csv")
+            return None, None
         
-        # Standardizuj podatke
-        scaler = StandardScaler()
-        tool_matrix_scaled = scaler.fit_transform(tool_matrix)
+        # Proveriti da li su knowledge_level podaci validni
+        valid_knowledge = self.ai_knowledge['knowledge_level'].notna() & \
+                         (self.ai_knowledge['knowledge_level'] != '') & \
+                         (self.ai_knowledge['knowledge_level'] != 'unknown')
         
-        # K-means clustering
-        kmeans = KMeans(n_clusters=4, random_state=42)
-        clusters = kmeans.fit_predict(tool_matrix_scaled)
-        
-        # Dodaj cluster labels
-        tool_matrix['cluster'] = clusters
-        
-        print(f"Kreirano {len(set(clusters))} klastera korisnika")
-        print("\\nDistribucija po klasterima:")
-        print(pd.Series(clusters).value_counts().sort_index())
-        
-        return tool_matrix, clusters
+        if not valid_knowledge.any():
+            print("UPOZORENJE: Nema validnih knowledge_level podataka")
+            print("Koristiću alternativnu analizu na osnovu broja AI alata po korisniku...")
+            
+            # Alternativna analiza - broji koliko svaki korisnik koristi različitih alata
+            try:
+                tool_counts = self.ai_knowledge.groupby('participant_id')['ai_tool'].nunique().reset_index()
+                tool_counts.columns = ['participant_id', 'tool_count']
+                
+                # Kreiraj dummy pivot tabelu - koristi ai_tool kao index umesto participant_id
+                tool_matrix = self.ai_knowledge.pivot_table(
+                    index='participant_id', 
+                    columns='ai_tool', 
+                    aggfunc='size',  # Koristi size umesto count
+                    fill_value=0
+                )
+                
+                print(f"Analiza na osnovu {len(tool_matrix.columns)} različitih AI alata")
+                print(f"Korisnici u analizi: {len(tool_matrix)}")
+                
+                # Proveri da li imamo podatke za clustering
+                if tool_matrix.empty or len(tool_matrix) < 2:
+                    print("GREŠKA: Nedovoljno podataka za clustering analizu")
+                    return None, None
+                
+                # Standardizuj podatke
+                scaler = StandardScaler()
+                tool_matrix_scaled = scaler.fit_transform(tool_matrix.values)
+                
+                # K-means clustering sa prilagođenim brojem klastera
+                n_clusters = min(4, len(tool_matrix) // 2, len(tool_matrix))
+                if n_clusters < 2:
+                    n_clusters = 2
+                    
+                kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+                clusters = kmeans.fit_predict(tool_matrix_scaled)
+                
+                # Dodaj cluster labels
+                tool_matrix_copy = tool_matrix.copy()
+                tool_matrix_copy['cluster'] = clusters
+                
+                print(f"Kreirano {len(set(clusters))} klastera korisnika")
+                print("\\nDistribucija po klasterima:")
+                cluster_counts = pd.Series(clusters).value_counts().sort_index()
+                for cluster, count in cluster_counts.items():
+                    print(f"Klaster {cluster}: {count} korisnika")
+                
+                return tool_matrix_copy, clusters
+                
+            except Exception as e:
+                print(f"Greška u alternativnoj analizi: {e}")
+                return None, None
+        else:
+            # Originalna analiza sa knowledge_level
+            filtered_data = self.ai_knowledge[valid_knowledge].copy()
+            
+            # Pokušaj konvertovati knowledge_level u numeričke vrednosti
+            try:
+                filtered_data['knowledge_level'] = pd.to_numeric(filtered_data['knowledge_level'])
+            except:
+                print("UPOZORENJE: Ne mogu da konvertujem knowledge_level u brojeve")
+                return None, None
+            
+            # Kreiraj pivot tabelu: participant vs ai_tool
+            tool_matrix = filtered_data.pivot_table(
+                index='participant_id', 
+                columns='ai_tool', 
+                values='knowledge_level', 
+                fill_value=0
+            )
+            
+            if tool_matrix.empty:
+                print("GREŠKA: Pivot tabela je prazna")
+                return None, None
+                
+            # Standardizuj podatke
+            scaler = StandardScaler()
+            tool_matrix_scaled = scaler.fit_transform(tool_matrix)
+            
+            # K-means clustering
+            n_clusters = min(4, len(tool_matrix))
+            kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+            clusters = kmeans.fit_predict(tool_matrix_scaled)
+            
+            # Dodaj cluster labels
+            tool_matrix['cluster'] = clusters
+            
+            print(f"Kreirano {len(set(clusters))} klastera korisnika")
+            print("\\nDistribucija po klasterima:")
+            print(pd.Series(clusters).value_counts().sort_index())
+            
+            return tool_matrix, clusters
     
     def quiz_performance_analysis(self):
         """Analiza performansi na kvizu"""
@@ -115,17 +206,36 @@ class AdvancedAnalytics:
         # Kreiraj graf
         G = nx.Graph()
         
-        for _, row in self.relationships.iterrows():
-            G.add_edge(row['source_id'], row['target_id'], 
-                      weight=row['weight'],
-                      relationship_type=row['relationship_type'])
+        try:
+            for _, row in self.relationships.iterrows():
+                if pd.notna(row['source_id']) and pd.notna(row['target_id']) and pd.notna(row['weight']):
+                    # Konvertuj weight u float
+                    try:
+                        weight = float(row['weight'])
+                    except:
+                        weight = 1.0
+                    
+                    G.add_edge(str(row['source_id']), str(row['target_id']), 
+                              weight=weight,
+                              relationship_type=str(row['relationship_type']))
+        except Exception as e:
+            print(f"Greška pri kreiranju grafa: {e}")
+            return None, None, None, None
         
         print(f"Graf ima {G.number_of_nodes()} čvorova i {G.number_of_edges()} veza")
         
+        if G.number_of_nodes() == 0:
+            print("UPOZORENJE: Graf je prazan")
+            return None, None, None, None
+        
         # Centralnost mere
-        degree_centrality = nx.degree_centrality(G)
-        betweenness_centrality = nx.betweenness_centrality(G)
-        closeness_centrality = nx.closeness_centrality(G)
+        try:
+            degree_centrality = nx.degree_centrality(G)
+            betweenness_centrality = nx.betweenness_centrality(G)
+            closeness_centrality = nx.closeness_centrality(G)
+        except Exception as e:
+            print(f"Greška pri računanju centralnosti: {e}")
+            return G, None, None, None
         
         # Top 5 centralnijih čvorova
         print("\\nTop 5 čvorova po degree centralnosti:")
@@ -134,8 +244,14 @@ class AdvancedAnalytics:
             print(f"{node}: {centrality:.3f}")
         
         # Community detection
-        communities = list(nx.community.louvain_communities(G))
-        print(f"\\nPronađeno {len(communities)} zajednica u mreži")
+        try:
+            communities = list(nx.community.louvain_communities(G))
+            print(f"\\nPronađeno {len(communities)} zajednica u mreži")
+            for i, community in enumerate(communities[:3]):  # Prikaži prve 3 zajednice
+                print(f"Zajednica {i+1}: {len(community)} čvorova")
+        except Exception as e:
+            print(f"Greška pri community detection: {e}")
+            communities = []
         
         return G, degree_centrality, betweenness_centrality, communities
     
@@ -149,30 +265,49 @@ class AdvancedAnalytics:
             'is_correct': 'mean'
         }).rename(columns={'is_correct': 'quiz_score'})
         
-        # Participants sa AI knowledge
+        # Participants sa AI knowledge - korisiti tool count umesto knowledge_level
+        # jer je knowledge_level kolona problematična
         participant_ai = self.ai_knowledge.groupby('participant_id').agg({
-            'knowledge_level': 'mean'
-        }).rename(columns={'knowledge_level': 'avg_ai_knowledge'})
+            'ai_tool': 'nunique'  # Broji broj različitih alata koje korisnik koristi
+        }).rename(columns={'ai_tool': 'ai_tools_count'})
         
         # Merge all
         merged_data = self.participants.set_index('participant_id')
         merged_data = merged_data.join([participant_quiz, participant_ai], how='left')
         
+        # Popuni NaN vrednosti
+        merged_data['quiz_score'] = merged_data['quiz_score'].fillna(0)
+        merged_data['ai_tools_count'] = merged_data['ai_tools_count'].fillna(0)
+        
         # Konvertuj kategoričke varijable u numeričke
         merged_data['employment_numeric'] = merged_data['employment_status'].map({
-            'employed': 1, 'unemployed': 0
-        })
+            'da': 1, 'ne': 0
+        }).fillna(0)
         
         merged_data['education_numeric'] = merged_data['education'].map({
-            'high_school': 1, 'bachelor': 2, 'master': 3, 'phd': 4
-        })
+            'srednja': 1, 'visa': 2, 'visoka': 3, 'master': 4, 'doktorat': 5
+        }).fillna(1)
         
         # Korelaciona matrica
-        numeric_cols = ['quiz_score', 'avg_ai_knowledge', 'employment_numeric', 'education_numeric']
-        correlation_matrix = merged_data[numeric_cols].corr()
+        numeric_cols = ['quiz_score', 'ai_tools_count', 'employment_numeric', 'education_numeric']
+        
+        # Proveriti da li postoje potrebne kolone
+        available_cols = [col for col in numeric_cols if col in merged_data.columns]
+        
+        if len(available_cols) < 2:
+            print("UPOZORENJE: Nedovoljno numeričkih kolona za korelacionu analizu")
+            return None, merged_data
+            
+        correlation_matrix = merged_data[available_cols].corr()
         
         print("\\nKorelaciona matrica:")
         print(correlation_matrix.round(3))
+        
+        print("\\nInterpretacija:")
+        print(f"• quiz_score: prosečan uspeh na kvizu po korisniku")
+        print(f"• ai_tools_count: broj različitih AI alata koje korisnik koristi")
+        print(f"• employment_numeric: da li je korisnik zaposlen (1=da, 0=ne)")
+        print(f"• education_numeric: nivo obrazovanja (1=srednja, 5=doktorat)")
         
         return correlation_matrix, merged_data
     
@@ -255,46 +390,80 @@ class AdvancedAnalytics:
             os.makedirs(export_dir)
         
         # Merged dataset za R/SPSS
-        merged_for_stats = self.participants.merge(
-            self.quiz_responses.groupby('participant_id')['is_correct'].mean(),
-            left_on='participant_id', right_index=True, how='left'
-        )
-        
-        merged_for_stats.to_csv(f'{export_dir}/merged_for_r_analysis.csv', index=False)
-        print(f"• Kreiran merged dataset: {export_dir}/merged_for_r_analysis.csv")
+        try:
+            merged_for_stats = self.participants.merge(
+                self.quiz_responses.groupby('participant_id')['is_correct'].mean(),
+                left_on='participant_id', right_index=True, how='left'
+            )
+            
+            merged_for_stats.to_csv(f'{export_dir}/merged_for_r_analysis.csv', index=False)
+            print(f"• Kreiran merged dataset: {export_dir}/merged_for_r_analysis.csv")
+        except Exception as e:
+            print(f"Greška pri kreiranju merged dataseta: {e}")
         
         # Network za Gephi
-        gephi_nodes = []
-        gephi_edges = []
-        
-        # Nodes
-        for participant in self.participants['participant_id']:
-            gephi_nodes.append({
-                'Id': participant,
-                'Label': participant,
-                'Type': 'participant'
-            })
-        
-        for tool in self.ai_knowledge['ai_tool'].unique():
-            gephi_nodes.append({
-                'Id': f"TOOL_{tool}",
-                'Label': tool,
-                'Type': 'ai_tool'
-            })
-        
-        # Edges
-        for _, row in self.relationships.iterrows():
-            gephi_edges.append({
-                'Source': row['source_id'],
-                'Target': row['target_id'],
-                'Weight': row['weight'],
-                'Type': row['relationship_type']
-            })
-        
-        pd.DataFrame(gephi_nodes).to_csv(f'{export_dir}/gephi_nodes.csv', index=False)
-        pd.DataFrame(gephi_edges).to_csv(f'{export_dir}/gephi_edges.csv', index=False)
-        
-        print(f"• Kreirani Gephi fajlovi: {export_dir}/gephi_nodes.csv, {export_dir}/gephi_edges.csv")
+        try:
+            gephi_nodes = []
+            gephi_edges = []
+            
+            # Nodes
+            for participant in self.participants['participant_id']:
+                gephi_nodes.append({
+                    'Id': participant,
+                    'Label': participant,
+                    'Type': 'participant'
+                })
+            
+            for tool in self.ai_knowledge['ai_tool'].unique():
+                gephi_nodes.append({
+                    'Id': f"TOOL_{tool}",
+                    'Label': tool,
+                    'Type': 'ai_tool'
+                })
+            
+            # Edges - koristi podatke iz relationships.csv-a ako su dostupni
+            if hasattr(self, 'relationships') and not self.relationships.empty:
+                # Proveri da li relationships ima potrebne kolone
+                if 'source_id' in self.relationships.columns:
+                    for _, row in self.relationships.iterrows():
+                        if pd.notna(row['source_id']) and pd.notna(row['target_id']):
+                            try:
+                                weight = float(row['weight']) if pd.notna(row['weight']) else 1.0
+                            except:
+                                weight = 1.0
+                                
+                            gephi_edges.append({
+                                'Source': str(row['source_id']),
+                                'Target': str(row['target_id']),
+                                'Weight': weight,
+                                'Type': str(row['relationship_type']) if pd.notna(row['relationship_type']) else 'unknown'
+                            })
+                else:
+                    # Ako nema pravilan header, kreiraj edges iz AI knowledge podataka
+                    for _, row in self.ai_knowledge.iterrows():
+                        gephi_edges.append({
+                            'Source': row['participant_id'],
+                            'Target': f"TOOL_{row['ai_tool']}",
+                            'Weight': 1.0,
+                            'Type': 'uses_tool'
+                        })
+            else:
+                # Fallback - kreiraj edges iz AI knowledge podataka
+                for _, row in self.ai_knowledge.iterrows():
+                    gephi_edges.append({
+                        'Source': row['participant_id'],
+                        'Target': f"TOOL_{row['ai_tool']}",
+                        'Weight': 1.0,
+                        'Type': 'uses_tool'
+                    })
+            
+            pd.DataFrame(gephi_nodes).to_csv(f'{export_dir}/gephi_nodes.csv', index=False)
+            pd.DataFrame(gephi_edges).to_csv(f'{export_dir}/gephi_edges.csv', index=False)
+            
+            print(f"• Kreirani Gephi fajlovi: {export_dir}/gephi_nodes.csv, {export_dir}/gephi_edges.csv")
+            
+        except Exception as e:
+            print(f"Greška pri kreiranju Gephi fajlova: {e}")
         
         return export_dir
 
@@ -307,27 +476,59 @@ def main():
     analytics = AdvancedAnalytics()
     
     try:
-        # Pokreni sve analize
+        # Pokreni sve analize sa error handling
+        print("\\n1. Pokretanje demografske analize...")
         analytics.demographic_analysis()
-        analytics.ai_tool_clustering() 
+        
+        print("\\n2. Pokretanje AI tool clustering analize...")
+        try:
+            analytics.ai_tool_clustering() 
+        except Exception as e:
+            print(f"Greška u AI tool clustering: {e}")
+            print("Nastavljam sa ostalim analizama...")
+        
+        print("\\n3. Pokretanje quiz performance analize...")
         analytics.quiz_performance_analysis()
-        analytics.network_analysis()
-        analytics.correlation_analysis()
-        analytics.usage_pattern_analysis()
+        
+        print("\\n4. Pokretanje network analize...")
+        try:
+            analytics.network_analysis()
+        except Exception as e:
+            print(f"Greška u network analizi: {e}")
+            print("Nastavljam sa ostalim analizama...")
+        
+        print("\\n5. Pokretanje korelacione analize...")
+        try:
+            analytics.correlation_analysis()
+        except Exception as e:
+            print(f"Greška u korelacionoj analizi: {e}")
+            print("Nastavljam sa ostalim analizama...")
+        
+        print("\\n6. Pokretanje usage pattern analize...")
+        try:
+            analytics.usage_pattern_analysis()
+        except Exception as e:
+            print(f"Greška u usage pattern analizi: {e}")
+            print("Nastavljam sa ostalim analizama...")
         
         # Generiši insights
         analytics.generate_insights()
         
         # Export za spoljne alate
-        analytics.export_for_external_tools()
+        try:
+            analytics.export_for_external_tools()
+        except Exception as e:
+            print(f"Greška pri eksportu: {e}")
         
         print("\\n" + "="*60)
-        print("ANALIZA ZAVRŠENA USPEŠNO!")
+        print("ANALIZA ZAVRŠENA!")
+        print("Neki moduli možda imaju probleme zbog kvaliteta podataka u CSV fajlovima.")
         print("Proverite 'data/exports/' direktorijum za fajlove za spoljne alate.")
         
     except Exception as e:
-        print(f"Greška tokom analize: {e}")
-        print("Ubedite se da postoje CSV fajlovi u 'data/' direktorijumu")
+        print(f"Kritična greška tokom analize: {e}")
+        print("Proverite da li postoje CSV fajlovi u 'data/' direktorijumu")
+        print("i da li su u ispravnom formatu.")
 
 if __name__ == "__main__":
     main()
