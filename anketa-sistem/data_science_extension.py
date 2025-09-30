@@ -453,10 +453,12 @@ class DataScienceManager:
                                              header=None,
                                              names=['source_id', 'target_id', 'relationship_type', 
                                                    'weight', 'context', 'ciljana_grupa'],
-                                             dtype={'source_id': str, 'target_id': str})
+                                             dtype={'source_id': str, 'target_id': str},
+                                             encoding='utf-8')
             else:
                 relationships_df = pd.read_csv(self.files['relationships'], 
-                                             dtype={'source_id': str, 'target_id': str})
+                                             dtype={'source_id': str, 'target_id': str},
+                                             encoding='utf-8')
                                              
         except Exception as e:
             print(f"Greška pri čitanju relationships fajla: {e}")
@@ -494,7 +496,7 @@ class DataScienceManager:
             
             # Učitaj dodatne informacije o učesnicima
             try:
-                participants_df = pd.read_csv(self.files['participants'])
+                participants_df = pd.read_csv(self.files['participants'], encoding='utf-8')
                 # Ukloni duplikate na osnovu participant_id i uzmi poslednji unos
                 participants_df = participants_df.drop_duplicates(subset=['participant_id'], keep='last')
                 participant_info = participants_df.set_index('participant_id').to_dict('index')
@@ -642,10 +644,10 @@ class DataScienceManager:
         
         try:
             # Učitaj podatke
-            participants_df = pd.read_csv(self.files['participants'])
-            ai_knowledge_df = pd.read_csv(self.files['ai_knowledge'])
-            quiz_df = pd.read_csv(self.files['quiz_responses'])
-            patterns_df = pd.read_csv(self.files['tool_usage_patterns'])
+            participants_df = pd.read_csv(self.files['participants'], encoding='utf-8')
+            ai_knowledge_df = pd.read_csv(self.files['ai_knowledge'], encoding='utf-8')
+            quiz_df = pd.read_csv(self.files['quiz_responses'], encoding='utf-8')
+            patterns_df = pd.read_csv(self.files['tool_usage_patterns'], encoding='utf-8')
             
             summary = {
                 'total_participants': len(participants_df),

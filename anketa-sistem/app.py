@@ -1466,12 +1466,12 @@ def data_science_dashboard():
             if num_nodes > 0:
                 # Average Degree
                 degrees = dict(G.degree())
-                avg_degree = sum(degrees.values()) / len(degrees) if degrees else 0
+                avg_degree = (sum(degrees.values()) / len(degrees))/2 if degrees else 0
                 
                 # Average Weighted Degree
                 if G.edges(data=True):
                     weighted_degrees = dict(G.degree(weight='weight'))
-                    avg_weighted_degree = sum(weighted_degrees.values()) / len(weighted_degrees) if weighted_degrees else 0
+                    avg_weighted_degree = (sum(weighted_degrees.values()) / len(weighted_degrees))/2 if weighted_degrees else 0
                 else:
                     avg_weighted_degree = 0
                 
