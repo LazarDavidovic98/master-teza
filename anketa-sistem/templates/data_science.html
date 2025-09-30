@@ -229,6 +229,109 @@
             color: #666;
             line-height: 1.5;
         }
+        
+        /* Advanced Network Analysis Styles */
+        .advanced-network-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            border: 2px solid #dee2e6;
+        }
+        
+        .advanced-network-section h3 {
+            color: #495057;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .advanced-stats {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+        
+        .network-analysis-section {
+            margin-top: 25px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .network-analysis-section h4 {
+            color: #343a40;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-left: 4px solid #667eea;
+            padding-left: 10px;
+        }
+        
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .ranking-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .ranking-item:hover {
+            transform: translateX(5px);
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+        }
+        
+        .rank-node {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.95em;
+        }
+        
+        .rank-score {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 500;
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        /* Enhanced network stat styling for advanced metrics */
+        .advanced-stats .network-stat {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .advanced-stats .network-stat:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .advanced-stats .network-stat-value {
+            color: #343a40;
+            font-size: 1.6em;
+        }
+        
+        .advanced-stats .network-stat-label {
+            color: #6c757d;
+            font-size: 0.85em;
+            font-weight: 500;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -294,6 +397,7 @@
                     <strong>Greška:</strong> {{ network_stats.error }}
                 </div>
             {% else %}
+                <!-- Osnovne Network Statistike -->
                 <div class="network-stats">
                     <div class="network-stat">
                         <div class="network-stat-value">{{ network_stats.nodes }}</div>
@@ -312,6 +416,70 @@
                         <div class="network-stat-label">Komponente</div>
                     </div>
                 </div>
+                
+                <!-- Napredne Network Statistike -->
+                {% if network_stats.advanced %}
+                <div class="advanced-network-section">
+                    <h3>📊 Napredni Network Parametri</h3>
+                    
+                    <div class="network-stats advanced-stats">
+                        <div class="network-stat">
+                            <div class="network-stat-value">{{ network_stats.advanced.avg_degree }}</div>
+                            <div class="network-stat-label">Average Degree</div>
+                        </div>
+                        <div class="network-stat">
+                            <div class="network-stat-value">{{ network_stats.advanced.avg_weighted_degree }}</div>
+                            <div class="network-stat-label">Avg Weighted Degree</div>
+                        </div>
+                        <div class="network-stat">
+                            <div class="network-stat-value">{{ network_stats.advanced.diameter }}</div>
+                            <div class="network-stat-label">Network Diametar</div>
+                        </div>
+                        <div class="network-stat">
+                            <div class="network-stat-value">{{ network_stats.advanced.clustering_coefficient }}</div>
+                            <div class="network-stat-label">Clustering Coefficient</div>
+                        </div>
+                        <div class="network-stat">
+                            <div class="network-stat-value">{{ network_stats.advanced.modularity }}</div>
+                            <div class="network-stat-label">Modularity</div>
+                        </div>
+                        <div class="network-stat">
+                            <div class="network-stat-value">{{ network_stats.advanced.num_communities }}</div>
+                            <div class="network-stat-label">Communities</div>
+                        </div>
+                    </div>
+                    
+                    <!-- PageRank Top Nodes -->
+                    {% if network_stats.advanced.pagerank_top %}
+                    <div class="network-analysis-section">
+                        <h4>🏆 PageRank - Top Čvorovi</h4>
+                        <div class="ranking-list">
+                            {% for item in network_stats.advanced.pagerank_top %}
+                            <div class="ranking-item">
+                                <span class="rank-node">{{ item.node }}</span>
+                                <span class="rank-score">{{ item.score }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <!-- HITS Algorithm Results -->
+                    {% if network_stats.advanced.hits_top %}
+                    <div class="network-analysis-section">
+                        <h4>🎯 HITS - Top Authorities</h4>
+                        <div class="ranking-list">
+                            {% for item in network_stats.advanced.hits_top %}
+                            <div class="ranking-item">
+                                <span class="rank-node">{{ item.node }}</span>
+                                <span class="rank-score">{{ item.authority }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
                 
                 <div class="insights-grid">
                     <div class="insight-card">

@@ -1455,11 +1455,90 @@ def data_science_dashboard():
         # Generiši NetworkX graf
         try:
             G = data_manager.create_network_graph()
+            
+            # Osnovne statistike
+            num_nodes = G.number_of_nodes()
+            num_edges = G.number_of_edges()
+            
+            # Napredne network analize
+            advanced_stats = {}
+            
+            if num_nodes > 0:
+                # Average Degree
+                degrees = dict(G.degree())
+                avg_degree = sum(degrees.values()) / len(degrees) if degrees else 0
+                
+                # Average Weighted Degree
+                if G.edges(data=True):
+                    weighted_degrees = dict(G.degree(weight='weight'))
+                    avg_weighted_degree = sum(weighted_degrees.values()) / len(weighted_degrees) if weighted_degrees else 0
+                else:
+                    avg_weighted_degree = 0
+                
+                # Network Diameter (samo za povezane grafove)
+                try:
+                    if nx.is_connected(G):
+                        diameter = nx.diameter(G)
+                    else:
+                        # Za nepovezane grafove, uzmi najveći dijametar komponenti
+                        components = [G.subgraph(c).copy() for c in nx.connected_components(G)]
+                        diameters = []
+                        for comp in components:
+                            if len(comp) > 1:
+                                diameters.append(nx.diameter(comp))
+                        diameter = max(diameters) if diameters else 0
+                except:
+                    diameter = "N/A"
+                
+                # Clustering Coefficient
+                try:
+                    clustering_coeff = nx.average_clustering(G)
+                except:
+                    clustering_coeff = 0
+                
+                # PageRank (top 3)
+                try:
+                    pagerank = nx.pagerank(G)
+                    top_pagerank = sorted(pagerank.items(), key=lambda x: x[1], reverse=True)[:3]
+                    pagerank_top = [{"node": node, "score": round(score, 4)} for node, score in top_pagerank]
+                except:
+                    pagerank_top = []
+                
+                # HITS Algorithm (top 3 authorities)
+                try:
+                    hits_h, hits_a = nx.hits(G)
+                    top_authorities = sorted(hits_a.items(), key=lambda x: x[1], reverse=True)[:3]
+                    hits_top = [{"node": node, "authority": round(score, 4)} for node, score in top_authorities]
+                except:
+                    hits_top = []
+                
+                # Community Detection (Modularity)
+                try:
+                    import networkx.algorithms.community as nx_comm
+                    communities = nx_comm.greedy_modularity_communities(G)
+                    modularity = nx_comm.modularity(G, communities)
+                    num_communities = len(communities)
+                except:
+                    modularity = "N/A"
+                    num_communities = "N/A"
+                
+                advanced_stats = {
+                    'avg_degree': round(avg_degree, 3),
+                    'avg_weighted_degree': round(avg_weighted_degree, 3),
+                    'diameter': diameter,
+                    'clustering_coefficient': round(clustering_coeff, 3),
+                    'pagerank_top': pagerank_top,
+                    'hits_top': hits_top,
+                    'modularity': round(modularity, 3) if isinstance(modularity, (int, float)) else modularity,
+                    'num_communities': num_communities
+                }
+            
             network_stats = {
-                'nodes': G.number_of_nodes()*2,
-                'edges': G.number_of_edges(),
-                'density': round(nx.density(G), 3)/2,
-                'connected_components': nx.number_connected_components(G)
+                'nodes': num_nodes*2,  # Keeping original logic
+                'edges': num_edges,
+                'density': round(nx.density(G), 3)/2,  # Keeping original logic
+                'connected_components': nx.number_connected_components(G),
+                'advanced': advanced_stats
             }
         except Exception as e:
             network_stats = {'error': str(e)}
