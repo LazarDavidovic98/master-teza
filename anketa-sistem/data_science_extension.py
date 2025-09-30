@@ -100,9 +100,10 @@ class DataScienceManager:
                 if row['timestamp']:  # Proverava da nije prazan red
                     participant_id = self.process_survey_response(row, from_existing=True)
                     processed_count += 1
-                    print(f"  Obrađen učesnik {processed_count}: {participant_id}")
-        
-        print(f"✅ Uspešno obrađeno {processed_count} postojećih odgovora!")
+                    # Ovde koristiti printf samo u procesu testiranja
+                    # print(f" Obrađen učesnik {processed_count}: {participant_id}")
+        # I ovu liniju koristiti samo u testiranju
+        # print(f" Uspešno obrađeno {processed_count} postojećih odgovora!")
         return processed_count
     
     def clear_data_files(self):
@@ -112,8 +113,8 @@ class DataScienceManager:
                 try:
                     os.remove(file_path)
                 except PermissionError:
-                    print(f"⚠️ Ne mogu da obrišem {file_path} - fajl je u upotrebi")
-                    # Pokušaj da prebriše sadržaj
+                    print(f"Nije moguće obrisati {file_path} - fajl je u upotrebi !")
+                    
                     try:
                         with open(file_path, 'w', newline='', encoding='utf-8') as f:
                             f.write('')
@@ -418,7 +419,7 @@ class DataScienceManager:
         else:
             return 'other'
     
-    def classify_usage_pattern(self, num_tools, num_purposes):
+    def classify_usage_pattern(self, num_tools, num_purposes): 
         if num_tools == 1 and num_purposes == 1:
             return 'focused_user'
         elif num_tools > 3 and num_purposes > 3:
@@ -438,7 +439,7 @@ class DataScienceManager:
         # Učitaj relationships sa eksplicitnim dtype za ID kolone
         try:
             if not os.path.exists(self.files['relationships']):
-                print("⚠️ relationships.csv fajl ne postoji")
+                print(" File relationships.csv ne postoji !")
                 return G
                 
             # Pročitaj fajl i provjeri da li ima header
@@ -447,7 +448,7 @@ class DataScienceManager:
                 
             # Ako prvi red ne sadrži 'source_id', fajl nema header
             if 'source_id' not in first_line:
-                print("⚠️ relationships.csv nema header - dodajem header")
+                print("File relationships.csv nema header - dodajemo header ...")
                 # Čitaj podatke bez header-a
                 relationships_df = pd.read_csv(self.files['relationships'], 
                                              header=None,
@@ -491,7 +492,7 @@ class DataScienceManager:
             print(f"Network graf kreiran sa {G.number_of_nodes()} čvorova i {G.number_of_edges()} veza")
             
             if G.number_of_nodes() == 0:
-                print("⚠️ Graf nema čvorove - proverite relationships.csv fajl")
+                print("Graf nema čvorove - proverite relationships.csv fajl !")
                 return None, None
             
             # Učitaj dodatne informacije o učesnicima

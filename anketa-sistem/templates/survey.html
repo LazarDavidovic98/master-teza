@@ -49,11 +49,11 @@
         .author-info {
             text-align: right;
             margin-bottom: 35px;
-            color: #718096;
+            color: #345485;
             font-style: italic;
             font-size: 15px;
             padding: 12px 20px;
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            background: linear-gradient(135deg, #c3c0e6 0%, #edf2f7 100%);
             border-radius: 12px;
             border-left: 4px solid #667eea;
         }
@@ -237,10 +237,10 @@
         
         /* Ikonice za sekcije */
         .section.demographics h3::before { content: "👤"; }
-        .section.professional h3::before { content: "💼"; }
-        .section.ai-knowledge h3::before { content: "🤖"; }
-        .section.technical h3::before { content: "⚙️"; }
-        .section.quiz h3::before { content: "📝"; }
+        .section.professional h3::before { content: ""; }
+        .section.ai-knowledge h3::before { content: ""; }
+        .section.technical h3::before { content: ""; }
+        .section.quiz h3::before { content: ""; }
         
         .conditional-field {
             margin-left: 24px;
@@ -355,7 +355,7 @@
         }
         
         .quiz-question h4::before {
-            content: "🤔";
+            content: "❓";
             position: absolute;
             left: 0;
             top: 0;
@@ -600,7 +600,7 @@
     <div class="progress-bar" id="progressBar"></div>
     
     <div class="container">
-        <h1>Anketa o korišćenju generativnih AI alata</h1>
+        <h1>Monitoring korišćenja generativnih AI alata</h1>
         <div class="author-info">
             <strong>Autor:</strong> Lazar Davidović
         </div>
@@ -1422,9 +1422,14 @@
             
             <!-- KVIZ PITANJA -->
             <div class="section quiz">
-                <h3>🧠 Kviz - Test znanja o AI alatima</h3>
-                <p style="margin-bottom: 20px; color: #666; font-style: italic;">
-                    Sledećih pitanja su kviz pitanja. Odgovorite po najboljem znanju - rezultati neće uticati na validnost vaše ankete.
+                <h3>
+                <img src="{{ url_for('static', filename='quizz.jpg') }}" alt="Logo kviza" 
+                    style="width:130px; height:100px; vertical-align:middle; margin-right:8px;">
+                    KVIZ - Test o poznavanju i upotrebi AI alata
+                </h3>
+
+                <p style="margin-bottom: 20px; color: #612626;">
+                    Sledećih nekoliko pitanja su kviz pitanja. Odgovorite najbolje što znate - rezultati neće uticati na validnost vaše ankete, ali ne bi trebali da odgovarate sasvim proizvoljno !
                 </p>
                 
                 <div class="quiz-question">

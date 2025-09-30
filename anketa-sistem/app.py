@@ -378,7 +378,7 @@ def generate_analytics_data():
             ax3.set_yticks(range(len(industries)))
             ax3.set_xticklabels(['Nimalo', 'Malo', 'Dosta', 'Veoma Dosta'], rotation=45)
             ax3.set_yticklabels([ind.replace('_', ' ').title() for ind in industries])
-            ax3.set_title('🧠 Nivo AI Znanja po Industrijama (%)', fontweight='bold', fontsize=12)
+            ax3.set_title('Nivo AI Znanja po Industrijama (%)', fontweight='bold', fontsize=12)
             
             # Dodaj brojeve u ćelije
             for i in range(len(industries)):

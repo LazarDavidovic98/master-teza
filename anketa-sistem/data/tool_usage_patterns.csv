@@ -1,302 +1,319 @@
 participant_id,ciljana_grupa,usage_pattern,tools_combination,frequency_score,effectiveness_score,pattern_type
-P02435CD5,prosveta,1_tools_for_2_purposes,DeepL,0.2,0.2,purpose_diverse
-P0278F18B,medicina,5_tools_for_4_purposes,Bing Chat|ChatGPT|DeepL|GitHub Copilot|Midjourney,1.0,0.2,power_user
-P03804940,kreativna_filmska,4_tools_for_2_purposes,Bing Chat|ChatGPT|Grammarly|Midjourney,0.8,0.2,tool_explorer
-P03F0642E,medicina,3_tools_for_4_purposes,DALL-E|Grammarly|Midjourney,1.0,0.2,purpose_diverse
-P04195DC6,prosveta,5_tools_for_1_purposes,Bing Chat|ChatGPT|Claude|DeepL|Midjourney,0.5,0.2,tool_explorer
-P018256E2,kreativna_filmska,2_tools_for_3_purposes,Claude|DALL-E,0.6,0.2,purpose_diverse
-P03CEA52F,prosveta,3_tools_for_3_purposes,Bing Chat|DALL-E|Gemini,0.9,0.2,balanced_user
-P03804940,kreativna_filmska,5_tools_for_6_purposes,Bing Chat|Claude|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
-P03804940,prosveta,2_tools_for_4_purposes,DeepL|Grammarly,0.8,0.2,purpose_diverse
-P0595153F,prosveta,5_tools_for_2_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
-P04195DC6,ostalo,4_tools_for_1_purposes,DeepL|GitHub Copilot|Midjourney|Stable Diffusion,0.4,0.2,tool_explorer
-P012FA467,medicina,2_tools_for_6_purposes,Claude|Gemini,1.0,0.2,purpose_diverse
-P00741E4A,it_industrija,4_tools_for_6_purposes,Bing Chat|ChatGPT|DeepL|Grammarly,1.0,0.2,power_user
-P0495B383,drustvene_nauke,4_tools_for_3_purposes,DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
-P03CEA52F,drustvene_nauke,5_tools_for_3_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
-P018256E2,medicina,1_tools_for_1_purposes,Bing Chat,0.1,0.2,focused_user
-P0496E36A,it_industrija,4_tools_for_2_purposes,Claude|DeepL|GitHub Copilot|Grammarly,0.8,0.2,tool_explorer
-P029C7B7C,ostalo,5_tools_for_6_purposes,Claude|DALL-E|DeepL|Gemini|GitHub Copilot,1.0,0.2,power_user
-P03464DE4,medicina,1_tools_for_3_purposes,ChatGPT,0.3,0.2,purpose_diverse
-P046D17AA,prosveta,2_tools_for_4_purposes,GitHub Copilot|Grammarly,0.8,0.2,purpose_diverse
-P0495B383,drustvene_nauke,4_tools_for_1_purposes,ChatGPT|Grammarly|Midjourney|Stable Diffusion,0.4,0.2,tool_explorer
-P00741E4A,ostalo,5_tools_for_4_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
-P047FE9B2,kreativna_filmska,2_tools_for_4_purposes,Claude|Gemini,0.8,0.2,purpose_diverse
-P029C7B7C,it_industrija,3_tools_for_3_purposes,Claude|Gemini|Stable Diffusion,0.9,0.2,balanced_user
-P04C3BE15,prosveta,5_tools_for_1_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,0.5,0.2,tool_explorer
-P01B19CCD,ostalo,2_tools_for_1_purposes,DALL-E|Grammarly,0.2,0.2,tool_explorer
-P0495B383,ostalo,1_tools_for_1_purposes,Stable Diffusion,0.1,0.2,focused_user
-P029C7B7C,prosveta,1_tools_for_2_purposes,GitHub Copilot,0.2,0.2,purpose_diverse
-P03804940,ostalo,4_tools_for_5_purposes,Bing Chat|ChatGPT|Grammarly|Stable Diffusion,1.0,0.2,power_user
-P00741E4A,it_industrija,5_tools_for_1_purposes,DALL-E|DeepL|Gemini|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
-P00DA41A9,medicina,5_tools_for_3_purposes,ChatGPT|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
-P00F8C96F,medicina,3_tools_for_6_purposes,Bing Chat|GitHub Copilot|Grammarly,1.0,0.2,purpose_diverse
-P025FFDE8,drustvene_nauke,2_tools_for_2_purposes,DeepL|Gemini,0.4,0.2,balanced_user
-P04195DC6,kreativna_filmska,2_tools_for_2_purposes,Bing Chat|Grammarly,0.4,0.2,balanced_user
-P02435CD5,medicina,5_tools_for_5_purposes,ChatGPT|Gemini|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,power_user
-P03F0642E,it_industrija,5_tools_for_4_purposes,Bing Chat|DeepL|GitHub Copilot|Grammarly|Stable Diffusion,1.0,0.2,power_user
-P03F0642E,medicina,2_tools_for_3_purposes,DeepL|Grammarly,0.6,0.2,purpose_diverse
-P03CEA52F,ostalo,1_tools_for_4_purposes,Midjourney,0.4,0.2,purpose_diverse
-P046D17AA,ostalo,1_tools_for_6_purposes,Bing Chat,0.6,0.2,purpose_diverse
-P00B903A5,it_industrija,3_tools_for_2_purposes,ChatGPT|GitHub Copilot|Grammarly,0.6,0.2,tool_explorer
-P04688CBC,prosveta,1_tools_for_2_purposes,Grammarly,0.2,0.2,purpose_diverse
-P025FFDE8,prosveta,4_tools_for_1_purposes,ChatGPT|DeepL|GitHub Copilot|Grammarly,0.4,0.2,tool_explorer
-P017D8EE9,medicina,2_tools_for_2_purposes,GitHub Copilot|Midjourney,0.4,0.2,balanced_user
-P04195DC6,prosveta,3_tools_for_1_purposes,ChatGPT|DALL-E|Gemini,0.3,0.2,tool_explorer
-P011E1222,drustvene_nauke,3_tools_for_3_purposes,ChatGPT|Gemini|GitHub Copilot,0.9,0.2,balanced_user
-P04E108C8,prosveta,4_tools_for_6_purposes,Gemini|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,power_user
-P0496E36A,medicina,3_tools_for_5_purposes,ChatGPT|Claude|DALL-E,1.0,0.2,purpose_diverse
-P018256E2,kreativna_filmska,5_tools_for_1_purposes,DALL-E|DeepL|GitHub Copilot|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
-P012FA467,drustvene_nauke,3_tools_for_6_purposes,Gemini|GitHub Copilot|Midjourney,1.0,0.2,purpose_diverse
-P00DA41A9,medicina,1_tools_for_1_purposes,Claude,0.1,0.2,focused_user
-P036B3026,drustvene_nauke,4_tools_for_2_purposes,ChatGPT|Claude|Grammarly|Midjourney,0.8,0.2,tool_explorer
-P0114CD62,medicina,1_tools_for_1_purposes,DALL-E,0.1,0.2,focused_user
-P00326448,kreativna_filmska,2_tools_for_1_purposes,Claude|Grammarly,0.2,0.2,tool_explorer
-P03464DE4,ostalo,5_tools_for_6_purposes,Bing Chat|Claude|DeepL|Gemini|Grammarly,1.0,0.2,power_user
-P025FFDE8,drustvene_nauke,5_tools_for_2_purposes,Bing Chat|ChatGPT|Claude|DALL-E|GitHub Copilot,1.0,0.2,tool_explorer
-P0287D9F0,kreativna_filmska,3_tools_for_3_purposes,ChatGPT|GitHub Copilot|Stable Diffusion,0.9,0.2,balanced_user
-P025FFDE8,kreativna_filmska,3_tools_for_2_purposes,Gemini|Grammarly|Midjourney,0.6,0.2,tool_explorer
-P04688CBC,ostalo,1_tools_for_3_purposes,ChatGPT,0.3,0.2,purpose_diverse
-P011E1222,kreativna_filmska,4_tools_for_5_purposes,Bing Chat|Gemini|GitHub Copilot|Grammarly,1.0,0.2,power_user
-P0114CD62,prosveta,5_tools_for_5_purposes,Bing Chat|ChatGPT|Claude|DALL-E|Grammarly,1.0,0.2,power_user
-P017D8EE9,it_industrija,3_tools_for_1_purposes,Bing Chat|Grammarly|Stable Diffusion,0.3,0.2,tool_explorer
-P018256E2,it_industrija,5_tools_for_1_purposes,Bing Chat|DeepL|Gemini|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
-P03804940,ostalo,2_tools_for_1_purposes,Bing Chat|Gemini,0.2,0.2,tool_explorer
-P046D17AA,medicina,4_tools_for_6_purposes,Claude|GitHub Copilot|Midjourney|Stable Diffusion,1.0,0.2,power_user
-P047FE9B2,ostalo,4_tools_for_5_purposes,Bing Chat|Claude|Grammarly|Midjourney,1.0,0.2,power_user
-P025FFDE8,medicina,3_tools_for_2_purposes,DALL-E|Gemini|GitHub Copilot,0.6,0.2,tool_explorer
-P0496E36A,drustvene_nauke,4_tools_for_3_purposes,Bing Chat|ChatGPT|Claude|GitHub Copilot,1.0,0.2,tool_explorer
-P00741E4A,medicina,4_tools_for_6_purposes,Bing Chat|DALL-E|DeepL|Grammarly,1.0,0.2,power_user
-P046D17AA,drustvene_nauke,3_tools_for_3_purposes,Claude|DeepL|Grammarly,0.9,0.2,balanced_user
-P0595153F,kreativna_filmska,5_tools_for_1_purposes,Bing Chat|ChatGPT|Grammarly|Midjourney|Stable Diffusion,0.5,0.2,tool_explorer
-P0278F18B,medicina,2_tools_for_4_purposes,GitHub Copilot|Grammarly,0.8,0.2,purpose_diverse
-P01B19CCD,it_industrija,3_tools_for_3_purposes,Claude|DeepL|Grammarly,0.9,0.2,balanced_user
-P04195DC6,kreativna_filmska,4_tools_for_5_purposes,Bing Chat|ChatGPT|DALL-E|GitHub Copilot,1.0,0.2,power_user
-P047FE9B2,prosveta,4_tools_for_4_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot,1.0,0.2,power_user
-P02435CD5,medicina,3_tools_for_4_purposes,Claude|Grammarly|Stable Diffusion,1.0,0.2,purpose_diverse
-P025FFDE8,drustvene_nauke,5_tools_for_4_purposes,Bing Chat|Claude|DeepL|Gemini|GitHub Copilot,1.0,0.2,power_user
-P03804940,prosveta,4_tools_for_4_purposes,DALL-E|DeepL|Gemini|Midjourney,1.0,0.2,power_user
-P00B903A5,kreativna_filmska,4_tools_for_3_purposes,Claude|DeepL|Gemini|GitHub Copilot,1.0,0.2,tool_explorer
-P046D17AA,drustvene_nauke,4_tools_for_6_purposes,Bing Chat|ChatGPT|Midjourney|Stable Diffusion,1.0,0.2,power_user
-P011E1222,ostalo,2_tools_for_5_purposes,ChatGPT|Gemini,1.0,0.2,purpose_diverse
-P046D17AA,prosveta,3_tools_for_4_purposes,Bing Chat|DeepL|Midjourney,1.0,0.2,purpose_diverse
-P000EE049,drustvene_nauke,3_tools_for_2_purposes,Grammarly|Midjourney|Stable Diffusion,0.6,0.2,tool_explorer
-P00DA41A9,kreativna_filmska,5_tools_for_2_purposes,ChatGPT|Claude|Gemini|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
-P017D8EE9,drustvene_nauke,3_tools_for_6_purposes,Bing Chat|GitHub Copilot|Grammarly,1.0,0.2,purpose_diverse
-P017D8EE9,kreativna_filmska,2_tools_for_1_purposes,DALL-E|DeepL,0.2,0.2,tool_explorer
-P046D17AA,drustvene_nauke,3_tools_for_2_purposes,ChatGPT|Claude|Midjourney,0.6,0.2,tool_explorer
-P02435CD5,it_industrija,3_tools_for_6_purposes,Gemini|Midjourney|Stable Diffusion,1.0,0.2,purpose_diverse
-P046D17AA,it_industrija,5_tools_for_1_purposes,ChatGPT|Claude|DeepL|Gemini|GitHub Copilot,0.5,0.2,tool_explorer
-P04E108C8,drustvene_nauke,1_tools_for_2_purposes,Bing Chat,0.2,0.2,purpose_diverse
-P00F8C96F,prosveta,3_tools_for_4_purposes,GitHub Copilot|Grammarly|Midjourney,1.0,0.2,purpose_diverse
-P025FFDE8,medicina,3_tools_for_6_purposes,ChatGPT|DALL-E|Gemini,1.0,0.2,purpose_diverse
-P029C7B7C,it_industrija,2_tools_for_4_purposes,Claude|Midjourney,0.8,0.2,purpose_diverse
-P018256E2,drustvene_nauke,4_tools_for_1_purposes,Bing Chat|Claude|DeepL|Gemini,0.4,0.2,tool_explorer
-P046D17AA,ostalo,2_tools_for_1_purposes,DALL-E|Gemini,0.2,0.2,tool_explorer
-P0595153F,prosveta,5_tools_for_2_purposes,Bing Chat|Gemini|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,tool_explorer
-P018256E2,kreativna_filmska,4_tools_for_1_purposes,Claude|Gemini|Grammarly|Midjourney,0.4,0.2,tool_explorer
-P0496E36A,ostalo,1_tools_for_3_purposes,Claude,0.3,0.2,purpose_diverse
-P036B3026,prosveta,1_tools_for_3_purposes,DALL-E,0.3,0.2,purpose_diverse
-P012FA467,ostalo,3_tools_for_2_purposes,Bing Chat|ChatGPT|Midjourney,0.6,0.2,tool_explorer
-P0595153F,medicina,3_tools_for_3_purposes,Bing Chat|ChatGPT|DeepL,0.9,0.2,balanced_user
-P047FE9B2,kreativna_filmska,4_tools_for_3_purposes,DeepL|Gemini|GitHub Copilot|Midjourney,1.0,0.2,tool_explorer
-P046D17AA,prosveta,1_tools_for_1_purposes,Bing Chat,0.1,0.2,focused_user
-P0495B383,it_industrija,5_tools_for_2_purposes,Bing Chat|ChatGPT|DeepL|Gemini|Midjourney,1.0,0.2,tool_explorer
-P03F0642E,ostalo,2_tools_for_3_purposes,DALL-E|Stable Diffusion,0.6,0.2,purpose_diverse
-P00B903A5,drustvene_nauke,3_tools_for_4_purposes,ChatGPT|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
-P012FA467,prosveta,3_tools_for_4_purposes,ChatGPT|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
-P01B19CCD,kreativna_filmska,2_tools_for_2_purposes,Bing Chat|Grammarly,0.4,0.2,balanced_user
-P017D8EE9,kreativna_filmska,3_tools_for_6_purposes,Bing Chat|DALL-E|Midjourney,1.0,0.2,purpose_diverse
-P0114CD62,drustvene_nauke,1_tools_for_2_purposes,Stable Diffusion,0.2,0.2,purpose_diverse
-P0114CD62,kreativna_filmska,3_tools_for_1_purposes,Bing Chat|DeepL|Midjourney,0.3,0.2,tool_explorer
-P00F8C96F,drustvene_nauke,2_tools_for_2_purposes,Claude|DALL-E,0.4,0.2,balanced_user
-P0114CD62,medicina,4_tools_for_3_purposes,Claude|DeepL|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
-P000EE049,prosveta,2_tools_for_2_purposes,Bing Chat|DALL-E,0.4,0.2,balanced_user
-P017D8EE9,kreativna_filmska,4_tools_for_1_purposes,Bing Chat|Claude|DALL-E|DeepL,0.4,0.2,tool_explorer
-P04195DC6,ostalo,4_tools_for_2_purposes,ChatGPT|GitHub Copilot|Grammarly|Midjourney,0.8,0.2,tool_explorer
-P0496E36A,ostalo,4_tools_for_4_purposes,Bing Chat|ChatGPT|Gemini|GitHub Copilot,1.0,0.2,power_user
-P0496E36A,kreativna_filmska,4_tools_for_1_purposes,GitHub Copilot|Grammarly|Midjourney|Stable Diffusion,0.4,0.2,tool_explorer
-P03464DE4,drustvene_nauke,5_tools_for_2_purposes,ChatGPT|Claude|DALL-E|Gemini|Grammarly,1.0,0.2,tool_explorer
-P011E1222,ostalo,1_tools_for_4_purposes,Grammarly,0.4,0.2,purpose_diverse
-P03F0642E,prosveta,2_tools_for_3_purposes,DeepL|Midjourney,0.6,0.2,purpose_diverse
-P047FE9B2,ostalo,4_tools_for_1_purposes,Bing Chat|DALL-E|GitHub Copilot|Stable Diffusion,0.4,0.2,tool_explorer
-P02435CD5,prosveta,3_tools_for_1_purposes,Claude|DALL-E|GitHub Copilot,0.3,0.2,tool_explorer
-P047FE9B2,prosveta,4_tools_for_5_purposes,Bing Chat|DeepL|Gemini|Stable Diffusion,1.0,0.2,power_user
-P0114CD62,ostalo,1_tools_for_3_purposes,Claude,0.3,0.2,purpose_diverse
-P03804940,medicina,5_tools_for_2_purposes,Bing Chat|Claude|DALL-E|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
-P03464DE4,prosveta,1_tools_for_6_purposes,ChatGPT,0.6,0.2,purpose_diverse
-P00741E4A,kreativna_filmska,2_tools_for_6_purposes,ChatGPT|Midjourney,1.0,0.2,purpose_diverse
-P0278F18B,prosveta,3_tools_for_2_purposes,Bing Chat|ChatGPT|Gemini,0.6,0.2,tool_explorer
-P03804940,prosveta,5_tools_for_5_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
-P04195DC6,prosveta,2_tools_for_6_purposes,ChatGPT|GitHub Copilot,1.0,0.2,purpose_diverse
-P018256E2,medicina,3_tools_for_1_purposes,DeepL|Midjourney|Stable Diffusion,0.3,0.2,tool_explorer
-P047FE9B2,drustvene_nauke,2_tools_for_1_purposes,DALL-E|DeepL,0.2,0.2,tool_explorer
-P012FA467,prosveta,3_tools_for_1_purposes,DALL-E|DeepL|Grammarly,0.3,0.2,tool_explorer
-P025FFDE8,ostalo,3_tools_for_1_purposes,Claude|Grammarly|Stable Diffusion,0.3,0.2,tool_explorer
-P04C3BE15,ostalo,4_tools_for_4_purposes,ChatGPT|Claude|Grammarly|Midjourney,1.0,0.2,power_user
-P029C7B7C,it_industrija,1_tools_for_4_purposes,Bing Chat,0.4,0.2,purpose_diverse
-P04688CBC,prosveta,4_tools_for_2_purposes,Bing Chat|Claude|GitHub Copilot|Stable Diffusion,0.8,0.2,tool_explorer
-P0595153F,drustvene_nauke,5_tools_for_5_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Midjourney,1.0,0.2,power_user
-P03464DE4,kreativna_filmska,5_tools_for_3_purposes,ChatGPT|DALL-E|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
-P011E1222,drustvene_nauke,2_tools_for_2_purposes,Bing Chat|Claude,0.4,0.2,balanced_user
-P0496E36A,prosveta,3_tools_for_4_purposes,ChatGPT|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
-P03804940,medicina,2_tools_for_2_purposes,DeepL|GitHub Copilot,0.4,0.2,balanced_user
-P03464DE4,medicina,3_tools_for_5_purposes,Bing Chat|ChatGPT|Grammarly,1.0,0.2,purpose_diverse
-P0278F18B,ostalo,2_tools_for_4_purposes,Gemini|Stable Diffusion,0.8,0.2,purpose_diverse
-P03F0642E,ostalo,1_tools_for_4_purposes,DeepL,0.4,0.2,purpose_diverse
-P0278F18B,it_industrija,1_tools_for_1_purposes,Claude,0.1,0.2,focused_user
-P0496E36A,kreativna_filmska,1_tools_for_2_purposes,DALL-E,0.2,0.2,purpose_diverse
-P000EE049,drustvene_nauke,3_tools_for_4_purposes,GitHub Copilot|Midjourney|Stable Diffusion,1.0,0.2,purpose_diverse
-P017D8EE9,it_industrija,1_tools_for_6_purposes,DALL-E,0.6,0.2,purpose_diverse
-P0595153F,medicina,1_tools_for_1_purposes,Gemini,0.1,0.2,focused_user
-P02435CD5,drustvene_nauke,3_tools_for_4_purposes,ChatGPT|DeepL|GitHub Copilot,1.0,0.2,purpose_diverse
-P00741E4A,it_industrija,5_tools_for_6_purposes,ChatGPT|DeepL|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,power_user
-P029C7B7C,kreativna_filmska,4_tools_for_1_purposes,Claude|DALL-E|GitHub Copilot|Midjourney,0.4,0.2,tool_explorer
-P017D8EE9,ostalo,4_tools_for_5_purposes,Claude|DeepL|Grammarly|Stable Diffusion,1.0,0.2,power_user
-P000EE049,ostalo,1_tools_for_4_purposes,ChatGPT,0.4,0.2,purpose_diverse
-P000EE049,it_industrija,1_tools_for_3_purposes,DALL-E,0.3,0.2,purpose_diverse
-P00DA41A9,drustvene_nauke,1_tools_for_1_purposes,Claude,0.1,0.2,focused_user
-P00741E4A,medicina,2_tools_for_4_purposes,Bing Chat|ChatGPT,0.8,0.2,purpose_diverse
-P01B19CCD,drustvene_nauke,2_tools_for_1_purposes,Claude|Gemini,0.2,0.2,tool_explorer
-P011E1222,kreativna_filmska,4_tools_for_1_purposes,Bing Chat|ChatGPT|Claude|DeepL,0.4,0.2,tool_explorer
-P0595153F,it_industrija,2_tools_for_1_purposes,Bing Chat|Stable Diffusion,0.2,0.2,tool_explorer
-P00F8C96F,drustvene_nauke,1_tools_for_4_purposes,DALL-E,0.4,0.2,purpose_diverse
-P03F0642E,medicina,4_tools_for_4_purposes,Claude|DALL-E|Gemini|Midjourney,1.0,0.2,power_user
-P04195DC6,prosveta,1_tools_for_4_purposes,Bing Chat,0.4,0.2,purpose_diverse
-P0287D9F0,it_industrija,1_tools_for_3_purposes,DALL-E,0.3,0.2,purpose_diverse
-P0278F18B,medicina,4_tools_for_5_purposes,Bing Chat|ChatGPT|Gemini|Grammarly,1.0,0.2,power_user
-P04195DC6,ostalo,2_tools_for_1_purposes,Claude|Midjourney,0.2,0.2,tool_explorer
-P0496E36A,kreativna_filmska,5_tools_for_2_purposes,Bing Chat|ChatGPT|DeepL|Gemini|GitHub Copilot,1.0,0.2,tool_explorer
-P03464DE4,kreativna_filmska,4_tools_for_3_purposes,Claude|DALL-E|Gemini|Grammarly,1.0,0.2,tool_explorer
-P029C7B7C,drustvene_nauke,1_tools_for_1_purposes,Midjourney,0.1,0.2,focused_user
-P0495B383,prosveta,1_tools_for_1_purposes,Grammarly,0.1,0.2,focused_user
-P00F8C96F,it_industrija,4_tools_for_2_purposes,ChatGPT|DALL-E|Gemini|Grammarly,0.8,0.2,tool_explorer
-P036B3026,ostalo,4_tools_for_1_purposes,Bing Chat|ChatGPT|GitHub Copilot|Grammarly,0.4,0.2,tool_explorer
-P011E1222,medicina,2_tools_for_6_purposes,Claude|Stable Diffusion,1.0,0.2,purpose_diverse
-P0496E36A,it_industrija,1_tools_for_4_purposes,DALL-E,0.4,0.2,purpose_diverse
-P012FA467,prosveta,5_tools_for_6_purposes,ChatGPT|Claude|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
-P047FE9B2,kreativna_filmska,1_tools_for_4_purposes,ChatGPT,0.4,0.2,purpose_diverse
-P029C7B7C,medicina,5_tools_for_5_purposes,Claude|DALL-E|Gemini|Grammarly|Midjourney,1.0,0.2,power_user
-P036B3026,kreativna_filmska,4_tools_for_2_purposes,ChatGPT|DeepL|GitHub Copilot|Stable Diffusion,0.8,0.2,tool_explorer
-P0495B383,prosveta,5_tools_for_1_purposes,Bing Chat|ChatGPT|DeepL|Gemini|Stable Diffusion,0.5,0.2,tool_explorer
-P02435CD5,drustvene_nauke,5_tools_for_1_purposes,Claude|Gemini|Grammarly|Midjourney|Stable Diffusion,0.5,0.2,tool_explorer
-P03804940,ostalo,1_tools_for_2_purposes,DeepL,0.2,0.2,purpose_diverse
-P01B19CCD,prosveta,5_tools_for_3_purposes,Claude|DALL-E|DeepL|GitHub Copilot|Midjourney,1.0,0.2,tool_explorer
-P04E108C8,prosveta,4_tools_for_3_purposes,ChatGPT|DeepL|Gemini|Midjourney,1.0,0.2,tool_explorer
-P00741E4A,kreativna_filmska,3_tools_for_4_purposes,DALL-E|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
-P012FA467,prosveta,2_tools_for_6_purposes,DALL-E|Grammarly,1.0,0.2,purpose_diverse
-P01B19CCD,kreativna_filmska,3_tools_for_4_purposes,ChatGPT|Claude|Gemini,1.0,0.2,purpose_diverse
-P03CEA52F,kreativna_filmska,4_tools_for_3_purposes,Claude|Gemini|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
-P04E108C8,prosveta,1_tools_for_5_purposes,Bing Chat,0.5,0.2,purpose_diverse
-P017D8EE9,it_industrija,2_tools_for_1_purposes,Gemini|GitHub Copilot,0.2,0.2,tool_explorer
-P03CEA52F,it_industrija,3_tools_for_3_purposes,ChatGPT|Claude|Gemini,0.9,0.2,balanced_user
-P00326448,ostalo,1_tools_for_6_purposes,Grammarly,0.6,0.2,purpose_diverse
-P025FFDE8,drustvene_nauke,2_tools_for_4_purposes,DALL-E|Midjourney,0.8,0.2,purpose_diverse
-P00DA41A9,medicina,3_tools_for_3_purposes,DeepL|Gemini|Grammarly,0.9,0.2,balanced_user
-P00B903A5,medicina,3_tools_for_2_purposes,Claude|Grammarly|Stable Diffusion,0.6,0.2,tool_explorer
-P04195DC6,medicina,4_tools_for_4_purposes,Bing Chat|DeepL|Grammarly|Midjourney,1.0,0.2,power_user
-P03804940,ostalo,3_tools_for_4_purposes,Bing Chat|ChatGPT|Midjourney,1.0,0.2,purpose_diverse
-P03804940,kreativna_filmska,1_tools_for_3_purposes,Bing Chat,0.3,0.2,purpose_diverse
-P00DA41A9,drustvene_nauke,4_tools_for_3_purposes,Gemini|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,tool_explorer
-P046D17AA,it_industrija,4_tools_for_3_purposes,ChatGPT|Gemini|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
-P000EE049,medicina,3_tools_for_2_purposes,DeepL|Midjourney|Stable Diffusion,0.6,0.2,tool_explorer
-P04E108C8,kreativna_filmska,5_tools_for_3_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
-P017D8EE9,medicina,1_tools_for_4_purposes,ChatGPT,0.4,0.2,purpose_diverse
-P00326448,prosveta,3_tools_for_3_purposes,DeepL|GitHub Copilot|Grammarly,0.9,0.2,balanced_user
-P0595153F,drustvene_nauke,1_tools_for_3_purposes,GitHub Copilot,0.3,0.2,purpose_diverse
-P0495B383,it_industrija,4_tools_for_3_purposes,ChatGPT|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
-P046D17AA,kreativna_filmska,2_tools_for_6_purposes,Gemini|Grammarly,1.0,0.2,purpose_diverse
-P0287D9F0,prosveta,4_tools_for_4_purposes,ChatGPT|DALL-E|Gemini|Midjourney,1.0,0.2,power_user
-P012FA467,drustvene_nauke,1_tools_for_1_purposes,ChatGPT,0.1,0.2,focused_user
-P0287D9F0,drustvene_nauke,5_tools_for_3_purposes,Bing Chat|Gemini|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,tool_explorer
-P02435CD5,medicina,4_tools_for_4_purposes,Bing Chat|ChatGPT|DALL-E|Grammarly,1.0,0.2,power_user
-P0595153F,medicina,2_tools_for_1_purposes,DeepL|Gemini,0.2,0.2,tool_explorer
-P047FE9B2,it_industrija,2_tools_for_1_purposes,Bing Chat|ChatGPT,0.2,0.2,tool_explorer
-P04E108C8,ostalo,5_tools_for_3_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
-P018256E2,drustvene_nauke,3_tools_for_6_purposes,DALL-E|Gemini|Grammarly,1.0,0.2,purpose_diverse
-P012FA467,drustvene_nauke,1_tools_for_2_purposes,Gemini,0.2,0.2,purpose_diverse
-P00F8C96F,drustvene_nauke,3_tools_for_3_purposes,Bing Chat|Midjourney|Stable Diffusion,0.9,0.2,balanced_user
-P03F0642E,prosveta,2_tools_for_4_purposes,ChatGPT|DeepL,0.8,0.2,purpose_diverse
-P000EE049,drustvene_nauke,2_tools_for_4_purposes,Bing Chat|Midjourney,0.8,0.2,purpose_diverse
-P046D17AA,kreativna_filmska,1_tools_for_6_purposes,GitHub Copilot,0.6,0.2,purpose_diverse
-P04688CBC,prosveta,5_tools_for_6_purposes,Bing Chat|DeepL|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,power_user
-P0287D9F0,it_industrija,5_tools_for_3_purposes,Claude|DALL-E|Gemini|Grammarly|Stable Diffusion,1.0,0.2,tool_explorer
-P000EE049,prosveta,3_tools_for_2_purposes,Bing Chat|Claude|DeepL,0.6,0.2,tool_explorer
-P00F8C96F,prosveta,5_tools_for_6_purposes,DALL-E|DeepL|Gemini|Grammarly|Midjourney,1.0,0.2,power_user
-P025FFDE8,prosveta,2_tools_for_6_purposes,ChatGPT|Grammarly,1.0,0.2,purpose_diverse
-P0287D9F0,medicina,5_tools_for_2_purposes,Bing Chat|ChatGPT|DeepL|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
-P00F8C96F,medicina,3_tools_for_6_purposes,Bing Chat|Gemini|Stable Diffusion,1.0,0.2,purpose_diverse
-P025FFDE8,prosveta,4_tools_for_2_purposes,Bing Chat|ChatGPT|DALL-E|GitHub Copilot,0.8,0.2,tool_explorer
-P03CEA52F,it_industrija,1_tools_for_4_purposes,GitHub Copilot,0.4,0.2,purpose_diverse
-P0114CD62,it_industrija,1_tools_for_1_purposes,Bing Chat,0.1,0.2,focused_user
-P03CEA52F,it_industrija,5_tools_for_2_purposes,Bing Chat|Claude|DALL-E|Grammarly|Midjourney,1.0,0.2,tool_explorer
-P04C3BE15,medicina,3_tools_for_4_purposes,DALL-E|DeepL|Grammarly,1.0,0.2,purpose_diverse
-P00DA41A9,ostalo,3_tools_for_1_purposes,ChatGPT|DALL-E|Stable Diffusion,0.3,0.2,tool_explorer
-P046D17AA,it_industrija,4_tools_for_1_purposes,Bing Chat|ChatGPT|Claude|DALL-E,0.4,0.2,tool_explorer
-P036B3026,prosveta,3_tools_for_5_purposes,Bing Chat|Gemini|Grammarly,1.0,0.2,purpose_diverse
-P0287D9F0,drustvene_nauke,1_tools_for_3_purposes,Bing Chat,0.3,0.2,purpose_diverse
-P00B903A5,it_industrija,2_tools_for_3_purposes,DeepL|Grammarly,0.6,0.2,purpose_diverse
-P03CEA52F,drustvene_nauke,1_tools_for_4_purposes,Stable Diffusion,0.4,0.2,purpose_diverse
-P03464DE4,kreativna_filmska,5_tools_for_3_purposes,Bing Chat|ChatGPT|Claude|Gemini|Grammarly,1.0,0.2,tool_explorer
-P025FFDE8,kreativna_filmska,4_tools_for_1_purposes,Bing Chat|DALL-E|Gemini|Midjourney,0.4,0.2,tool_explorer
-P04195DC6,ostalo,3_tools_for_6_purposes,Bing Chat|ChatGPT|Midjourney,1.0,0.2,purpose_diverse
-P00326448,it_industrija,4_tools_for_4_purposes,Bing Chat|ChatGPT|Claude|DALL-E,1.0,0.2,power_user
-P046D17AA,it_industrija,3_tools_for_3_purposes,Bing Chat|DALL-E|DeepL,0.9,0.2,balanced_user
-P04195DC6,prosveta,4_tools_for_2_purposes,Claude|DeepL|Grammarly|Stable Diffusion,0.8,0.2,tool_explorer
-P03464DE4,it_industrija,1_tools_for_1_purposes,DeepL,0.1,0.2,focused_user
-P03F0642E,kreativna_filmska,4_tools_for_2_purposes,Claude|Gemini|GitHub Copilot|Stable Diffusion,0.8,0.2,tool_explorer
-P0495B383,kreativna_filmska,5_tools_for_1_purposes,Bing Chat|DALL-E|DeepL|Gemini|GitHub Copilot,0.5,0.2,tool_explorer
-P00741E4A,prosveta,4_tools_for_2_purposes,ChatGPT|Claude|DeepL|Stable Diffusion,0.8,0.2,tool_explorer
-P00DA41A9,prosveta,2_tools_for_6_purposes,DALL-E|Midjourney,1.0,0.2,purpose_diverse
-P03804940,drustvene_nauke,2_tools_for_2_purposes,Claude|DeepL,0.4,0.2,balanced_user
-P03464DE4,kreativna_filmska,5_tools_for_5_purposes,ChatGPT|Claude|DeepL|Midjourney|Stable Diffusion,1.0,0.2,power_user
-P036B3026,ostalo,3_tools_for_2_purposes,DeepL|Gemini|Grammarly,0.6,0.2,tool_explorer
-P00B903A5,medicina,2_tools_for_5_purposes,Midjourney|Stable Diffusion,1.0,0.2,purpose_diverse
-P04C3BE15,it_industrija,5_tools_for_2_purposes,Claude|DALL-E|DeepL|Gemini|Grammarly,1.0,0.2,tool_explorer
-P00B903A5,drustvene_nauke,2_tools_for_3_purposes,Claude|GitHub Copilot,0.6,0.2,purpose_diverse
-P012FA467,ostalo,4_tools_for_6_purposes,Claude|DALL-E|Gemini|Stable Diffusion,1.0,0.2,power_user
-P00F8C96F,kreativna_filmska,3_tools_for_2_purposes,DALL-E|Gemini|GitHub Copilot,0.6,0.2,tool_explorer
-P025FFDE8,ostalo,4_tools_for_4_purposes,Claude|DALL-E|GitHub Copilot|Stable Diffusion,1.0,0.2,power_user
-P04688CBC,kreativna_filmska,1_tools_for_3_purposes,ChatGPT,0.3,0.2,purpose_diverse
-P047FE9B2,medicina,1_tools_for_1_purposes,DeepL,0.1,0.2,focused_user
-P036B3026,prosveta,4_tools_for_6_purposes,Claude|DeepL|Midjourney|Stable Diffusion,1.0,0.2,power_user
-P029C7B7C,ostalo,2_tools_for_6_purposes,DeepL|Gemini,1.0,0.2,purpose_diverse
-P0114CD62,it_industrija,5_tools_for_1_purposes,Bing Chat|Claude|GitHub Copilot|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
-P029C7B7C,kreativna_filmska,5_tools_for_4_purposes,Bing Chat|ChatGPT|DALL-E|DeepL|Gemini,1.0,0.2,power_user
-P0495B383,drustvene_nauke,2_tools_for_1_purposes,Gemini|GitHub Copilot,0.2,0.2,tool_explorer
-P00F8C96F,ostalo,5_tools_for_1_purposes,Claude|GitHub Copilot|Grammarly|Midjourney|Stable Diffusion,0.5,0.2,tool_explorer
-P0114CD62,ostalo,2_tools_for_5_purposes,DeepL|Grammarly,1.0,0.2,purpose_diverse
-P01B19CCD,drustvene_nauke,2_tools_for_4_purposes,Claude|Grammarly,0.8,0.2,purpose_diverse
-P046D17AA,prosveta,2_tools_for_3_purposes,Bing Chat|DeepL,0.6,0.2,purpose_diverse
-P000EE049,kreativna_filmska,3_tools_for_3_purposes,DALL-E|DeepL|Grammarly,0.9,0.2,balanced_user
-P04195DC6,kreativna_filmska,2_tools_for_4_purposes,ChatGPT|DALL-E,0.8,0.2,purpose_diverse
-P0496E36A,drustvene_nauke,3_tools_for_5_purposes,ChatGPT|DALL-E|DeepL,1.0,0.2,purpose_diverse
-P017D8EE9,medicina,3_tools_for_1_purposes,GitHub Copilot|Midjourney|Stable Diffusion,0.3,0.2,tool_explorer
-P012FA467,prosveta,2_tools_for_2_purposes,Gemini|GitHub Copilot,0.4,0.2,balanced_user
-P036B3026,ostalo,2_tools_for_3_purposes,Bing Chat|DALL-E,0.6,0.2,purpose_diverse
-P012FA467,it_industrija,5_tools_for_4_purposes,ChatGPT|Claude|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
-P036B3026,it_industrija,4_tools_for_1_purposes,Bing Chat|DeepL|Grammarly|Stable Diffusion,0.4,0.2,tool_explorer
-P025FFDE8,prosveta,3_tools_for_4_purposes,DeepL|GitHub Copilot|Midjourney,1.0,0.2,purpose_diverse
-P00DA41A9,drustvene_nauke,1_tools_for_1_purposes,Grammarly,0.1,0.2,focused_user
-P017D8EE9,prosveta,4_tools_for_1_purposes,Bing Chat|DALL-E|DeepL|Grammarly,0.4,0.2,tool_explorer
-P00DA41A9,prosveta,1_tools_for_1_purposes,Gemini,0.1,0.2,focused_user
-P036B3026,kreativna_filmska,5_tools_for_1_purposes,Bing Chat|ChatGPT|DeepL|GitHub Copilot|Stable Diffusion,0.5,0.2,tool_explorer
-P011E1222,prosveta,5_tools_for_4_purposes,Claude|DALL-E|Gemini|Grammarly|Stable Diffusion,1.0,0.2,power_user
-P01B19CCD,kreativna_filmska,2_tools_for_3_purposes,DeepL|Grammarly,0.6,0.2,purpose_diverse
-P012FA467,ostalo,1_tools_for_5_purposes,DeepL,0.5,0.2,purpose_diverse
-P046D17AA,drustvene_nauke,2_tools_for_2_purposes,Bing Chat|Stable Diffusion,0.4,0.2,balanced_user
-P02435CD5,drustvene_nauke,1_tools_for_2_purposes,Claude,0.2,0.2,purpose_diverse
-P02435CD5,medicina,1_tools_for_3_purposes,DeepL,0.3,0.2,purpose_diverse
-P0495B383,prosveta,4_tools_for_2_purposes,ChatGPT|GitHub Copilot|Grammarly|Stable Diffusion,0.8,0.2,tool_explorer
-P0287D9F0,medicina,5_tools_for_6_purposes,Bing Chat|Claude|Gemini|Grammarly|Stable Diffusion,1.0,0.2,power_user
-P04E108C8,kreativna_filmska,1_tools_for_2_purposes,Bing Chat,0.2,0.2,purpose_diverse
-P0278F18B,kreativna_filmska,5_tools_for_4_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,power_user
-P03CEA52F,medicina,4_tools_for_1_purposes,Bing Chat|ChatGPT|DALL-E|Grammarly,0.4,0.2,tool_explorer
-P047FE9B2,kreativna_filmska,2_tools_for_2_purposes,Claude|Gemini,0.4,0.2,balanced_user
-P00326448,it_industrija,4_tools_for_3_purposes,DeepL|GitHub Copilot|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
-P017D8EE9,prosveta,2_tools_for_6_purposes,Bing Chat|GitHub Copilot,1.0,0.2,purpose_diverse
-P03CEA52F,kreativna_filmska,2_tools_for_3_purposes,Bing Chat|ChatGPT,0.6,0.2,purpose_diverse
-P04E108C8,prosveta,4_tools_for_2_purposes,Bing Chat|Claude|Gemini|GitHub Copilot,0.8,0.2,tool_explorer
-P0595153F,it_industrija,1_tools_for_4_purposes,Gemini,0.4,0.2,purpose_diverse
-P0496E36A,drustvene_nauke,2_tools_for_2_purposes,GitHub Copilot|Stable Diffusion,0.4,0.2,balanced_user
-P01DCFAAF,it_industrija,2_tools_for_1_purposes,ChatGPT|Google Gemini (ex Bard),0.2,0.2,tool_explorer
+P018307E8,prosveta,1_tools_for_2_purposes,DeepL,0.2,0.2,purpose_diverse
+P025F3314,prosveta,1_tools_for_2_purposes,DeepL,0.2,0.2,purpose_diverse
+P02E12861,medicina,5_tools_for_4_purposes,Bing Chat|ChatGPT|DeepL|GitHub Copilot|Midjourney,1.0,0.2,power_user
+P03D2D5F9,kreativna_filmska,4_tools_for_2_purposes,Bing Chat|ChatGPT|Grammarly|Midjourney,0.8,0.2,tool_explorer
+P050B826B,medicina,5_tools_for_4_purposes,Bing Chat|ChatGPT|DeepL|GitHub Copilot|Midjourney,1.0,0.2,power_user
+P0516CF46,kreativna_filmska,4_tools_for_2_purposes,Bing Chat|ChatGPT|Grammarly|Midjourney,0.8,0.2,tool_explorer
+P0530D0CA,medicina,3_tools_for_4_purposes,DALL-E|Grammarly|Midjourney,1.0,0.2,purpose_diverse
+P05F234CB,medicina,3_tools_for_4_purposes,DALL-E|Grammarly|Midjourney,1.0,0.2,purpose_diverse
+P02D01E5A,prosveta,5_tools_for_1_purposes,Bing Chat|ChatGPT|Claude|DeepL|Midjourney,0.5,0.2,tool_explorer
+P0108E85C,prosveta,5_tools_for_1_purposes,Bing Chat|ChatGPT|Claude|DeepL|Midjourney,0.5,0.2,tool_explorer
+P04060DE4,kreativna_filmska,2_tools_for_3_purposes,Claude|DALL-E,0.6,0.2,purpose_diverse
+P00B265F2,kreativna_filmska,2_tools_for_3_purposes,Claude|DALL-E,0.6,0.2,purpose_diverse
+P02303954,prosveta,3_tools_for_3_purposes,Bing Chat|DALL-E|Gemini,0.9,0.2,balanced_user
+P00682A78,prosveta,3_tools_for_3_purposes,Bing Chat|DALL-E|Gemini,0.9,0.2,balanced_user
+P0516CF46,kreativna_filmska,5_tools_for_6_purposes,Bing Chat|Claude|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
+P0516CF46,prosveta,2_tools_for_4_purposes,DeepL|Grammarly,0.8,0.2,purpose_diverse
+P03D2D5F9,kreativna_filmska,5_tools_for_6_purposes,Bing Chat|Claude|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
+P00AC35ED,prosveta,5_tools_for_2_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
+P03D2D5F9,prosveta,2_tools_for_4_purposes,DeepL|Grammarly,0.8,0.2,purpose_diverse
+P0108E85C,ostalo,4_tools_for_1_purposes,DeepL|GitHub Copilot|Midjourney|Stable Diffusion,0.4,0.2,tool_explorer
+P0404C0C5,prosveta,5_tools_for_2_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
+P02B4F499,medicina,2_tools_for_6_purposes,Claude|Gemini,1.0,0.2,purpose_diverse
+P02D01E5A,ostalo,4_tools_for_1_purposes,DeepL|GitHub Copilot|Midjourney|Stable Diffusion,0.4,0.2,tool_explorer
+P05824668,it_industrija,4_tools_for_6_purposes,Bing Chat|ChatGPT|DeepL|Grammarly,1.0,0.2,power_user
+P04698356,drustvene_nauke,4_tools_for_3_purposes,DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
+P011E168C,medicina,2_tools_for_6_purposes,Claude|Gemini,1.0,0.2,purpose_diverse
+P02303954,drustvene_nauke,5_tools_for_3_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
+P00B265F2,medicina,1_tools_for_1_purposes,Bing Chat,0.1,0.2,focused_user
+P0112CC39,it_industrija,4_tools_for_6_purposes,Bing Chat|ChatGPT|DeepL|Grammarly,1.0,0.2,power_user
+P008B05EA,it_industrija,4_tools_for_2_purposes,Claude|DeepL|GitHub Copilot|Grammarly,0.8,0.2,tool_explorer
+P01F702FC,ostalo,5_tools_for_6_purposes,Claude|DALL-E|DeepL|Gemini|GitHub Copilot,1.0,0.2,power_user
+P02240367,drustvene_nauke,4_tools_for_3_purposes,DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
+P02BCFE21,medicina,1_tools_for_3_purposes,ChatGPT,0.3,0.2,purpose_diverse
+P00682A78,drustvene_nauke,5_tools_for_3_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
+P04060DE4,medicina,1_tools_for_1_purposes,Bing Chat,0.1,0.2,focused_user
+P00C21DC6,prosveta,2_tools_for_4_purposes,GitHub Copilot|Grammarly,0.8,0.2,purpose_diverse
+P02EEA0B5,it_industrija,4_tools_for_2_purposes,Claude|DeepL|GitHub Copilot|Grammarly,0.8,0.2,tool_explorer
+P04698356,drustvene_nauke,4_tools_for_1_purposes,ChatGPT|Grammarly|Midjourney|Stable Diffusion,0.4,0.2,tool_explorer
+P05824668,ostalo,5_tools_for_4_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
+P05705A4C,kreativna_filmska,2_tools_for_4_purposes,Claude|Gemini,0.8,0.2,purpose_diverse
+P01F702FC,it_industrija,3_tools_for_3_purposes,Claude|Gemini|Stable Diffusion,0.9,0.2,balanced_user
+P01692100,prosveta,5_tools_for_1_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,0.5,0.2,tool_explorer
+P04EC5864,ostalo,2_tools_for_1_purposes,DALL-E|Grammarly,0.2,0.2,tool_explorer
+P04698356,ostalo,1_tools_for_1_purposes,Stable Diffusion,0.1,0.2,focused_user
+P01F702FC,prosveta,1_tools_for_2_purposes,GitHub Copilot,0.2,0.2,purpose_diverse
+P0516CF46,ostalo,4_tools_for_5_purposes,Bing Chat|ChatGPT|Grammarly|Stable Diffusion,1.0,0.2,power_user
+P05824668,it_industrija,5_tools_for_1_purposes,DALL-E|DeepL|Gemini|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
+P02BBE61C,medicina,5_tools_for_3_purposes,ChatGPT|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
+P051BCC85,medicina,3_tools_for_6_purposes,Bing Chat|GitHub Copilot|Grammarly,1.0,0.2,purpose_diverse
+P0031AFB2,drustvene_nauke,2_tools_for_2_purposes,DeepL|Gemini,0.4,0.2,balanced_user
+P0108E85C,kreativna_filmska,2_tools_for_2_purposes,Bing Chat|Grammarly,0.4,0.2,balanced_user
+P018307E8,medicina,5_tools_for_5_purposes,ChatGPT|Gemini|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,power_user
+P05F234CB,it_industrija,5_tools_for_4_purposes,Bing Chat|DeepL|GitHub Copilot|Grammarly|Stable Diffusion,1.0,0.2,power_user
+P05F234CB,medicina,2_tools_for_3_purposes,DeepL|Grammarly,0.6,0.2,purpose_diverse
+P02303954,ostalo,1_tools_for_4_purposes,Midjourney,0.4,0.2,purpose_diverse
+P00C21DC6,ostalo,1_tools_for_6_purposes,Bing Chat,0.6,0.2,purpose_diverse
+P05289CEA,it_industrija,3_tools_for_2_purposes,ChatGPT|GitHub Copilot|Grammarly,0.6,0.2,tool_explorer
+P03FBF6AD,prosveta,1_tools_for_2_purposes,Grammarly,0.2,0.2,purpose_diverse
+P0031AFB2,prosveta,4_tools_for_1_purposes,ChatGPT|DeepL|GitHub Copilot|Grammarly,0.4,0.2,tool_explorer
+P019283F4,medicina,2_tools_for_2_purposes,GitHub Copilot|Midjourney,0.4,0.2,balanced_user
+P0108E85C,prosveta,3_tools_for_1_purposes,ChatGPT|DALL-E|Gemini,0.3,0.2,tool_explorer
+P01949C3C,drustvene_nauke,3_tools_for_3_purposes,ChatGPT|Gemini|GitHub Copilot,0.9,0.2,balanced_user
+P0237D98B,prosveta,4_tools_for_6_purposes,Gemini|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,power_user
+P008B05EA,medicina,3_tools_for_5_purposes,ChatGPT|Claude|DALL-E,1.0,0.2,purpose_diverse
+P00B265F2,kreativna_filmska,5_tools_for_1_purposes,DALL-E|DeepL|GitHub Copilot|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
+P02B4F499,drustvene_nauke,3_tools_for_6_purposes,Gemini|GitHub Copilot|Midjourney,1.0,0.2,purpose_diverse
+P02BBE61C,medicina,1_tools_for_1_purposes,Claude,0.1,0.2,focused_user
+P01FB7C08,drustvene_nauke,4_tools_for_2_purposes,ChatGPT|Claude|Grammarly|Midjourney,0.8,0.2,tool_explorer
+P05244540,medicina,1_tools_for_1_purposes,DALL-E,0.1,0.2,focused_user
+P00E7F197,kreativna_filmska,2_tools_for_1_purposes,Claude|Grammarly,0.2,0.2,tool_explorer
+P02BCFE21,ostalo,5_tools_for_6_purposes,Bing Chat|Claude|DeepL|Gemini|Grammarly,1.0,0.2,power_user
+P0031AFB2,drustvene_nauke,5_tools_for_2_purposes,Bing Chat|ChatGPT|Claude|DALL-E|GitHub Copilot,1.0,0.2,tool_explorer
+P024F321D,kreativna_filmska,3_tools_for_3_purposes,ChatGPT|GitHub Copilot|Stable Diffusion,0.9,0.2,balanced_user
+P0031AFB2,kreativna_filmska,3_tools_for_2_purposes,Gemini|Grammarly|Midjourney,0.6,0.2,tool_explorer
+P03FBF6AD,ostalo,1_tools_for_3_purposes,ChatGPT,0.3,0.2,purpose_diverse
+P01949C3C,kreativna_filmska,4_tools_for_5_purposes,Bing Chat|Gemini|GitHub Copilot|Grammarly,1.0,0.2,power_user
+P05244540,prosveta,5_tools_for_5_purposes,Bing Chat|ChatGPT|Claude|DALL-E|Grammarly,1.0,0.2,power_user
+P019283F4,it_industrija,3_tools_for_1_purposes,Bing Chat|Grammarly|Stable Diffusion,0.3,0.2,tool_explorer
+P00B265F2,it_industrija,5_tools_for_1_purposes,Bing Chat|DeepL|Gemini|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
+P0516CF46,ostalo,2_tools_for_1_purposes,Bing Chat|Gemini,0.2,0.2,tool_explorer
+P00C21DC6,medicina,4_tools_for_6_purposes,Claude|GitHub Copilot|Midjourney|Stable Diffusion,1.0,0.2,power_user
+P05705A4C,ostalo,4_tools_for_5_purposes,Bing Chat|Claude|Grammarly|Midjourney,1.0,0.2,power_user
+P0031AFB2,medicina,3_tools_for_2_purposes,DALL-E|Gemini|GitHub Copilot,0.6,0.2,tool_explorer
+P008B05EA,drustvene_nauke,4_tools_for_3_purposes,Bing Chat|ChatGPT|Claude|GitHub Copilot,1.0,0.2,tool_explorer
+P05824668,medicina,4_tools_for_6_purposes,Bing Chat|DALL-E|DeepL|Grammarly,1.0,0.2,power_user
+P00C21DC6,drustvene_nauke,3_tools_for_3_purposes,Claude|DeepL|Grammarly,0.9,0.2,balanced_user
+P00AC35ED,kreativna_filmska,5_tools_for_1_purposes,Bing Chat|ChatGPT|Grammarly|Midjourney|Stable Diffusion,0.5,0.2,tool_explorer
+P050B826B,medicina,2_tools_for_4_purposes,GitHub Copilot|Grammarly,0.8,0.2,purpose_diverse
+P04EC5864,it_industrija,3_tools_for_3_purposes,Claude|DeepL|Grammarly,0.9,0.2,balanced_user
+P0108E85C,kreativna_filmska,4_tools_for_5_purposes,Bing Chat|ChatGPT|DALL-E|GitHub Copilot,1.0,0.2,power_user
+P05705A4C,prosveta,4_tools_for_4_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot,1.0,0.2,power_user
+P018307E8,medicina,3_tools_for_4_purposes,Claude|Grammarly|Stable Diffusion,1.0,0.2,purpose_diverse
+P0031AFB2,drustvene_nauke,5_tools_for_4_purposes,Bing Chat|Claude|DeepL|Gemini|GitHub Copilot,1.0,0.2,power_user
+P0516CF46,prosveta,4_tools_for_4_purposes,DALL-E|DeepL|Gemini|Midjourney,1.0,0.2,power_user
+P05289CEA,kreativna_filmska,4_tools_for_3_purposes,Claude|DeepL|Gemini|GitHub Copilot,1.0,0.2,tool_explorer
+P00C21DC6,drustvene_nauke,4_tools_for_6_purposes,Bing Chat|ChatGPT|Midjourney|Stable Diffusion,1.0,0.2,power_user
+P01949C3C,ostalo,2_tools_for_5_purposes,ChatGPT|Gemini,1.0,0.2,purpose_diverse
+P00C21DC6,prosveta,3_tools_for_4_purposes,Bing Chat|DeepL|Midjourney,1.0,0.2,purpose_diverse
+P023923EB,drustvene_nauke,3_tools_for_2_purposes,Grammarly|Midjourney|Stable Diffusion,0.6,0.2,tool_explorer
+P02BBE61C,kreativna_filmska,5_tools_for_2_purposes,ChatGPT|Claude|Gemini|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
+P019283F4,drustvene_nauke,3_tools_for_6_purposes,Bing Chat|GitHub Copilot|Grammarly,1.0,0.2,purpose_diverse
+P019283F4,kreativna_filmska,2_tools_for_1_purposes,DALL-E|DeepL,0.2,0.2,tool_explorer
+P00C21DC6,drustvene_nauke,3_tools_for_2_purposes,ChatGPT|Claude|Midjourney,0.6,0.2,tool_explorer
+P018307E8,it_industrija,3_tools_for_6_purposes,Gemini|Midjourney|Stable Diffusion,1.0,0.2,purpose_diverse
+P00C21DC6,it_industrija,5_tools_for_1_purposes,ChatGPT|Claude|DeepL|Gemini|GitHub Copilot,0.5,0.2,tool_explorer
+P0237D98B,drustvene_nauke,1_tools_for_2_purposes,Bing Chat,0.2,0.2,purpose_diverse
+P051BCC85,prosveta,3_tools_for_4_purposes,GitHub Copilot|Grammarly|Midjourney,1.0,0.2,purpose_diverse
+P0031AFB2,medicina,3_tools_for_6_purposes,ChatGPT|DALL-E|Gemini,1.0,0.2,purpose_diverse
+P01F702FC,it_industrija,2_tools_for_4_purposes,Claude|Midjourney,0.8,0.2,purpose_diverse
+P00B265F2,drustvene_nauke,4_tools_for_1_purposes,Bing Chat|Claude|DeepL|Gemini,0.4,0.2,tool_explorer
+P00C21DC6,ostalo,2_tools_for_1_purposes,DALL-E|Gemini,0.2,0.2,tool_explorer
+P00AC35ED,prosveta,5_tools_for_2_purposes,Bing Chat|Gemini|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,tool_explorer
+P00B265F2,kreativna_filmska,4_tools_for_1_purposes,Claude|Gemini|Grammarly|Midjourney,0.4,0.2,tool_explorer
+P008B05EA,ostalo,1_tools_for_3_purposes,Claude,0.3,0.2,purpose_diverse
+P01FB7C08,prosveta,1_tools_for_3_purposes,DALL-E,0.3,0.2,purpose_diverse
+P02B4F499,ostalo,3_tools_for_2_purposes,Bing Chat|ChatGPT|Midjourney,0.6,0.2,tool_explorer
+P00AC35ED,medicina,3_tools_for_3_purposes,Bing Chat|ChatGPT|DeepL,0.9,0.2,balanced_user
+P05705A4C,kreativna_filmska,4_tools_for_3_purposes,DeepL|Gemini|GitHub Copilot|Midjourney,1.0,0.2,tool_explorer
+P00C21DC6,prosveta,1_tools_for_1_purposes,Bing Chat,0.1,0.2,focused_user
+P04698356,it_industrija,5_tools_for_2_purposes,Bing Chat|ChatGPT|DeepL|Gemini|Midjourney,1.0,0.2,tool_explorer
+P05F234CB,ostalo,2_tools_for_3_purposes,DALL-E|Stable Diffusion,0.6,0.2,purpose_diverse
+P05289CEA,drustvene_nauke,3_tools_for_4_purposes,ChatGPT|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
+P02B4F499,prosveta,3_tools_for_4_purposes,ChatGPT|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
+P04EC5864,kreativna_filmska,2_tools_for_2_purposes,Bing Chat|Grammarly,0.4,0.2,balanced_user
+P019283F4,kreativna_filmska,3_tools_for_6_purposes,Bing Chat|DALL-E|Midjourney,1.0,0.2,purpose_diverse
+P05244540,drustvene_nauke,1_tools_for_2_purposes,Stable Diffusion,0.2,0.2,purpose_diverse
+P05244540,kreativna_filmska,3_tools_for_1_purposes,Bing Chat|DeepL|Midjourney,0.3,0.2,tool_explorer
+P051BCC85,drustvene_nauke,2_tools_for_2_purposes,Claude|DALL-E,0.4,0.2,balanced_user
+P05244540,medicina,4_tools_for_3_purposes,Claude|DeepL|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
+P023923EB,prosveta,2_tools_for_2_purposes,Bing Chat|DALL-E,0.4,0.2,balanced_user
+P019283F4,kreativna_filmska,4_tools_for_1_purposes,Bing Chat|Claude|DALL-E|DeepL,0.4,0.2,tool_explorer
+P0108E85C,ostalo,4_tools_for_2_purposes,ChatGPT|GitHub Copilot|Grammarly|Midjourney,0.8,0.2,tool_explorer
+P008B05EA,ostalo,4_tools_for_4_purposes,Bing Chat|ChatGPT|Gemini|GitHub Copilot,1.0,0.2,power_user
+P008B05EA,kreativna_filmska,4_tools_for_1_purposes,GitHub Copilot|Grammarly|Midjourney|Stable Diffusion,0.4,0.2,tool_explorer
+P02BCFE21,drustvene_nauke,5_tools_for_2_purposes,ChatGPT|Claude|DALL-E|Gemini|Grammarly,1.0,0.2,tool_explorer
+P01949C3C,ostalo,1_tools_for_4_purposes,Grammarly,0.4,0.2,purpose_diverse
+P05F234CB,prosveta,2_tools_for_3_purposes,DeepL|Midjourney,0.6,0.2,purpose_diverse
+P05705A4C,ostalo,4_tools_for_1_purposes,Bing Chat|DALL-E|GitHub Copilot|Stable Diffusion,0.4,0.2,tool_explorer
+P018307E8,prosveta,3_tools_for_1_purposes,Claude|DALL-E|GitHub Copilot,0.3,0.2,tool_explorer
+P05705A4C,prosveta,4_tools_for_5_purposes,Bing Chat|DeepL|Gemini|Stable Diffusion,1.0,0.2,power_user
+P05244540,ostalo,1_tools_for_3_purposes,Claude,0.3,0.2,purpose_diverse
+P0516CF46,medicina,5_tools_for_2_purposes,Bing Chat|Claude|DALL-E|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
+P02BCFE21,prosveta,1_tools_for_6_purposes,ChatGPT,0.6,0.2,purpose_diverse
+P05824668,kreativna_filmska,2_tools_for_6_purposes,ChatGPT|Midjourney,1.0,0.2,purpose_diverse
+P050B826B,prosveta,3_tools_for_2_purposes,Bing Chat|ChatGPT|Gemini,0.6,0.2,tool_explorer
+P0516CF46,prosveta,5_tools_for_5_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
+P0108E85C,prosveta,2_tools_for_6_purposes,ChatGPT|GitHub Copilot,1.0,0.2,purpose_diverse
+P00B265F2,medicina,3_tools_for_1_purposes,DeepL|Midjourney|Stable Diffusion,0.3,0.2,tool_explorer
+P05705A4C,drustvene_nauke,2_tools_for_1_purposes,DALL-E|DeepL,0.2,0.2,tool_explorer
+P02B4F499,prosveta,3_tools_for_1_purposes,DALL-E|DeepL|Grammarly,0.3,0.2,tool_explorer
+P0031AFB2,ostalo,3_tools_for_1_purposes,Claude|Grammarly|Stable Diffusion,0.3,0.2,tool_explorer
+P01692100,ostalo,4_tools_for_4_purposes,ChatGPT|Claude|Grammarly|Midjourney,1.0,0.2,power_user
+P01F702FC,it_industrija,1_tools_for_4_purposes,Bing Chat,0.4,0.2,purpose_diverse
+P03FBF6AD,prosveta,4_tools_for_2_purposes,Bing Chat|Claude|GitHub Copilot|Stable Diffusion,0.8,0.2,tool_explorer
+P00AC35ED,drustvene_nauke,5_tools_for_5_purposes,Bing Chat|DALL-E|DeepL|GitHub Copilot|Midjourney,1.0,0.2,power_user
+P02BCFE21,kreativna_filmska,5_tools_for_3_purposes,ChatGPT|DALL-E|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
+P01949C3C,drustvene_nauke,2_tools_for_2_purposes,Bing Chat|Claude,0.4,0.2,balanced_user
+P008B05EA,prosveta,3_tools_for_4_purposes,ChatGPT|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
+P0516CF46,medicina,2_tools_for_2_purposes,DeepL|GitHub Copilot,0.4,0.2,balanced_user
+P02BCFE21,medicina,3_tools_for_5_purposes,Bing Chat|ChatGPT|Grammarly,1.0,0.2,purpose_diverse
+P050B826B,ostalo,2_tools_for_4_purposes,Gemini|Stable Diffusion,0.8,0.2,purpose_diverse
+P05F234CB,ostalo,1_tools_for_4_purposes,DeepL,0.4,0.2,purpose_diverse
+P050B826B,it_industrija,1_tools_for_1_purposes,Claude,0.1,0.2,focused_user
+P008B05EA,kreativna_filmska,1_tools_for_2_purposes,DALL-E,0.2,0.2,purpose_diverse
+P023923EB,drustvene_nauke,3_tools_for_4_purposes,GitHub Copilot|Midjourney|Stable Diffusion,1.0,0.2,purpose_diverse
+P019283F4,it_industrija,1_tools_for_6_purposes,DALL-E,0.6,0.2,purpose_diverse
+P00AC35ED,medicina,1_tools_for_1_purposes,Gemini,0.1,0.2,focused_user
+P018307E8,drustvene_nauke,3_tools_for_4_purposes,ChatGPT|DeepL|GitHub Copilot,1.0,0.2,purpose_diverse
+P05824668,it_industrija,5_tools_for_6_purposes,ChatGPT|DeepL|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,power_user
+P01F702FC,kreativna_filmska,4_tools_for_1_purposes,Claude|DALL-E|GitHub Copilot|Midjourney,0.4,0.2,tool_explorer
+P019283F4,ostalo,4_tools_for_5_purposes,Claude|DeepL|Grammarly|Stable Diffusion,1.0,0.2,power_user
+P023923EB,ostalo,1_tools_for_4_purposes,ChatGPT,0.4,0.2,purpose_diverse
+P023923EB,it_industrija,1_tools_for_3_purposes,DALL-E,0.3,0.2,purpose_diverse
+P02BBE61C,drustvene_nauke,1_tools_for_1_purposes,Claude,0.1,0.2,focused_user
+P05824668,medicina,2_tools_for_4_purposes,Bing Chat|ChatGPT,0.8,0.2,purpose_diverse
+P04EC5864,drustvene_nauke,2_tools_for_1_purposes,Claude|Gemini,0.2,0.2,tool_explorer
+P01949C3C,kreativna_filmska,4_tools_for_1_purposes,Bing Chat|ChatGPT|Claude|DeepL,0.4,0.2,tool_explorer
+P00AC35ED,it_industrija,2_tools_for_1_purposes,Bing Chat|Stable Diffusion,0.2,0.2,tool_explorer
+P051BCC85,drustvene_nauke,1_tools_for_4_purposes,DALL-E,0.4,0.2,purpose_diverse
+P05F234CB,medicina,4_tools_for_4_purposes,Claude|DALL-E|Gemini|Midjourney,1.0,0.2,power_user
+P0108E85C,prosveta,1_tools_for_4_purposes,Bing Chat,0.4,0.2,purpose_diverse
+P024F321D,it_industrija,1_tools_for_3_purposes,DALL-E,0.3,0.2,purpose_diverse
+P050B826B,medicina,4_tools_for_5_purposes,Bing Chat|ChatGPT|Gemini|Grammarly,1.0,0.2,power_user
+P0108E85C,ostalo,2_tools_for_1_purposes,Claude|Midjourney,0.2,0.2,tool_explorer
+P008B05EA,kreativna_filmska,5_tools_for_2_purposes,Bing Chat|ChatGPT|DeepL|Gemini|GitHub Copilot,1.0,0.2,tool_explorer
+P02BCFE21,kreativna_filmska,4_tools_for_3_purposes,Claude|DALL-E|Gemini|Grammarly,1.0,0.2,tool_explorer
+P01F702FC,drustvene_nauke,1_tools_for_1_purposes,Midjourney,0.1,0.2,focused_user
+P04698356,prosveta,1_tools_for_1_purposes,Grammarly,0.1,0.2,focused_user
+P051BCC85,it_industrija,4_tools_for_2_purposes,ChatGPT|DALL-E|Gemini|Grammarly,0.8,0.2,tool_explorer
+P01FB7C08,ostalo,4_tools_for_1_purposes,Bing Chat|ChatGPT|GitHub Copilot|Grammarly,0.4,0.2,tool_explorer
+P01949C3C,medicina,2_tools_for_6_purposes,Claude|Stable Diffusion,1.0,0.2,purpose_diverse
+P008B05EA,it_industrija,1_tools_for_4_purposes,DALL-E,0.4,0.2,purpose_diverse
+P02B4F499,prosveta,5_tools_for_6_purposes,ChatGPT|Claude|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
+P05705A4C,kreativna_filmska,1_tools_for_4_purposes,ChatGPT,0.4,0.2,purpose_diverse
+P01F702FC,medicina,5_tools_for_5_purposes,Claude|DALL-E|Gemini|Grammarly|Midjourney,1.0,0.2,power_user
+P01FB7C08,kreativna_filmska,4_tools_for_2_purposes,ChatGPT|DeepL|GitHub Copilot|Stable Diffusion,0.8,0.2,tool_explorer
+P04698356,prosveta,5_tools_for_1_purposes,Bing Chat|ChatGPT|DeepL|Gemini|Stable Diffusion,0.5,0.2,tool_explorer
+P018307E8,drustvene_nauke,5_tools_for_1_purposes,Claude|Gemini|Grammarly|Midjourney|Stable Diffusion,0.5,0.2,tool_explorer
+P0516CF46,ostalo,1_tools_for_2_purposes,DeepL,0.2,0.2,purpose_diverse
+P04EC5864,prosveta,5_tools_for_3_purposes,Claude|DALL-E|DeepL|GitHub Copilot|Midjourney,1.0,0.2,tool_explorer
+P0237D98B,prosveta,4_tools_for_3_purposes,ChatGPT|DeepL|Gemini|Midjourney,1.0,0.2,tool_explorer
+P05824668,kreativna_filmska,3_tools_for_4_purposes,DALL-E|Gemini|GitHub Copilot,1.0,0.2,purpose_diverse
+P02B4F499,prosveta,2_tools_for_6_purposes,DALL-E|Grammarly,1.0,0.2,purpose_diverse
+P04EC5864,kreativna_filmska,3_tools_for_4_purposes,ChatGPT|Claude|Gemini,1.0,0.2,purpose_diverse
+P02303954,kreativna_filmska,4_tools_for_3_purposes,Claude|Gemini|GitHub Copilot|Grammarly,1.0,0.2,tool_explorer
+P0237D98B,prosveta,1_tools_for_5_purposes,Bing Chat,0.5,0.2,purpose_diverse
+P019283F4,it_industrija,2_tools_for_1_purposes,Gemini|GitHub Copilot,0.2,0.2,tool_explorer
+P02303954,it_industrija,3_tools_for_3_purposes,ChatGPT|Claude|Gemini,0.9,0.2,balanced_user
+P00E7F197,ostalo,1_tools_for_6_purposes,Grammarly,0.6,0.2,purpose_diverse
+P0031AFB2,drustvene_nauke,2_tools_for_4_purposes,DALL-E|Midjourney,0.8,0.2,purpose_diverse
+P02BBE61C,medicina,3_tools_for_3_purposes,DeepL|Gemini|Grammarly,0.9,0.2,balanced_user
+P05289CEA,medicina,3_tools_for_2_purposes,Claude|Grammarly|Stable Diffusion,0.6,0.2,tool_explorer
+P0108E85C,medicina,4_tools_for_4_purposes,Bing Chat|DeepL|Grammarly|Midjourney,1.0,0.2,power_user
+P0516CF46,ostalo,3_tools_for_4_purposes,Bing Chat|ChatGPT|Midjourney,1.0,0.2,purpose_diverse
+P0516CF46,kreativna_filmska,1_tools_for_3_purposes,Bing Chat,0.3,0.2,purpose_diverse
+P02BBE61C,drustvene_nauke,4_tools_for_3_purposes,Gemini|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,tool_explorer
+P00C21DC6,it_industrija,4_tools_for_3_purposes,ChatGPT|Gemini|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
+P023923EB,medicina,3_tools_for_2_purposes,DeepL|Midjourney|Stable Diffusion,0.6,0.2,tool_explorer
+P0237D98B,kreativna_filmska,5_tools_for_3_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
+P019283F4,medicina,1_tools_for_4_purposes,ChatGPT,0.4,0.2,purpose_diverse
+P00E7F197,prosveta,3_tools_for_3_purposes,DeepL|GitHub Copilot|Grammarly,0.9,0.2,balanced_user
+P00AC35ED,drustvene_nauke,1_tools_for_3_purposes,GitHub Copilot,0.3,0.2,purpose_diverse
+P04698356,it_industrija,4_tools_for_3_purposes,ChatGPT|Grammarly|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
+P00C21DC6,kreativna_filmska,2_tools_for_6_purposes,Gemini|Grammarly,1.0,0.2,purpose_diverse
+P024F321D,prosveta,4_tools_for_4_purposes,ChatGPT|DALL-E|Gemini|Midjourney,1.0,0.2,power_user
+P02B4F499,drustvene_nauke,1_tools_for_1_purposes,ChatGPT,0.1,0.2,focused_user
+P024F321D,drustvene_nauke,5_tools_for_3_purposes,Bing Chat|Gemini|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,tool_explorer
+P018307E8,medicina,4_tools_for_4_purposes,Bing Chat|ChatGPT|DALL-E|Grammarly,1.0,0.2,power_user
+P00AC35ED,medicina,2_tools_for_1_purposes,DeepL|Gemini,0.2,0.2,tool_explorer
+P05705A4C,it_industrija,2_tools_for_1_purposes,Bing Chat|ChatGPT,0.2,0.2,tool_explorer
+P0237D98B,ostalo,5_tools_for_3_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,tool_explorer
+P00B265F2,drustvene_nauke,3_tools_for_6_purposes,DALL-E|Gemini|Grammarly,1.0,0.2,purpose_diverse
+P02B4F499,drustvene_nauke,1_tools_for_2_purposes,Gemini,0.2,0.2,purpose_diverse
+P051BCC85,drustvene_nauke,3_tools_for_3_purposes,Bing Chat|Midjourney|Stable Diffusion,0.9,0.2,balanced_user
+P05F234CB,prosveta,2_tools_for_4_purposes,ChatGPT|DeepL,0.8,0.2,purpose_diverse
+P023923EB,drustvene_nauke,2_tools_for_4_purposes,Bing Chat|Midjourney,0.8,0.2,purpose_diverse
+P00C21DC6,kreativna_filmska,1_tools_for_6_purposes,GitHub Copilot,0.6,0.2,purpose_diverse
+P03FBF6AD,prosveta,5_tools_for_6_purposes,Bing Chat|DeepL|GitHub Copilot|Grammarly|Midjourney,1.0,0.2,power_user
+P024F321D,it_industrija,5_tools_for_3_purposes,Claude|DALL-E|Gemini|Grammarly|Stable Diffusion,1.0,0.2,tool_explorer
+P023923EB,prosveta,3_tools_for_2_purposes,Bing Chat|Claude|DeepL,0.6,0.2,tool_explorer
+P051BCC85,prosveta,5_tools_for_6_purposes,DALL-E|DeepL|Gemini|Grammarly|Midjourney,1.0,0.2,power_user
+P0031AFB2,prosveta,2_tools_for_6_purposes,ChatGPT|Grammarly,1.0,0.2,purpose_diverse
+P024F321D,medicina,5_tools_for_2_purposes,Bing Chat|ChatGPT|DeepL|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
+P051BCC85,medicina,3_tools_for_6_purposes,Bing Chat|Gemini|Stable Diffusion,1.0,0.2,purpose_diverse
+P0031AFB2,prosveta,4_tools_for_2_purposes,Bing Chat|ChatGPT|DALL-E|GitHub Copilot,0.8,0.2,tool_explorer
+P02303954,it_industrija,1_tools_for_4_purposes,GitHub Copilot,0.4,0.2,purpose_diverse
+P05244540,it_industrija,1_tools_for_1_purposes,Bing Chat,0.1,0.2,focused_user
+P02303954,it_industrija,5_tools_for_2_purposes,Bing Chat|Claude|DALL-E|Grammarly|Midjourney,1.0,0.2,tool_explorer
+P01692100,medicina,3_tools_for_4_purposes,DALL-E|DeepL|Grammarly,1.0,0.2,purpose_diverse
+P02BBE61C,ostalo,3_tools_for_1_purposes,ChatGPT|DALL-E|Stable Diffusion,0.3,0.2,tool_explorer
+P00C21DC6,it_industrija,4_tools_for_1_purposes,Bing Chat|ChatGPT|Claude|DALL-E,0.4,0.2,tool_explorer
+P01FB7C08,prosveta,3_tools_for_5_purposes,Bing Chat|Gemini|Grammarly,1.0,0.2,purpose_diverse
+P024F321D,drustvene_nauke,1_tools_for_3_purposes,Bing Chat,0.3,0.2,purpose_diverse
+P05289CEA,it_industrija,2_tools_for_3_purposes,DeepL|Grammarly,0.6,0.2,purpose_diverse
+P02303954,drustvene_nauke,1_tools_for_4_purposes,Stable Diffusion,0.4,0.2,purpose_diverse
+P02BCFE21,kreativna_filmska,5_tools_for_3_purposes,Bing Chat|ChatGPT|Claude|Gemini|Grammarly,1.0,0.2,tool_explorer
+P0031AFB2,kreativna_filmska,4_tools_for_1_purposes,Bing Chat|DALL-E|Gemini|Midjourney,0.4,0.2,tool_explorer
+P0108E85C,ostalo,3_tools_for_6_purposes,Bing Chat|ChatGPT|Midjourney,1.0,0.2,purpose_diverse
+P00E7F197,it_industrija,4_tools_for_4_purposes,Bing Chat|ChatGPT|Claude|DALL-E,1.0,0.2,power_user
+P00C21DC6,it_industrija,3_tools_for_3_purposes,Bing Chat|DALL-E|DeepL,0.9,0.2,balanced_user
+P0108E85C,prosveta,4_tools_for_2_purposes,Claude|DeepL|Grammarly|Stable Diffusion,0.8,0.2,tool_explorer
+P02BCFE21,it_industrija,1_tools_for_1_purposes,DeepL,0.1,0.2,focused_user
+P05F234CB,kreativna_filmska,4_tools_for_2_purposes,Claude|Gemini|GitHub Copilot|Stable Diffusion,0.8,0.2,tool_explorer
+P04698356,kreativna_filmska,5_tools_for_1_purposes,Bing Chat|DALL-E|DeepL|Gemini|GitHub Copilot,0.5,0.2,tool_explorer
+P05824668,prosveta,4_tools_for_2_purposes,ChatGPT|Claude|DeepL|Stable Diffusion,0.8,0.2,tool_explorer
+P02BBE61C,prosveta,2_tools_for_6_purposes,DALL-E|Midjourney,1.0,0.2,purpose_diverse
+P0516CF46,drustvene_nauke,2_tools_for_2_purposes,Claude|DeepL,0.4,0.2,balanced_user
+P02BCFE21,kreativna_filmska,5_tools_for_5_purposes,ChatGPT|Claude|DeepL|Midjourney|Stable Diffusion,1.0,0.2,power_user
+P01FB7C08,ostalo,3_tools_for_2_purposes,DeepL|Gemini|Grammarly,0.6,0.2,tool_explorer
+P05289CEA,medicina,2_tools_for_5_purposes,Midjourney|Stable Diffusion,1.0,0.2,purpose_diverse
+P01692100,it_industrija,5_tools_for_2_purposes,Claude|DALL-E|DeepL|Gemini|Grammarly,1.0,0.2,tool_explorer
+P05289CEA,drustvene_nauke,2_tools_for_3_purposes,Claude|GitHub Copilot,0.6,0.2,purpose_diverse
+P02B4F499,ostalo,4_tools_for_6_purposes,Claude|DALL-E|Gemini|Stable Diffusion,1.0,0.2,power_user
+P051BCC85,kreativna_filmska,3_tools_for_2_purposes,DALL-E|Gemini|GitHub Copilot,0.6,0.2,tool_explorer
+P0031AFB2,ostalo,4_tools_for_4_purposes,Claude|DALL-E|GitHub Copilot|Stable Diffusion,1.0,0.2,power_user
+P03FBF6AD,kreativna_filmska,1_tools_for_3_purposes,ChatGPT,0.3,0.2,purpose_diverse
+P05705A4C,medicina,1_tools_for_1_purposes,DeepL,0.1,0.2,focused_user
+P01FB7C08,prosveta,4_tools_for_6_purposes,Claude|DeepL|Midjourney|Stable Diffusion,1.0,0.2,power_user
+P01F702FC,ostalo,2_tools_for_6_purposes,DeepL|Gemini,1.0,0.2,purpose_diverse
+P05244540,it_industrija,5_tools_for_1_purposes,Bing Chat|Claude|GitHub Copilot|Grammarly|Stable Diffusion,0.5,0.2,tool_explorer
+P01F702FC,kreativna_filmska,5_tools_for_4_purposes,Bing Chat|ChatGPT|DALL-E|DeepL|Gemini,1.0,0.2,power_user
+P04698356,drustvene_nauke,2_tools_for_1_purposes,Gemini|GitHub Copilot,0.2,0.2,tool_explorer
+P051BCC85,ostalo,5_tools_for_1_purposes,Claude|GitHub Copilot|Grammarly|Midjourney|Stable Diffusion,0.5,0.2,tool_explorer
+P05244540,ostalo,2_tools_for_5_purposes,DeepL|Grammarly,1.0,0.2,purpose_diverse
+P04EC5864,drustvene_nauke,2_tools_for_4_purposes,Claude|Grammarly,0.8,0.2,purpose_diverse
+P00C21DC6,prosveta,2_tools_for_3_purposes,Bing Chat|DeepL,0.6,0.2,purpose_diverse
+P023923EB,kreativna_filmska,3_tools_for_3_purposes,DALL-E|DeepL|Grammarly,0.9,0.2,balanced_user
+P0108E85C,kreativna_filmska,2_tools_for_4_purposes,ChatGPT|DALL-E,0.8,0.2,purpose_diverse
+P008B05EA,drustvene_nauke,3_tools_for_5_purposes,ChatGPT|DALL-E|DeepL,1.0,0.2,purpose_diverse
+P019283F4,medicina,3_tools_for_1_purposes,GitHub Copilot|Midjourney|Stable Diffusion,0.3,0.2,tool_explorer
+P02B4F499,prosveta,2_tools_for_2_purposes,Gemini|GitHub Copilot,0.4,0.2,balanced_user
+P01FB7C08,ostalo,2_tools_for_3_purposes,Bing Chat|DALL-E,0.6,0.2,purpose_diverse
+P02B4F499,it_industrija,5_tools_for_4_purposes,ChatGPT|Claude|DeepL|GitHub Copilot|Grammarly,1.0,0.2,power_user
+P01FB7C08,it_industrija,4_tools_for_1_purposes,Bing Chat|DeepL|Grammarly|Stable Diffusion,0.4,0.2,tool_explorer
+P0031AFB2,prosveta,3_tools_for_4_purposes,DeepL|GitHub Copilot|Midjourney,1.0,0.2,purpose_diverse
+P02BBE61C,drustvene_nauke,1_tools_for_1_purposes,Grammarly,0.1,0.2,focused_user
+P019283F4,prosveta,4_tools_for_1_purposes,Bing Chat|DALL-E|DeepL|Grammarly,0.4,0.2,tool_explorer
+P02BBE61C,prosveta,1_tools_for_1_purposes,Gemini,0.1,0.2,focused_user
+P01FB7C08,kreativna_filmska,5_tools_for_1_purposes,Bing Chat|ChatGPT|DeepL|GitHub Copilot|Stable Diffusion,0.5,0.2,tool_explorer
+P01949C3C,prosveta,5_tools_for_4_purposes,Claude|DALL-E|Gemini|Grammarly|Stable Diffusion,1.0,0.2,power_user
+P04EC5864,kreativna_filmska,2_tools_for_3_purposes,DeepL|Grammarly,0.6,0.2,purpose_diverse
+P02B4F499,ostalo,1_tools_for_5_purposes,DeepL,0.5,0.2,purpose_diverse
+P00C21DC6,drustvene_nauke,2_tools_for_2_purposes,Bing Chat|Stable Diffusion,0.4,0.2,balanced_user
+P018307E8,drustvene_nauke,1_tools_for_2_purposes,Claude,0.2,0.2,purpose_diverse
+P018307E8,medicina,1_tools_for_3_purposes,DeepL,0.3,0.2,purpose_diverse
+P04698356,prosveta,4_tools_for_2_purposes,ChatGPT|GitHub Copilot|Grammarly|Stable Diffusion,0.8,0.2,tool_explorer
+P024F321D,medicina,5_tools_for_6_purposes,Bing Chat|Claude|Gemini|Grammarly|Stable Diffusion,1.0,0.2,power_user
+P0237D98B,kreativna_filmska,1_tools_for_2_purposes,Bing Chat,0.2,0.2,purpose_diverse
+P050B826B,kreativna_filmska,5_tools_for_4_purposes,Bing Chat|DALL-E|Gemini|GitHub Copilot|Stable Diffusion,1.0,0.2,power_user
+P02303954,medicina,4_tools_for_1_purposes,Bing Chat|ChatGPT|DALL-E|Grammarly,0.4,0.2,tool_explorer
+P05705A4C,kreativna_filmska,2_tools_for_2_purposes,Claude|Gemini,0.4,0.2,balanced_user
+P00E7F197,it_industrija,4_tools_for_3_purposes,DeepL|GitHub Copilot|Midjourney|Stable Diffusion,1.0,0.2,tool_explorer
+P019283F4,prosveta,2_tools_for_6_purposes,Bing Chat|GitHub Copilot,1.0,0.2,purpose_diverse
+P02303954,kreativna_filmska,2_tools_for_3_purposes,Bing Chat|ChatGPT,0.6,0.2,purpose_diverse
+P0237D98B,prosveta,4_tools_for_2_purposes,Bing Chat|Claude|Gemini|GitHub Copilot,0.8,0.2,tool_explorer
+P00AC35ED,it_industrija,1_tools_for_4_purposes,Gemini,0.4,0.2,purpose_diverse
+P008B05EA,drustvene_nauke,2_tools_for_2_purposes,GitHub Copilot|Stable Diffusion,0.4,0.2,balanced_user
+P02A3D814,it_industrija,2_tools_for_1_purposes,ChatGPT|Google Gemini (ex Bard),0.2,0.2,tool_explorer
