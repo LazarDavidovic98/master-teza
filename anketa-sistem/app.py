@@ -1343,12 +1343,14 @@ def results():
         # Brojimo poznavanje AI alata
         ai_tools_users = sum(1 for r in responses if r.get('poznati_ai_alati', ''))
         
-        # Prosečno znanje AI alata
+        # Prosečno znanje AI alata - koristimo poznavanje_principa kolonu
         ai_knowledge_scores = []
+        knowledge_mapping = {'nimalo': 1, 'malo': 2, 'dosta': 3, 'veoma_dosta': 4}
+        
         for r in responses:
-            score = r.get('generativni_ai_poznavanje', '')
-            if score and score.isdigit():
-                ai_knowledge_scores.append(int(score))
+            knowledge_level = r.get('poznavanje_principa', '')
+            if knowledge_level in knowledge_mapping:
+                ai_knowledge_scores.append(knowledge_mapping[knowledge_level])
         
         avg_ai_knowledge = round(sum(ai_knowledge_scores) / len(ai_knowledge_scores), 2) if ai_knowledge_scores else 0
         
