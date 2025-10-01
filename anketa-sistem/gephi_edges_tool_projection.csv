@@ -1,0 +1,43 @@
+Source,Target,Type,Weight,Context,CommonUsers,CommonUsersList,Label,Color,Thickness
+TOOL_Bing_Chat,TOOL_ChatGPT,Undirected,0.444,shared_users,4,"P00CADA8, P01BDE40, P01D51C5, P03A2B55",4 korisnika,#e74c3c,3
+TOOL_Bing_Chat,TOOL_Claude,Undirected,0.3,shared_users,3,"P00581EA, P01D51C5, P03A2B55",3 korisnika,#e74c3c,2
+TOOL_Bing_Chat,TOOL_DALL-E,Undirected,0.4,shared_users,4,"P00581EA, P00CADA8, P0365770, P045E20E",4 korisnika,#e74c3c,3
+TOOL_Bing_Chat,TOOL_DeepL,Undirected,0.545,shared_users,6,"P00CADA8, P01BDE40, P01D51C5, P0365770, P03A2B55, P045E20E",6 korisnika,#e74c3c,4
+TOOL_Bing_Chat,TOOL_Gemini,Undirected,0.111,shared_users,1,P0365770,1 korisnika,#e74c3c,1
+TOOL_Bing_Chat,TOOL_GitHub_Copilot,Undirected,0.545,shared_users,6,"P00CADA8, P01BDE40, P01D51C5, P0365770, P03A2B55, P045E20E",6 korisnika,#e74c3c,4
+TOOL_Bing_Chat,TOOL_Grammarly,Undirected,0.273,shared_users,3,"P00CADA8, P01D51C5, P0365770",3 korisnika,#e74c3c,2
+TOOL_Bing_Chat,TOOL_Midjourney,Undirected,0.333,shared_users,3,"P01BDE40, P01D51C5, P03A2B55",3 korisnika,#e74c3c,2
+TOOL_Bing_Chat,TOOL_Stable_Diffusion,Undirected,0.25,shared_users,2,"P03A2B55, P045E20E",2 korisnika,#e74c3c,2
+TOOL_ChatGPT,TOOL_Claude,Undirected,0.2,shared_users,2,"P01D51C5, P03A2B55",2 korisnika,#e74c3c,1
+TOOL_ChatGPT,TOOL_DALL-E,Undirected,0.182,shared_users,2,"P00CADA8, P039CCB1",2 korisnika,#e74c3c,1
+TOOL_ChatGPT,TOOL_DeepL,Undirected,0.455,shared_users,5,"P00CADA8, P01BDE40, P01D51C5, P039CCB1, P03A2B55",5 korisnika,#e74c3c,3
+TOOL_ChatGPT,TOOL_GitHub_Copilot,Undirected,0.455,shared_users,5,"P00CADA8, P01BDE40, P01D51C5, P039CCB1, P03A2B55",5 korisnika,#e74c3c,3
+TOOL_ChatGPT,TOOL_Grammarly,Undirected,0.3,shared_users,3,"P00CADA8, P01D51C5, P039CCB1",3 korisnika,#e74c3c,2
+TOOL_ChatGPT,TOOL_Midjourney,Undirected,0.571,shared_users,4,"P01BDE40, P01D51C5, P039CCB1, P03A2B55",4 korisnika,#e74c3c,4
+TOOL_ChatGPT,TOOL_Stable_Diffusion,Undirected,0.286,shared_users,2,"P039CCB1, P03A2B55",2 korisnika,#e74c3c,2
+TOOL_Claude,TOOL_DALL-E,Undirected,0.182,shared_users,2,"P00581EA, P00D945F",2 korisnika,#e74c3c,1
+TOOL_Claude,TOOL_DeepL,Undirected,0.333,shared_users,4,"P00D945F, P01D51C5, P03A2B55, P051888A",4 korisnika,#e74c3c,2
+TOOL_Claude,TOOL_Gemini,Undirected,0.286,shared_users,2,"P0078B0C, P00D945F",2 korisnika,#e74c3c,2
+TOOL_Claude,TOOL_GitHub_Copilot,Undirected,0.333,shared_users,4,"P00D945F, P01D51C5, P03A2B55, P051888A",4 korisnika,#e74c3c,2
+TOOL_Claude,TOOL_Grammarly,Undirected,0.182,shared_users,2,"P01D51C5, P051888A",2 korisnika,#e74c3c,1
+TOOL_Claude,TOOL_Midjourney,Undirected,0.222,shared_users,2,"P01D51C5, P03A2B55",2 korisnika,#e74c3c,1
+TOOL_Claude,TOOL_Stable_Diffusion,Undirected,0.125,shared_users,1,P03A2B55,1 korisnika,#e74c3c,1
+TOOL_DALL-E,TOOL_DeepL,Undirected,0.417,shared_users,5,"P00CADA8, P00D945F, P0365770, P039CCB1, P045E20E",5 korisnika,#e74c3c,3
+TOOL_DALL-E,TOOL_Gemini,Undirected,0.25,shared_users,2,"P00D945F, P0365770",2 korisnika,#e74c3c,2
+TOOL_DALL-E,TOOL_GitHub_Copilot,Undirected,0.417,shared_users,5,"P00CADA8, P00D945F, P0365770, P039CCB1, P045E20E",5 korisnika,#e74c3c,3
+TOOL_DALL-E,TOOL_Grammarly,Undirected,0.4,shared_users,4,"P00CADA8, P01F884A, P0365770, P039CCB1",4 korisnika,#e74c3c,3
+TOOL_DALL-E,TOOL_Midjourney,Undirected,0.2,shared_users,2,"P01F884A, P039CCB1",2 korisnika,#e74c3c,1
+TOOL_DALL-E,TOOL_Stable_Diffusion,Undirected,0.25,shared_users,2,"P039CCB1, P045E20E",2 korisnika,#e74c3c,2
+TOOL_DeepL,TOOL_Gemini,Undirected,0.182,shared_users,2,"P00D945F, P0365770",2 korisnika,#e74c3c,1
+TOOL_DeepL,TOOL_GitHub_Copilot,Undirected,0.818,shared_users,9,"P00CADA8, P00D945F, P01BDE40, P01D51C5, P0365770, P039CCB1, P03A2B55, P045E20E, P051888A",9 korisnika,#e74c3c,6
+TOOL_DeepL,TOOL_Grammarly,Undirected,0.417,shared_users,5,"P00CADA8, P01D51C5, P0365770, P039CCB1, P051888A",5 korisnika,#e74c3c,3
+TOOL_DeepL,TOOL_Midjourney,Undirected,0.364,shared_users,4,"P01BDE40, P01D51C5, P039CCB1, P03A2B55",4 korisnika,#e74c3c,2
+TOOL_DeepL,TOOL_Stable_Diffusion,Undirected,0.3,shared_users,3,"P039CCB1, P03A2B55, P045E20E",3 korisnika,#e74c3c,2
+TOOL_Gemini,TOOL_GitHub_Copilot,Undirected,0.182,shared_users,2,"P00D945F, P0365770",2 korisnika,#e74c3c,1
+TOOL_Gemini,TOOL_Grammarly,Undirected,0.111,shared_users,1,P0365770,1 korisnika,#e74c3c,1
+TOOL_GitHub_Copilot,TOOL_Grammarly,Undirected,0.545,shared_users,6,"P00CADA8, P015A226, P01D51C5, P0365770, P039CCB1, P051888A",6 korisnika,#e74c3c,4
+TOOL_GitHub_Copilot,TOOL_Midjourney,Undirected,0.364,shared_users,4,"P01BDE40, P01D51C5, P039CCB1, P03A2B55",4 korisnika,#e74c3c,2
+TOOL_GitHub_Copilot,TOOL_Stable_Diffusion,Undirected,0.3,shared_users,3,"P039CCB1, P03A2B55, P045E20E",3 korisnika,#e74c3c,2
+TOOL_Grammarly,TOOL_Midjourney,Undirected,0.333,shared_users,3,"P01D51C5, P01F884A, P039CCB1",3 korisnika,#e74c3c,2
+TOOL_Grammarly,TOOL_Stable_Diffusion,Undirected,0.111,shared_users,1,P039CCB1,1 korisnika,#e74c3c,1
+TOOL_Midjourney,TOOL_Stable_Diffusion,Undirected,0.333,shared_users,2,"P039CCB1, P03A2B55",2 korisnika,#e74c3c,2

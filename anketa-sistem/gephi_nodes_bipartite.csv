@@ -1,0 +1,33 @@
+Id,Label,Type,Partition,CiljanaGrupa,Country,Education,WorkExperience,AgeGroup,ExperienceLevel,Institution,ToolsUsed,Size,Color,Shape,X,Y,Category,UsersCount
+P017C72DA,P017C72D,user,users,prosveta,srbija,visa,6-10,mid_career,senior,Meta,2.0,21,#4ECDC4,circle,-60.65528531300322,-64.18586917716276,,
+P01BDE407,P01BDE40,user,users,medicina,nemacka,srednja,3-5,mid_career,intermediate,Meta,20.0,40,#45B7D1,circle,-71.01991406000106,14.995017154519005,,
+P01D51C53,P01D51C5,user,users,kreativna_filmska,hrvatska,visa,20+,mid_career,unknown,,46.0,40,#FF6B6B,circle,-63.44171919527287,80.956793469162,,
+P01F884A5,P01F884A,user,users,medicina,rumunija,visoka,11-15,mid_career,unknown,Oracle,12.0,40,#45B7D1,circle,-138.29229613118983,-98.46030135814459,,
+P03A2B55E,P03A2B55,user,users,prosveta,nemacka,doktorat,6-10,young,senior,Univerzitet u Novom Sadu,9.0,40,#4ECDC4,circle,-54.3409810757249,80.34563075196004,,
+P00581EA6,P00581EA,user,users,kreativna_filmska,bugarska,doktorat,1-2,experienced,junior,,7.0,36,#FF6B6B,circle,-97.3121498212638,-6.511862200190777,,
+P03657703,P0365770,user,users,prosveta,bugarska,master,20+,experienced,unknown,,24.0,40,#4ECDC4,circle,-112.27345031499547,13.731665902183508,,
+P01D51C53,P01D51C5,user,users,kreativna_filmska,hrvatska,master,11-15,mid_career,unknown,,46.0,40,#FF6B6B,circle,-101.22000748505197,-67.93584842802329,,
+P01D51C53,P01D51C5,user,users,prosveta,srbija,visoka,6-10,young,senior,,46.0,40,#4ECDC4,circle,-95.8287864647001,28.196056179288348,,
+P045E20E3,P045E20E,user,users,prosveta,bugarska,master,1-2,mid_career,junior,Univerzitet u Novom Sadu,10.0,40,#4ECDC4,circle,-88.28282099739806,53.48433893228051,,
+P03A2B55E,P03A2B55,user,users,ostalo,austrija,srednja,11-15,mid_career,unknown,,9.0,40,#DDA0DD,circle,-146.66231606065543,-3.552078691418089,,
+P0078B0CB,P0078B0C,user,users,medicina,severna_makedonija,doktorat,1-2,mid_career,junior,,12.0,40,#45B7D1,circle,-66.57601540300956,55.189480691816556,,
+P00CADA81,P00CADA8,user,users,it_industrija,bosna_i_hercegovina,visoka,20+,young,unknown,Apple,44.0,40,#96CEB4,circle,-101.1802915483758,-17.658509650970004,,
+P039CCB10,P039CCB1,user,users,drustvene_nauke,severna_makedonija,doktorat,20+,experienced,unknown,Oracle,16.0,40,#FFEAA7,circle,-133.97435427606365,-9.2727413855648,,
+P03657703,P0365770,user,users,drustvene_nauke,srbija,doktorat,16-20,mid_career,unknown,,24.0,40,#FFEAA7,circle,-94.67349490283308,-11.085756892669977,,
+P00581EA6,P00581EA,user,users,medicina,bugarska,master,16-20,young,unknown,,7.0,36,#45B7D1,circle,-92.88035284001488,66.87606795963009,,
+P051888A8,P051888A,user,users,it_industrija,crna_gora,doktorat,0,young,junior,Apple,8.0,39,#96CEB4,circle,-110.31834146509075,3.7900039122141322,,
+P00D945FF,P00D945F,user,users,ostalo,crna_gora,doktorat,6-10,mid_career,senior,Nordeus,30.0,40,#DDA0DD,circle,-98.51814249957538,5.9247976960537585,,
+P043A241C,P043A241,user,users,medicina,slovenija,master,6-10,mid_career,senior,,3.0,24,#45B7D1,circle,-109.13417270338148,31.487222183136254,,
+P015A2265,P015A226,user,users,prosveta,crna_gora,master,1-2,mid_career,junior,,8.0,39,#4ECDC4,circle,-125.97362973658429,19.947334375432945,,
+P039CCB10,P039CCB1,user,users,drustvene_nauke,srbija,visoka,0,young,junior,RT-RK,16.0,40,#FFEAA7,circle,-83.77703691047303,-3.1510282747771754,,
+P00CADA81,P00CADA8,user,users,ostalo,crna_gora,srednja,1-2,mid_career,junior,,44.0,40,#DDA0DD,circle,-125.81709794418059,53.024945335621,,
+TOOL_DeepL,DeepL,ai_tool,tools,,,,,,,,,40,#1DD1A1,square,77.12277300244352,85.73214693622299,translation,10.0
+TOOL_Bing_Chat,Bing Chat,ai_tool,tools,,,,,,,,,34,#FF4757,square,64.1576519623117,-22.758405100887913,conversational_ai,7.0
+TOOL_ChatGPT,ChatGPT,ai_tool,tools,,,,,,,,,32,#FF4757,square,85.94355973312236,83.04005309892065,conversational_ai,6.0
+TOOL_GitHub_Copilot,GitHub Copilot,ai_tool,tools,,,,,,,,,40,#5352ED,square,99.98260150862761,39.45214323856615,code_assistant,10.0
+TOOL_Midjourney,Midjourney,ai_tool,tools,,,,,,,,,30,#FF6348,square,90.52166479614917,-49.71944966027997,image_generation,5.0
+TOOL_Grammarly,Grammarly,ai_tool,tools,,,,,,,,,34,#FFC048,square,125.85810546532753,-89.16781874139215,writing_assistant,7.0
+TOOL_DALL-E,DALL-E,ai_tool,tools,,,,,,,,,34,#FF6348,square,120.51103798608071,94.9044372027551,image_generation,7.0
+TOOL_Claude,Claude,ai_tool,tools,,,,,,,,,32,#FF4757,square,112.3683587694945,-90.34565269816355,conversational_ai,6.0
+TOOL_Gemini,Gemini,ai_tool,tools,,,,,,,,,26,#FF4757,square,67.59017871176817,0.18253130131773787,conversational_ai,3.0
+TOOL_Stable_Diffusion,Stable Diffusion,ai_tool,tools,,,,,,,,,26,#FF6348,square,127.89416918949713,78.28306956141247,image_generation,3.0

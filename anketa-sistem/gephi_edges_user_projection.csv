@@ -1,0 +1,70 @@
+Source,Target,Type,Weight,Context,CommonTools,CommonToolsList,Label,Color,Thickness
+P00581EA6,P0078B0CB,Undirected,0.25,shared_tools,1,Claude,1 alata,#3498db,2
+P00581EA6,P00CADA81,Undirected,0.286,shared_tools,2,"Bing Chat, DALL-E",2 alata,#3498db,2
+P00581EA6,P00D945FF,Undirected,0.333,shared_tools,2,"Claude, DALL-E",2 alata,#3498db,3
+P00581EA6,P01D51C53,Undirected,0.25,shared_tools,2,"Bing Chat, Claude",2 alata,#3498db,2
+P00581EA6,P01F884A5,Undirected,0.2,shared_tools,1,DALL-E,1 alata,#3498db,2
+P00581EA6,P03657703,Undirected,0.286,shared_tools,2,"Bing Chat, DALL-E",2 alata,#3498db,2
+P00581EA6,P03A2B55E,Undirected,0.25,shared_tools,2,"Bing Chat, Claude",2 alata,#3498db,2
+P00581EA6,P045E20E3,Undirected,0.333,shared_tools,2,"Bing Chat, DALL-E",2 alata,#3498db,3
+P00581EA6,P051888A8,Undirected,0.167,shared_tools,1,Claude,1 alata,#3498db,1
+P0078B0CB,P00D945FF,Undirected,0.4,shared_tools,2,"Claude, Gemini",2 alata,#3498db,4
+P0078B0CB,P051888A8,Undirected,0.2,shared_tools,1,Claude,1 alata,#3498db,2
+P00CADA81,P00D945FF,Undirected,0.375,shared_tools,3,"DALL-E, DeepL, GitHub Copilot",3 alata,#3498db,3
+P00CADA81,P015A2265,Undirected,0.333,shared_tools,2,"GitHub Copilot, Grammarly",2 alata,#3498db,3
+P00CADA81,P017C72DA,Undirected,0.167,shared_tools,1,DeepL,1 alata,#3498db,1
+P00CADA81,P01BDE407,Undirected,0.571,shared_tools,4,"Bing Chat, ChatGPT, DeepL, GitHub Copilot",4 alata,#3498db,5
+P00CADA81,P01D51C53,Undirected,0.625,shared_tools,5,"Bing Chat, ChatGPT, DeepL, GitHub Copilot, Grammarly",5 alata,#3498db,6
+P00CADA81,P01F884A5,Undirected,0.286,shared_tools,2,"DALL-E, Grammarly",2 alata,#3498db,2
+P00CADA81,P03657703,Undirected,0.714,shared_tools,5,"Bing Chat, DALL-E, DeepL, GitHub Copilot, Grammarly",5 alata,#3498db,7
+P00CADA81,P039CCB10,Undirected,0.625,shared_tools,5,"ChatGPT, DALL-E, DeepL, GitHub Copilot, Grammarly",5 alata,#3498db,6
+P00CADA81,P03A2B55E,Undirected,0.444,shared_tools,4,"Bing Chat, ChatGPT, DeepL, GitHub Copilot",4 alata,#3498db,4
+P00CADA81,P043A241C,Undirected,0.167,shared_tools,1,ChatGPT,1 alata,#3498db,1
+P00CADA81,P045E20E3,Undirected,0.571,shared_tools,4,"Bing Chat, DALL-E, DeepL, GitHub Copilot",4 alata,#3498db,5
+P00CADA81,P051888A8,Undirected,0.429,shared_tools,3,"DeepL, GitHub Copilot, Grammarly",3 alata,#3498db,4
+P00D945FF,P015A2265,Undirected,0.167,shared_tools,1,GitHub Copilot,1 alata,#3498db,1
+P00D945FF,P017C72DA,Undirected,0.2,shared_tools,1,DeepL,1 alata,#3498db,2
+P00D945FF,P01BDE407,Undirected,0.25,shared_tools,2,"DeepL, GitHub Copilot",2 alata,#3498db,2
+P00D945FF,P01D51C53,Undirected,0.333,shared_tools,3,"Claude, DeepL, GitHub Copilot",3 alata,#3498db,3
+P00D945FF,P03657703,Undirected,0.571,shared_tools,4,"DALL-E, DeepL, Gemini, GitHub Copilot",4 alata,#3498db,5
+P00D945FF,P039CCB10,Undirected,0.333,shared_tools,3,"DALL-E, DeepL, GitHub Copilot",3 alata,#3498db,3
+P00D945FF,P03A2B55E,Undirected,0.333,shared_tools,3,"Claude, DeepL, GitHub Copilot",3 alata,#3498db,3
+P00D945FF,P045E20E3,Undirected,0.429,shared_tools,3,"DALL-E, DeepL, GitHub Copilot",3 alata,#3498db,4
+P00D945FF,P051888A8,Undirected,0.5,shared_tools,3,"Claude, DeepL, GitHub Copilot",3 alata,#3498db,5
+P015A2265,P01BDE407,Undirected,0.167,shared_tools,1,GitHub Copilot,1 alata,#3498db,1
+P015A2265,P01D51C53,Undirected,0.286,shared_tools,2,"GitHub Copilot, Grammarly",2 alata,#3498db,2
+P015A2265,P01F884A5,Undirected,0.25,shared_tools,1,Grammarly,1 alata,#3498db,2
+P015A2265,P03657703,Undirected,0.333,shared_tools,2,"GitHub Copilot, Grammarly",2 alata,#3498db,3
+P015A2265,P039CCB10,Undirected,0.286,shared_tools,2,"GitHub Copilot, Grammarly",2 alata,#3498db,2
+P015A2265,P045E20E3,Undirected,0.167,shared_tools,1,GitHub Copilot,1 alata,#3498db,1
+P015A2265,P051888A8,Undirected,0.5,shared_tools,2,"GitHub Copilot, Grammarly",2 alata,#3498db,5
+P017C72DA,P01BDE407,Undirected,0.2,shared_tools,1,DeepL,1 alata,#3498db,2
+P017C72DA,P03657703,Undirected,0.167,shared_tools,1,DeepL,1 alata,#3498db,1
+P017C72DA,P045E20E3,Undirected,0.2,shared_tools,1,DeepL,1 alata,#3498db,2
+P017C72DA,P051888A8,Undirected,0.25,shared_tools,1,DeepL,1 alata,#3498db,2
+P01BDE407,P01D51C53,Undirected,0.714,shared_tools,5,"Bing Chat, ChatGPT, DeepL, GitHub Copilot, Midjourney",5 alata,#3498db,7
+P01BDE407,P03657703,Undirected,0.375,shared_tools,3,"Bing Chat, DeepL, GitHub Copilot",3 alata,#3498db,3
+P01BDE407,P039CCB10,Undirected,0.5,shared_tools,4,"ChatGPT, DeepL, GitHub Copilot, Midjourney",4 alata,#3498db,5
+P01BDE407,P03A2B55E,Undirected,0.714,shared_tools,5,"Bing Chat, ChatGPT, DeepL, GitHub Copilot, Midjourney",5 alata,#3498db,7
+P01BDE407,P043A241C,Undirected,0.2,shared_tools,1,ChatGPT,1 alata,#3498db,2
+P01BDE407,P045E20E3,Undirected,0.429,shared_tools,3,"Bing Chat, DeepL, GitHub Copilot",3 alata,#3498db,4
+P01BDE407,P051888A8,Undirected,0.286,shared_tools,2,"DeepL, GitHub Copilot",2 alata,#3498db,2
+P01D51C53,P01F884A5,Undirected,0.25,shared_tools,2,"Grammarly, Midjourney",2 alata,#3498db,2
+P01D51C53,P03657703,Undirected,0.444,shared_tools,4,"Bing Chat, DeepL, GitHub Copilot, Grammarly",4 alata,#3498db,4
+P01D51C53,P039CCB10,Undirected,0.556,shared_tools,5,"ChatGPT, DeepL, GitHub Copilot, Grammarly, Midjourney",5 alata,#3498db,5
+P01D51C53,P03A2B55E,Undirected,0.75,shared_tools,6,"Bing Chat, ChatGPT, Claude, DeepL, GitHub Copilot, Midjourney",6 alata,#3498db,7
+P01D51C53,P045E20E3,Undirected,0.333,shared_tools,3,"Bing Chat, DeepL, GitHub Copilot",3 alata,#3498db,3
+P01D51C53,P051888A8,Undirected,0.571,shared_tools,4,"Claude, DeepL, GitHub Copilot, Grammarly",4 alata,#3498db,5
+P01F884A5,P03657703,Undirected,0.286,shared_tools,2,"DALL-E, Grammarly",2 alata,#3498db,2
+P01F884A5,P039CCB10,Undirected,0.429,shared_tools,3,"DALL-E, Grammarly, Midjourney",3 alata,#3498db,4
+P01F884A5,P051888A8,Undirected,0.167,shared_tools,1,Grammarly,1 alata,#3498db,1
+P03657703,P039CCB10,Undirected,0.444,shared_tools,4,"DALL-E, DeepL, GitHub Copilot, Grammarly",4 alata,#3498db,4
+P03657703,P03A2B55E,Undirected,0.3,shared_tools,3,"Bing Chat, DeepL, GitHub Copilot",3 alata,#3498db,3
+P03657703,P045E20E3,Undirected,0.571,shared_tools,4,"Bing Chat, DALL-E, DeepL, GitHub Copilot",4 alata,#3498db,5
+P03657703,P051888A8,Undirected,0.429,shared_tools,3,"DeepL, GitHub Copilot, Grammarly",3 alata,#3498db,4
+P039CCB10,P03A2B55E,Undirected,0.556,shared_tools,5,"ChatGPT, DeepL, GitHub Copilot, Midjourney, Stable Diffusion",5 alata,#3498db,5
+P039CCB10,P045E20E3,Undirected,0.5,shared_tools,4,"DALL-E, DeepL, GitHub Copilot, Stable Diffusion",4 alata,#3498db,5
+P039CCB10,P051888A8,Undirected,0.375,shared_tools,3,"DeepL, GitHub Copilot, Grammarly",3 alata,#3498db,3
+P03A2B55E,P045E20E3,Undirected,0.5,shared_tools,4,"Bing Chat, DeepL, GitHub Copilot, Stable Diffusion",4 alata,#3498db,5
+P03A2B55E,P051888A8,Undirected,0.375,shared_tools,3,"Claude, DeepL, GitHub Copilot",3 alata,#3498db,3
+P045E20E3,P051888A8,Undirected,0.286,shared_tools,2,"DeepL, GitHub Copilot",2 alata,#3498db,2

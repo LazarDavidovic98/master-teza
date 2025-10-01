@@ -1,0 +1,50 @@
+{
+  "projection_info": {
+    "type": "bipartite_projections",
+    "description": "Projekcije bipartitnog grafa na pojedinačne skupove",
+    "projections": [
+      "user-user",
+      "tool-tool"
+    ]
+  },
+  "user_projection": {
+    "nodes": 15,
+    "edges": 69,
+    "density": 0.6571428571428571,
+    "avg_similarity": 0.3699130434782609,
+    "top_connected_users": {
+      "P00CADA81": 13.0,
+      "P051888A8": 13.0,
+      "P00D945FF": 12.0,
+      "P03657703": 12.0,
+      "P01BDE407": 11.0
+    }
+  },
+  "tool_projection": {
+    "nodes": 10,
+    "edges": 42,
+    "density": 0.9333333333333333,
+    "avg_similarity": 0.32397619047619053,
+    "top_connected_tools": {
+      "TOOL_Bing_Chat": 9.0,
+      "TOOL_Claude": 9.0,
+      "TOOL_DALL-E": 9.0,
+      "TOOL_DeepL": 9.0,
+      "TOOL_GitHub_Copilot": 9.0
+    }
+  },
+  "analysis_possibilities": {
+    "user_projection": [
+      "Community detection - grupe korisnika sa sličnim preferencama",
+      "Centrality measures - identifikacija influencer korisnika",
+      "Clustering coefficient - koliko su korisnici klasterirani",
+      "Collaborative filtering - preporučivanje novih alata"
+    ],
+    "tool_projection": [
+      "Tool clustering - grupiranje sličnih alata",
+      "Market basket analysis - alati koji se često koriste zajedno",
+      "Tool recommendation systems - predlog kombinacija alata",
+      "Technology stack analysis - identifikacija tech stackova"
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "bipartite_graph_info": {
+    "type": "bipartite",
+    "description": "Dvodelni graf sa korisnicima i AI alatima",
+    "partitions": [
+      "users",
+      "tools"
+    ]
+  },
+  "total_nodes": 32,
+  "users_count": 22,
+  "tools_count": 10,
+  "total_edges": 251,
+  "bipartite_density": 1.1409090909090909,
+  "user_groups": {
+    "prosveta": 6,
+    "medicina": 5,
+    "kreativna_filmska": 3,
+    "ostalo": 3,
+    "drustvene_nauke": 3,
+    "it_industrija": 2
+  },
+  "tool_categories": {
+    "conversational_ai": 4,
+    "image_generation": 3,
+    "translation": 1,
+    "code_assistant": 1,
+    "writing_assistant": 1
+  },
+  "top_5_tools": {
+    "DeepL": 10.0,
+    "GitHub Copilot": 10.0,
+    "Bing Chat": 7.0,
+    "Grammarly": 7.0,
+    "DALL-E": 7.0
+  },
+  "top_5_active_users": [
+    {
+      "id": "P01D51C5",
+      "tools_used": 46.0,
+      "group": "kreativna_filmska"
+    },
+    {
+      "id": "P01D51C5",
+      "tools_used": 46.0,
+      "group": "kreativna_filmska"
+    },
+    {
+      "id": "P01D51C5",
+      "tools_used": 46.0,
+      "group": "prosveta"
+    },
+    {
+      "id": "P00CADA8",
+      "tools_used": 44.0,
+      "group": "ostalo"
+    },
+    {
+      "id": "P00CADA8",
+      "tools_used": 44.0,
+      "group": "it_industrija"
+    }
+  ],
+  "graph_properties": {
+    "users_left_side": "X coordinates: -150 to -50",
+    "tools_right_side": "X coordinates: 50 to 150",
+    "edge_type": "only user-tool connections",
+    "no_user_user_edges": true,
+    "no_tool_tool_edges": true
+  },
+  "suggested_analyses": [
+    "Projection na korisnike: koji korisnici dele slične alate",
+    "Projection na alate: koji alati su često korišćeni zajedno",
+    "Community detection u projeksijama",
+    "Centrality measures za identifikaciju ključnih čvorova",
+    "Collaborative filtering za preporuke alata"
+  ]
+}

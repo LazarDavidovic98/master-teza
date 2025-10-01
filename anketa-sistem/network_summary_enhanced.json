@@ -1,16 +1,16 @@
 {
-  "total_nodes": 60,
-  "total_edges": 542,
+  "total_nodes": 37,
+  "total_edges": 94,
   "node_types": {
-    "participant": 31,
-    "entity": 13,
+    "participant": 15,
     "ai_tool": 10,
-    "target_group": 6
+    "target_group": 6,
+    "entity": 6
   },
   "edge_types": {
-    "uses_tool": 285,
-    "belongs_to_group": 143,
-    "affiliated_with": 114
+    "uses_tool": 64,
+    "belongs_to_group": 20,
+    "affiliated_with": 10
   },
   "enhanced_from": "data/gephi_nodes.csv and data/gephi_edges.csv",
   "enhancements": [

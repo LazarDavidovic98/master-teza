@@ -1,0 +1,16 @@
+Id,Label,Type,CiljanaGrupa,Country,Education,AgeGroup,ToolsCount,ToolsList,Size,Color,Shape
+P00581EA6,P00581EA,user,kreativna_filmska,bugarska,doktorat,experienced,3,"Bing Chat, Claude, DALL-E",21,#FF6B6B,circle
+P0078B0CB,P0078B0C,user,medicina,severna_makedonija,doktorat,mid_career,2,"Claude, Gemini",19,#45B7D1,circle
+P00CADA81,P00CADA8,user,it_industrija,bosna_i_hercegovina,visoka,young,6,"Bing Chat, ChatGPT, DALL-E, DeepL, GitHub Copilot, Grammarly",27,#96CEB4,circle
+P00D945FF,P00D945F,user,ostalo,crna_gora,doktorat,mid_career,5,"Claude, DALL-E, DeepL, Gemini, GitHub Copilot",25,#DDA0DD,circle
+P015A2265,P015A226,user,prosveta,crna_gora,master,mid_career,2,"GitHub Copilot, Grammarly",19,#4ECDC4,circle
+P017C72DA,P017C72D,user,prosveta,srbija,visa,mid_career,1,DeepL,17,#4ECDC4,circle
+P01BDE407,P01BDE40,user,medicina,nemacka,srednja,mid_career,5,"Bing Chat, ChatGPT, DeepL, GitHub Copilot, Midjourney",25,#45B7D1,circle
+P01D51C53,P01D51C5,user,kreativna_filmska,hrvatska,visa,mid_career,7,"Bing Chat, ChatGPT, Claude, DeepL, GitHub Copilot, Grammarly, Midjourney",29,#FF6B6B,circle
+P01F884A5,P01F884A,user,medicina,rumunija,visoka,mid_career,3,"DALL-E, Grammarly, Midjourney",21,#45B7D1,circle
+P03657703,P0365770,user,prosveta,bugarska,master,experienced,6,"Bing Chat, DALL-E, DeepL, Gemini, GitHub Copilot, Grammarly",27,#4ECDC4,circle
+P039CCB10,P039CCB1,user,drustvene_nauke,severna_makedonija,doktorat,experienced,7,"ChatGPT, DALL-E, DeepL, GitHub Copilot, Grammarly, Midjourney, Stable Diffusion",29,#FFEAA7,circle
+P03A2B55E,P03A2B55,user,prosveta,nemacka,doktorat,young,7,"Bing Chat, ChatGPT, Claude, DeepL, GitHub Copilot, Midjourney, Stable Diffusion",29,#4ECDC4,circle
+P043A241C,P043A241,user,medicina,slovenija,master,mid_career,1,ChatGPT,17,#45B7D1,circle
+P045E20E3,P045E20E,user,prosveta,bugarska,master,mid_career,5,"Bing Chat, DALL-E, DeepL, GitHub Copilot, Stable Diffusion",25,#4ECDC4,circle
+P051888A8,P051888A,user,it_industrija,crna_gora,doktorat,young,4,"Claude, DeepL, GitHub Copilot, Grammarly",23,#96CEB4,circle

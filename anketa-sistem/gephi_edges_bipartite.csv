@@ -1,0 +1,252 @@
+Source,Target,Type,Weight,Context,Relationship_type,Label,Color,Thickness,Purposes
+P017C72DA,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P017C72DA,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01BDE407,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01BDE407,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01BDE407,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01BDE407,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01BDE407,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01BDE407,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01BDE407,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01BDE407,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01BDE407,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01BDE407,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01BDE407,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01BDE407,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01BDE407,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01BDE407,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01BDE407,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01BDE407,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01BDE407,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01BDE407,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01BDE407,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01BDE407,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01D51C53,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01D51C53,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01D51C53,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01F884A5,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01F884A5,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01F884A5,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01F884A5,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P01F884A5,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01F884A5,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01F884A5,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01F884A5,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P01F884A5,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P01F884A5,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01F884A5,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01F884A5,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P03A2B55E,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03A2B55E,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03A2B55E,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03A2B55E,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03A2B55E,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P00581EA6,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P00581EA6,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00581EA6,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P00581EA6,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P00581EA6,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00581EA6,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P03657703,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P03657703,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P03657703,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P03657703,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P03657703,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P03657703,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01D51C53,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P01D51C53,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01D51C53,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01D51C53,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01D51C53,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01D51C53,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P01D51C53,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01D51C53,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01D51C53,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01D51C53,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01D51C53,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P01D51C53,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P045E20E3,TOOL_Stable_Diffusion,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P045E20E3,TOOL_Stable_Diffusion,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P045E20E3,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P045E20E3,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P045E20E3,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P045E20E3,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P045E20E3,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P045E20E3,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P045E20E3,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P045E20E3,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P03A2B55E,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P03A2B55E,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P03A2B55E,TOOL_Stable_Diffusion,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P03A2B55E,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P0078B0CB,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P0078B0CB,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P0078B0CB,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P0078B0CB,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P0078B0CB,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P0078B0CB,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P0078B0CB,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P0078B0CB,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P0078B0CB,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P0078B0CB,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P0078B0CB,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P0078B0CB,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00CADA81,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00CADA81,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00CADA81,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P039CCB10,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P039CCB10,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P039CCB10,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P039CCB10,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P039CCB10,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P039CCB10,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P039CCB10,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P039CCB10,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P039CCB10,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P039CCB10,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P039CCB10,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P039CCB10,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P03657703,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03657703,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P03657703,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03657703,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P03657703,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03657703,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P03657703,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03657703,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P03657703,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P03657703,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P03657703,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P00581EA6,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P051888A8,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P051888A8,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P051888A8,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P051888A8,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P051888A8,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P051888A8,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P051888A8,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Prevođenje jezika
+P051888A8,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00D945FF,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00D945FF,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00D945FF,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00D945FF,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00D945FF,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00D945FF,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P00D945FF,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00D945FF,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00D945FF,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00D945FF,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00D945FF,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00D945FF,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P00D945FF,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00D945FF,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00D945FF,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00D945FF,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00D945FF,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00D945FF,TOOL_Claude,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P00D945FF,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00D945FF,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00D945FF,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00D945FF,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00D945FF,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00D945FF,TOOL_Gemini,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P00D945FF,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00D945FF,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje teksta (eseja
+P00D945FF,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,mejlova
+P00D945FF,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,bloga)
+P00D945FF,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00D945FF,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Analiza podataka
+P043A241C,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P043A241C,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Učenje novih koncepata
+P043A241C,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P015A2265,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P015A2265,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P015A2265,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P015A2265,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P015A2265,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P015A2265,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P015A2265,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P015A2265,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P039CCB10,TOOL_Midjourney,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P039CCB10,TOOL_Stable_Diffusion,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P039CCB10,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P039CCB10,TOOL_ChatGPT,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P00CADA81,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_DALL-E,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P00CADA81,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_GitHub_Copilot,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_Grammarly,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_DeepL,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Brainstorming ideja
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje prezentacija
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Kreiranje slika
+P00CADA81,TOOL_Bing_Chat,Undirected,0.2,tool_usage,uses_tool,koristi,#00CEC9,1,Pisanje koda
