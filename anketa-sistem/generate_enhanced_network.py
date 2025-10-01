@@ -1,3 +1,26 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+🌟 ENHANCED NETWORK GENERATOR
+=============================
+
+Generiše unapređenu verziju mrežne analize sa dodatnim atributima:
+- Demografske informacije za učesnike
+- Shape atributi za različite tipove čvorova  
+- X,Y koordinate za početni layout
+- Veze sličnosti između grupa
+- Poboljšano označavanje i tipiziranje veza
+- Directed/Undirected tipovi veza
+
+Kreiran fajlovi:
+- gephi_nodes_enhanced.csv
+- gephi_edges_enhanced.csv
+- network_summary_enhanced.json
+
+Autor: GitHub Copilot & Tim
+Verzija: 2.0 (ex generate_gephi_enhanced_v2.py)
+"""
+
 import pandas as pd
 import numpy as np
 import json
@@ -6,6 +29,7 @@ import os
 def enhance_gephi_files():
     """
     Unapređuje postojeće gephi_nodes.csv i gephi_edges.csv fajlove iz data/ foldera
+    sa dodatnim atributima i analizama
     """
     print("🔄 UNAPREĐIVANJE GEPHI FAJLOVA")
     print("=" * 50)
